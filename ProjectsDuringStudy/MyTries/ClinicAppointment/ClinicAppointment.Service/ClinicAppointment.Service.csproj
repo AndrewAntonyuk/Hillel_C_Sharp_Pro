@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClinicAppointment.Data\ClinicAppointment.Data.csproj" />
+    <ProjectReference Include="..\ClinicAppointment.Domain\ClinicAppointment.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
