@@ -1,8 +1,10 @@
 ﻿using ClinicAppointment.Domain.Entities;
 using ClinicAppointment.Helper.Validators.General;
 using ClinicAppointment.Helper.Validators.General.Implements;
+using System.IO;
 using System.Text;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace ClinicAppointment.Helper.FileHandlers
@@ -21,29 +23,47 @@ namespace ClinicAppointment.Helper.FileHandlers
             XmlSerializer serializer = new XmlSerializer(typeof(T));
             List<T>? result;
 
+            //using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate))
+            //{
+            //    result = (List<T>)serializer.Deserialize(fileStream);
+
+            //    return result == null ? new List<T>() : result;
+            //}
+
             using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate))
             {
-                result = (List<T>)serializer.Deserialize(fileStream);
-
-                return result == null ? new List<T>() : result;
+                try
+                {
+                    result = (List<T>)serializer.Deserialize(fileStream);
+                }
+                catch (Exception)
+                {
+                    result = new List<T>();
+                }
+                finally
+                {
+                    fileStream.Close();
+                }
             }
+
+            return result;
         }
 
         public bool WriteToFile(string path, IEnumerable<T> objects)
         {
             if (objects != null)
             {
-                XmlSerializer serializer = new XmlSerializer(objects.GetType());
+                XmlSerializer serializer = new XmlSerializer(typeof(Doctor));
 
-                //using (var stringWriter = new StringWriter())
-                //{
-                //    using (XmlWriter writer = new XmlTextWriter(stringWriter) { Formatting = Formatting.Indented })
-                //    {
-                //        serializer.Serialize(writer, objects);
-                //    }
-                //}
+                using (var stringWriter = new StringWriter())
+                {
+                    using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate))
+                    {
+                        serializer.Serialize(fileStream, objects);
+                    }
+                }
 
-                serializer.Serialize( Console.Out, objects );
+                //serializer.Serialize( Console.Out, objects );
                 //FileInfo file = new FileInfo(path);
                 //StreamWriter sw = file.AppendText();
                 //XmlSerializer writer = new XmlSerializer(typeof(T));
