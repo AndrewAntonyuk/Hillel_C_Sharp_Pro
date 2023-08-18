@@ -18,15 +18,9 @@
         #endregion
 
         #region public functions
-        public override string? ToString()
-        {
-            return $"[First name: {FirstName}; middle name: {LastName}; last name: {MiddleName}]";
-        }
+        public override string? ToString() => $"[First name: {FirstName}; middle name: {LastName}; last name: {MiddleName}]";
         #endregion
 
-        ~Person()
-        {
-            Console.WriteLine("Person was destroyed:\n" + this);
-        }
+        ~Person() => Console.WriteLine("Person was destroyed:\n" + this);
     }
 }

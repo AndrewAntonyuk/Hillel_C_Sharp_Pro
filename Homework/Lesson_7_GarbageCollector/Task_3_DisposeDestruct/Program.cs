@@ -6,24 +6,31 @@ namespace Task_3_DisposeDestruct
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Tests for market");
-            Console.WriteLine("=====================");
-            Console.WriteLine();
-
-            Address _address = new Address("Lviv", "Naukova, 7b");
-            using (var _yourClothes = new Market("Your Clothes", _address, MarketTypes.Clothing))
+            try
             {
-                _yourClothes.Buy();
-                _yourClothes.Sell();
+                Console.WriteLine("Tests for market");
+                Console.WriteLine("=====================");
                 Console.WriteLine();
+
+                Address _address = new Address(null, "Naukova, 7b");
+                using (var _yourClothes = new Market("Your Clothes", _address, MarketTypes.Clothing))
+                {
+                    _yourClothes.Buy();
+                    _yourClothes.Sell();
+                    Console.WriteLine();
+                }
+
+                Test();
+
+                Console.WriteLine();
+                Console.WriteLine("Test of destructor:");
+
+                GC.Collect();
             }
-
-            Test();
-
-            Console.WriteLine();
-            Console.WriteLine("Test of destructor:");
-
-            GC.Collect();
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception occured " + e.Message);
+            }
 
             Console.ReadLine();
         }

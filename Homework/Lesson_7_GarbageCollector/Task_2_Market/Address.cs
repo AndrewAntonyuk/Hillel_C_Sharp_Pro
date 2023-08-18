@@ -1,4 +1,6 @@
-﻿namespace Task_2_Market
+﻿using System;
+
+namespace Task_2_Market
 {
     internal class Address
     {
@@ -15,9 +17,8 @@
         }
         #endregion
 
-        public override string ToString()
-        {
-            return $"[City: {City}; street: {Street}]";
-        }
+        public override string ToString() => $"[City: {City}; street: {Street}]";
+
+        ~Address() => Console.WriteLine($"Address {this} has been deleted from destructor");
     }
 }

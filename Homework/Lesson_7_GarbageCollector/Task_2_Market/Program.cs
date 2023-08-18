@@ -6,6 +6,22 @@ namespace Task_2_Market
     {
         static void Main(string[] args)
         {
+            try
+            {
+                Test();
+
+                GC.Collect();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception occured " + e.Message);
+            }
+
+            Console.ReadLine();
+        }
+
+        static void Test()
+        {
             Console.WriteLine("Tests for market");
             Console.WriteLine("=====================");
             Console.WriteLine();
@@ -18,7 +34,12 @@ namespace Task_2_Market
                 Console.WriteLine();
             }
 
-            Console.ReadLine();
+            using (var _yourNewClothes = new Market("Your New Clothes", null, MarketTypes.Clothing))
+            {
+                _yourNewClothes.Buy();
+                _yourNewClothes.Sell();
+                Console.WriteLine();
+            }
         }
     }
 }

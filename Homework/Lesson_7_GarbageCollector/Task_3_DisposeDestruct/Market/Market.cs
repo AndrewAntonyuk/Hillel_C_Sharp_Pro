@@ -21,20 +21,11 @@ namespace Task_3_DisposeDestruct
         #endregion
 
         #region public functions
-        public override string ToString()
-        {
-            return $"[Market name: {Name}; market type: {MarketType.ToString()}; address: {Address}]";
-        }
+        public override string ToString() => $"[Market name: {Name}; market type: {MarketType}; address: {Address?.ToString()}]";
 
-        public void Buy()
-        {
-            Console.WriteLine($"Buying in progress for market:\n {this}");
-        }
+        public void Buy() => Console.WriteLine($"Buying in progress for market:\n {this}");
 
-        public void Sell()
-        {
-            Console.WriteLine($"Selling in progress for market:\n {this}");
-        }
+        public void Sell() => Console.WriteLine($"Selling in progress for market:\n {this}");
 
         public void Dispose()
         {
@@ -48,18 +39,13 @@ namespace Task_3_DisposeDestruct
             if (_disposed) return;
 
             if (disposing)
-            {
                 Console.WriteLine($"Dispose controlled recourses of {this}");
-            }
 
             Console.WriteLine($"Dispose uncontrolled recourses of {this}");
 
             _disposed = true;
         }
 
-        ~Market()
-        {
-            Dispose(false);
-        }
+        ~Market() => Dispose(false);
     }
 }

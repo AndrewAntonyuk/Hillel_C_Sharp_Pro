@@ -23,20 +23,11 @@ namespace Task_3_DisposeDestruct
         #endregion
 
         #region public methods
-        public override string ToString()
-        {
-            return $"[Play: {PlayName}; type: {PlayType.ToString()}; year: {PlayYear}; author: {Author}]";
-        }
+        public override string ToString() => $"[Play: {PlayName}; type: {PlayType}; year: {PlayYear}; author: {Author?.ToString()}]";
 
-        public void Run()
-        {
-            Console.WriteLine("Play is running:\n" + this);
-        }
+        public void Run() => Console.WriteLine("Play is running:\n" + this);
 
-        public void Pause()
-        {
-            Console.WriteLine("Play is paused:\n" + this);
-        }
+        public void Pause() => Console.WriteLine("Play is paused:\n" + this);
 
         public void Dispose()
         {
@@ -50,18 +41,13 @@ namespace Task_3_DisposeDestruct
             if (_disposed) return;
 
             if (disposing)
-            {
                 Console.WriteLine($"Dispose controlled recourses of {this}");
-            }
 
             Console.WriteLine($"Dispose uncontrolled recourses of {this}");
 
             _disposed = true;
         }
 
-        ~Play()
-        {
-            Dispose(false);
-        }
+        ~Play() => Dispose(false);
     }
 }

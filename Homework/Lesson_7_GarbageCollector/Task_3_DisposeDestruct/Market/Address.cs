@@ -15,9 +15,6 @@
         }
         #endregion
 
-        public override string ToString()
-        {
-            return $"[City: {City}; street: {Street}]";
-        }
+        public override string ToString() => $"[City: {City}; street: {Street}]";
     }
 }

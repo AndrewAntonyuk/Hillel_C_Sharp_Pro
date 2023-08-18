@@ -22,25 +22,13 @@ namespace Task_1_Play
         #endregion
 
         #region public methods
-        public override string? ToString()
-        {
-            return $"[Play: {PlayName}; type: {PlayType.ToString()}; year: {PlayYear}; author: {Author}]";
-        }
+        public override string? ToString() => $"[Play: {PlayName}; type: {PlayType}; year: {PlayYear}; author: {Author?.ToString()}]";
 
-        public void Run()
-        {
-            Console.WriteLine("Play is running:\n" + this);
-        }
+        public void Run() => Console.WriteLine("Play is running:\n" + this);
 
-        public void Pause()
-        {
-            Console.WriteLine("Play is paused:\n" + this);
-        }
+        public void Pause() => Console.WriteLine("Play is paused:\n" + this);
         #endregion
 
-        ~Play()
-        {
-            Console.WriteLine("Play was destroyed:\n" + this);
-        }
+        ~Play() => Console.WriteLine("Play was destroyed:\n" + this);
     }
 }

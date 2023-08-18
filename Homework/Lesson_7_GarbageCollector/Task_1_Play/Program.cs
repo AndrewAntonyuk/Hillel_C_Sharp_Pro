@@ -6,12 +6,20 @@ namespace Lesson_7_GarbageCollector
     {
         public static void Main(string[] args)
         {
-            Test();
 
-            Console.WriteLine();
-            Console.WriteLine("Test of destructor:");
+            try
+            {
+                Test();
 
-            GC.Collect();
+                Console.WriteLine();
+                Console.WriteLine("Test of destructor:");
+
+                GC.Collect();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception occured " + e.Message);
+            }
             Console.ReadLine();
         }
 
@@ -27,11 +35,20 @@ namespace Lesson_7_GarbageCollector
                                                    PlayTypes.Tragicomedy,
                                                    1889,
                                                    _authorOHT);
+
+            Person _authorUndef = null;
+            Play _withoutAuthor = new Play("Witcher",
+                                            PlayTypes.UndefinedType,
+                                            1992,
+                                            _authorUndef);
             #endregion
 
             #region test of functions
             _oneHundredThousands.Run();
             _oneHundredThousands.Pause();
+
+            _withoutAuthor.Run();
+            _withoutAuthor.Pause();
             #endregion
         }
     }
