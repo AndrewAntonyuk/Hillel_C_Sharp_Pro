@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:03:17.7297808Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="ID" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Унікальний ідентифікатор</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CMD" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Команди з HMI</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PLS" Datatype="&quot;Lib_PLC_PLS&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">бітові міандри</MultiLanguageText></Comment></Member>
+    <Member Name="CycleInfo" Datatype="&quot;Lib_PLC_CycleInfo&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="CMDPRG" Datatype="UInt">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Команди з програмного керування (побітові)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PRM1" Datatype="UInt">
+      <Comment>
+        <MultiLanguageText Lang="en-US">дискретні параметри</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PRM2" Datatype="UInt">
+      <Comment>
+        <MultiLanguageText Lang="en-US">дискретні параметри</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Alarm2" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">біти алармів</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="STEP1" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">крок основної програми</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="T_STEP1" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">час кроку основної програми обробки, в (с)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Message" Datatype="UDInt">
+      <Comment>
+        <MultiLanguageText Lang="en-US">для формування повідомлень, може бути як бітовим (32 повідомлення), так і числовим (за номером); передбачається, що повідомлення буде скидуватися в 0 автоматично через певний час (не менш ніж 2 інтервали опитування з HMI)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NumberDI" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">кількість наявних каналів DI</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NumberDO" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">кількість наявних каналів DO</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NumberAI" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">кількість наявних каналів AI</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NumberAO" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">кількість наявних каналів AO</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NOW" Datatype="Array[0..3] of Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">плинний час астрономічний час в BCD форматі: NOW[0] seconds,-- (16#ss,--)  NOW[1] hour, minute (16#hhmm)  NOW[2] month, day (16#mmdd)  NOW[3] year (16#yyyy)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ShiftParam" Datatype="Array[0..3] of Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Години передачі змін (максимум 3 зміни): SHIFT[0] – кількість змін SHIFT[1] – передача 1-ї зміни (BCD 16#hhmm) SHIFT[2] – передача 2-ї зміни (BCD 16#hhmm)  SHIFT[3] – передача 3-ї зміни (BCD 16#hhmm)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ShiftActiveNumber" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">номер активної зміни</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TSK_LTIME" Datatype="LTime">
+      <Comment>
+        <MultiLanguageText Lang="en-US">плинний (останній) час задачі в мілісекундах</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TSK_MAXTIME" Datatype="LTime">
+      <Comment>
+        <MultiLanguageText Lang="en-US">максимальний час задачі в мілісекундах</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TSK_MINTIME" Datatype="LTime">
+      <Comment>
+        <MultiLanguageText Lang="en-US">максимальний час задачі в мілісекундах</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TaskTime" Datatype="&quot;Lib_PLC_TaskTime&quot;">
+      <Comment>
+        <MultiLanguageText Lang="en-US">RT_INFO</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TIME_TCK" Datatype="Struct">
+      <Member Name="cyclic_sec_R" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">!!_ЧАС ЦИКЛУ_!!!</MultiLanguageText></Comment></Member>
+      <Member Name="cyclic_ms" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">msec, Плинне/поточне значення часу виконання циклу циклу OB1</MultiLanguageText></Comment></Member>
+      <Member Name="cyclic_sec_LR" Datatype="LReal"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">sec, Плинне/поточне значення часу виконання циклу циклу OB1</MultiLanguageText></Comment></Member>
+      <Member Name="FirstScanTime" Datatype="Date_And_Time"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Дата/час "FirstScan"</MultiLanguageText></Comment></Member>
+      <Member Name="PrevScanTime" Datatype="Date_And_Time"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Дата/час попередньго виклику OB1</MultiLanguageText></Comment></Member>
+      <Member Name="NowTime" Datatype="Date_And_Time"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Дата/час поточні</MultiLanguageText></Comment></Member>
+      <Member Name="Time1cycle_r" Datatype="LReal">
+        <Comment>
+          <MultiLanguageText Lang="en-US">загальний час з початку 1-го циклу контролера (в секундах)</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Time1cycle_di" Datatype="UDInt">
+        <Comment>
+          <MultiLanguageText Lang="en-US">загальний час з початку 1-го циклу контролера (в секундах)</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Time1cycle_DINT" Datatype="UDInt">
+        <Comment>
+          <MultiLanguageText Lang="en-US">sec, Час від "FirstScan"</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="TimeTotalPLC" Datatype="UDInt">
+        <Comment>
+          <MultiLanguageText Lang="en-US">загальний час роботи ПЛК з моменту пуску (в хвилинах)</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="TaskTime_RUNTIME" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">RUNTIME</MultiLanguageText>
+      </Comment>
+      <Member Name="Live" Datatype="LReal">
+        <Comment>
+          <MultiLanguageText Lang="en-US">sec, Плинне/поточне значення часу виконання блоку</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="TIME_TCK_s" Datatype="LReal">
+        <Comment>
+          <MultiLanguageText Lang="en-US">sec, Час від першого циклу</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="MEM_RUNTIME" Datatype="LReal"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="HMI" Datatype="Struct">
+      <Member Name="State" Datatype="UDInt">
+        <Comment>
+          <MultiLanguageText Lang="en-US">повторює STA, який був на початку виклику функції</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Alarm" Datatype="UDInt">
+        <Comment>
+          <MultiLanguageText Lang="en-US">повторює ALM1, який був на початку виклику функції</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Counter" Datatype="&quot;Lib_PLC_AlarmCounter&quot;" />
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>Lib_UDT_PLC</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

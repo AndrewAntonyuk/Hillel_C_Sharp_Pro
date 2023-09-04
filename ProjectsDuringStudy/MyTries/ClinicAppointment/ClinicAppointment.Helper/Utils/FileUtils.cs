@@ -1,19 +1,22 @@
 ﻿using ClinicAppointment.Domain.Entities;
 using ClinicAppointment.Helper.FileHandlers;
+using Microsoft.VisualBasic.FileIO;
 using System.Xml.Serialization;
 
 namespace ClinicAppointment.Helper.Utils
 {
     public static class FileUtils
     {
-        //public IFileHandler<T> GetFileHandler<T>(object? settings)
-        //{            
-        //    if (settings is null)
-        //    {
-        //        return new FileHandlerJson<T>();
-        //    }
+        public static IFileHandler<T> GetFileHandler<T>(dynamic? settings) where T : Auditable
+        {
+            string fileType = settings?.Database.FileType ?? "";
 
-        //    return new FileHandlerJson<T>();
-        //}
+            if (fileType.ToLower().Contains("xml"))
+            {
+                return new FileHandlerXml<T>();
+            }
+
+            return new FileHandlerJson<T>();
+        }
     }
 }

@@ -24,24 +24,11 @@ namespace ClinicAppointment.Menu.Commands.Cnsl
 
             if (_doctor != null)
             {
-                IGeneralValidator<string> _stringValidator = new GeneralValidatorString();
-                Console.WriteLine("Please enter new name of doctor:");
-                _doctor.Name = _stringValidator.Validate(Console.ReadLine());
-
-                Console.WriteLine("Please enter new surname of doctor:");
-                _doctor.Surname = _stringValidator.Validate(Console.ReadLine());
-
-                _stringValidator = new GeneralValidatorPhone();
-                Console.WriteLine("Please enter new phone of doctor:");
-                _doctor.Phone = _stringValidator.Validate(Console.ReadLine());
-
-                _stringValidator = new GeneralValidatorEmail();
-                Console.WriteLine("Please enter new email of doctor:");
-                _doctor.Email = _stringValidator.Validate(Console.ReadLine());
+                ConsWorkWithObjects.UpdateUserById(_doctor);
 
                 IGeneralValidator<DoctorTypes> _enumValidator = new GeneralValidatorEnum<DoctorTypes>();
                 Console.WriteLine("Please enter new type of doctor (available types):");
-                EnumExtention.ShowEnumDescription(DoctorTypes.Paramedic);
+                EnumExtension.ShowEnumDescription(DoctorTypes.Paramedic);
                 _doctor.DoctorType = _enumValidator.Validate(Console.ReadLine());
 
                 IGeneralValidator<decimal> _salaryValidator = new GeneralValidatorSalary();
@@ -50,24 +37,16 @@ namespace ClinicAppointment.Menu.Commands.Cnsl
 
                 IGeneralValidator<byte> _ageValidator = new GeneralValidatorAge();
                 Console.WriteLine("Please enter new experience of doctor:");
-                _doctor.Experiance = _ageValidator.Validate(Console.ReadLine());
+                _doctor.Experience = _ageValidator.Validate(Console.ReadLine());
 
-                _doctor = _doctorService.Update(_userId,_doctor);
+                _doctor = _doctorService.Update(_userId, _doctor);
 
-                if (_doctor != null)
-                {
-                    Console.WriteLine("\nWas updated the next doctor:");
-                    _doctorService.ShowInfo(_doctor);
-                }
-                else
-                {
-                    Console.WriteLine("\nCouldn't update doctor");
-                }
+                ConsWorkWithObjects.ResultObjectInform(_doctor, _doctorService);
             }
             else
             {
                 Console.WriteLine($"\nCouldn't find doctor with id {_userId}");
-            }            
+            }
         }
     }
 }

@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:02:45.4276913Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut">
+    <Member Name="IQ_InternalData" Datatype="&quot;Lib_UDT_Int&quot;">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Internal data</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>Lib_FC_GenMoto_InitInternal</Name>
+      <Number>13</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment UId="21">
+    <Text UId="22">Set internal data</Text>
+  </LineComment>
+  <NewLine UId="23" />
+  <Access Scope="LocalVariable" UId="24">
+    <Symbol UId="25">
+      <Component Name="IQ_InternalData" UId="26" />
+      <Token Text="." UId="27" />
+      <Component Name="AlwTrue" UId="28" />
+    </Symbol>
+  </Access>
+  <Blank UId="29" />
+  <Token Text=":=" UId="30" />
+  <Blank UId="31" />
+  <Access Scope="LiteralConstant" UId="32">
+    <Constant UId="33">
+      <ConstantValue UId="35">true</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="36" />
+  <NewLine UId="37" />
+  <Access Scope="LocalVariable" UId="38">
+    <Symbol UId="39">
+      <Component Name="IQ_InternalData" UId="40" />
+      <Token Text="." UId="41" />
+      <Component Name="AlwFalse" UId="42" />
+    </Symbol>
+  </Access>
+  <Blank UId="43" />
+  <Token Text=":=" UId="44" />
+  <Blank UId="45" />
+  <Access Scope="LiteralConstant" UId="46">
+    <Constant UId="47">
+      <ConstantValue UId="49">false</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="50" />
+  <NewLine UId="51" />
+  <Access Scope="LocalVariable" UId="52">
+    <Symbol UId="53">
+      <Component Name="IQ_InternalData" UId="54" />
+      <Token Text="." UId="55" />
+      <Component Name="i_Alw0" UId="56" />
+    </Symbol>
+  </Access>
+  <Blank UId="57" />
+  <Token Text=":=" UId="58" />
+  <Blank UId="59" />
+  <Access Scope="LiteralConstant" UId="60">
+    <Constant UId="61">
+      <ConstantValue UId="63">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="64" />
+  <NewLine UId="65" />
+  <Access Scope="LocalVariable" UId="66">
+    <Symbol UId="67">
+      <Component Name="IQ_InternalData" UId="68" />
+      <Token Text="." UId="69" />
+      <Component Name="b_Alw0" UId="70" />
+    </Symbol>
+  </Access>
+  <Blank UId="71" />
+  <Token Text=":=" UId="72" />
+  <Blank UId="73" />
+  <Access Scope="TypedConstant" UId="74">
+    <Constant UId="75">
+      <ConstantValue UId="76">b#16#0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="77" />
+  <NewLine UId="78" />
+  <Access Scope="LocalVariable" UId="79">
+    <Symbol UId="80">
+      <Component Name="IQ_InternalData" UId="81" />
+      <Token Text="." UId="82" />
+      <Component Name="w_Alw0" UId="83" />
+    </Symbol>
+  </Access>
+  <Blank UId="84" />
+  <Token Text=":=" UId="85" />
+  <Blank UId="86" />
+  <Access Scope="TypedConstant" UId="87">
+    <Constant UId="88">
+      <ConstantValue UId="89">w#16#0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="90" />
+  <NewLine UId="91" />
+  <Access Scope="LocalVariable" UId="92">
+    <Symbol UId="93">
+      <Component Name="IQ_InternalData" UId="94" />
+      <Token Text="." UId="95" />
+      <Component Name="d_Alw0" UId="96" />
+    </Symbol>
+  </Access>
+  <Blank UId="97" />
+  <Token Text=":=" UId="98" />
+  <Blank UId="99" />
+  <Access Scope="TypedConstant" UId="100">
+    <Constant UId="101">
+      <ConstantValue UId="102">dw#16#0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="103" />
+  <NewLine UId="104" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

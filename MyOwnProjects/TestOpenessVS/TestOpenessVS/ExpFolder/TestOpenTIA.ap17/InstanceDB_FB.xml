@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-06-18T11:46:49.493708Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <InstanceOfName>Lib_FB_Motor_DS_RotSens</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="I_Initialization" Datatype="Bool" />
+    <Member Name="IR_CycleTime" Datatype="Real" />
+    <Member Name="II_Obj_ID" Datatype="Int" />
+    <Member Name="I_CmdGeneralReset" Datatype="Bool" />
+    <Member Name="I_One_1s" Datatype="Bool" />
+    <Member Name="I_EnableHorn" Datatype="Bool" />
+    <Member Name="I_EstopLocal" Datatype="Bool" />
+    <Member Name="I_EstopHMI" Datatype="Bool" />
+    <Member Name="I_SuppyBox_Ok" Datatype="Bool" />
+    <Member Name="I_ELSS_On" Datatype="Bool" />
+    <Member Name="I_MP_Ok" Datatype="Bool" />
+    <Member Name="I_FeedbackForwardOn" Datatype="Bool" />
+    <Member Name="I_FeedbackReverseOn" Datatype="Bool" />
+    <Member Name="I_EnableForward" Datatype="Bool" />
+    <Member Name="I_EnableReverse" Datatype="Bool" />
+    <Member Name="I_Brake_Ok" Datatype="Bool" />
+    <Member Name="I_Brake_CP_Ok" Datatype="Bool" />
+    <Member Name="I_Cooling_FeedbackRun" Datatype="Bool" />
+    <Member Name="I_Cooling_CP_Ok" Datatype="Bool" />
+    <Member Name="I_GenFaultMainDrive" Datatype="Bool" />
+    <Member Name="I_CmdAutoFromInputFB" Datatype="Bool" />
+    <Member Name="I_CmdAutoForward" Datatype="Bool" />
+    <Member Name="I_CmdAutoReverse" Datatype="Bool" />
+    <Member Name="I_ManLocalModeActive" Datatype="Bool" />
+    <Member Name="I_CmdManLocalForward/Open" Datatype="Bool" />
+    <Member Name="I_CmdManLocalReverse/Close" Datatype="Bool" />
+    <Member Name="IB_InterlocksForward_8" Datatype="Byte" />
+    <Member Name="IB_InterlocksReverse_8" Datatype="Byte" />
+    <Member Name="IW_ExternalError_16" Datatype="Word" />
+    <Member Name="I_ExternalWarning" Datatype="Bool" />
+    <Member Name="I_RotationSensor" Datatype="Bool" />
+    <Member Name="II_RotationSensorMode" Datatype="Int" />
+    <Member Name="I_Termistor_Ok" Datatype="Bool" />
+    <Member Name="IR_TimeTripKM" Datatype="Real" />
+    <Member Name="IR_TimeTripCool" Datatype="Real" />
+    <Member Name="IR_TimeTripBrake" Datatype="Real" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="Q_CmdForward" Datatype="Bool" />
+    <Member Name="Q_CmdReverse" Datatype="Bool" />
+    <Member Name="Q_CmdReleaseClutch" Datatype="Bool" />
+    <Member Name="Q_CmdRunCooling" Datatype="Bool" />
+    <Member Name="Q_CmdHorn" Datatype="Bool" />
+    <Member Name="Q_Error" Datatype="Bool" />
+    <Member Name="Q_Warning" Datatype="Bool" />
+    <Member Name="Q_Auto" Datatype="Bool" />
+    <Member Name="Q_ManLocal" Datatype="Bool" />
+    <Member Name="Q_Stoped" Datatype="Bool" />
+    <Member Name="Q_Run" Datatype="Bool" />
+    <Member Name="Q_RunForward" Datatype="Bool" />
+    <Member Name="Q_RunReverse" Datatype="Bool" />
+    <Member Name="Q_DataErr" Datatype="Bool" />
+  </Section>
+  <Section Name="InOut">
+    <Member Name="IQ_PLC_CycleInfo" Datatype="Variant" />
+  </Section>
+  <Section Name="Static">
+    <Member Name="s_RequestForward" Datatype="Bool" />
+    <Member Name="s_RequestReverse" Datatype="Bool" />
+    <Member Name="s_Stopdown" Datatype="Bool" />
+    <Member Name="s_StartCooling" Datatype="Bool" />
+    <Member Name="s_ReleaseBrake" Datatype="Bool" />
+    <Member Name="si_GenCountMotoHours" Datatype="DInt" />
+    <Member Name="si_QuanStartsForward" Datatype="DInt" />
+    <Member Name="si_QuanStartsReverse" Datatype="DInt" />
+    <Member Name="s_EdgeAuto" Datatype="&quot;Lib_FB_Edge&quot;" />
+    <Member Name="s_EdgeSim" Datatype="&quot;Lib_FB_Edge&quot;" />
+    <Member Name="s_EdgeLocal" Datatype="&quot;Lib_FB_Edge&quot;" />
+    <Member Name="EdgeActivForward" Datatype="&quot;Lib_FB_Edge&quot;"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="EdgeActivRevers" Datatype="&quot;Lib_FB_Edge&quot;"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="Simulation" Datatype="Struct" Remanence="Retain"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Member Name="Obj_DATA_BACKUP" Datatype="Struct"><Member Name="Config" Datatype="&quot;_Motor_DS_RotSens_Config&quot;" /><Member Name="Counters" Datatype="&quot;_Motor_DS_RotSens_Counters&quot;" /><Member Name="sud_MotoHours_Electro" Datatype="&quot;_MotoHours_One&quot;" /><Member Name="sud_MotoHours_Mech" Datatype="&quot;_MotoHours_One&quot;" /></Member></Member>
+    <Member Name="s_Moto" Datatype="&quot;Lib_FB_MotSimp&quot;" />
+    <Member Name="s_TON_TripBrake" Datatype="&quot;Lib_FB_Timer_ON_Simple&quot;" />
+    <Member Name="s_TON_TripCool" Datatype="&quot;Lib_FB_Timer_ON_Simple&quot;" />
+    <Member Name="s_TON_Horn" Datatype="&quot;Lib_FB_Timer_ON_Simple&quot;" />
+    <Member Name="s_fb_TurningSensor_Instance" Datatype="&quot;lib_fb_TurningSensor&quot;" />
+  </Section>
+</Sections></Interface>
+      <Name>InstanceDB_FB</Name>
+      <Number>7</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

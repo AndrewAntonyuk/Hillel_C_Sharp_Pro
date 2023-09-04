@@ -1,7 +1,7 @@
 ﻿using ClinicAppointment.Data.Configuration;
 using ClinicAppointment.Data.Interfaces;
 using ClinicAppointment.Domain.Entities;
-using ClinicAppointment.Helper.FileHandlers;
+using ClinicAppointment.Helper.Utils;
 
 namespace ClinicAppointment.Data.Repositories
 {
@@ -25,21 +25,18 @@ namespace ClinicAppointment.Data.Repositories
             Path = result.Database.Appointments.Path + "." + FileType;
             LastId = result.Database.Appointments.LastId;
 
-            if (FileType.ToLower().Equals("xml"))
-                _fileHandler = new FileHandlerXml<Appointment>();
-            else
-                _fileHandler = new FileHandlerJson<Appointment>();
+            _fileHandler = FileUtils.GetFileHandler<Appointment>(result);
         }
 
         public override void ShowInfo(Appointment appointment)
         {
-            if(appointment != null)
+            if (appointment != null)
             {
                 Console.WriteLine("Id appointment: " + appointment.Id + "; description: " + appointment.Description);
                 Console.WriteLine("Doctor data: ");
-                ((DoctorRepository)_doctorRepository).ShowInfo(appointment.Doctor);
+                _doctorRepository.ShowInfo(appointment.Doctor);
                 Console.WriteLine("Patient data: ");
-                ((PatientRepository)_patientRepository).ShowInfo(appointment.Patient);
+                _patientRepository.ShowInfo(appointment.Patient);
                 Console.WriteLine("From: " + appointment.DateTimeFrom.ToString() + " to: " + appointment.DateTimeTo.ToString());
             }
             else
@@ -56,14 +53,35 @@ namespace ClinicAppointment.Data.Repositories
             File.WriteAllText(Constants.AppSettingsPath, result.ToString());
         }
 
-        public Appointment GetAllByDoctor(Doctor doctor)
+        protected override void CheckExist(IEnumerable<Appointment> arr, Appointment obj)
         {
-            throw new NotImplementedException();
+            bool condition = obj != null
+                             && arr.Any(app => app.DateTimeFrom.Equals(obj.DateTimeFrom)
+                                        && app.DateTimeTo.Equals(obj.DateTimeTo)
+                                        && (app.Doctor?.Id == obj.Doctor?.Id)
+                                        && (app.Patient?.Id == obj.Patient?.Id));
+
+            if (condition)
+            {
+                throw new ArgumentException($"Appointment: from {obj?.DateTimeFrom} to" +
+                    $" {obj?.DateTimeTo} for doctor with id {obj?.Doctor?.Id} and patient with id {obj?.Patient?.Id} already exist!");
+            }
         }
 
-        public Appointment GetAllByPatient(Patient patient)
+        public IEnumerable<Appointment> GetAllByDoctor(Doctor doctor)
         {
-            throw new NotImplementedException();
+            var allAppointments = GetAll();
+
+            var allByDoctor = from app in allAppointments
+                              where app.Doctor?.Id == doctor?.Id
+                              select app;
+
+            return allByDoctor;
+        }
+
+        public IEnumerable<Appointment> GetAllByPatient(Patient patient)
+        {
+            return GetAll().Where(a => a.Patient?.Id == patient?.Id);
         }
     }
 }

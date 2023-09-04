@@ -9,23 +9,8 @@ namespace ClinicAppointment.Menu.Commands.Cnsl
     {
         public void Execute()
         {
-            IPatientService _patientService = new PatientService();
-
             Console.WriteLine("Information about all patients:");
-
-            IEnumerable<Patient> _patients = _patientService.GetAll();
-
-            if (_patients.Count() > 0)
-            {
-                foreach (Patient patient in _patients)
-                {
-                    _patientService.ShowInfo(patient);
-                }
-            }
-            else
-            {
-                Console.WriteLine($"\nThere aren't any patients");
-            }
+            ConsWorkWithObjects.ShowAllObjects<IPatientService, Patient>(new PatientService());
         }
     }
 }

@@ -1,0 +1,28 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    //Параметри давача: {sDescribe1}
+	//Одиниці вимірювання: {sDescribe2}
+	//Додаткова інформація: {sDescribe3}
+    
+    REGION Блок керування		
+		"D_{sTechNumPrg}_Ctrl"(I_Initialization:="D_General_ProgramDATA".RestartPLC,
+					   I_SuppyBox_Ok:=t_SuppBox_Ok,
+					   IR_Raw:="D_InOut"."{sTechNumPrg}".II_RawValue,
+					   IR_High:=27648.0,
+					   IR_Low:=0.0,
+					   IR_Gain:=1.0,
+					   II_Mode:=0,
+					   I_GlobalRST:="D_General_ProgramDATA".ResetGeneralPLC,
+					   IR_CycleTime:="D_PLC".TIME_TCK.cyclic_sec_R,
+					   II_Obj_ID:=34,
+					   QR_ScalledVal=>"D_{sTechNumPrg}_Ctrl".QR_ScalledVal,
+					   Q_HH=>"D_{sTechNumPrg}_Ctrl".Q_HH,
+					   Q_H=>"D_{sTechNumPrg}_Ctrl".Q_H,
+					   Q_L=>"D_{sTechNumPrg}_Ctrl".Q_L,
+					   Q_LL=>"D_{sTechNumPrg}_Ctrl".Q_LL,
+					   Q_Overshoot=>"D_{sTechNumPrg}_Ctrl".Q_Overshoot,
+					   Q_BadSensor=>"D_{sTechNumPrg}_Ctrl".Q_BadSensor,
+					   Q_DBReadErr=>"D_{sTechNumPrg}_Ctrl".Q_DBReadErr,
+					   IQ_PLC_CycleInfo:="PLC_CycleInfo_DATA".Grp_Obj[1,1]);
+    END_REGION    
+END_REGION

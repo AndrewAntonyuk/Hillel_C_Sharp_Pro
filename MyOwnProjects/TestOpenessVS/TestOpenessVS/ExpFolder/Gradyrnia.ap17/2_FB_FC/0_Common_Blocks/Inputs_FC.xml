@@ -1,0 +1,3413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:02:46.9320724Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>Inputs_FC</Name>
+      <Number>7</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="REGION" UId="21" />
+  <Blank UId="22" />
+  <Text UId="23">(ID = 1) Витратомір пари на нову рафінацію Steam Flowmeter New</Text>
+  <NewLine UId="24" />
+  <Blank Num="4" UId="25" />
+  <LineComment UId="26">
+    <Text UId="27">Тип елемента: Аналоговий витратомір</Text>
+  </LineComment>
+  <NewLine UId="28" />
+  <Blank Num="4" UId="29" />
+  <LineComment UId="30">
+    <Text UId="31">Параметри давача: Scale=; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="32" />
+  <Blank Num="4" UId="33" />
+  <LineComment UId="34">
+    <Text UId="35">Одиниці вимірювання: m3/h</Text>
+  </LineComment>
+  <NewLine UId="36" />
+  <Blank Num="4" UId="37" />
+  <LineComment UId="38">
+    <Text UId="39">Додаткова інформація: SITRANS FX330 / 7ME2610-3LD00-0AA0-Z</Text>
+  </LineComment>
+  <NewLine UId="40" />
+  <Blank Num="4" UId="41" />
+  <NewLine UId="42" />
+  <Blank Num="4" UId="43" />
+  <Token Text="IF" UId="44" />
+  <Blank UId="45" />
+  <Access Scope="GlobalVariable" UId="46">
+    <Symbol UId="47">
+      <Component Name="II_SteamFlowmeterNew_FT1" UId="48" />
+    </Symbol>
+  </Access>
+  <Blank UId="49" />
+  <Token Text="&gt;=" UId="50" />
+  <Blank UId="51" />
+  <Access Scope="LiteralConstant" UId="52">
+    <Constant UId="53">
+      <ConstantValue UId="55">60</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="56" />
+  <Blank Num="4" UId="57" />
+  <Token Text="THEN" UId="58" />
+  <NewLine UId="59" />
+  <Blank Num="8" UId="60" />
+  <Access Scope="GlobalVariable" UId="61">
+    <Symbol UId="62">
+      <Component Name="D_InOut" UId="63" />
+      <Token Text="." UId="64" />
+      <Component Name="SteamFlowmeterNew_FT1" UId="65">
+        <BooleanAttribute Name="HasQuotes" UId="66">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="67" />
+      <Component Name="II_AnalogValue" UId="68" />
+    </Symbol>
+  </Access>
+  <Blank UId="69" />
+  <Token Text=":=" UId="70" />
+  <Blank UId="71" />
+  <Access Scope="GlobalVariable" UId="72">
+    <Symbol UId="73">
+      <Component Name="II_SteamFlowmeterNew_FT1" UId="74" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="75" />
+  <NewLine UId="76" />
+  <Blank Num="4" UId="77" />
+  <Token Text="ELSE" UId="78" />
+  <NewLine UId="79" />
+  <Blank Num="8" UId="80" />
+  <Access Scope="GlobalVariable" UId="81">
+    <Symbol UId="82">
+      <Component Name="D_InOut" UId="83" />
+      <Token Text="." UId="84" />
+      <Component Name="SteamFlowmeterNew_FT1" UId="85">
+        <BooleanAttribute Name="HasQuotes" UId="86">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="87" />
+      <Component Name="II_AnalogValue" UId="88" />
+    </Symbol>
+  </Access>
+  <Blank UId="89" />
+  <Token Text=":=" UId="90" />
+  <Blank UId="91" />
+  <Access Scope="LiteralConstant" UId="92">
+    <Constant UId="93">
+      <ConstantValue UId="95">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="96" />
+  <NewLine UId="97" />
+  <Blank Num="4" UId="98" />
+  <Token Text="END_IF" UId="99" />
+  <Token Text=";" UId="100" />
+  <NewLine UId="101" />
+  <Token Text="END_REGION" UId="102" />
+  <NewLine Num="2" UId="103" />
+  <Token Text="REGION" UId="104" />
+  <Blank UId="105" />
+  <Text UId="106">(ID = 2) Витратомір пари на стару рафінацію Steam Flowmeter Old</Text>
+  <NewLine UId="107" />
+  <Blank Num="4" UId="108" />
+  <LineComment UId="109">
+    <Text UId="110">Тип елемента: Аналоговий витратомір</Text>
+  </LineComment>
+  <NewLine UId="111" />
+  <Blank Num="4" UId="112" />
+  <LineComment UId="113">
+    <Text UId="114">Параметри давача: Scale=; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="115" />
+  <Blank Num="4" UId="116" />
+  <LineComment UId="117">
+    <Text UId="118">Одиниці вимірювання: m3/h</Text>
+  </LineComment>
+  <NewLine UId="119" />
+  <Blank Num="4" UId="120" />
+  <LineComment UId="121">
+    <Text UId="122">Додаткова інформація: SITRANS FX330 / 7ME2610-3LD00-0AA0-Z</Text>
+  </LineComment>
+  <NewLine UId="123" />
+  <Blank Num="4" UId="124" />
+  <NewLine UId="125" />
+  <Blank Num="4" UId="126" />
+  <Token Text="IF" UId="127" />
+  <Blank UId="128" />
+  <Access Scope="GlobalVariable" UId="129">
+    <Symbol UId="130">
+      <Component Name="II_SteamFlowmeterOld_FT1" UId="131" />
+    </Symbol>
+  </Access>
+  <Blank UId="132" />
+  <Token Text="&gt;=" UId="133" />
+  <Blank UId="134" />
+  <Access Scope="LiteralConstant" UId="135">
+    <Constant UId="136">
+      <ConstantValue UId="138">60</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="139" />
+  <Blank Num="4" UId="140" />
+  <Token Text="THEN" UId="141" />
+  <NewLine UId="142" />
+  <Blank Num="8" UId="143" />
+  <Access Scope="GlobalVariable" UId="144">
+    <Symbol UId="145">
+      <Component Name="D_InOut" UId="146" />
+      <Token Text="." UId="147" />
+      <Component Name="SteamFlowmeterOld_FT1" UId="148">
+        <BooleanAttribute Name="HasQuotes" UId="149">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="150" />
+      <Component Name="II_AnalogValue" UId="151" />
+    </Symbol>
+  </Access>
+  <Blank UId="152" />
+  <Token Text=":=" UId="153" />
+  <Blank UId="154" />
+  <Access Scope="GlobalVariable" UId="155">
+    <Symbol UId="156">
+      <Component Name="II_SteamFlowmeterOld_FT1" UId="157" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="158" />
+  <NewLine UId="159" />
+  <Blank Num="4" UId="160" />
+  <Token Text="ELSE" UId="161" />
+  <NewLine UId="162" />
+  <Blank Num="8" UId="163" />
+  <Access Scope="GlobalVariable" UId="164">
+    <Symbol UId="165">
+      <Component Name="D_InOut" UId="166" />
+      <Token Text="." UId="167" />
+      <Component Name="SteamFlowmeterOld_FT1" UId="168">
+        <BooleanAttribute Name="HasQuotes" UId="169">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="170" />
+      <Component Name="II_AnalogValue" UId="171" />
+    </Symbol>
+  </Access>
+  <Blank UId="172" />
+  <Token Text=":=" UId="173" />
+  <Blank UId="174" />
+  <Access Scope="LiteralConstant" UId="175">
+    <Constant UId="176">
+      <ConstantValue UId="178">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="179" />
+  <NewLine UId="180" />
+  <Blank Num="4" UId="181" />
+  <Token Text="END_IF" UId="182" />
+  <Token Text=";" UId="183" />
+  <NewLine UId="184" />
+  <Token Text="END_REGION" UId="185" />
+  <NewLine Num="2" UId="186" />
+  <Token Text="REGION" UId="187" />
+  <Blank UId="188" />
+  <Text UId="189">(ID = 3) Перетворювач тиску обор.води PTНГр</Text>
+  <NewLine UId="190" />
+  <Blank Num="4" UId="191" />
+  <LineComment UId="192">
+    <Text UId="193">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="194" />
+  <Blank Num="4" UId="195" />
+  <LineComment UId="196">
+    <Text UId="197">Параметри давача: Scale=0-10bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="198" />
+  <Blank Num="4" UId="199" />
+  <LineComment UId="200">
+    <Text UId="201">Одиниці вимірювання: bar</Text>
+  </LineComment>
+  <NewLine UId="202" />
+  <Blank Num="4" UId="203" />
+  <LineComment UId="204">
+    <Text UId="205">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="206" />
+  <Blank Num="4" UId="207" />
+  <NewLine UId="208" />
+  <Blank Num="4" UId="209" />
+  <Access Scope="GlobalVariable" UId="210">
+    <Symbol UId="211">
+      <Component Name="D_InOut" UId="212" />
+      <Token Text="." UId="213" />
+      <Component Name="PTNGr_PT1" UId="214">
+        <BooleanAttribute Name="HasQuotes" UId="215">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="216" />
+      <Component Name="II_AnalogValue" UId="217" />
+    </Symbol>
+  </Access>
+  <Blank UId="218" />
+  <Token Text=":=" UId="219" />
+  <Blank UId="220" />
+  <Access Scope="GlobalVariable" UId="221">
+    <Symbol UId="222">
+      <Component Name="II_PTNGr_PT1" UId="223" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="224" />
+  <NewLine UId="225" />
+  <Token Text="END_REGION" UId="226" />
+  <NewLine Num="2" UId="227" />
+  <Token Text="REGION" UId="228" />
+  <Blank UId="229" />
+  <Text UId="230">(ID = 4) Перетворювач температури вих.води ХМ1 ТТW1011</Text>
+  <NewLine UId="231" />
+  <Blank Num="4" UId="232" />
+  <LineComment UId="233">
+    <Text UId="234">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="235" />
+  <Blank Num="4" UId="236" />
+  <LineComment UId="237">
+    <Text UId="238">Параметри давача: Scale=0-150C; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="239" />
+  <Blank Num="4" UId="240" />
+  <LineComment UId="241">
+    <Text UId="242">Одиниці вимірювання: C</Text>
+  </LineComment>
+  <NewLine UId="243" />
+  <Blank Num="4" UId="244" />
+  <LineComment UId="245">
+    <Text UId="246">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="247" />
+  <Blank Num="4" UId="248" />
+  <NewLine UId="249" />
+  <Blank Num="4" UId="250" />
+  <Access Scope="GlobalVariable" UId="251">
+    <Symbol UId="252">
+      <Component Name="D_InOut" UId="253" />
+      <Token Text="." UId="254" />
+      <Component Name="TTW1011_TT1" UId="255">
+        <BooleanAttribute Name="HasQuotes" UId="256">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="257" />
+      <Component Name="II_AnalogValue" UId="258" />
+    </Symbol>
+  </Access>
+  <Blank UId="259" />
+  <Token Text=":=" UId="260" />
+  <Blank UId="261" />
+  <Access Scope="GlobalVariable" UId="262">
+    <Symbol UId="263">
+      <Component Name="II_TTW1011_TT1" UId="264" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="265" />
+  <NewLine UId="266" />
+  <Token Text="END_REGION" UId="267" />
+  <NewLine Num="2" UId="268" />
+  <Token Text="REGION" UId="269" />
+  <Blank UId="270" />
+  <Text UId="271">(ID = 5) Перетворювач температури вих.води ХМ2 TT811</Text>
+  <NewLine UId="272" />
+  <Blank Num="4" UId="273" />
+  <LineComment UId="274">
+    <Text UId="275">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="276" />
+  <Blank Num="4" UId="277" />
+  <LineComment UId="278">
+    <Text UId="279">Параметри давача: Scale=0-150C; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="280" />
+  <Blank Num="4" UId="281" />
+  <LineComment UId="282">
+    <Text UId="283">Одиниці вимірювання: C</Text>
+  </LineComment>
+  <NewLine UId="284" />
+  <Blank Num="4" UId="285" />
+  <LineComment UId="286">
+    <Text UId="287">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="288" />
+  <Blank Num="4" UId="289" />
+  <NewLine UId="290" />
+  <Blank Num="4" UId="291" />
+  <Access Scope="GlobalVariable" UId="292">
+    <Symbol UId="293">
+      <Component Name="D_InOut" UId="294" />
+      <Token Text="." UId="295" />
+      <Component Name="TT811_TT1" UId="296">
+        <BooleanAttribute Name="HasQuotes" UId="297">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="298" />
+      <Component Name="II_AnalogValue" UId="299" />
+    </Symbol>
+  </Access>
+  <Blank UId="300" />
+  <Token Text=":=" UId="301" />
+  <Blank UId="302" />
+  <Access Scope="GlobalVariable" UId="303">
+    <Symbol UId="304">
+      <Component Name="II_TT811_TT1" UId="305" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="306" />
+  <NewLine UId="307" />
+  <Token Text="END_REGION" UId="308" />
+  <NewLine Num="2" UId="309" />
+  <Token Text="REGION" UId="310" />
+  <Blank UId="311" />
+  <Text UId="312">(ID = 6) Перетворювач тиску (рівень басейну градирні 1) LTБ1Гр</Text>
+  <NewLine UId="313" />
+  <Blank Num="4" UId="314" />
+  <LineComment UId="315">
+    <Text UId="316">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="317" />
+  <Blank Num="4" UId="318" />
+  <LineComment UId="319">
+    <Text UId="320">Параметри давача: Scale=0-0.25bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="321" />
+  <Blank Num="4" UId="322" />
+  <LineComment UId="323">
+    <Text UId="324">Одиниці вимірювання: м</Text>
+  </LineComment>
+  <NewLine UId="325" />
+  <Blank Num="4" UId="326" />
+  <LineComment UId="327">
+    <Text UId="328">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="329" />
+  <Blank Num="4" UId="330" />
+  <NewLine UId="331" />
+  <Blank Num="4" UId="332" />
+  <Access Scope="GlobalVariable" UId="333">
+    <Symbol UId="334">
+      <Component Name="D_InOut" UId="335" />
+      <Token Text="." UId="336" />
+      <Component Name="LTB1Gr_LT1" UId="337">
+        <BooleanAttribute Name="HasQuotes" UId="338">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="339" />
+      <Component Name="II_AnalogValue" UId="340" />
+    </Symbol>
+  </Access>
+  <Blank UId="341" />
+  <Token Text=":=" UId="342" />
+  <Blank UId="343" />
+  <Access Scope="GlobalVariable" UId="344">
+    <Symbol UId="345">
+      <Component Name="II_LTB1Gr_LT1" UId="346" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="347" />
+  <NewLine UId="348" />
+  <Token Text="END_REGION" UId="349" />
+  <NewLine Num="2" UId="350" />
+  <Token Text="REGION" UId="351" />
+  <Blank UId="352" />
+  <Text UId="353">(ID = 7) Перетворювач тиску (рівень басейну градирні 2) LTБ2Гр</Text>
+  <NewLine UId="354" />
+  <Blank Num="4" UId="355" />
+  <LineComment UId="356">
+    <Text UId="357">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="358" />
+  <Blank Num="4" UId="359" />
+  <LineComment UId="360">
+    <Text UId="361">Параметри давача: Scale=0-0.25bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="362" />
+  <Blank Num="4" UId="363" />
+  <LineComment UId="364">
+    <Text UId="365">Одиниці вимірювання: м</Text>
+  </LineComment>
+  <NewLine UId="366" />
+  <Blank Num="4" UId="367" />
+  <LineComment UId="368">
+    <Text UId="369">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="370" />
+  <Blank Num="4" UId="371" />
+  <NewLine UId="372" />
+  <Blank Num="4" UId="373" />
+  <Access Scope="GlobalVariable" UId="374">
+    <Symbol UId="375">
+      <Component Name="D_InOut" UId="376" />
+      <Token Text="." UId="377" />
+      <Component Name="LTB2Gr_LT1" UId="378">
+        <BooleanAttribute Name="HasQuotes" UId="379">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="380" />
+      <Component Name="II_AnalogValue" UId="381" />
+    </Symbol>
+  </Access>
+  <Blank UId="382" />
+  <Token Text=":=" UId="383" />
+  <Blank UId="384" />
+  <Access Scope="GlobalVariable" UId="385">
+    <Symbol UId="386">
+      <Component Name="II_LTB2Gr_LT1" UId="387" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="388" />
+  <NewLine UId="389" />
+  <Token Text="END_REGION" UId="390" />
+  <NewLine Num="2" UId="391" />
+  <Token Text="REGION" UId="392" />
+  <Blank UId="393" />
+  <Text UId="394">(ID = 8) Аналоговий сигнал від AirForce 1 G1</Text>
+  <NewLine UId="395" />
+  <Blank Num="4" UId="396" />
+  <LineComment UId="397">
+    <Text UId="398">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="399" />
+  <Blank Num="4" UId="400" />
+  <LineComment UId="401">
+    <Text UId="402">Параметри давача: Scale= ; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="403" />
+  <Blank Num="4" UId="404" />
+  <LineComment UId="405">
+    <Text UId="406">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="407" />
+  <Blank Num="4" UId="408" />
+  <LineComment UId="409">
+    <Text UId="410">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="411" />
+  <Blank Num="4" UId="412" />
+  <NewLine UId="413" />
+  <Blank Num="4" UId="414" />
+  <Access Scope="GlobalVariable" UId="415">
+    <Symbol UId="416">
+      <Component Name="D_InOut" UId="417" />
+      <Token Text="." UId="418" />
+      <Component Name="G1_AI1" UId="419">
+        <BooleanAttribute Name="HasQuotes" UId="420">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="421" />
+      <Component Name="II_AnalogValue" UId="422" />
+    </Symbol>
+  </Access>
+  <Blank UId="423" />
+  <Token Text=":=" UId="424" />
+  <Blank UId="425" />
+  <Access Scope="GlobalVariable" UId="426">
+    <Symbol UId="427">
+      <Component Name="II_G1_AI1" UId="428" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="429" />
+  <NewLine UId="430" />
+  <Token Text="END_REGION" UId="431" />
+  <NewLine Num="2" UId="432" />
+  <Token Text="REGION" UId="433" />
+  <Blank UId="434" />
+  <Text UId="435">(ID = 9) Аналоговий сигнал від AirForce 2 G1</Text>
+  <NewLine UId="436" />
+  <Blank Num="4" UId="437" />
+  <LineComment UId="438">
+    <Text UId="439">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="440" />
+  <Blank Num="4" UId="441" />
+  <LineComment UId="442">
+    <Text UId="443">Параметри давача: Scale= ; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="444" />
+  <Blank Num="4" UId="445" />
+  <LineComment UId="446">
+    <Text UId="447">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="448" />
+  <Blank Num="4" UId="449" />
+  <LineComment UId="450">
+    <Text UId="451">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="452" />
+  <Blank Num="4" UId="453" />
+  <NewLine UId="454" />
+  <Blank Num="4" UId="455" />
+  <Access Scope="GlobalVariable" UId="456">
+    <Symbol UId="457">
+      <Component Name="D_InOut" UId="458" />
+      <Token Text="." UId="459" />
+      <Component Name="G1_AI2" UId="460">
+        <BooleanAttribute Name="HasQuotes" UId="461">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="462" />
+      <Component Name="II_AnalogValue" UId="463" />
+    </Symbol>
+  </Access>
+  <Blank UId="464" />
+  <Token Text=":=" UId="465" />
+  <Blank UId="466" />
+  <Access Scope="GlobalVariable" UId="467">
+    <Symbol UId="468">
+      <Component Name="II_G1_AI2" UId="469" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="470" />
+  <NewLine UId="471" />
+  <Token Text="END_REGION" UId="472" />
+  <NewLine Num="2" UId="473" />
+  <Token Text="REGION" UId="474" />
+  <Blank UId="475" />
+  <Text UId="476">(ID = 10) Аналоговий сигнал від AirForce 3 G1</Text>
+  <NewLine UId="477" />
+  <Blank Num="4" UId="478" />
+  <LineComment UId="479">
+    <Text UId="480">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="481" />
+  <Blank Num="4" UId="482" />
+  <LineComment UId="483">
+    <Text UId="484">Параметри давача: Scale= ; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="485" />
+  <Blank Num="4" UId="486" />
+  <LineComment UId="487">
+    <Text UId="488">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="489" />
+  <Blank Num="4" UId="490" />
+  <LineComment UId="491">
+    <Text UId="492">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="493" />
+  <Blank Num="4" UId="494" />
+  <NewLine UId="495" />
+  <Blank Num="4" UId="496" />
+  <Access Scope="GlobalVariable" UId="497">
+    <Symbol UId="498">
+      <Component Name="D_InOut" UId="499" />
+      <Token Text="." UId="500" />
+      <Component Name="G1_AI3" UId="501">
+        <BooleanAttribute Name="HasQuotes" UId="502">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="503" />
+      <Component Name="II_AnalogValue" UId="504" />
+    </Symbol>
+  </Access>
+  <Blank UId="505" />
+  <Token Text=":=" UId="506" />
+  <Blank UId="507" />
+  <Access Scope="GlobalVariable" UId="508">
+    <Symbol UId="509">
+      <Component Name="II_G1_AI3" UId="510" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="511" />
+  <NewLine UId="512" />
+  <Token Text="END_REGION" UId="513" />
+  <NewLine Num="2" UId="514" />
+  <Token Text="REGION" UId="515" />
+  <Blank UId="516" />
+  <Text UId="517">(ID = 11) Аналоговий сигнал від AirForce 4 G1</Text>
+  <NewLine UId="518" />
+  <Blank Num="4" UId="519" />
+  <LineComment UId="520">
+    <Text UId="521">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="522" />
+  <Blank Num="4" UId="523" />
+  <LineComment UId="524">
+    <Text UId="525">Параметри давача: Scale= ; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="526" />
+  <Blank Num="4" UId="527" />
+  <LineComment UId="528">
+    <Text UId="529">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="530" />
+  <Blank Num="4" UId="531" />
+  <LineComment UId="532">
+    <Text UId="533">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="534" />
+  <Blank Num="4" UId="535" />
+  <NewLine UId="536" />
+  <Blank Num="4" UId="537" />
+  <Access Scope="GlobalVariable" UId="538">
+    <Symbol UId="539">
+      <Component Name="D_InOut" UId="540" />
+      <Token Text="." UId="541" />
+      <Component Name="G1_AI4" UId="542">
+        <BooleanAttribute Name="HasQuotes" UId="543">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="544" />
+      <Component Name="II_AnalogValue" UId="545" />
+    </Symbol>
+  </Access>
+  <Blank UId="546" />
+  <Token Text=":=" UId="547" />
+  <Blank UId="548" />
+  <Access Scope="GlobalVariable" UId="549">
+    <Symbol UId="550">
+      <Component Name="II_G1_AI4" UId="551" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="552" />
+  <NewLine UId="553" />
+  <Token Text="END_REGION" UId="554" />
+  <NewLine Num="2" UId="555" />
+  <Token Text="REGION" UId="556" />
+  <Blank UId="557" />
+  <Text UId="558">(ID = 12) Аналоговий сигнал від AirForce 5 G1</Text>
+  <NewLine UId="559" />
+  <Blank Num="4" UId="560" />
+  <LineComment UId="561">
+    <Text UId="562">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="563" />
+  <Blank Num="4" UId="564" />
+  <LineComment UId="565">
+    <Text UId="566">Параметри давача: Scale= ; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="567" />
+  <Blank Num="4" UId="568" />
+  <LineComment UId="569">
+    <Text UId="570">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="571" />
+  <Blank Num="4" UId="572" />
+  <LineComment UId="573">
+    <Text UId="574">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="575" />
+  <Blank Num="4" UId="576" />
+  <NewLine UId="577" />
+  <Blank Num="4" UId="578" />
+  <Access Scope="GlobalVariable" UId="579">
+    <Symbol UId="580">
+      <Component Name="D_InOut" UId="581" />
+      <Token Text="." UId="582" />
+      <Component Name="G1_AI5" UId="583">
+        <BooleanAttribute Name="HasQuotes" UId="584">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="585" />
+      <Component Name="II_AnalogValue" UId="586" />
+    </Symbol>
+  </Access>
+  <Blank UId="587" />
+  <Token Text=":=" UId="588" />
+  <Blank UId="589" />
+  <Access Scope="GlobalVariable" UId="590">
+    <Symbol UId="591">
+      <Component Name="II_G1_AI5" UId="592" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="593" />
+  <NewLine UId="594" />
+  <Token Text="END_REGION" UId="595" />
+  <NewLine Num="2" UId="596" />
+  <Token Text="REGION" UId="597" />
+  <Blank UId="598" />
+  <Text UId="599">(ID = 13) Аналоговий сигнал від AirForce 6 G1</Text>
+  <NewLine UId="600" />
+  <Blank Num="4" UId="601" />
+  <LineComment UId="602">
+    <Text UId="603">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="604" />
+  <Blank Num="4" UId="605" />
+  <LineComment UId="606">
+    <Text UId="607">Параметри давача: Scale= ; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="608" />
+  <Blank Num="4" UId="609" />
+  <LineComment UId="610">
+    <Text UId="611">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="612" />
+  <Blank Num="4" UId="613" />
+  <LineComment UId="614">
+    <Text UId="615">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="616" />
+  <Blank Num="4" UId="617" />
+  <NewLine UId="618" />
+  <Blank Num="4" UId="619" />
+  <Access Scope="GlobalVariable" UId="620">
+    <Symbol UId="621">
+      <Component Name="D_InOut" UId="622" />
+      <Token Text="." UId="623" />
+      <Component Name="G1_AI6" UId="624">
+        <BooleanAttribute Name="HasQuotes" UId="625">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="626" />
+      <Component Name="II_AnalogValue" UId="627" />
+    </Symbol>
+  </Access>
+  <Blank UId="628" />
+  <Token Text=":=" UId="629" />
+  <Blank UId="630" />
+  <Access Scope="GlobalVariable" UId="631">
+    <Symbol UId="632">
+      <Component Name="II_G1_AI6" UId="633" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="634" />
+  <NewLine UId="635" />
+  <Token Text="END_REGION" UId="636" />
+  <NewLine Num="2" UId="637" />
+  <Token Text="REGION" UId="638" />
+  <Blank UId="639" />
+  <Text UId="640">(ID = 14) Перетворювач тиску (рівень ємності конденсату) LT R46</Text>
+  <NewLine UId="641" />
+  <Blank Num="4" UId="642" />
+  <LineComment UId="643">
+    <Text UId="644">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="645" />
+  <Blank Num="4" UId="646" />
+  <LineComment UId="647">
+    <Text UId="648">Параметри давача: Scale=0-0.4bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="649" />
+  <Blank Num="4" UId="650" />
+  <LineComment UId="651">
+    <Text UId="652">Одиниці вимірювання: м</Text>
+  </LineComment>
+  <NewLine UId="653" />
+  <Blank Num="4" UId="654" />
+  <LineComment UId="655">
+    <Text UId="656">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="657" />
+  <Blank Num="4" UId="658" />
+  <NewLine UId="659" />
+  <Blank Num="4" UId="660" />
+  <Access Scope="GlobalVariable" UId="661">
+    <Symbol UId="662">
+      <Component Name="D_InOut" UId="663" />
+      <Token Text="." UId="664" />
+      <Component Name="LTR46_LT1" UId="665">
+        <BooleanAttribute Name="HasQuotes" UId="666">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="667" />
+      <Component Name="II_AnalogValue" UId="668" />
+    </Symbol>
+  </Access>
+  <Blank UId="669" />
+  <Token Text=":=" UId="670" />
+  <Blank UId="671" />
+  <Access Scope="GlobalVariable" UId="672">
+    <Symbol UId="673">
+      <Component Name="II_LTR46_LT1" UId="674" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="675" />
+  <NewLine UId="676" />
+  <Token Text="END_REGION" UId="677" />
+  <NewLine Num="2" UId="678" />
+  <Token Text="REGION" UId="679" />
+  <Blank UId="680" />
+  <Text UId="681">(ID = 15) Температура конденсату TT R46</Text>
+  <NewLine UId="682" />
+  <Blank Num="4" UId="683" />
+  <LineComment UId="684">
+    <Text UId="685">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="686" />
+  <Blank Num="4" UId="687" />
+  <LineComment UId="688">
+    <Text UId="689">Параметри давача: Scale=0-150C; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="690" />
+  <Blank Num="4" UId="691" />
+  <LineComment UId="692">
+    <Text UId="693">Одиниці вимірювання: C</Text>
+  </LineComment>
+  <NewLine UId="694" />
+  <Blank Num="4" UId="695" />
+  <LineComment UId="696">
+    <Text UId="697">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="698" />
+  <Blank Num="4" UId="699" />
+  <NewLine UId="700" />
+  <Blank Num="4" UId="701" />
+  <Access Scope="GlobalVariable" UId="702">
+    <Symbol UId="703">
+      <Component Name="D_InOut" UId="704" />
+      <Token Text="." UId="705" />
+      <Component Name="TTR46_TT1" UId="706">
+        <BooleanAttribute Name="HasQuotes" UId="707">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="708" />
+      <Component Name="II_AnalogValue" UId="709" />
+    </Symbol>
+  </Access>
+  <Blank UId="710" />
+  <Token Text=":=" UId="711" />
+  <Blank UId="712" />
+  <Access Scope="GlobalVariable" UId="713">
+    <Symbol UId="714">
+      <Component Name="II_TTR46_TT1" UId="715" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="716" />
+  <NewLine UId="717" />
+  <Token Text="END_REGION" UId="718" />
+  <NewLine Num="2" UId="719" />
+  <Token Text="REGION" UId="720" />
+  <Blank UId="721" />
+  <Text UId="722">(ID = 16) Тиск повітря 1 PT AirLow</Text>
+  <NewLine UId="723" />
+  <Blank Num="4" UId="724" />
+  <LineComment UId="725">
+    <Text UId="726">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="727" />
+  <Blank Num="4" UId="728" />
+  <LineComment UId="729">
+    <Text UId="730">Параметри давача: Scale=0-10bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="731" />
+  <Blank Num="4" UId="732" />
+  <LineComment UId="733">
+    <Text UId="734">Одиниці вимірювання: bar</Text>
+  </LineComment>
+  <NewLine UId="735" />
+  <Blank Num="4" UId="736" />
+  <LineComment UId="737">
+    <Text UId="738">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="739" />
+  <Blank Num="4" UId="740" />
+  <NewLine UId="741" />
+  <Blank Num="4" UId="742" />
+  <Access Scope="GlobalVariable" UId="743">
+    <Symbol UId="744">
+      <Component Name="D_InOut" UId="745" />
+      <Token Text="." UId="746" />
+      <Component Name="PT_AirLow_PT1" UId="747">
+        <BooleanAttribute Name="HasQuotes" UId="748">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="749" />
+      <Component Name="II_AnalogValue" UId="750" />
+    </Symbol>
+  </Access>
+  <Blank UId="751" />
+  <Token Text=":=" UId="752" />
+  <Blank UId="753" />
+  <Access Scope="GlobalVariable" UId="754">
+    <Symbol UId="755">
+      <Component Name="II_PT_AirLow_PT1" UId="756" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="757" />
+  <NewLine UId="758" />
+  <Token Text="END_REGION" UId="759" />
+  <NewLine Num="2" UId="760" />
+  <Token Text="REGION" UId="761" />
+  <Blank UId="762" />
+  <Text UId="763">(ID = 17) Тиск повітря 2 PT AirHigh</Text>
+  <NewLine UId="764" />
+  <Blank Num="4" UId="765" />
+  <LineComment UId="766">
+    <Text UId="767">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="768" />
+  <Blank Num="4" UId="769" />
+  <LineComment UId="770">
+    <Text UId="771">Параметри давача: Scale=0-10bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="772" />
+  <Blank Num="4" UId="773" />
+  <LineComment UId="774">
+    <Text UId="775">Одиниці вимірювання: bar</Text>
+  </LineComment>
+  <NewLine UId="776" />
+  <Blank Num="4" UId="777" />
+  <LineComment UId="778">
+    <Text UId="779">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="780" />
+  <Blank Num="4" UId="781" />
+  <NewLine UId="782" />
+  <Blank Num="4" UId="783" />
+  <Access Scope="GlobalVariable" UId="784">
+    <Symbol UId="785">
+      <Component Name="D_InOut" UId="786" />
+      <Token Text="." UId="787" />
+      <Component Name="PT_AirHigh_PT1" UId="788">
+        <BooleanAttribute Name="HasQuotes" UId="789">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="790" />
+      <Component Name="II_AnalogValue" UId="791" />
+    </Symbol>
+  </Access>
+  <Blank UId="792" />
+  <Token Text=":=" UId="793" />
+  <Blank UId="794" />
+  <Access Scope="GlobalVariable" UId="795">
+    <Symbol UId="796">
+      <Component Name="II_PT_AirHigh_PT1" UId="797" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="798" />
+  <NewLine UId="799" />
+  <Token Text="END_REGION" UId="800" />
+  <NewLine Num="2" UId="801" />
+  <Token Text="REGION" UId="802" />
+  <Blank UId="803" />
+  <Text UId="804">(ID = 18) Тиск газу PT Gas</Text>
+  <NewLine UId="805" />
+  <Blank Num="4" UId="806" />
+  <LineComment UId="807">
+    <Text UId="808">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="809" />
+  <Blank Num="4" UId="810" />
+  <LineComment UId="811">
+    <Text UId="812">Параметри давача: Scale= ;4-20ma; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="813" />
+  <Blank Num="4" UId="814" />
+  <LineComment UId="815">
+    <Text UId="816">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="817" />
+  <Blank Num="4" UId="818" />
+  <LineComment UId="819">
+    <Text UId="820">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="821" />
+  <Blank Num="4" UId="822" />
+  <NewLine UId="823" />
+  <Blank Num="4" UId="824" />
+  <Access Scope="GlobalVariable" UId="825">
+    <Symbol UId="826">
+      <Component Name="D_InOut" UId="827" />
+      <Token Text="." UId="828" />
+      <Component Name="PT_Gas_PT1" UId="829">
+        <BooleanAttribute Name="HasQuotes" UId="830">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="831" />
+      <Component Name="II_AnalogValue" UId="832" />
+    </Symbol>
+  </Access>
+  <Blank UId="833" />
+  <Token Text=":=" UId="834" />
+  <Blank UId="835" />
+  <Access Scope="GlobalVariable" UId="836">
+    <Symbol UId="837">
+      <Component Name="II_PT_Gas_PT1" UId="838" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="839" />
+  <NewLine UId="840" />
+  <Token Text="END_REGION" UId="841" />
+  <NewLine Num="2" UId="842" />
+  <Token Text="REGION" UId="843" />
+  <Blank UId="844" />
+  <Text UId="845">(ID = 19) Тиск азоту PT Nitrogen</Text>
+  <NewLine UId="846" />
+  <Blank Num="4" UId="847" />
+  <LineComment UId="848">
+    <Text UId="849">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="850" />
+  <Blank Num="4" UId="851" />
+  <LineComment UId="852">
+    <Text UId="853">Параметри давача: Scale= ;4-20ma; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="854" />
+  <Blank Num="4" UId="855" />
+  <LineComment UId="856">
+    <Text UId="857">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="858" />
+  <Blank Num="4" UId="859" />
+  <LineComment UId="860">
+    <Text UId="861">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="862" />
+  <Blank Num="4" UId="863" />
+  <NewLine UId="864" />
+  <Blank Num="4" UId="865" />
+  <Access Scope="GlobalVariable" UId="866">
+    <Symbol UId="867">
+      <Component Name="D_InOut" UId="868" />
+      <Token Text="." UId="869" />
+      <Component Name="PT_Nitrogen_PT1" UId="870">
+        <BooleanAttribute Name="HasQuotes" UId="871">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="872" />
+      <Component Name="II_AnalogValue" UId="873" />
+    </Symbol>
+  </Access>
+  <Blank UId="874" />
+  <Token Text=":=" UId="875" />
+  <Blank UId="876" />
+  <Access Scope="GlobalVariable" UId="877">
+    <Symbol UId="878">
+      <Component Name="II_PT_Nitrogen_PT1" UId="879" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="880" />
+  <NewLine UId="881" />
+  <Token Text="END_REGION" UId="882" />
+  <NewLine Num="2" UId="883" />
+  <Token Text="REGION" UId="884" />
+  <Blank UId="885" />
+  <Text UId="886">(ID = 20) Тиск води осмотичної PT W10_1</Text>
+  <NewLine UId="887" />
+  <Blank Num="4" UId="888" />
+  <LineComment UId="889">
+    <Text UId="890">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="891" />
+  <Blank Num="4" UId="892" />
+  <LineComment UId="893">
+    <Text UId="894">Параметри давача: Scale=0-6bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="895" />
+  <Blank Num="4" UId="896" />
+  <LineComment UId="897">
+    <Text UId="898">Одиниці вимірювання: bar</Text>
+  </LineComment>
+  <NewLine UId="899" />
+  <Blank Num="4" UId="900" />
+  <LineComment UId="901">
+    <Text UId="902">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="903" />
+  <Blank Num="4" UId="904" />
+  <NewLine UId="905" />
+  <Blank Num="4" UId="906" />
+  <Access Scope="GlobalVariable" UId="907">
+    <Symbol UId="908">
+      <Component Name="D_InOut" UId="909" />
+      <Token Text="." UId="910" />
+      <Component Name="PT_W10_1_PT1" UId="911">
+        <BooleanAttribute Name="HasQuotes" UId="912">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="913" />
+      <Component Name="II_AnalogValue" UId="914" />
+    </Symbol>
+  </Access>
+  <Blank UId="915" />
+  <Token Text=":=" UId="916" />
+  <Blank UId="917" />
+  <Access Scope="GlobalVariable" UId="918">
+    <Symbol UId="919">
+      <Component Name="II_PT_W10_1_PT1" UId="920" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="921" />
+  <NewLine UId="922" />
+  <Token Text="END_REGION" UId="923" />
+  <NewLine Num="2" UId="924" />
+  <Token Text="REGION" UId="925" />
+  <Blank UId="926" />
+  <Text UId="927">(ID = 21) Тиск води технічної PT water</Text>
+  <NewLine UId="928" />
+  <Blank Num="4" UId="929" />
+  <LineComment UId="930">
+    <Text UId="931">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="932" />
+  <Blank Num="4" UId="933" />
+  <LineComment UId="934">
+    <Text UId="935">Параметри давача: Scale=0-6bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="936" />
+  <Blank Num="4" UId="937" />
+  <LineComment UId="938">
+    <Text UId="939">Одиниці вимірювання: bar</Text>
+  </LineComment>
+  <NewLine UId="940" />
+  <Blank Num="4" UId="941" />
+  <LineComment UId="942">
+    <Text UId="943">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="944" />
+  <Blank Num="4" UId="945" />
+  <NewLine UId="946" />
+  <Blank Num="4" UId="947" />
+  <Access Scope="GlobalVariable" UId="948">
+    <Symbol UId="949">
+      <Component Name="D_InOut" UId="950" />
+      <Token Text="." UId="951" />
+      <Component Name="PT_water_PT1" UId="952">
+        <BooleanAttribute Name="HasQuotes" UId="953">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="954" />
+      <Component Name="II_AnalogValue" UId="955" />
+    </Symbol>
+  </Access>
+  <Blank UId="956" />
+  <Token Text=":=" UId="957" />
+  <Blank UId="958" />
+  <Access Scope="GlobalVariable" UId="959">
+    <Symbol UId="960">
+      <Component Name="II_PT_water_PT1" UId="961" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="962" />
+  <NewLine UId="963" />
+  <Token Text="END_REGION" UId="964" />
+  <NewLine Num="2" UId="965" />
+  <Token Text="REGION" UId="966" />
+  <Blank UId="967" />
+  <Text UId="968">(ID = 22) Тиск пари 1 PT steam 1</Text>
+  <NewLine UId="969" />
+  <Blank Num="4" UId="970" />
+  <LineComment UId="971">
+    <Text UId="972">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="973" />
+  <Blank Num="4" UId="974" />
+  <LineComment UId="975">
+    <Text UId="976">Параметри давача: Scale= ;4-20ma; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="977" />
+  <Blank Num="4" UId="978" />
+  <LineComment UId="979">
+    <Text UId="980">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="981" />
+  <Blank Num="4" UId="982" />
+  <LineComment UId="983">
+    <Text UId="984">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="985" />
+  <Blank Num="4" UId="986" />
+  <NewLine UId="987" />
+  <Blank Num="4" UId="988" />
+  <Access Scope="GlobalVariable" UId="989">
+    <Symbol UId="990">
+      <Component Name="D_InOut" UId="991" />
+      <Token Text="." UId="992" />
+      <Component Name="PT_steam_1_PT1" UId="993">
+        <BooleanAttribute Name="HasQuotes" UId="994">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="995" />
+      <Component Name="II_AnalogValue" UId="996" />
+    </Symbol>
+  </Access>
+  <Blank UId="997" />
+  <Token Text=":=" UId="998" />
+  <Blank UId="999" />
+  <Access Scope="GlobalVariable" UId="1000">
+    <Symbol UId="1001">
+      <Component Name="II_PT_steam_1_PT1" UId="1002" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1003" />
+  <NewLine UId="1004" />
+  <Token Text="END_REGION" UId="1005" />
+  <NewLine Num="2" UId="1006" />
+  <Token Text="REGION" UId="1007" />
+  <Blank UId="1008" />
+  <Text UId="1009">(ID = 23) Тиск пари 2 PT steam 2</Text>
+  <NewLine UId="1010" />
+  <Blank Num="4" UId="1011" />
+  <LineComment UId="1012">
+    <Text UId="1013">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1014" />
+  <Blank Num="4" UId="1015" />
+  <LineComment UId="1016">
+    <Text UId="1017">Параметри давача: Scale= ;4-20ma; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1018" />
+  <Blank Num="4" UId="1019" />
+  <LineComment UId="1020">
+    <Text UId="1021">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="1022" />
+  <Blank Num="4" UId="1023" />
+  <LineComment UId="1024">
+    <Text UId="1025">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1026" />
+  <Blank Num="4" UId="1027" />
+  <NewLine UId="1028" />
+  <Blank Num="4" UId="1029" />
+  <Access Scope="GlobalVariable" UId="1030">
+    <Symbol UId="1031">
+      <Component Name="D_InOut" UId="1032" />
+      <Token Text="." UId="1033" />
+      <Component Name="PT_steam_2_PT1" UId="1034">
+        <BooleanAttribute Name="HasQuotes" UId="1035">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1036" />
+      <Component Name="II_AnalogValue" UId="1037" />
+    </Symbol>
+  </Access>
+  <Blank UId="1038" />
+  <Token Text=":=" UId="1039" />
+  <Blank UId="1040" />
+  <Access Scope="GlobalVariable" UId="1041">
+    <Symbol UId="1042">
+      <Component Name="II_PT_steam_2_PT1" UId="1043" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1044" />
+  <NewLine UId="1045" />
+  <Token Text="END_REGION" UId="1046" />
+  <NewLine Num="2" UId="1047" />
+  <Token Text="REGION" UId="1048" />
+  <Blank UId="1049" />
+  <Text UId="1050">(ID = 24) Тиск пари 3 PT steam 3</Text>
+  <NewLine UId="1051" />
+  <Blank Num="4" UId="1052" />
+  <LineComment UId="1053">
+    <Text UId="1054">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1055" />
+  <Blank Num="4" UId="1056" />
+  <LineComment UId="1057">
+    <Text UId="1058">Параметри давача: Scale= ;4-20ma; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1059" />
+  <Blank Num="4" UId="1060" />
+  <LineComment UId="1061">
+    <Text UId="1062">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="1063" />
+  <Blank Num="4" UId="1064" />
+  <LineComment UId="1065">
+    <Text UId="1066">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1067" />
+  <Blank Num="4" UId="1068" />
+  <NewLine UId="1069" />
+  <Blank Num="4" UId="1070" />
+  <Access Scope="GlobalVariable" UId="1071">
+    <Symbol UId="1072">
+      <Component Name="D_InOut" UId="1073" />
+      <Token Text="." UId="1074" />
+      <Component Name="PT_steam_3_PT1" UId="1075">
+        <BooleanAttribute Name="HasQuotes" UId="1076">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1077" />
+      <Component Name="II_AnalogValue" UId="1078" />
+    </Symbol>
+  </Access>
+  <Blank UId="1079" />
+  <Token Text=":=" UId="1080" />
+  <Blank UId="1081" />
+  <Access Scope="GlobalVariable" UId="1082">
+    <Symbol UId="1083">
+      <Component Name="II_PT_steam_3_PT1" UId="1084" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1085" />
+  <NewLine UId="1086" />
+  <Token Text="END_REGION" UId="1087" />
+  <NewLine Num="2" UId="1088" />
+  <Token Text="REGION" UId="1089" />
+  <Blank UId="1090" />
+  <Text UId="1091">(ID = 25) Тиск теплоносія 1 PT coolant 1</Text>
+  <NewLine UId="1092" />
+  <Blank Num="4" UId="1093" />
+  <LineComment UId="1094">
+    <Text UId="1095">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1096" />
+  <Blank Num="4" UId="1097" />
+  <LineComment UId="1098">
+    <Text UId="1099">Параметри давача: Scale= ;4-20ma; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1100" />
+  <Blank Num="4" UId="1101" />
+  <LineComment UId="1102">
+    <Text UId="1103">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="1104" />
+  <Blank Num="4" UId="1105" />
+  <LineComment UId="1106">
+    <Text UId="1107">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1108" />
+  <Blank Num="4" UId="1109" />
+  <NewLine UId="1110" />
+  <Blank Num="4" UId="1111" />
+  <Access Scope="GlobalVariable" UId="1112">
+    <Symbol UId="1113">
+      <Component Name="D_InOut" UId="1114" />
+      <Token Text="." UId="1115" />
+      <Component Name="PT_coolant_1_PT1" UId="1116">
+        <BooleanAttribute Name="HasQuotes" UId="1117">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1118" />
+      <Component Name="II_AnalogValue" UId="1119" />
+    </Symbol>
+  </Access>
+  <Blank UId="1120" />
+  <Token Text=":=" UId="1121" />
+  <Blank UId="1122" />
+  <Access Scope="GlobalVariable" UId="1123">
+    <Symbol UId="1124">
+      <Component Name="II_PT_coolant_1_PT1" UId="1125" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1126" />
+  <NewLine UId="1127" />
+  <Token Text="END_REGION" UId="1128" />
+  <NewLine Num="2" UId="1129" />
+  <Token Text="REGION" UId="1130" />
+  <Blank UId="1131" />
+  <Text UId="1132">(ID = 26) Тиск теплоносія 2 PT coolant 2</Text>
+  <NewLine UId="1133" />
+  <Blank Num="4" UId="1134" />
+  <LineComment UId="1135">
+    <Text UId="1136">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1137" />
+  <Blank Num="4" UId="1138" />
+  <LineComment UId="1139">
+    <Text UId="1140">Параметри давача: Scale= ;4-20ma; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1141" />
+  <Blank Num="4" UId="1142" />
+  <LineComment UId="1143">
+    <Text UId="1144">Одиниці вимірювання: </Text>
+  </LineComment>
+  <NewLine UId="1145" />
+  <Blank Num="4" UId="1146" />
+  <LineComment UId="1147">
+    <Text UId="1148">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1149" />
+  <Blank Num="4" UId="1150" />
+  <NewLine UId="1151" />
+  <Blank Num="4" UId="1152" />
+  <Access Scope="GlobalVariable" UId="1153">
+    <Symbol UId="1154">
+      <Component Name="D_InOut" UId="1155" />
+      <Token Text="." UId="1156" />
+      <Component Name="PT_coolant_2_PT1" UId="1157">
+        <BooleanAttribute Name="HasQuotes" UId="1158">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1159" />
+      <Component Name="II_AnalogValue" UId="1160" />
+    </Symbol>
+  </Access>
+  <Blank UId="1161" />
+  <Token Text=":=" UId="1162" />
+  <Blank UId="1163" />
+  <Access Scope="GlobalVariable" UId="1164">
+    <Symbol UId="1165">
+      <Component Name="II_PT_coolant_2_PT1" UId="1166" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1167" />
+  <NewLine UId="1168" />
+  <Token Text="END_REGION" UId="1169" />
+  <NewLine Num="2" UId="1170" />
+  <Token Text="REGION" UId="1171" />
+  <Blank UId="1172" />
+  <Text UId="1173">(ID = 27) Температура теплоносія 1 TT coolant 1</Text>
+  <NewLine UId="1174" />
+  <Blank Num="4" UId="1175" />
+  <LineComment UId="1176">
+    <Text UId="1177">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1178" />
+  <Blank Num="4" UId="1179" />
+  <LineComment UId="1180">
+    <Text UId="1181">Параметри давача: Scale=0-150C; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1182" />
+  <Blank Num="4" UId="1183" />
+  <LineComment UId="1184">
+    <Text UId="1185">Одиниці вимірювання: C</Text>
+  </LineComment>
+  <NewLine UId="1186" />
+  <Blank Num="4" UId="1187" />
+  <LineComment UId="1188">
+    <Text UId="1189">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1190" />
+  <Blank Num="4" UId="1191" />
+  <NewLine UId="1192" />
+  <Blank Num="4" UId="1193" />
+  <Access Scope="GlobalVariable" UId="1194">
+    <Symbol UId="1195">
+      <Component Name="D_InOut" UId="1196" />
+      <Token Text="." UId="1197" />
+      <Component Name="TT_coolant_1_TT1" UId="1198">
+        <BooleanAttribute Name="HasQuotes" UId="1199">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1200" />
+      <Component Name="II_AnalogValue" UId="1201" />
+    </Symbol>
+  </Access>
+  <Blank UId="1202" />
+  <Token Text=":=" UId="1203" />
+  <Blank UId="1204" />
+  <Access Scope="GlobalVariable" UId="1205">
+    <Symbol UId="1206">
+      <Component Name="II_TT_coolant_1_TT1" UId="1207" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1208" />
+  <NewLine UId="1209" />
+  <Token Text="END_REGION" UId="1210" />
+  <NewLine Num="2" UId="1211" />
+  <Token Text="REGION" UId="1212" />
+  <Blank UId="1213" />
+  <Text UId="1214">(ID = 28) Температура теплоносія 2 TT coolant 2</Text>
+  <NewLine UId="1215" />
+  <Blank Num="4" UId="1216" />
+  <LineComment UId="1217">
+    <Text UId="1218">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1219" />
+  <Blank Num="4" UId="1220" />
+  <LineComment UId="1221">
+    <Text UId="1222">Параметри давача: Scale=0-150C; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1223" />
+  <Blank Num="4" UId="1224" />
+  <LineComment UId="1225">
+    <Text UId="1226">Одиниці вимірювання: C</Text>
+  </LineComment>
+  <NewLine UId="1227" />
+  <Blank Num="4" UId="1228" />
+  <LineComment UId="1229">
+    <Text UId="1230">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1231" />
+  <Blank Num="4" UId="1232" />
+  <NewLine UId="1233" />
+  <Blank Num="4" UId="1234" />
+  <Access Scope="GlobalVariable" UId="1235">
+    <Symbol UId="1236">
+      <Component Name="D_InOut" UId="1237" />
+      <Token Text="." UId="1238" />
+      <Component Name="TT_coolant_2_TT1" UId="1239">
+        <BooleanAttribute Name="HasQuotes" UId="1240">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1241" />
+      <Component Name="II_AnalogValue" UId="1242" />
+    </Symbol>
+  </Access>
+  <Blank UId="1243" />
+  <Token Text=":=" UId="1244" />
+  <Blank UId="1245" />
+  <Access Scope="GlobalVariable" UId="1246">
+    <Symbol UId="1247">
+      <Component Name="II_TT_coolant_2_TT1" UId="1248" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1249" />
+  <NewLine UId="1250" />
+  <Token Text="END_REGION" UId="1251" />
+  <NewLine Num="2" UId="1252" />
+  <Token Text="REGION" UId="1253" />
+  <Blank UId="1254" />
+  <Text UId="1255">(ID = 29) Перетворювач тиску подачі  кислоти PT PW579CA</Text>
+  <NewLine UId="1256" />
+  <Blank Num="4" UId="1257" />
+  <LineComment UId="1258">
+    <Text UId="1259">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1260" />
+  <Blank Num="4" UId="1261" />
+  <LineComment UId="1262">
+    <Text UId="1263">Параметри давача: Scale=0-6bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1264" />
+  <Blank Num="4" UId="1265" />
+  <LineComment UId="1266">
+    <Text UId="1267">Одиниці вимірювання: bar</Text>
+  </LineComment>
+  <NewLine UId="1268" />
+  <Blank Num="4" UId="1269" />
+  <LineComment UId="1270">
+    <Text UId="1271">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1272" />
+  <Blank Num="4" UId="1273" />
+  <NewLine UId="1274" />
+  <Blank Num="4" UId="1275" />
+  <Access Scope="GlobalVariable" UId="1276">
+    <Symbol UId="1277">
+      <Component Name="D_InOut" UId="1278" />
+      <Token Text="." UId="1279" />
+      <Component Name="PT_PW579CA_PT1" UId="1280">
+        <BooleanAttribute Name="HasQuotes" UId="1281">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1282" />
+      <Component Name="II_AnalogValue" UId="1283" />
+    </Symbol>
+  </Access>
+  <Blank UId="1284" />
+  <Token Text=":=" UId="1285" />
+  <Blank UId="1286" />
+  <Access Scope="GlobalVariable" UId="1287">
+    <Symbol UId="1288">
+      <Component Name="II_PT_PW579CA_PT1" UId="1289" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1290" />
+  <NewLine UId="1291" />
+  <Token Text="END_REGION" UId="1292" />
+  <NewLine Num="2" UId="1293" />
+  <Token Text="REGION" UId="1294" />
+  <Blank UId="1295" />
+  <Text UId="1296">(ID = 30) Рівень в ємності лимонної кислоти LT PW579CA</Text>
+  <NewLine UId="1297" />
+  <Blank Num="4" UId="1298" />
+  <LineComment UId="1299">
+    <Text UId="1300">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1301" />
+  <Blank Num="4" UId="1302" />
+  <LineComment UId="1303">
+    <Text UId="1304">Параметри давача: Scale=0-0.1bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1305" />
+  <Blank Num="4" UId="1306" />
+  <LineComment UId="1307">
+    <Text UId="1308">Одиниці вимірювання: м</Text>
+  </LineComment>
+  <NewLine UId="1309" />
+  <Blank Num="4" UId="1310" />
+  <LineComment UId="1311">
+    <Text UId="1312">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1313" />
+  <Blank Num="4" UId="1314" />
+  <NewLine UId="1315" />
+  <Blank Num="4" UId="1316" />
+  <Access Scope="GlobalVariable" UId="1317">
+    <Symbol UId="1318">
+      <Component Name="D_InOut" UId="1319" />
+      <Token Text="." UId="1320" />
+      <Component Name="LT_PW579CA_LT1" UId="1321">
+        <BooleanAttribute Name="HasQuotes" UId="1322">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1323" />
+      <Component Name="II_AnalogValue" UId="1324" />
+    </Symbol>
+  </Access>
+  <Blank UId="1325" />
+  <Token Text=":=" UId="1326" />
+  <Blank UId="1327" />
+  <Access Scope="GlobalVariable" UId="1328">
+    <Symbol UId="1329">
+      <Component Name="II_LT_PW579CA_LT1" UId="1330" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1331" />
+  <NewLine UId="1332" />
+  <Token Text="END_REGION" UId="1333" />
+  <NewLine Num="2" UId="1334" />
+  <Token Text="REGION" UId="1335" />
+  <Blank UId="1336" />
+  <Text UId="1337">(ID = 31) Перетворювач тиску подачі  лугу PT PW579NA</Text>
+  <NewLine UId="1338" />
+  <Blank Num="4" UId="1339" />
+  <LineComment UId="1340">
+    <Text UId="1341">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1342" />
+  <Blank Num="4" UId="1343" />
+  <LineComment UId="1344">
+    <Text UId="1345">Параметри давача: Scale=0-6bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1346" />
+  <Blank Num="4" UId="1347" />
+  <LineComment UId="1348">
+    <Text UId="1349">Одиниці вимірювання: bar</Text>
+  </LineComment>
+  <NewLine UId="1350" />
+  <Blank Num="4" UId="1351" />
+  <LineComment UId="1352">
+    <Text UId="1353">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1354" />
+  <Blank Num="4" UId="1355" />
+  <NewLine UId="1356" />
+  <Blank Num="4" UId="1357" />
+  <Access Scope="GlobalVariable" UId="1358">
+    <Symbol UId="1359">
+      <Component Name="D_InOut" UId="1360" />
+      <Token Text="." UId="1361" />
+      <Component Name="PT_PW579NA_PT1" UId="1362">
+        <BooleanAttribute Name="HasQuotes" UId="1363">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1364" />
+      <Component Name="II_AnalogValue" UId="1365" />
+    </Symbol>
+  </Access>
+  <Blank UId="1366" />
+  <Token Text=":=" UId="1367" />
+  <Blank UId="1368" />
+  <Access Scope="GlobalVariable" UId="1369">
+    <Symbol UId="1370">
+      <Component Name="II_PT_PW579NA_PT1" UId="1371" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1372" />
+  <NewLine UId="1373" />
+  <Token Text="END_REGION" UId="1374" />
+  <NewLine Num="2" UId="1375" />
+  <Token Text="REGION" UId="1376" />
+  <Blank UId="1377" />
+  <Text UId="1378">(ID = 32) Перетворювач тиску (рівень води в ємності) LT W10 OW</Text>
+  <NewLine UId="1379" />
+  <Blank Num="4" UId="1380" />
+  <LineComment UId="1381">
+    <Text UId="1382">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1383" />
+  <Blank Num="4" UId="1384" />
+  <LineComment UId="1385">
+    <Text UId="1386">Параметри давача: Scale=0-0.25bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1387" />
+  <Blank Num="4" UId="1388" />
+  <LineComment UId="1389">
+    <Text UId="1390">Одиниці вимірювання: м</Text>
+  </LineComment>
+  <NewLine UId="1391" />
+  <Blank Num="4" UId="1392" />
+  <LineComment UId="1393">
+    <Text UId="1394">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1395" />
+  <Blank Num="4" UId="1396" />
+  <NewLine UId="1397" />
+  <Blank Num="4" UId="1398" />
+  <Access Scope="GlobalVariable" UId="1399">
+    <Symbol UId="1400">
+      <Component Name="D_InOut" UId="1401" />
+      <Token Text="." UId="1402" />
+      <Component Name="LT_W10_OW_LT1" UId="1403">
+        <BooleanAttribute Name="HasQuotes" UId="1404">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1405" />
+      <Component Name="II_AnalogValue" UId="1406" />
+    </Symbol>
+  </Access>
+  <Blank UId="1407" />
+  <Token Text=":=" UId="1408" />
+  <Blank UId="1409" />
+  <Access Scope="GlobalVariable" UId="1410">
+    <Symbol UId="1411">
+      <Component Name="II_LT_W10_OW_LT1" UId="1412" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1413" />
+  <NewLine UId="1414" />
+  <Token Text="END_REGION" UId="1415" />
+  <NewLine Num="2" UId="1416" />
+  <Token Text="REGION" UId="1417" />
+  <Blank UId="1418" />
+  <Text UId="1419">(ID = 33) Температура води охолодження дублюючого насоса TT P822 2</Text>
+  <NewLine UId="1420" />
+  <Blank Num="4" UId="1421" />
+  <LineComment UId="1422">
+    <Text UId="1423">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1424" />
+  <Blank Num="4" UId="1425" />
+  <LineComment UId="1426">
+    <Text UId="1427">Параметри давача: Scale= ; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1428" />
+  <Blank Num="4" UId="1429" />
+  <LineComment UId="1430">
+    <Text UId="1431">Одиниці вимірювання: C</Text>
+  </LineComment>
+  <NewLine UId="1432" />
+  <Blank Num="4" UId="1433" />
+  <LineComment UId="1434">
+    <Text UId="1435">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1436" />
+  <Blank Num="4" UId="1437" />
+  <NewLine UId="1438" />
+  <Blank Num="4" UId="1439" />
+  <Access Scope="GlobalVariable" UId="1440">
+    <Symbol UId="1441">
+      <Component Name="D_InOut" UId="1442" />
+      <Token Text="." UId="1443" />
+      <Component Name="TT_P822_2_TT1" UId="1444">
+        <BooleanAttribute Name="HasQuotes" UId="1445">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1446" />
+      <Component Name="II_AnalogValue" UId="1447" />
+    </Symbol>
+  </Access>
+  <Blank UId="1448" />
+  <Token Text=":=" UId="1449" />
+  <Blank UId="1450" />
+  <Access Scope="GlobalVariable" UId="1451">
+    <Symbol UId="1452">
+      <Component Name="II_TT_P822_2_TT1" UId="1453" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1454" />
+  <NewLine UId="1455" />
+  <Token Text="END_REGION" UId="1456" />
+  <NewLine Num="2" UId="1457" />
+  <Token Text="REGION" UId="1458" />
+  <Blank UId="1459" />
+  <Text UId="1460">(ID = 34) Рівень води в ємності LT W0 W</Text>
+  <NewLine UId="1461" />
+  <Blank Num="4" UId="1462" />
+  <LineComment UId="1463">
+    <Text UId="1464">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1465" />
+  <Blank Num="4" UId="1466" />
+  <LineComment UId="1467">
+    <Text UId="1468">Параметри давача: Scale=0-0.25bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1469" />
+  <Blank Num="4" UId="1470" />
+  <LineComment UId="1471">
+    <Text UId="1472">Одиниці вимірювання: м</Text>
+  </LineComment>
+  <NewLine UId="1473" />
+  <Blank Num="4" UId="1474" />
+  <LineComment UId="1475">
+    <Text UId="1476">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1477" />
+  <Blank Num="4" UId="1478" />
+  <NewLine UId="1479" />
+  <Blank Num="4" UId="1480" />
+  <Access Scope="GlobalVariable" UId="1481">
+    <Symbol UId="1482">
+      <Component Name="D_InOut" UId="1483" />
+      <Token Text="." UId="1484" />
+      <Component Name="LT_W0_W_LT1" UId="1485">
+        <BooleanAttribute Name="HasQuotes" UId="1486">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1487" />
+      <Component Name="II_AnalogValue" UId="1488" />
+    </Symbol>
+  </Access>
+  <Blank UId="1489" />
+  <Token Text=":=" UId="1490" />
+  <Blank UId="1491" />
+  <Access Scope="LiteralConstant" UId="1492">
+    <Constant UId="1493">
+      <ConstantValue UId="1495">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1496" />
+  <LineComment UId="1497">
+    <Text UId="1498">"II_LT_W0_W_LT1";</Text>
+  </LineComment>
+  <NewLine UId="1499" />
+  <Token Text="END_REGION" UId="1500" />
+  <NewLine Num="2" UId="1501" />
+  <Token Text="REGION" UId="1502" />
+  <Blank UId="1503" />
+  <Text UId="1504">(ID = 35) Перетворювач тиску технологічної води PT PW0 W</Text>
+  <NewLine UId="1505" />
+  <Blank Num="4" UId="1506" />
+  <LineComment UId="1507">
+    <Text UId="1508">Тип елемента: Аналоговий сигнал</Text>
+  </LineComment>
+  <NewLine UId="1509" />
+  <Blank Num="4" UId="1510" />
+  <LineComment UId="1511">
+    <Text UId="1512">Параметри давача: Scale=0-10bar; 4-20mA; Analog = 0 - 27648;</Text>
+  </LineComment>
+  <NewLine UId="1513" />
+  <Blank Num="4" UId="1514" />
+  <LineComment UId="1515">
+    <Text UId="1516">Одиниці вимірювання: bar</Text>
+  </LineComment>
+  <NewLine UId="1517" />
+  <Blank Num="4" UId="1518" />
+  <LineComment UId="1519">
+    <Text UId="1520">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1521" />
+  <Blank Num="4" UId="1522" />
+  <NewLine UId="1523" />
+  <Blank Num="4" UId="1524" />
+  <Access Scope="GlobalVariable" UId="1525">
+    <Symbol UId="1526">
+      <Component Name="D_InOut" UId="1527" />
+      <Token Text="." UId="1528" />
+      <Component Name="PT_PW0_W_PT1" UId="1529">
+        <BooleanAttribute Name="HasQuotes" UId="1530">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1531" />
+      <Component Name="II_AnalogValue" UId="1532" />
+    </Symbol>
+  </Access>
+  <Blank UId="1533" />
+  <Token Text=":=" UId="1534" />
+  <Blank UId="1535" />
+  <Access Scope="LiteralConstant" UId="1536">
+    <Constant UId="1537">
+      <ConstantValue UId="1539">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1540" />
+  <LineComment UId="1541">
+    <Text UId="1542">"II_PT_PW0_W_PT1";</Text>
+  </LineComment>
+  <NewLine UId="1543" />
+  <Token Text="END_REGION" UId="1544" />
+  <NewLine Num="2" UId="1545" />
+  <Token Text="REGION" UId="1546" />
+  <Blank UId="1547" />
+  <Text UId="1548">(ID = 36) Дискретний сигнал від AirForce 1 G1</Text>
+  <NewLine UId="1549" />
+  <Blank Num="4" UId="1550" />
+  <LineComment UId="1551">
+    <Text UId="1552">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1553" />
+  <Blank Num="4" UId="1554" />
+  <LineComment UId="1555">
+    <Text UId="1556">Параметри давача: Info;NO;</Text>
+  </LineComment>
+  <NewLine UId="1557" />
+  <Blank Num="4" UId="1558" />
+  <LineComment UId="1559">
+    <Text UId="1560">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1561" />
+  <Blank Num="4" UId="1562" />
+  <NewLine UId="1563" />
+  <Blank Num="4" UId="1564" />
+  <Access Scope="GlobalVariable" UId="1565">
+    <Symbol UId="1566">
+      <Component Name="D_InOut" UId="1567" />
+      <Token Text="." UId="1568" />
+      <Component Name="G1_DI1" UId="1569">
+        <BooleanAttribute Name="HasQuotes" UId="1570">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1571" />
+      <Component Name="DescreteValue" UId="1572" />
+    </Symbol>
+  </Access>
+  <Blank UId="1573" />
+  <Token Text=":=" UId="1574" />
+  <Blank UId="1575" />
+  <Access Scope="GlobalVariable" UId="1576">
+    <Symbol UId="1577">
+      <Component Name="I_G1_DI1" UId="1578" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1579" />
+  <NewLine UId="1580" />
+  <Token Text="END_REGION" UId="1581" />
+  <NewLine Num="2" UId="1582" />
+  <Token Text="REGION" UId="1583" />
+  <Blank UId="1584" />
+  <Text UId="1585">(ID = 37) Дискретний сигнал від AirForce 2 G1</Text>
+  <NewLine UId="1586" />
+  <Blank Num="4" UId="1587" />
+  <LineComment UId="1588">
+    <Text UId="1589">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1590" />
+  <Blank Num="4" UId="1591" />
+  <LineComment UId="1592">
+    <Text UId="1593">Параметри давача: Info;NO;</Text>
+  </LineComment>
+  <NewLine UId="1594" />
+  <Blank Num="4" UId="1595" />
+  <LineComment UId="1596">
+    <Text UId="1597">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1598" />
+  <Blank Num="4" UId="1599" />
+  <NewLine UId="1600" />
+  <Blank Num="4" UId="1601" />
+  <Access Scope="GlobalVariable" UId="1602">
+    <Symbol UId="1603">
+      <Component Name="D_InOut" UId="1604" />
+      <Token Text="." UId="1605" />
+      <Component Name="G1_DI2" UId="1606">
+        <BooleanAttribute Name="HasQuotes" UId="1607">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1608" />
+      <Component Name="DescreteValue" UId="1609" />
+    </Symbol>
+  </Access>
+  <Blank UId="1610" />
+  <Token Text=":=" UId="1611" />
+  <Blank UId="1612" />
+  <Access Scope="GlobalVariable" UId="1613">
+    <Symbol UId="1614">
+      <Component Name="I_G1_DI2" UId="1615" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1616" />
+  <NewLine UId="1617" />
+  <Token Text="END_REGION" UId="1618" />
+  <NewLine Num="2" UId="1619" />
+  <Token Text="REGION" UId="1620" />
+  <Blank UId="1621" />
+  <Text UId="1622">(ID = 38) Дискретний сигнал від AirForce 3 G1</Text>
+  <NewLine UId="1623" />
+  <Blank Num="4" UId="1624" />
+  <LineComment UId="1625">
+    <Text UId="1626">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1627" />
+  <Blank Num="4" UId="1628" />
+  <LineComment UId="1629">
+    <Text UId="1630">Параметри давача: Info;NO;</Text>
+  </LineComment>
+  <NewLine UId="1631" />
+  <Blank Num="4" UId="1632" />
+  <LineComment UId="1633">
+    <Text UId="1634">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1635" />
+  <Blank Num="4" UId="1636" />
+  <NewLine UId="1637" />
+  <Blank Num="4" UId="1638" />
+  <Access Scope="GlobalVariable" UId="1639">
+    <Symbol UId="1640">
+      <Component Name="D_InOut" UId="1641" />
+      <Token Text="." UId="1642" />
+      <Component Name="G1_DI3" UId="1643">
+        <BooleanAttribute Name="HasQuotes" UId="1644">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1645" />
+      <Component Name="DescreteValue" UId="1646" />
+    </Symbol>
+  </Access>
+  <Blank UId="1647" />
+  <Token Text=":=" UId="1648" />
+  <Blank UId="1649" />
+  <Access Scope="GlobalVariable" UId="1650">
+    <Symbol UId="1651">
+      <Component Name="I_G1_DI3" UId="1652" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1653" />
+  <NewLine UId="1654" />
+  <Token Text="END_REGION" UId="1655" />
+  <NewLine Num="2" UId="1656" />
+  <Token Text="REGION" UId="1657" />
+  <Blank UId="1658" />
+  <Text UId="1659">(ID = 39) Дискретний сигнал від AirForce 4 G1</Text>
+  <NewLine UId="1660" />
+  <Blank Num="4" UId="1661" />
+  <LineComment UId="1662">
+    <Text UId="1663">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1664" />
+  <Blank Num="4" UId="1665" />
+  <LineComment UId="1666">
+    <Text UId="1667">Параметри давача: Info;NO;</Text>
+  </LineComment>
+  <NewLine UId="1668" />
+  <Blank Num="4" UId="1669" />
+  <LineComment UId="1670">
+    <Text UId="1671">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1672" />
+  <Blank Num="4" UId="1673" />
+  <NewLine UId="1674" />
+  <Blank Num="4" UId="1675" />
+  <Access Scope="GlobalVariable" UId="1676">
+    <Symbol UId="1677">
+      <Component Name="D_InOut" UId="1678" />
+      <Token Text="." UId="1679" />
+      <Component Name="G1_DI4" UId="1680">
+        <BooleanAttribute Name="HasQuotes" UId="1681">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1682" />
+      <Component Name="DescreteValue" UId="1683" />
+    </Symbol>
+  </Access>
+  <Blank UId="1684" />
+  <Token Text=":=" UId="1685" />
+  <Blank UId="1686" />
+  <Access Scope="GlobalVariable" UId="1687">
+    <Symbol UId="1688">
+      <Component Name="I_G1_DI4" UId="1689" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1690" />
+  <NewLine UId="1691" />
+  <Token Text="END_REGION" UId="1692" />
+  <NewLine Num="2" UId="1693" />
+  <Token Text="REGION" UId="1694" />
+  <Blank UId="1695" />
+  <Text UId="1696">(ID = 40) Дискретний сигнал від AirForce 5 G1</Text>
+  <NewLine UId="1697" />
+  <Blank Num="4" UId="1698" />
+  <LineComment UId="1699">
+    <Text UId="1700">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1701" />
+  <Blank Num="4" UId="1702" />
+  <LineComment UId="1703">
+    <Text UId="1704">Параметри давача: Info;NO;</Text>
+  </LineComment>
+  <NewLine UId="1705" />
+  <Blank Num="4" UId="1706" />
+  <LineComment UId="1707">
+    <Text UId="1708">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1709" />
+  <Blank Num="4" UId="1710" />
+  <NewLine UId="1711" />
+  <Blank Num="4" UId="1712" />
+  <Access Scope="GlobalVariable" UId="1713">
+    <Symbol UId="1714">
+      <Component Name="D_InOut" UId="1715" />
+      <Token Text="." UId="1716" />
+      <Component Name="G1_DI5" UId="1717">
+        <BooleanAttribute Name="HasQuotes" UId="1718">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1719" />
+      <Component Name="DescreteValue" UId="1720" />
+    </Symbol>
+  </Access>
+  <Blank UId="1721" />
+  <Token Text=":=" UId="1722" />
+  <Blank UId="1723" />
+  <Access Scope="GlobalVariable" UId="1724">
+    <Symbol UId="1725">
+      <Component Name="I_G1_DI5" UId="1726" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1727" />
+  <NewLine UId="1728" />
+  <Token Text="END_REGION" UId="1729" />
+  <NewLine Num="2" UId="1730" />
+  <Token Text="REGION" UId="1731" />
+  <Blank UId="1732" />
+  <Text UId="1733">(ID = 41) Контроль роботи холодильної машини 1 - робота W1011</Text>
+  <NewLine UId="1734" />
+  <Blank Num="4" UId="1735" />
+  <LineComment UId="1736">
+    <Text UId="1737">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1738" />
+  <Blank Num="4" UId="1739" />
+  <LineComment UId="1740">
+    <Text UId="1741">Параметри давача: Info;NO;</Text>
+  </LineComment>
+  <NewLine UId="1742" />
+  <Blank Num="4" UId="1743" />
+  <LineComment UId="1744">
+    <Text UId="1745">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1746" />
+  <Blank Num="4" UId="1747" />
+  <NewLine UId="1748" />
+  <Blank Num="4" UId="1749" />
+  <Access Scope="GlobalVariable" UId="1750">
+    <Symbol UId="1751">
+      <Component Name="D_InOut" UId="1752" />
+      <Token Text="." UId="1753" />
+      <Component Name="W1011_S1" UId="1754">
+        <BooleanAttribute Name="HasQuotes" UId="1755">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1756" />
+      <Component Name="DescreteValue" UId="1757" />
+    </Symbol>
+  </Access>
+  <Blank UId="1758" />
+  <Token Text=":=" UId="1759" />
+  <Blank UId="1760" />
+  <Access Scope="GlobalVariable" UId="1761">
+    <Symbol UId="1762">
+      <Component Name="I_W1011_S1" UId="1763" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1764" />
+  <NewLine UId="1765" />
+  <Token Text="END_REGION" UId="1766" />
+  <NewLine Num="2" UId="1767" />
+  <Token Text="REGION" UId="1768" />
+  <Blank UId="1769" />
+  <Text UId="1770">(ID = 42) Контроль роботи холодильної машини 1 - аварія W1011</Text>
+  <NewLine UId="1771" />
+  <Blank Num="4" UId="1772" />
+  <LineComment UId="1773">
+    <Text UId="1774">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1775" />
+  <Blank Num="4" UId="1776" />
+  <LineComment UId="1777">
+    <Text UId="1778">Параметри давача: Err;NO;</Text>
+  </LineComment>
+  <NewLine UId="1779" />
+  <Blank Num="4" UId="1780" />
+  <LineComment UId="1781">
+    <Text UId="1782">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1783" />
+  <Blank Num="4" UId="1784" />
+  <NewLine UId="1785" />
+  <Blank Num="4" UId="1786" />
+  <Access Scope="GlobalVariable" UId="1787">
+    <Symbol UId="1788">
+      <Component Name="D_InOut" UId="1789" />
+      <Token Text="." UId="1790" />
+      <Component Name="W1011_S2" UId="1791">
+        <BooleanAttribute Name="HasQuotes" UId="1792">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1793" />
+      <Component Name="DescreteValue" UId="1794" />
+    </Symbol>
+  </Access>
+  <Blank UId="1795" />
+  <Token Text=":=" UId="1796" />
+  <Blank UId="1797" />
+  <Access Scope="GlobalVariable" UId="1798">
+    <Symbol UId="1799">
+      <Component Name="I_W1011_S2" UId="1800" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1801" />
+  <NewLine UId="1802" />
+  <Token Text="END_REGION" UId="1803" />
+  <NewLine Num="2" UId="1804" />
+  <Token Text="REGION" UId="1805" />
+  <Blank UId="1806" />
+  <Text UId="1807">(ID = 43) Контроль роботи холодильної машини 2 - робота 811</Text>
+  <NewLine UId="1808" />
+  <Blank Num="4" UId="1809" />
+  <LineComment UId="1810">
+    <Text UId="1811">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1812" />
+  <Blank Num="4" UId="1813" />
+  <LineComment UId="1814">
+    <Text UId="1815">Параметри давача: Info;NO;</Text>
+  </LineComment>
+  <NewLine UId="1816" />
+  <Blank Num="4" UId="1817" />
+  <LineComment UId="1818">
+    <Text UId="1819">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1820" />
+  <Blank Num="4" UId="1821" />
+  <NewLine UId="1822" />
+  <Blank Num="4" UId="1823" />
+  <Access Scope="GlobalVariable" UId="1824">
+    <Symbol UId="1825">
+      <Component Name="D_InOut" UId="1826" />
+      <Token Text="." UId="1827" />
+      <Component Name="811_S1" UId="1828" />
+      <Token Text="." UId="1829" />
+      <Component Name="DescreteValue" UId="1830" />
+    </Symbol>
+  </Access>
+  <Blank UId="1831" />
+  <Token Text=":=" UId="1832" />
+  <Blank UId="1833" />
+  <Access Scope="GlobalVariable" UId="1834">
+    <Symbol UId="1835">
+      <Component Name="I_811_S1" UId="1836" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1837" />
+  <NewLine UId="1838" />
+  <Token Text="END_REGION" UId="1839" />
+  <NewLine Num="2" UId="1840" />
+  <Token Text="REGION" UId="1841" />
+  <Blank UId="1842" />
+  <Text UId="1843">(ID = 44) Контроль роботи холодильної машини 2 - аварія 811</Text>
+  <NewLine UId="1844" />
+  <Blank Num="4" UId="1845" />
+  <LineComment UId="1846">
+    <Text UId="1847">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1848" />
+  <Blank Num="4" UId="1849" />
+  <LineComment UId="1850">
+    <Text UId="1851">Параметри давача: Err;NO;</Text>
+  </LineComment>
+  <NewLine UId="1852" />
+  <Blank Num="4" UId="1853" />
+  <LineComment UId="1854">
+    <Text UId="1855">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1856" />
+  <Blank Num="4" UId="1857" />
+  <NewLine UId="1858" />
+  <Blank Num="4" UId="1859" />
+  <Access Scope="GlobalVariable" UId="1860">
+    <Symbol UId="1861">
+      <Component Name="D_InOut" UId="1862" />
+      <Token Text="." UId="1863" />
+      <Component Name="811_S2" UId="1864" />
+      <Token Text="." UId="1865" />
+      <Component Name="DescreteValue" UId="1866" />
+    </Symbol>
+  </Access>
+  <Blank UId="1867" />
+  <Token Text=":=" UId="1868" />
+  <Blank UId="1869" />
+  <Access Scope="GlobalVariable" UId="1870">
+    <Symbol UId="1871">
+      <Component Name="I_811_S2" UId="1872" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1873" />
+  <NewLine UId="1874" />
+  <Token Text="END_REGION" UId="1875" />
+  <NewLine Num="2" UId="1876" />
+  <Token Text="REGION" UId="1877" />
+  <Blank UId="1878" />
+  <Text UId="1879">(ID = 45) Парогенератор і бойлерна - загазованість H DI7</Text>
+  <NewLine UId="1880" />
+  <Blank Num="4" UId="1881" />
+  <LineComment UId="1882">
+    <Text UId="1883">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1884" />
+  <Blank Num="4" UId="1885" />
+  <LineComment UId="1886">
+    <Text UId="1887">Параметри давача: Info;NO;</Text>
+  </LineComment>
+  <NewLine UId="1888" />
+  <Blank Num="4" UId="1889" />
+  <LineComment UId="1890">
+    <Text UId="1891">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1892" />
+  <Blank Num="4" UId="1893" />
+  <NewLine UId="1894" />
+  <Blank Num="4" UId="1895" />
+  <Access Scope="GlobalVariable" UId="1896">
+    <Symbol UId="1897">
+      <Component Name="D_InOut" UId="1898" />
+      <Token Text="." UId="1899" />
+      <Component Name="DI7_S1" UId="1900">
+        <BooleanAttribute Name="HasQuotes" UId="1901">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1902" />
+      <Component Name="DescreteValue" UId="1903" />
+    </Symbol>
+  </Access>
+  <Blank UId="1904" />
+  <Token Text=":=" UId="1905" />
+  <Blank UId="1906" />
+  <Access Scope="GlobalVariable" UId="1907">
+    <Symbol UId="1908">
+      <Component Name="I_DI7_S1" UId="1909" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1910" />
+  <NewLine UId="1911" />
+  <Token Text="END_REGION" UId="1912" />
+  <NewLine Num="2" UId="1913" />
+  <Token Text="REGION" UId="1914" />
+  <Blank UId="1915" />
+  <Text UId="1916">(ID = 46) Парогенератор і бойлерна - аварія DI7</Text>
+  <NewLine UId="1917" />
+  <Blank Num="4" UId="1918" />
+  <LineComment UId="1919">
+    <Text UId="1920">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1921" />
+  <Blank Num="4" UId="1922" />
+  <LineComment UId="1923">
+    <Text UId="1924">Параметри давача: Err;NC;</Text>
+  </LineComment>
+  <NewLine UId="1925" />
+  <Blank Num="4" UId="1926" />
+  <LineComment UId="1927">
+    <Text UId="1928">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1929" />
+  <Blank Num="4" UId="1930" />
+  <NewLine UId="1931" />
+  <Blank Num="4" UId="1932" />
+  <Access Scope="GlobalVariable" UId="1933">
+    <Symbol UId="1934">
+      <Component Name="D_InOut" UId="1935" />
+      <Token Text="." UId="1936" />
+      <Component Name="DI7_S2" UId="1937">
+        <BooleanAttribute Name="HasQuotes" UId="1938">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1939" />
+      <Component Name="DescreteValue" UId="1940" />
+    </Symbol>
+  </Access>
+  <Blank UId="1941" />
+  <Token Text=":=" UId="1942" />
+  <Blank UId="1943" />
+  <Access Scope="GlobalVariable" UId="1944">
+    <Symbol UId="1945">
+      <Component Name="I_DI7_S2" UId="1946" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1947" />
+  <NewLine UId="1948" />
+  <Token Text="END_REGION" UId="1949" />
+  <NewLine Num="2" UId="1950" />
+  <Token Text="REGION" UId="1951" />
+  <Blank UId="1952" />
+  <Text UId="1953">(ID = 47) Парогенератор і бойлерна - загазованість HH DI7</Text>
+  <NewLine UId="1954" />
+  <Blank Num="4" UId="1955" />
+  <LineComment UId="1956">
+    <Text UId="1957">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1958" />
+  <Blank Num="4" UId="1959" />
+  <LineComment UId="1960">
+    <Text UId="1961">Параметри давача: Err;NC;</Text>
+  </LineComment>
+  <NewLine UId="1962" />
+  <Blank Num="4" UId="1963" />
+  <LineComment UId="1964">
+    <Text UId="1965">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="1966" />
+  <Blank Num="4" UId="1967" />
+  <NewLine UId="1968" />
+  <Blank Num="4" UId="1969" />
+  <Access Scope="GlobalVariable" UId="1970">
+    <Symbol UId="1971">
+      <Component Name="D_InOut" UId="1972" />
+      <Token Text="." UId="1973" />
+      <Component Name="DI7_S3" UId="1974">
+        <BooleanAttribute Name="HasQuotes" UId="1975">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1976" />
+      <Component Name="DescreteValue" UId="1977" />
+    </Symbol>
+  </Access>
+  <Blank UId="1978" />
+  <Token Text=":=" UId="1979" />
+  <Blank UId="1980" />
+  <Access Scope="GlobalVariable" UId="1981">
+    <Symbol UId="1982">
+      <Component Name="I_DI7_S3" UId="1983" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1984" />
+  <NewLine UId="1985" />
+  <Token Text="END_REGION" UId="1986" />
+  <NewLine Num="2" UId="1987" />
+  <Token Text="REGION" UId="1988" />
+  <Blank UId="1989" />
+  <Text UId="1990">(ID = 48) Протік  води охолодження дублюючого насоса FT P822 2</Text>
+  <NewLine UId="1991" />
+  <Blank Num="4" UId="1992" />
+  <LineComment UId="1993">
+    <Text UId="1994">Тип елемента: Дискретний сигнал</Text>
+  </LineComment>
+  <NewLine UId="1995" />
+  <Blank Num="4" UId="1996" />
+  <LineComment UId="1997">
+    <Text UId="1998">Параметри давача: Info;NC;</Text>
+  </LineComment>
+  <NewLine UId="1999" />
+  <Blank Num="4" UId="2000" />
+  <LineComment UId="2001">
+    <Text UId="2002">Додаткова інформація: </Text>
+  </LineComment>
+  <NewLine UId="2003" />
+  <Blank Num="4" UId="2004" />
+  <NewLine UId="2005" />
+  <Blank Num="4" UId="2006" />
+  <Access Scope="GlobalVariable" UId="2007">
+    <Symbol UId="2008">
+      <Component Name="D_InOut" UId="2009" />
+      <Token Text="." UId="2010" />
+      <Component Name="FT_P822_2_FT1" UId="2011">
+        <BooleanAttribute Name="HasQuotes" UId="2012">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2013" />
+      <Component Name="DescreteValue" UId="2014" />
+    </Symbol>
+  </Access>
+  <Blank UId="2015" />
+  <Token Text=":=" UId="2016" />
+  <Blank UId="2017" />
+  <Access Scope="GlobalVariable" UId="2018">
+    <Symbol UId="2019">
+      <Component Name="I_FT_P822_2_FT1" UId="2020" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2021" />
+  <NewLine UId="2022" />
+  <Token Text="END_REGION" UId="2023" />
+  <NewLine Num="2" UId="2024" />
+  <Token Text="REGION" UId="2025" />
+  <Blank UId="2026" />
+  <Text UId="2027">(ID = 10) Насос відкачки конденсату 1 PR46 1</Text>
+  <NewLine UId="2028" />
+  <Blank Num="4" UId="2029" />
+  <LineComment UId="2030">
+    <Text UId="2031">Тип елемента: Насос без ПЧ</Text>
+  </LineComment>
+  <NewLine UId="2032" />
+  <Blank Num="4" UId="2033" />
+  <LineComment UId="2034">
+    <Text UId="2035">Параметри двигуна: P=4.6kW;V=400V;I=8.2A;v=2950rpm;</Text>
+  </LineComment>
+  <NewLine UId="2036" />
+  <Blank Num="4" UId="2037" />
+  <NewLine UId="2038" />
+  <Blank Num="4" UId="2039" />
+  <Access Scope="GlobalVariable" UId="2040">
+    <Symbol UId="2041">
+      <Component Name="D_InOut" UId="2042" />
+      <Token Text="." UId="2043" />
+      <Component Name="PR46_1" UId="2044">
+        <BooleanAttribute Name="HasQuotes" UId="2045">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2046" />
+      <Component Name="I_KM_Feedback" UId="2047" />
+    </Symbol>
+  </Access>
+  <Blank UId="2048" />
+  <Token Text=":=" UId="2049" />
+  <Blank UId="2050" />
+  <Access Scope="GlobalVariable" UId="2051">
+    <Symbol UId="2052">
+      <Component Name="I_PR46_1_KM" UId="2053" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2054" />
+  <NewLine UId="2055" />
+  <Blank Num="4" UId="2056" />
+  <Access Scope="GlobalVariable" UId="2057">
+    <Symbol UId="2058">
+      <Component Name="D_InOut" UId="2059" />
+      <Token Text="." UId="2060" />
+      <Component Name="PR46_1" UId="2061">
+        <BooleanAttribute Name="HasQuotes" UId="2062">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2063" />
+      <Component Name="I_MCP" UId="2064" />
+    </Symbol>
+  </Access>
+  <Blank UId="2065" />
+  <Token Text=":=" UId="2066" />
+  <Blank UId="2067" />
+  <Access Scope="GlobalVariable" UId="2068">
+    <Symbol UId="2069">
+      <Component Name="I_PR46_1_MCP" UId="2070" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2071" />
+  <NewLine UId="2072" />
+  <Token Text="END_REGION" UId="2073" />
+  <NewLine Num="2" UId="2074" />
+  <Token Text="REGION" UId="2075" />
+  <Blank UId="2076" />
+  <Text UId="2077">(ID = 11) Насос відкачки конденсату 2 PR46 2</Text>
+  <NewLine UId="2078" />
+  <Blank Num="4" UId="2079" />
+  <LineComment UId="2080">
+    <Text UId="2081">Тип елемента: Насос без ПЧ</Text>
+  </LineComment>
+  <NewLine UId="2082" />
+  <Blank Num="4" UId="2083" />
+  <LineComment UId="2084">
+    <Text UId="2085">Параметри двигуна: P=4.6kW;V=400V;I=8.2A;v=2950rpm;</Text>
+  </LineComment>
+  <NewLine UId="2086" />
+  <Blank Num="4" UId="2087" />
+  <NewLine UId="2088" />
+  <Blank Num="4" UId="2089" />
+  <Access Scope="GlobalVariable" UId="2090">
+    <Symbol UId="2091">
+      <Component Name="D_InOut" UId="2092" />
+      <Token Text="." UId="2093" />
+      <Component Name="PR46_2" UId="2094">
+        <BooleanAttribute Name="HasQuotes" UId="2095">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2096" />
+      <Component Name="I_KM_Feedback" UId="2097" />
+    </Symbol>
+  </Access>
+  <Blank UId="2098" />
+  <Token Text=":=" UId="2099" />
+  <Blank UId="2100" />
+  <Access Scope="GlobalVariable" UId="2101">
+    <Symbol UId="2102">
+      <Component Name="I_PR46_2_KM" UId="2103" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2104" />
+  <NewLine UId="2105" />
+  <Blank Num="4" UId="2106" />
+  <Access Scope="GlobalVariable" UId="2107">
+    <Symbol UId="2108">
+      <Component Name="D_InOut" UId="2109" />
+      <Token Text="." UId="2110" />
+      <Component Name="PR46_2" UId="2111">
+        <BooleanAttribute Name="HasQuotes" UId="2112">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2113" />
+      <Component Name="I_MCP" UId="2114" />
+    </Symbol>
+  </Access>
+  <Blank UId="2115" />
+  <Token Text=":=" UId="2116" />
+  <Blank UId="2117" />
+  <Access Scope="GlobalVariable" UId="2118">
+    <Symbol UId="2119">
+      <Component Name="I_PR46_2_MCP" UId="2120" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2121" />
+  <NewLine UId="2122" />
+  <Token Text="END_REGION" UId="2123" />
+  <NewLine Num="2" UId="2124" />
+  <Token Text="REGION" UId="2125" />
+  <Blank UId="2126" />
+  <Text UId="2127">(ID = 12) Насос подачі кислоти PW579CA</Text>
+  <NewLine UId="2128" />
+  <Blank Num="4" UId="2129" />
+  <LineComment UId="2130">
+    <Text UId="2131">Тип елемента: Насос без ПЧ</Text>
+  </LineComment>
+  <NewLine UId="2132" />
+  <Blank Num="4" UId="2133" />
+  <LineComment UId="2134">
+    <Text UId="2135">Параметри двигуна: P=3kW;V=400V;I=6.33A;f=0.79;v=2880rpm;</Text>
+  </LineComment>
+  <NewLine UId="2136" />
+  <Blank Num="4" UId="2137" />
+  <NewLine UId="2138" />
+  <Blank Num="4" UId="2139" />
+  <Access Scope="GlobalVariable" UId="2140">
+    <Symbol UId="2141">
+      <Component Name="D_InOut" UId="2142" />
+      <Token Text="." UId="2143" />
+      <Component Name="PW579CA" UId="2144">
+        <BooleanAttribute Name="HasQuotes" UId="2145">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2146" />
+      <Component Name="I_KM_Feedback" UId="2147" />
+    </Symbol>
+  </Access>
+  <Blank UId="2148" />
+  <Token Text=":=" UId="2149" />
+  <Blank UId="2150" />
+  <Access Scope="GlobalVariable" UId="2151">
+    <Symbol UId="2152">
+      <Component Name="I_PW579CA_KM" UId="2153" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2154" />
+  <NewLine UId="2155" />
+  <Blank Num="4" UId="2156" />
+  <Access Scope="GlobalVariable" UId="2157">
+    <Symbol UId="2158">
+      <Component Name="D_InOut" UId="2159" />
+      <Token Text="." UId="2160" />
+      <Component Name="PW579CA" UId="2161">
+        <BooleanAttribute Name="HasQuotes" UId="2162">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2163" />
+      <Component Name="I_MCP" UId="2164" />
+    </Symbol>
+  </Access>
+  <Blank UId="2165" />
+  <Token Text=":=" UId="2166" />
+  <Blank UId="2167" />
+  <Access Scope="GlobalVariable" UId="2168">
+    <Symbol UId="2169">
+      <Component Name="I_PW579CA_MCP" UId="2170" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2171" />
+  <NewLine UId="2172" />
+  <Token Text="END_REGION" UId="2173" />
+  <NewLine Num="2" UId="2174" />
+  <Token Text="REGION" UId="2175" />
+  <Blank UId="2176" />
+  <Text UId="2177">(ID = 13) Насос подачі лугу PW579NA</Text>
+  <NewLine UId="2178" />
+  <Blank Num="4" UId="2179" />
+  <LineComment UId="2180">
+    <Text UId="2181">Тип елемента: Насос без ПЧ</Text>
+  </LineComment>
+  <NewLine UId="2182" />
+  <Blank Num="4" UId="2183" />
+  <LineComment UId="2184">
+    <Text UId="2185">Параметри двигуна: P=3kW;V=400V;I=6.33A;f=0.79;v=2880rpm;</Text>
+  </LineComment>
+  <NewLine UId="2186" />
+  <Blank Num="4" UId="2187" />
+  <NewLine UId="2188" />
+  <Blank Num="4" UId="2189" />
+  <Access Scope="GlobalVariable" UId="2190">
+    <Symbol UId="2191">
+      <Component Name="D_InOut" UId="2192" />
+      <Token Text="." UId="2193" />
+      <Component Name="PW579NA" UId="2194">
+        <BooleanAttribute Name="HasQuotes" UId="2195">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2196" />
+      <Component Name="I_KM_Feedback" UId="2197" />
+    </Symbol>
+  </Access>
+  <Blank UId="2198" />
+  <Token Text=":=" UId="2199" />
+  <Blank UId="2200" />
+  <Access Scope="GlobalVariable" UId="2201">
+    <Symbol UId="2202">
+      <Component Name="I_PW579NA_KM" UId="2203" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2204" />
+  <NewLine UId="2205" />
+  <Blank Num="4" UId="2206" />
+  <Access Scope="GlobalVariable" UId="2207">
+    <Symbol UId="2208">
+      <Component Name="D_InOut" UId="2209" />
+      <Token Text="." UId="2210" />
+      <Component Name="PW579NA" UId="2211">
+        <BooleanAttribute Name="HasQuotes" UId="2212">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2213" />
+      <Component Name="I_MCP" UId="2214" />
+    </Symbol>
+  </Access>
+  <Blank UId="2215" />
+  <Token Text=":=" UId="2216" />
+  <Blank UId="2217" />
+  <Access Scope="GlobalVariable" UId="2218">
+    <Symbol UId="2219">
+      <Component Name="I_PW579NA_MCP" UId="2220" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2221" />
+  <NewLine UId="2222" />
+  <Token Text="END_REGION" UId="2223" />
+  <NewLine Num="2" UId="2224" />
+  <Token Text="REGION" UId="2225" />
+  <Blank UId="2226" />
+  <Text UId="2227">(ID = 14) Насос оборотної води 1 Н1Гр</Text>
+  <NewLine UId="2228" />
+  <Blank Num="4" UId="2229" />
+  <LineComment UId="2230">
+    <Text UId="2231">Тип елемента: Насос з ПЧ</Text>
+  </LineComment>
+  <NewLine UId="2232" />
+  <Blank Num="4" UId="2233" />
+  <LineComment UId="2234">
+    <Text UId="2235">Параметри двигуна: P=75kW;V=400V;I=133A;f=0.86;v=2979rpm;</Text>
+  </LineComment>
+  <NewLine UId="2236" />
+  <Blank Num="4" UId="2237" />
+  <LineComment UId="2238">
+    <Text UId="2239">Параметри ПЧ: G120C; Profinet = 8 Words;</Text>
+  </LineComment>
+  <NewLine UId="2240" />
+  <Blank Num="4" UId="2241" />
+  <NewLine UId="2242" />
+  <Blank Num="4" UId="2243" />
+  <Access Scope="GlobalVariable" UId="2244">
+    <Symbol UId="2245">
+      <Component Name="D_InOut" UId="2246" />
+      <Token Text="." UId="2247" />
+      <Component Name="N1Gr" UId="2248">
+        <BooleanAttribute Name="HasQuotes" UId="2249">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2250" />
+      <Component Name="I_ES" UId="2251" />
+    </Symbol>
+  </Access>
+  <Blank UId="2252" />
+  <Token Text=":=" UId="2253" />
+  <Blank UId="2254" />
+  <Token Text="NOT" UId="2255" />
+  <Blank UId="2256" />
+  <Access Scope="GlobalVariable" UId="2257">
+    <Symbol UId="2258">
+      <Component Name="I_N1Gr_ES" UId="2259" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2260" />
+  <NewLine UId="2261" />
+  <Blank Num="4" UId="2262" />
+  <Access Scope="GlobalVariable" UId="2263">
+    <Symbol UId="2264">
+      <Component Name="D_InOut" UId="2265" />
+      <Token Text="." UId="2266" />
+      <Component Name="N1Gr" UId="2267">
+        <BooleanAttribute Name="HasQuotes" UId="2268">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2269" />
+      <Component Name="I_MCP" UId="2270" />
+    </Symbol>
+  </Access>
+  <Blank UId="2271" />
+  <Token Text=":=" UId="2272" />
+  <Blank UId="2273" />
+  <Access Scope="GlobalVariable" UId="2274">
+    <Symbol UId="2275">
+      <Component Name="I_N1Gr_MCP" UId="2276" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2277" />
+  <NewLine UId="2278" />
+  <Blank Num="4" UId="2279" />
+  <Access Scope="GlobalVariable" UId="2280">
+    <Symbol UId="2281">
+      <Component Name="D_InOut" UId="2282" />
+      <Token Text="." UId="2283" />
+      <Component Name="N1Gr" UId="2284">
+        <BooleanAttribute Name="HasQuotes" UId="2285">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2286" />
+      <Component Name="I_PTC_Ok" UId="2287" />
+    </Symbol>
+  </Access>
+  <Blank UId="2288" />
+  <Token Text=":=" UId="2289" />
+  <Blank UId="2290" />
+  <Access Scope="GlobalVariable" UId="2291">
+    <Symbol UId="2292">
+      <Component Name="I_N1Gr_PTC_Ok" UId="2293" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2294" />
+  <NewLine UId="2295" />
+  <Token Text="END_REGION" UId="2296" />
+  <NewLine Num="2" UId="2297" />
+  <Token Text="REGION" UId="2298" />
+  <Blank UId="2299" />
+  <Text UId="2300">(ID = 15) Насос оборотної води 2 Н2Гр</Text>
+  <NewLine UId="2301" />
+  <Blank Num="4" UId="2302" />
+  <LineComment UId="2303">
+    <Text UId="2304">Тип елемента: Насос з ПЧ</Text>
+  </LineComment>
+  <NewLine UId="2305" />
+  <Blank Num="4" UId="2306" />
+  <LineComment UId="2307">
+    <Text UId="2308">Параметри двигуна: P=75kW;V=400V;I=133A;f=0.86;v=2979rpm;</Text>
+  </LineComment>
+  <NewLine UId="2309" />
+  <Blank Num="4" UId="2310" />
+  <LineComment UId="2311">
+    <Text UId="2312">Параметри ПЧ: G120C; Profinet = 8 Words;</Text>
+  </LineComment>
+  <NewLine UId="2313" />
+  <Blank Num="4" UId="2314" />
+  <NewLine UId="2315" />
+  <Blank Num="4" UId="2316" />
+  <Access Scope="GlobalVariable" UId="2317">
+    <Symbol UId="2318">
+      <Component Name="D_InOut" UId="2319" />
+      <Token Text="." UId="2320" />
+      <Component Name="N2Gr" UId="2321">
+        <BooleanAttribute Name="HasQuotes" UId="2322">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2323" />
+      <Component Name="I_ES" UId="2324" />
+    </Symbol>
+  </Access>
+  <Blank UId="2325" />
+  <Token Text=":=" UId="2326" />
+  <Blank UId="2327" />
+  <Token Text="NOT" UId="2328" />
+  <Blank UId="2329" />
+  <Access Scope="GlobalVariable" UId="2330">
+    <Symbol UId="2331">
+      <Component Name="I_N2Gr_ES" UId="2332" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2333" />
+  <NewLine UId="2334" />
+  <Blank Num="4" UId="2335" />
+  <Access Scope="GlobalVariable" UId="2336">
+    <Symbol UId="2337">
+      <Component Name="D_InOut" UId="2338" />
+      <Token Text="." UId="2339" />
+      <Component Name="N2Gr" UId="2340">
+        <BooleanAttribute Name="HasQuotes" UId="2341">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2342" />
+      <Component Name="I_MCP" UId="2343" />
+    </Symbol>
+  </Access>
+  <Blank UId="2344" />
+  <Token Text=":=" UId="2345" />
+  <Blank UId="2346" />
+  <Access Scope="GlobalVariable" UId="2347">
+    <Symbol UId="2348">
+      <Component Name="I_N2Gr_MCP" UId="2349" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2350" />
+  <NewLine UId="2351" />
+  <Blank Num="4" UId="2352" />
+  <Access Scope="GlobalVariable" UId="2353">
+    <Symbol UId="2354">
+      <Component Name="D_InOut" UId="2355" />
+      <Token Text="." UId="2356" />
+      <Component Name="N2Gr" UId="2357">
+        <BooleanAttribute Name="HasQuotes" UId="2358">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2359" />
+      <Component Name="I_PTC_Ok" UId="2360" />
+    </Symbol>
+  </Access>
+  <Blank UId="2361" />
+  <Token Text=":=" UId="2362" />
+  <Blank UId="2363" />
+  <Access Scope="GlobalVariable" UId="2364">
+    <Symbol UId="2365">
+      <Component Name="I_N2Gr_PTC_Ok" UId="2366" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2367" />
+  <NewLine UId="2368" />
+  <Token Text="END_REGION" UId="2369" />
+  <NewLine Num="2" UId="2370" />
+  <Token Text="REGION" UId="2371" />
+  <Blank UId="2372" />
+  <Text UId="2373">(ID = 16) Насос оборотної води 3 Н3Гр</Text>
+  <NewLine UId="2374" />
+  <Blank Num="4" UId="2375" />
+  <LineComment UId="2376">
+    <Text UId="2377">Тип елемента: Насос з ПЧ</Text>
+  </LineComment>
+  <NewLine UId="2378" />
+  <Blank Num="4" UId="2379" />
+  <LineComment UId="2380">
+    <Text UId="2381">Параметри двигуна: P=75kW;V=400V;I=133A;f=0.86;v=2979rpm;</Text>
+  </LineComment>
+  <NewLine UId="2382" />
+  <Blank Num="4" UId="2383" />
+  <LineComment UId="2384">
+    <Text UId="2385">Параметри ПЧ: G120C; Profinet = 8 Words;</Text>
+  </LineComment>
+  <NewLine UId="2386" />
+  <Blank Num="4" UId="2387" />
+  <NewLine UId="2388" />
+  <Blank Num="4" UId="2389" />
+  <Access Scope="GlobalVariable" UId="2390">
+    <Symbol UId="2391">
+      <Component Name="D_InOut" UId="2392" />
+      <Token Text="." UId="2393" />
+      <Component Name="N3Gr" UId="2394">
+        <BooleanAttribute Name="HasQuotes" UId="2395">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2396" />
+      <Component Name="I_ES" UId="2397" />
+    </Symbol>
+  </Access>
+  <Blank UId="2398" />
+  <Token Text=":=" UId="2399" />
+  <Blank UId="2400" />
+  <Token Text="NOT" UId="2401" />
+  <Blank UId="2402" />
+  <Access Scope="GlobalVariable" UId="2403">
+    <Symbol UId="2404">
+      <Component Name="I_N3Gr_ES" UId="2405" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2406" />
+  <NewLine UId="2407" />
+  <Blank Num="4" UId="2408" />
+  <Access Scope="GlobalVariable" UId="2409">
+    <Symbol UId="2410">
+      <Component Name="D_InOut" UId="2411" />
+      <Token Text="." UId="2412" />
+      <Component Name="N3Gr" UId="2413">
+        <BooleanAttribute Name="HasQuotes" UId="2414">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2415" />
+      <Component Name="I_MCP" UId="2416" />
+    </Symbol>
+  </Access>
+  <Blank UId="2417" />
+  <Token Text=":=" UId="2418" />
+  <Blank UId="2419" />
+  <Access Scope="GlobalVariable" UId="2420">
+    <Symbol UId="2421">
+      <Component Name="I_N3Gr_MCP" UId="2422" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2423" />
+  <NewLine UId="2424" />
+  <Blank Num="4" UId="2425" />
+  <Access Scope="GlobalVariable" UId="2426">
+    <Symbol UId="2427">
+      <Component Name="D_InOut" UId="2428" />
+      <Token Text="." UId="2429" />
+      <Component Name="N3Gr" UId="2430">
+        <BooleanAttribute Name="HasQuotes" UId="2431">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2432" />
+      <Component Name="I_PTC_Ok" UId="2433" />
+    </Symbol>
+  </Access>
+  <Blank UId="2434" />
+  <Token Text=":=" UId="2435" />
+  <Blank UId="2436" />
+  <Access Scope="GlobalVariable" UId="2437">
+    <Symbol UId="2438">
+      <Component Name="I_N3Gr_PTC_Ok" UId="2439" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2440" />
+  <NewLine UId="2441" />
+  <Token Text="END_REGION" UId="2442" />
+  <NewLine Num="2" UId="2443" />
+  <Token Text="REGION" UId="2444" />
+  <Blank UId="2445" />
+  <Text UId="2446">(ID = 17) Насос подачі технологічної води PW0 W</Text>
+  <NewLine UId="2447" />
+  <Blank Num="4" UId="2448" />
+  <LineComment UId="2449">
+    <Text UId="2450">Тип елемента: Насос з ПЧ</Text>
+  </LineComment>
+  <NewLine UId="2451" />
+  <Blank Num="4" UId="2452" />
+  <LineComment UId="2453">
+    <Text UId="2454">Параметри двигуна: P=15kW;V=400V;I=A;f=;v=rpm;</Text>
+  </LineComment>
+  <NewLine UId="2455" />
+  <Blank Num="4" UId="2456" />
+  <LineComment UId="2457">
+    <Text UId="2458">Параметри ПЧ: G120C; Profinet = 8 Words;</Text>
+  </LineComment>
+  <NewLine UId="2459" />
+  <Blank Num="4" UId="2460" />
+  <NewLine UId="2461" />
+  <Blank Num="4" UId="2462" />
+  <Access Scope="GlobalVariable" UId="2463">
+    <Symbol UId="2464">
+      <Component Name="D_InOut" UId="2465" />
+      <Token Text="." UId="2466" />
+      <Component Name="PW0_W" UId="2467">
+        <BooleanAttribute Name="HasQuotes" UId="2468">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2469" />
+      <Component Name="I_ES" UId="2470" />
+    </Symbol>
+  </Access>
+  <Blank UId="2471" />
+  <Token Text=":=" UId="2472" />
+  <Blank UId="2473" />
+  <Access Scope="LiteralConstant" UId="2474">
+    <Constant UId="2475">
+      <ConstantValue UId="2477">true</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="2478" />
+  <LineComment UId="2479">
+    <Text UId="2480">NOT "I_PW0_W_ES";</Text>
+  </LineComment>
+  <NewLine UId="2481" />
+  <Blank Num="4" UId="2482" />
+  <Access Scope="GlobalVariable" UId="2483">
+    <Symbol UId="2484">
+      <Component Name="D_InOut" UId="2485" />
+      <Token Text="." UId="2486" />
+      <Component Name="PW0_W" UId="2487">
+        <BooleanAttribute Name="HasQuotes" UId="2488">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2489" />
+      <Component Name="I_MCP" UId="2490" />
+    </Symbol>
+  </Access>
+  <Blank UId="2491" />
+  <Token Text=":=" UId="2492" />
+  <Blank UId="2493" />
+  <Access Scope="LiteralConstant" UId="2494">
+    <Constant UId="2495">
+      <ConstantValue UId="2497">true</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="2498" />
+  <LineComment UId="2499">
+    <Text UId="2500">"I_PW0_W_MCP";</Text>
+  </LineComment>
+  <NewLine UId="2501" />
+  <Blank Num="4" UId="2502" />
+  <Access Scope="GlobalVariable" UId="2503">
+    <Symbol UId="2504">
+      <Component Name="D_InOut" UId="2505" />
+      <Token Text="." UId="2506" />
+      <Component Name="PW0_W" UId="2507">
+        <BooleanAttribute Name="HasQuotes" UId="2508">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="2509" />
+      <Component Name="I_PTC_Ok" UId="2510" />
+    </Symbol>
+  </Access>
+  <Blank UId="2511" />
+  <Token Text=":=" UId="2512" />
+  <Blank UId="2513" />
+  <Access Scope="LiteralConstant" UId="2514">
+    <Constant UId="2515">
+      <ConstantValue UId="2517">true</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="2518" />
+  <LineComment UId="2519">
+    <Text UId="2520">"I_PW0_W_PTC_Ok";</Text>
+  </LineComment>
+  <NewLine UId="2521" />
+  <Token Text="END_REGION" UId="2522" />
+  <NewLine Num="2" UId="2523" />
+  <Token Text="REGION" UId="2524" />
+  <Blank UId="2525" />
+  <Text UId="2526">(ID = 18) Регулятор температути вихідної води 1 TIC_W1011</Text>
+  <NewLine UId="2527" />
+  <Blank Num="4" UId="2528" />
+  <LineComment UId="2529">
+    <Text UId="2530">Тип елемента: ПІД</Text>
+  </LineComment>
+  <NewLine UId="2531" />
+  <Blank Num="4" UId="2532" />
+  <NewLine UId="2533" />
+  <Token Text="END_REGION" UId="2534" />
+  <NewLine Num="2" UId="2535" />
+  <Token Text="REGION" UId="2536" />
+  <Blank UId="2537" />
+  <Text UId="2538">(ID = 19) Регулятор температути вихідної води 2 TIC_811</Text>
+  <NewLine UId="2539" />
+  <Blank Num="4" UId="2540" />
+  <LineComment UId="2541">
+    <Text UId="2542">Тип елемента: ПІД</Text>
+  </LineComment>
+  <NewLine UId="2543" />
+  <Blank Num="4" UId="2544" />
+  <NewLine UId="2545" />
+  <Token Text="END_REGION" UId="2546" />
+  <NewLine Num="2" UId="2547" />
+  <Token Text="REGION" UId="2548" />
+  <Blank UId="2549" />
+  <Text UId="2550">(ID = 20) Регулятор тиску кислоти LIC_PW579CA</Text>
+  <NewLine UId="2551" />
+  <Blank Num="4" UId="2552" />
+  <LineComment UId="2553">
+    <Text UId="2554">Тип елемента: ПІД</Text>
+  </LineComment>
+  <NewLine UId="2555" />
+  <Blank Num="4" UId="2556" />
+  <NewLine UId="2557" />
+  <Token Text="END_REGION" UId="2558" />
+  <NewLine Num="2" UId="2559" />
+  <Token Text="REGION" UId="2560" />
+  <Blank UId="2561" />
+  <Text UId="2562">(ID = 21) Регулятор тиску лугу LIC_PW579NA</Text>
+  <NewLine UId="2563" />
+  <Blank Num="4" UId="2564" />
+  <LineComment UId="2565">
+    <Text UId="2566">Тип елемента: ПІД</Text>
+  </LineComment>
+  <NewLine UId="2567" />
+  <Blank Num="4" UId="2568" />
+  <NewLine UId="2569" />
+  <Token Text="END_REGION" UId="2570" />
+  <NewLine Num="2" UId="2571" />
+  <Token Text="REGION" UId="2572" />
+  <Blank UId="2573" />
+  <Text UId="2574">(ID = 22) Регулятор тиску технологічної води PIC_PW0_W</Text>
+  <NewLine UId="2575" />
+  <Blank Num="4" UId="2576" />
+  <LineComment UId="2577">
+    <Text UId="2578">Тип елемента: ПІД</Text>
+  </LineComment>
+  <NewLine UId="2579" />
+  <Blank Num="4" UId="2580" />
+  <NewLine UId="2581" />
+  <Token Text="END_REGION" UId="2582" />
+  <NewLine Num="2" UId="2583" />
+  <Token Text="REGION" UId="2584" />
+  <Blank UId="2585" />
+  <Text UId="2586">(ID = 23) Регулятор тиску оборотної води PIC_N_Gr</Text>
+  <NewLine UId="2587" />
+  <Blank Num="4" UId="2588" />
+  <LineComment UId="2589">
+    <Text UId="2590">Тип елемента: ПІД каскадний</Text>
+  </LineComment>
+  <NewLine UId="2591" />
+  <Blank Num="4" UId="2592" />
+  <NewLine UId="2593" />
+  <Token Text="END_REGION" UId="2594" />
+  <NewLine Num="2" UId="2595" />
+  <Token Text="REGION" UId="2596" />
+  <Blank UId="2597" />
+  <Text UId="2598">(ID = 1) Клапан продувки басейну градирні 1 XVБ1Гр</Text>
+  <NewLine UId="2599" />
+  <Blank Num="4" UId="2600" />
+  <LineComment UId="2601">
+    <Text UId="2602">Тип елемента: Клапан продувки</Text>
+  </LineComment>
+  <NewLine UId="2603" />
+  <Blank Num="4" UId="2604" />
+  <NewLine UId="2605" />
+  <Token Text="END_REGION" UId="2606" />
+  <NewLine Num="2" UId="2607" />
+  <Token Text="REGION" UId="2608" />
+  <Blank UId="2609" />
+  <Text UId="2610">(ID = 2) Клапан підживлення градирні 1 XV1Гр</Text>
+  <NewLine UId="2611" />
+  <Blank Num="4" UId="2612" />
+  <LineComment UId="2613">
+    <Text UId="2614">Тип елемента: Клапан двоходовий (Дискретний)</Text>
+  </LineComment>
+  <NewLine UId="2615" />
+  <Blank Num="4" UId="2616" />
+  <NewLine UId="2617" />
+  <Token Text="END_REGION" UId="2618" />
+  <NewLine Num="2" UId="2619" />
+  <Token Text="REGION" UId="2620" />
+  <Blank UId="2621" />
+  <Text UId="2622">(ID = 3) Клапан продувки басейну градирні 2 XVБ2Гр</Text>
+  <NewLine UId="2623" />
+  <Blank Num="4" UId="2624" />
+  <LineComment UId="2625">
+    <Text UId="2626">Тип елемента: Клапан продувки</Text>
+  </LineComment>
+  <NewLine UId="2627" />
+  <Blank Num="4" UId="2628" />
+  <NewLine UId="2629" />
+  <Token Text="END_REGION" UId="2630" />
+  <NewLine Num="2" UId="2631" />
+  <Token Text="REGION" UId="2632" />
+  <Blank UId="2633" />
+  <Text UId="2634">(ID = 4) Клапан підживлення градирні 2 XV2Гр</Text>
+  <NewLine UId="2635" />
+  <Blank Num="4" UId="2636" />
+  <LineComment UId="2637">
+    <Text UId="2638">Тип елемента: Клапан двоходовий (Дискретний)</Text>
+  </LineComment>
+  <NewLine UId="2639" />
+  <Blank Num="4" UId="2640" />
+  <NewLine UId="2641" />
+  <Token Text="END_REGION" UId="2642" />
+  <NewLine Num="2" UId="2643" />
+  <Token Text="REGION" UId="2644" />
+  <Blank UId="2645" />
+  <Text UId="2646">(ID = 5) Клапан подачі конденсату до W578HW1 XV W578HW1/R46</Text>
+  <NewLine UId="2647" />
+  <Blank Num="4" UId="2648" />
+  <LineComment UId="2649">
+    <Text UId="2650">Тип елемента: Клапан конденсату</Text>
+  </LineComment>
+  <NewLine UId="2651" />
+  <Blank Num="4" UId="2652" />
+  <NewLine UId="2653" />
+  <Token Text="END_REGION" UId="2654" />
+  <NewLine Num="2" UId="2655" />
+  <Token Text="REGION" UId="2656" />
+  <Blank UId="2657" />
+  <Text UId="2658">(ID = 6) Клапан подачі конденсату до градирні XV Бгр/R46</Text>
+  <NewLine UId="2659" />
+  <Blank Num="4" UId="2660" />
+  <LineComment UId="2661">
+    <Text UId="2662">Тип елемента: Клапан конденсату</Text>
+  </LineComment>
+  <NewLine UId="2663" />
+  <Blank Num="4" UId="2664" />
+  <NewLine UId="2665" />
+  <Token Text="END_REGION" UId="2666" />
+  <NewLine Num="2" UId="2667" />
+  <Token Text="REGION" UId="2668" />
+  <Blank UId="2669" />
+  <Text UId="2670">(ID = 7) Клапан подачі конденсату до котельні ОЕЗ XV Storage/R46</Text>
+  <NewLine UId="2671" />
+  <Blank Num="4" UId="2672" />
+  <LineComment UId="2673">
+    <Text UId="2674">Тип елемента: Клапан конденсату</Text>
+  </LineComment>
+  <NewLine UId="2675" />
+  <Blank Num="4" UId="2676" />
+  <NewLine UId="2677" />
+  <Token Text="END_REGION" UId="2678" />
+  <NewLine Num="2" UId="2679" />
+  <Token Text="REGION" UId="2680" />
+  <Blank UId="2681" />
+  <Text UId="2682">(ID = 8) Відсічний клапан XV6</Text>
+  <NewLine UId="2683" />
+  <Blank Num="4" UId="2684" />
+  <LineComment UId="2685">
+    <Text UId="2686">Тип елемента: Клапан двоходовий (Дискретний)</Text>
+  </LineComment>
+  <NewLine UId="2687" />
+  <Blank Num="4" UId="2688" />
+  <NewLine UId="2689" />
+  <Token Text="END_REGION" UId="2690" />
+  <NewLine Num="2" UId="2691" />
+  <Token Text="REGION" UId="2692" />
+  <Blank UId="2693" />
+  <Text UId="2694">(ID = 9) Клапан подачі води в ємність запасу осмотичної води XV W10 OW</Text>
+  <NewLine UId="2695" />
+  <Blank Num="4" UId="2696" />
+  <LineComment UId="2697">
+    <Text UId="2698">Тип елемента: Клапан двоходовий (Дискретний)</Text>
+  </LineComment>
+  <NewLine UId="2699" />
+  <Blank Num="4" UId="2700" />
+  <NewLine UId="2701" />
+  <Token Text="END_REGION" UId="2702" />
+  <NewLine Num="3" UId="2703" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--All students-->
+<students>
+  <student name="Nicole">
+    <age>27</age>
+    <course>C# language</course>
+  </student>
+  <student name="Adam">
+    <age>18</age>
+    <course>C# language</course>
+  </student>
+  <student name="Rick">
+    <age>19</age>
+    <course>Java language</course>
+  </student>
+  <student name="Bill">
+    <age>18</age>
+    <course>Java language</course>
+  </student>
+</students>

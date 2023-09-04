@@ -1,6 +1,4 @@
-﻿using System;
-using System.Reflection.PortableExecutable;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace ClinicAppointment.Helper.Validators.General.Implements
 {

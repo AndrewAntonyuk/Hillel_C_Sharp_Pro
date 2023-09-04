@@ -1,0 +1,7 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    //Параметри двигуна: {sDescribe1}
+    	
+	"D_InOut"."{sTechNumPrg}".I_IsOpened := "I_{sTechNumPrg}_IsOpen";
+	"D_InOut"."{sTechNumPrg}".I_IsClosed := "I_{sTechNumPrg}_IsClose";
+END_REGION

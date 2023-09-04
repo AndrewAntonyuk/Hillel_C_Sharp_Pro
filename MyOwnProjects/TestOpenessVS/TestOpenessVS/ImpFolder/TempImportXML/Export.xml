@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <SW.Tags.PlcTag ID="0">
+    <AttributeList>
+      <DataTypeName>Bool</DataTypeName>
+      <ExternalAccessible>false</ExternalAccessible>
+      <ExternalVisible>false</ExternalVisible>
+      <ExternalWritable>false</ExternalWritable>
+      <LogicalAddress>I0.0</LogicalAddress>
+      <Name>I_TestTag_BlaBlaBla</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Test comment US blablabla</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text>Test comment UA blablabla</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Tags.PlcTag>
+</Document>

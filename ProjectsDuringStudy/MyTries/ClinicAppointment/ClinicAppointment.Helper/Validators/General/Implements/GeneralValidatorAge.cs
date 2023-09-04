@@ -1,6 +1,6 @@
 ﻿namespace ClinicAppointment.Helper.Validators.General.Implements
 {
-    public class GeneralValidatorAge : IGeneralValidator<byte> 
+    public class GeneralValidatorAge : IGeneralValidator<byte>
     {
         public byte Validate(object? value)
         {

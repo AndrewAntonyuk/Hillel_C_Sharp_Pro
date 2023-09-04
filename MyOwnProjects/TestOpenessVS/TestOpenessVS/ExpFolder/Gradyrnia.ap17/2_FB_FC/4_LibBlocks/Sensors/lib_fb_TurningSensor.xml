@@ -1,0 +1,674 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:02:50.7738126Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="iSensorSignal" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Signal from sensor input</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="iStartCmd" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Run command has been set</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="iiSensorType" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 - disabled; 1 - descrete signal; 2 - pulses when rotating</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="irCycleTime" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Last cycle tyme, msec</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="irMaxPulsesDelay" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Max delay between pulses (for type 1 sensor), sec</MultiLanguageText>
+      </Comment>
+      <StartValue>1.0</StartValue>
+    </Member>
+    <Member Name="irMaxStartTime" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Max Delay between motor start command and shaft rotation, sec</MultiLanguageText>
+      </Comment>
+      <StartValue>5.0</StartValue>
+    </Member>
+    <Member Name="irMaxStopTime" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Max Delay between motor and shaft stoping, sec</MultiLanguageText>
+      </Comment>
+      <StartValue>5.0</StartValue>
+    </Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="oResult" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TRUE if shaft rotates</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="oStartAlarm" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Start time exceeded</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="oStopAlarm" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Start time exceeded</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="sdb_InputPulse" Datatype="&quot;Lib_FB_Edge&quot;" />
+    <Member Name="sdb_TOF_Pulses" Datatype="&quot;Lib_FB_Timer_OFF_Simple&quot;">
+      <Comment>
+        <MultiLanguageText Lang="en-US">If false, then the shaft is stopped</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="sdb_TON_StartDelay" Datatype="&quot;Lib_FB_Timer_ON_Simple&quot;">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Delay while not rotating after start command. If true, then fault</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="sdb_TON_StopDelay" Datatype="&quot;Lib_FB_Timer_ON_Simple&quot;">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Delay while rotating after stop command. If true, then fault</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="tb_ShaftRotates" Datatype="Bool" />
+    <Member Name="tb_EnableOuts" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 - enabled, 0 - disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>lib_fb_TurningSensor</Name>
+      <Number>14</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <NewLine Num="2" UId="21" />
+  <LineComment UId="22">
+    <Text UId="23">  Check sensor type</Text>
+  </LineComment>
+  <NewLine UId="24" />
+  <Token Text="CASE" UId="25" />
+  <Blank UId="26" />
+  <Access Scope="LocalVariable" UId="27">
+    <Symbol UId="28">
+      <Component Name="iiSensorType" UId="29" />
+    </Symbol>
+  </Access>
+  <Blank UId="30" />
+  <Token Text="OF" UId="31" />
+  <NewLine UId="32" />
+  <Blank Num="4" UId="33" />
+  <Access Scope="LiteralConstant" UId="34">
+    <Constant UId="35">
+      <ConstantValue UId="37">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=":" UId="38" />
+  <Blank Num="2" UId="39" />
+  <LineComment UId="40">
+    <Text UId="41"> Descrete signal</Text>
+  </LineComment>
+  <NewLine UId="42" />
+  <Blank Num="8" UId="43" />
+  <Access Scope="LocalVariable" UId="44">
+    <Symbol UId="45">
+      <Component Name="tb_ShaftRotates" UId="46" />
+    </Symbol>
+  </Access>
+  <Blank UId="47" />
+  <Token Text=":=" UId="48" />
+  <Blank UId="49" />
+  <Access Scope="LocalVariable" UId="50">
+    <Symbol UId="51">
+      <Component Name="iSensorSignal" UId="52" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="53" />
+  <NewLine UId="54" />
+  <Blank Num="8" UId="55" />
+  <Access Scope="LocalVariable" UId="56">
+    <Symbol UId="57">
+      <Component Name="tb_EnableOuts" UId="58" />
+    </Symbol>
+  </Access>
+  <Blank UId="59" />
+  <Token Text=":=" UId="60" />
+  <Blank UId="61" />
+  <Access Scope="LiteralConstant" UId="62">
+    <Constant UId="63">
+      <ConstantValue UId="65">true</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="66" />
+  <NewLine UId="67" />
+  <Blank Num="4" UId="68" />
+  <Access Scope="LiteralConstant" UId="69">
+    <Constant UId="70">
+      <ConstantValue UId="72">2</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=":" UId="73" />
+  <Blank Num="2" UId="74" />
+  <LineComment UId="75">
+    <Text UId="76"> Pulses when rotating</Text>
+  </LineComment>
+  <NewLine UId="77" />
+  <Blank Num="8" UId="78" />
+  <Access Scope="LocalVariable" UId="79">
+    <Symbol UId="80">
+      <Component Name="sdb_InputPulse" UId="81" />
+      <Token Text="." UId="82" />
+      <Component Name="IB_Input" UId="83" />
+    </Symbol>
+  </Access>
+  <Blank UId="84" />
+  <Token Text=":=" UId="85" />
+  <Blank UId="86" />
+  <Access Scope="LocalVariable" UId="87">
+    <Symbol UId="88">
+      <Component Name="iSensorSignal" UId="89" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="90" />
+  <NewLine UId="91" />
+  <Blank Num="8" UId="92" />
+  <NewLine UId="93" />
+  <Blank Num="8" UId="94" />
+  <Access Scope="Call" UId="95">
+    <CallInfo UId="96" BlockType="FB" Name="Lib_FB_Edge">
+      <Instance Scope="LocalVariable" UId="97">
+        <Component Name="sdb_InputPulse" UId="98" />
+      </Instance>
+      <Token Text="(" UId="99" />
+      <Token Text=")" UId="104" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="105" />
+  <NewLine UId="106" />
+  <Blank Num="8" UId="107" />
+  <NewLine UId="108" />
+  <Blank Num="8" UId="109" />
+  <Access Scope="LocalVariable" UId="110">
+    <Symbol UId="111">
+      <Component Name="sdb_TOF_Pulses" UId="112" />
+      <Token Text="." UId="113" />
+      <Component Name="IB_StartTimerInput" UId="114" />
+    </Symbol>
+  </Access>
+  <Blank UId="115" />
+  <Token Text=":=" UId="116" />
+  <Blank UId="117" />
+  <Access Scope="LocalVariable" UId="118">
+    <Symbol UId="119">
+      <Component Name="sdb_InputPulse" UId="120" />
+      <Token Text="." UId="121" />
+      <Component Name="QB_EdgePos" UId="122" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="123" />
+  <NewLine UId="124" />
+  <Blank Num="8" UId="125" />
+  <Access Scope="LocalVariable" UId="126">
+    <Symbol UId="127">
+      <Component Name="sdb_TOF_Pulses" UId="128" />
+      <Token Text="." UId="129" />
+      <Component Name="IR_SpTime" UId="130" />
+    </Symbol>
+  </Access>
+  <Blank UId="131" />
+  <Token Text=":=" UId="132" />
+  <Blank UId="133" />
+  <Access Scope="LocalVariable" UId="134">
+    <Symbol UId="135">
+      <Component Name="irMaxPulsesDelay" UId="136" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="137" />
+  <NewLine UId="138" />
+  <Blank Num="8" UId="139" />
+  <Access Scope="LocalVariable" UId="140">
+    <Symbol UId="141">
+      <Component Name="sdb_TOF_Pulses" UId="142" />
+      <Token Text="." UId="143" />
+      <Component Name="IR_CycleTime" UId="144" />
+    </Symbol>
+  </Access>
+  <Blank UId="145" />
+  <Token Text=":=" UId="146" />
+  <Blank UId="147" />
+  <Access Scope="LocalVariable" UId="148">
+    <Symbol UId="149">
+      <Component Name="irCycleTime" UId="150" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="151" />
+  <NewLine UId="152" />
+  <Blank Num="8" UId="153" />
+  <NewLine UId="154" />
+  <Blank Num="8" UId="155" />
+  <Access Scope="Call" UId="156">
+    <CallInfo UId="157" BlockType="FB" Name="Lib_FB_Timer_OFF_Simple">
+      <Instance Scope="LocalVariable" UId="158">
+        <Component Name="sdb_TOF_Pulses" UId="159" />
+      </Instance>
+      <Token Text="(" UId="160" />
+      <Token Text=")" UId="166" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="167" />
+  <NewLine UId="168" />
+  <Blank Num="8" UId="169" />
+  <NewLine UId="170" />
+  <Blank Num="8" UId="171" />
+  <Access Scope="LocalVariable" UId="172">
+    <Symbol UId="173">
+      <Component Name="tb_ShaftRotates" UId="174" />
+    </Symbol>
+  </Access>
+  <Blank UId="175" />
+  <Token Text=":=" UId="176" />
+  <Blank UId="177" />
+  <Access Scope="LocalVariable" UId="178">
+    <Symbol UId="179">
+      <Component Name="sdb_TOF_Pulses" UId="180" />
+      <Token Text="." UId="181" />
+      <Component Name="QB_TimerOut" UId="182" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="183" />
+  <NewLine UId="184" />
+  <Blank Num="8" UId="185" />
+  <Access Scope="LocalVariable" UId="186">
+    <Symbol UId="187">
+      <Component Name="tb_EnableOuts" UId="188" />
+    </Symbol>
+  </Access>
+  <Blank UId="189" />
+  <Token Text=":=" UId="190" />
+  <Blank UId="191" />
+  <Access Scope="LiteralConstant" UId="192">
+    <Constant UId="193">
+      <ConstantValue UId="195">true</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="196" />
+  <NewLine UId="197" />
+  <Blank Num="4" UId="198" />
+  <Token Text="ELSE" UId="199" />
+  <NewLine UId="200" />
+  <Blank Num="8" UId="201" />
+  <Access Scope="LocalVariable" UId="202">
+    <Symbol UId="203">
+      <Component Name="tb_EnableOuts" UId="204" />
+    </Symbol>
+  </Access>
+  <Blank UId="205" />
+  <Token Text=":=" UId="206" />
+  <Blank UId="207" />
+  <Access Scope="LiteralConstant" UId="208">
+    <Constant UId="209">
+      <ConstantValue UId="211">false</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="212" />
+  <NewLine UId="213" />
+  <Token Text="END_CASE" UId="214" />
+  <Token Text=";" UId="215" />
+  <NewLine Num="2" UId="216" />
+  <Access Scope="Call" UId="217">
+    <CallInfo UId="218" BlockType="FB" Name="Lib_FB_Timer_ON_Simple">
+      <Instance Scope="LocalVariable" UId="219">
+        <Component Name="sdb_TON_StartDelay" UId="220" />
+      </Instance>
+      <Token Text="(" UId="221" />
+      <Parameter Name="IB_StartTimerInput" UId="222">
+        <Blank UId="223" />
+        <Token Text=":=" UId="224" />
+        <Blank UId="225" />
+        <Token Text="(" UId="226" />
+        <Access Scope="LocalVariable" UId="227">
+          <Symbol UId="228">
+            <Component Name="iStartCmd" UId="229" />
+          </Symbol>
+        </Access>
+        <Blank UId="230" />
+        <Token Text="AND" UId="231" />
+        <Blank UId="232" />
+        <Token Text="NOT" UId="233" />
+        <Blank UId="234" />
+        <Access Scope="LocalVariable" UId="235">
+          <Symbol UId="236">
+            <Component Name="tb_ShaftRotates" UId="237" />
+          </Symbol>
+        </Access>
+        <Token Text=")" UId="238" />
+        <Blank UId="239" />
+        <Token Text="AND" UId="240" />
+        <Blank UId="241" />
+        <Access Scope="LocalVariable" UId="242">
+          <Symbol UId="243">
+            <Component Name="tb_EnableOuts" UId="244" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="245" />
+      <NewLine UId="246" />
+      <Blank Num="20" UId="247" />
+      <Parameter Name="IR_CycleTime" UId="248">
+        <Blank UId="249" />
+        <Token Text=":=" UId="250" />
+        <Blank UId="251" />
+        <Access Scope="LocalVariable" UId="252">
+          <Symbol UId="253">
+            <Component Name="irCycleTime" UId="254" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="255" />
+      <NewLine UId="256" />
+      <Blank Num="20" UId="257" />
+      <Parameter Name="IR_SpTime" UId="258">
+        <Blank UId="259" />
+        <Token Text=":=" UId="260" />
+        <Blank UId="261" />
+        <Access Scope="LocalVariable" UId="262">
+          <Symbol UId="263">
+            <Component Name="irMaxStartTime" UId="264" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="267" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="268" />
+  <NewLine Num="2" UId="269" />
+  <Access Scope="Call" UId="270">
+    <CallInfo UId="271" BlockType="FB" Name="Lib_FB_Timer_ON_Simple">
+      <Instance Scope="LocalVariable" UId="272">
+        <Component Name="sdb_TON_StopDelay" UId="273" />
+      </Instance>
+      <Token Text="(" UId="274" />
+      <Parameter Name="IB_StartTimerInput" UId="275">
+        <Blank UId="276" />
+        <Token Text=":=" UId="277" />
+        <Blank UId="278" />
+        <Token Text="(" UId="279" />
+        <Token Text="NOT" UId="280" />
+        <Blank UId="281" />
+        <Access Scope="LocalVariable" UId="282">
+          <Symbol UId="283">
+            <Component Name="iStartCmd" UId="284" />
+          </Symbol>
+        </Access>
+        <Blank UId="285" />
+        <Token Text="AND" UId="286" />
+        <Blank UId="287" />
+        <Access Scope="LocalVariable" UId="288">
+          <Symbol UId="289">
+            <Component Name="tb_ShaftRotates" UId="290" />
+          </Symbol>
+        </Access>
+        <Token Text=")" UId="291" />
+        <Blank UId="292" />
+        <Token Text="AND" UId="293" />
+        <Blank UId="294" />
+        <Access Scope="LocalVariable" UId="295">
+          <Symbol UId="296">
+            <Component Name="tb_EnableOuts" UId="297" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="298" />
+      <NewLine UId="299" />
+      <Blank Num="19" UId="300" />
+      <Parameter Name="IR_CycleTime" UId="301">
+        <Blank UId="302" />
+        <Token Text=":=" UId="303" />
+        <Blank UId="304" />
+        <Access Scope="LocalVariable" UId="305">
+          <Symbol UId="306">
+            <Component Name="irCycleTime" UId="307" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="308" />
+      <NewLine UId="309" />
+      <Blank Num="19" UId="310" />
+      <Parameter Name="IR_SpTime" UId="311">
+        <Blank UId="312" />
+        <Token Text=":=" UId="313" />
+        <Blank UId="314" />
+        <Access Scope="LocalVariable" UId="315">
+          <Symbol UId="316">
+            <Component Name="irMaxStopTime" UId="317" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="320" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="321" />
+  <NewLine Num="4" UId="322" />
+  <LineComment UId="323">
+    <Text UId="324">  Alarms</Text>
+  </LineComment>
+  <NewLine UId="325" />
+  <Access Scope="LocalVariable" UId="326">
+    <Symbol UId="327">
+      <Component Name="oStartAlarm" UId="328" />
+    </Symbol>
+  </Access>
+  <Blank UId="329" />
+  <Token Text=":=" UId="330" />
+  <Blank UId="331" />
+  <Access Scope="LocalVariable" UId="332">
+    <Symbol UId="333">
+      <Component Name="sdb_TON_StartDelay" UId="334" />
+      <Token Text="." UId="335" />
+      <Component Name="QB_TimerOut" UId="336" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="337" />
+  <NewLine UId="338" />
+  <Access Scope="LocalVariable" UId="339">
+    <Symbol UId="340">
+      <Component Name="oStopAlarm" UId="341" />
+    </Symbol>
+  </Access>
+  <Blank UId="342" />
+  <Token Text=":=" UId="343" />
+  <Blank UId="344" />
+  <Access Scope="LocalVariable" UId="345">
+    <Symbol UId="346">
+      <Component Name="sdb_TON_StopDelay" UId="347" />
+      <Token Text="." UId="348" />
+      <Component Name="QB_TimerOut" UId="349" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="350" />
+  <NewLine UId="351" />
+  <LineComment UId="352">
+    <Text UId="353">  Status</Text>
+  </LineComment>
+  <NewLine UId="354" />
+  <Access Scope="LocalVariable" UId="355">
+    <Symbol UId="356">
+      <Component Name="oResult" UId="357" />
+    </Symbol>
+  </Access>
+  <Blank UId="358" />
+  <Token Text=":=" UId="359" />
+  <Blank UId="360" />
+  <Access Scope="LocalVariable" UId="361">
+    <Symbol UId="362">
+      <Component Name="tb_ShaftRotates" UId="363" />
+    </Symbol>
+  </Access>
+  <Blank UId="364" />
+  <Token Text="AND" UId="365" />
+  <Blank UId="366" />
+  <Access Scope="LocalVariable" UId="367">
+    <Symbol UId="368">
+      <Component Name="tb_EnableOuts" UId="369" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="370" />
+  <NewLine Num="4" UId="371" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

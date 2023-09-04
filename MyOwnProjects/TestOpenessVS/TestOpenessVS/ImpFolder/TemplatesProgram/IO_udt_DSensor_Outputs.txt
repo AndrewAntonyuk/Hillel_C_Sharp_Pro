@@ -1,0 +1,6 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    //Параметри давача: {sDescribe1}
+	//Додаткова інформація: {sDescribe3}
+    	
+END_REGION

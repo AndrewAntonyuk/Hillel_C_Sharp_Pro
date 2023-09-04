@@ -1,0 +1,9 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    //Параметри двигуна: {sDescribe1}
+    	
+	"D_InOut"."{sTechNumPrg}".I_MCP := "I_{sTechNumPrg}_MCP";
+	"D_InOut"."{sTechNumPrg}".I_Thermo_Ok := "I_{sTechNumPrg}_TermoRelay1"
+	AND "I_{sTechNumPrg}_TermoRelay2";
+	
+END_REGION

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+	  <HeaderAuthor>AV</HeaderAuthor>
+      <HeaderFamily>Fam</HeaderFamily>
+      <HeaderName>eeee</HeaderName>
+      <HeaderVersion>0.11</HeaderVersion>
+      <InstanceOfName>Lib_UDT_Motor_DS_RotSens</InstanceOfName>
+      <InstanceOfType>UDT</InstanceOfType>
+      <Interface>
+	    <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v1">
+          <Section Name="Static">
+          </Section>
+        </Sections>
+      </Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>InstanceDB_Test_UDT</Name>
+      <Number>1000</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

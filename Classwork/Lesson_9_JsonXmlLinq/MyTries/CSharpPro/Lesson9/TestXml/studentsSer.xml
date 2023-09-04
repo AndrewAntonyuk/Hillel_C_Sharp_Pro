@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfStudent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Student>
+    <Name>Jack</Name>
+    <Age>21</Age>
+    <Course>C# language</Course>
+  </Student>
+  <Student>
+    <Name>Linda</Name>
+    <Age>18</Age>
+    <Course>Java language</Course>
+  </Student>
+  <Student>
+    <Name>Nicole</Name>
+    <Age>19</Age>
+    <Course>Java language</Course>
+  </Student>
+  <Student>
+    <Name>Marshal</Name>
+    <Age>25</Age>
+    <Course>C# language</Course>
+  </Student>
+  <Student>
+    <Name>Colonel</Name>
+    <Age>18</Age>
+    <Course>C# language</Course>
+  </Student>
+</ArrayOfStudent>

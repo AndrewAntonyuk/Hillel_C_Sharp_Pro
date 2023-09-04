@@ -1,0 +1,7 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    //Параметри двигуна: {sDescribe1}
+    	
+	"D_InOut"."{sTechNumPrg}".I_IsPos1 := "I_{sTechNumPrg}_IsPos1";
+	"D_InOut"."{sTechNumPrg}".I_IsPos2 := "I_{sTechNumPrg}_IsPos2";
+END_REGION

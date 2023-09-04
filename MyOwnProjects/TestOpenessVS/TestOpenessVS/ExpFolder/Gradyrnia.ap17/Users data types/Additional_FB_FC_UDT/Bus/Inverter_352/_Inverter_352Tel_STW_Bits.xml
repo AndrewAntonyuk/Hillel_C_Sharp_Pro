@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:03:17.298759Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="ReadyToSwitchOn" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 0  - 1 = Ready for switched on; electronics initialized; pulses locked</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ReadyToOperation" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 1  - 1 = Ready for operation. Start as soon as ON1 is active (bit 0 = 1 in CTW)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OperationEnabled" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 2  - 1 = Motor follows setpoint</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="FaultActive" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 3  - 1 = Fault present. Acknowlege is requaired</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OFF2Inactive" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 4 - 0 = OFF2 is inactive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OFF3Inactive" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 5 - 0 = OFF3 is inactive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="LockoutActive" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 6 - 1 = Lockout active. Motor switched on after trig ON1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="AlarmActive" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 7 - 1 = Alarm is active. Acknowlege not requaired</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SetpointReached" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 8 - 1 = Setpoint speed is achived</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CtrlRequest" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 9 - 1 = The automation system is requested to assume control</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="MaxSpeedReached" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 10 - 1 = Actual speed greater or equal to maximum speed</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="IMP_LimitReached" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 11 - 0 = Current, torque or power limit has been reached or exceeded</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="BrakeOpen" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 12 - 1 = Signal to open motor holding brake</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Overtemperature" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 13 - 0 = Alarm motor overtemperature</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ForwardBeckward" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 14 - 1 = Motor rotates forwards (act&gt;0); 0 = Motor rotates backwards (act&lt;0)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PowerUnitOverload" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 15 - 1 = No alarm, thermal power unit overload</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>_Inverter_352Tel_STW_Bits</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

@@ -1,60 +1,41 @@
-﻿using ClinicAppointment.Domain.Entities;
-using ClinicAppointment.Domain.Enums;
-using ClinicAppointment.Helper.Utils;
+﻿using ClinicAppointment.Domain.Enums;
 using ClinicAppointment.Helper.Validators.General;
 using ClinicAppointment.Helper.Validators.General.Implements;
 using ClinicAppointment.Menu.Commands.Cnsl;
 using ClinicAppointment.Menu.Interfaces;
-using ClinicAppointment.Service.Services;
 
 namespace ClinicAppointment
 {
 
     public class ClinicAppointment
     {
-        private readonly IMenuCommand _createDoctor;
-        private readonly IMenuCommand _createPatient;
-        private readonly IMenuCommand _createAppointment;
-        private readonly IMenuCommand _deleteAppointment;
-        private readonly IMenuCommand _deleteDoctor;
-        private readonly IMenuCommand _deletePatient;
-        private readonly IMenuCommand _exitFromApp;
-        private readonly IMenuCommand _showAllAppointments;
-        private readonly IMenuCommand _showAllDoctors;
-        private readonly IMenuCommand _showAllPatients;
-        private readonly IMenuCommand _showAppointment;
-        private readonly IMenuCommand _showAppointmentsByDoctor;
-        private readonly IMenuCommand _showAppointmentsByPatient;
-        private readonly IMenuCommand _showDoctor;
-        private readonly IMenuCommand _showPatient;
-        private readonly IMenuCommand _showHelp;
-        private readonly IMenuCommand _updateAppointment;
-        private readonly IMenuCommand _updateDoctor;
-        private readonly IMenuCommand _updatePatient;
         private readonly IGeneralValidator<MenuTypes> _validatorCmd;
+        private Dictionary<MenuTypes, IMenuCommand> _commands;
 
         public ClinicAppointment()
         {
-            _createDoctor = new ConsCmdCreateDoctor();
-            _createPatient = new ConsCmdCreatePatient();
-            _createAppointment = new ConsCmdCreateAppointment();
-            _deleteAppointment = new ConsCmdDeleteAppointment();
-            _deleteDoctor = new ConsCmdDeleteDoctor();
-            _deletePatient = new ConsCmdDeletePatient();
-            _exitFromApp = new ConsCmdExitFromApp();
-            _showAllAppointments = new ConsCmdShowAllAppointments();
-            _showAllDoctors = new ConsCmdShowAllDoctors();
-            _showAllPatients = new ConsCmdShowAllPatients();
-            _showAppointment = new ConsCmdShowAppointment();
-            _showAppointmentsByDoctor = new ConsCmdShowAppointmentsByDoctor();
-            _showAppointmentsByPatient = new ConsCmdShowAppointmentsByPatient();
-            _showDoctor = new ConsCmdShowDoctor();
-            _showPatient = new ConsCmdShowPatient();
-            _showHelp = new ConsCmdShowHelp();
-            _updateAppointment = new ConsCmdUpdateAppointment();
-            _updateDoctor = new ConsCmdUpdateDoctor();
-            _updatePatient = new ConsCmdUpdatePatient();
+            _commands = new Dictionary<MenuTypes, IMenuCommand>();
             _validatorCmd = new GeneralValidatorEnum<MenuTypes>();
+
+            _commands.Add(MenuTypes.Help, new ConsCmdShowHelp());
+            _commands.Add(MenuTypes.CreateDoctor, new ConsCmdCreateDoctor());
+            _commands.Add(MenuTypes.CreatePatient, new ConsCmdCreatePatient());
+            _commands.Add(MenuTypes.CreateAppointment, new ConsCmdCreateAppointment());
+            _commands.Add(MenuTypes.DeleteAppointment, new ConsCmdDeleteAppointment());
+            _commands.Add(MenuTypes.DeleteDoctor, new ConsCmdDeleteDoctor());
+            _commands.Add(MenuTypes.DeletePatient, new ConsCmdDeletePatient());
+            _commands.Add(MenuTypes.ExitFromApp, new ConsCmdExitFromApp());
+            _commands.Add(MenuTypes.ShowAllAppointments, new ConsCmdShowAllAppointments());
+            _commands.Add(MenuTypes.ShowAllDoctors, new ConsCmdShowAllDoctors());
+            _commands.Add(MenuTypes.ShowAllPatients, new ConsCmdShowAllPatients());
+            _commands.Add(MenuTypes.ShowAppointment, new ConsCmdShowAppointment());
+            _commands.Add(MenuTypes.ShowAppointmentsByDoctor, new ConsCmdShowAppointmentsByDoctor());
+            _commands.Add(MenuTypes.ShowAppointmentsByPatient, new ConsCmdShowAppointmentsByPatient());
+            _commands.Add(MenuTypes.ShowDoctor, new ConsCmdShowDoctor());
+            _commands.Add(MenuTypes.ShowPatient, new ConsCmdShowPatient());
+            _commands.Add(MenuTypes.UpdateAppointment, new ConsCmdUpdateAppointment());
+            _commands.Add(MenuTypes.UpdateDoctor, new ConsCmdUpdateDoctor());
+            _commands.Add(MenuTypes.UpdatePatient, new ConsCmdUpdatePatient());
         }
 
         public void Menu()
@@ -71,28 +52,12 @@ namespace ClinicAppointment
                 {
                     currentMenuChoice = _validatorCmd.Validate(Console.ReadLine());
 
-                    switch (currentMenuChoice)
-                    {
-                        case MenuTypes.ExitFromApp: _exitFromApp.Execute(); break;
-                        case MenuTypes.Help: _showHelp.Execute(); break;
-                        case MenuTypes.CreateDoctor: _createDoctor.Execute(); break;
-                        case MenuTypes.DeleteDoctor: _deleteDoctor.Execute(); break;
-                        case MenuTypes.CreatePatient: _createPatient.Execute(); break;
-                        case MenuTypes.DeletePatient: _deletePatient.Execute(); break;
-                        case MenuTypes.ShowAllDoctors: _showAllDoctors.Execute(); break;
-                        case MenuTypes.ShowAllPatients: _showAllPatients.Execute(); break;
-                        case MenuTypes.ShowDoctor: _showDoctor.Execute(); break;
-                        case MenuTypes.ShowPatient: _showPatient.Execute(); break;
-                        case MenuTypes.UpdateDoctor: _updateDoctor.Execute(); break;
-                        case MenuTypes.UpdatePatient: _updatePatient.Execute(); break;
-                        case MenuTypes.CreateAppointment: _createAppointment.Execute(); break;
-                        case MenuTypes.DeleteAppointment: _deleteAppointment.Execute(); break;
-                        case MenuTypes.ShowAppointment: _showAppointment.Execute(); break;
-                        case MenuTypes.UpdateAppointment: _updateAppointment.Execute(); break;
-                        case MenuTypes.ShowAllAppointments: _showAllAppointments.Execute(); break;
-                        case MenuTypes.ShowAppointmentsByDoctor: _showAppointmentsByDoctor.Execute(); break;
-                        case MenuTypes.ShowAppointmentsByPatient: _showAppointmentsByPatient.Execute(); break;
-                    }
+                    IMenuCommand? currentCmd = _commands.GetValueOrDefault(currentMenuChoice);
+
+                    if (currentCmd != null)
+                        currentCmd.Execute();
+                    else
+                        Console.WriteLine($"Cant find appropriate action for {currentMenuChoice}");
 
                     Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
                 }
@@ -112,21 +77,6 @@ namespace ClinicAppointment
             var clinicAppointment = new ClinicAppointment();
 
             clinicAppointment.Menu();
-
-            //Doctor doctor = new Doctor()
-            //{
-            //    Name = "TestName",
-            //    Surname = "TestSurname",
-            //    Salary = new decimal(2000.0),
-            //    DoctorType = DoctorTypes.Dentist
-            //};
-
-            //FileUtils.WriteToXmlFile("C:\\DataTest\\TestXML.xml", doctor);
-
-            //Doctor doctor2 = FileUtils.ReadFromXmlFile<Doctor>("C:\\DataTest\\TestXML.xml");
-
-            //new DoctorService().ShowInfo(doctor2);
-
         }
     }
 }

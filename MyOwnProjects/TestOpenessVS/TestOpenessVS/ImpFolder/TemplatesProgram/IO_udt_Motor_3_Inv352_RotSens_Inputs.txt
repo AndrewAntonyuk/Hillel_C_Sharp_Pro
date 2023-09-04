@@ -1,0 +1,12 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    //Параметри двигуна: {sDescribe1}
+    	
+	"D_InOut"."{sTechNumPrg}".I_MCP := "I_{sTechNumPrg}_MCP";
+	"D_InOut"."{sTechNumPrg}".I_FeedBack_KM1 := "I_{sTechNumPrg}_KM1";
+	"D_InOut"."{sTechNumPrg}".I_FeedBack_KM2 := "I_{sTechNumPrg}_KM2";
+	"D_InOut"."{sTechNumPrg}".I_FeedBack_KM3 := "I_{sTechNumPrg}_KM3";
+	"D_InOut"."{sTechNumPrg}".I_RotSens_1 := "I_{sTechNumPrg}_Rot1";
+	"D_InOut"."{sTechNumPrg}".I_RotSens_2 := "I_{sTechNumPrg}_Rot2";
+	"D_InOut"."{sTechNumPrg}".I_RotSens_3 := "I_{sTechNumPrg}_Rot3";
+END_REGION

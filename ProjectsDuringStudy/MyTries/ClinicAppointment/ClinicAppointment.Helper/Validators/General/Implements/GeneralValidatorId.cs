@@ -1,6 +1,6 @@
 ﻿namespace ClinicAppointment.Helper.Validators.General.Implements
 {
-    public class GeneralValidatorId : IGeneralValidator<int> 
+    public class GeneralValidatorId : IGeneralValidator<int>
     {
         public int Validate(object? value)
         {

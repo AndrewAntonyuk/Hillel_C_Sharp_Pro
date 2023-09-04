@@ -34,6 +34,16 @@ namespace ClinicAppointment.Service.Services
             return _appointmentRepository.GetAll();
         }
 
+        public IEnumerable<Appointment> GetAllByDoctor(Doctor doctor)
+        {
+            return _appointmentRepository.GetAllByDoctor(doctor);
+        }
+
+        public IEnumerable<Appointment> GetAllByPatient(Patient patient)
+        {
+            return _appointmentRepository.GetAllByPatient(patient);
+        }
+
         public void ShowInfo(Appointment appointment)
         {
             _appointmentRepository.ShowInfo(appointment);

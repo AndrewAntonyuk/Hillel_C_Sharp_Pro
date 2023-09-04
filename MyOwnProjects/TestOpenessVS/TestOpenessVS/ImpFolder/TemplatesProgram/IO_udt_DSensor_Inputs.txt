@@ -1,0 +1,7 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    //Параметри давача: {sDescribe1}
+	//Додаткова інформація: {sDescribe3}
+    	
+	"D_InOut"."{sTechNumPrg}".I_RawValue := "I_{sTechNumPrg}";
+END_REGION

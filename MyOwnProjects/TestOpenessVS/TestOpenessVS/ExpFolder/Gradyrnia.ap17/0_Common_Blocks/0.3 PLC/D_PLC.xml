@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:03:03.3241752Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <InstanceOfName>Lib_UDT_PLC</InstanceOfName>
+      <InstanceOfType>UDT</InstanceOfType>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="ID" Datatype="Int" />
+    <Member Name="CMD" Datatype="Int" />
+    <Member Name="PLS" Datatype="&quot;Lib_PLC_PLS&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="CycleInfo" Datatype="&quot;Lib_PLC_CycleInfo&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="CMDPRG" Datatype="UInt" />
+    <Member Name="PRM1" Datatype="UInt" />
+    <Member Name="PRM2" Datatype="UInt" />
+    <Member Name="Alarm2" Datatype="Int" />
+    <Member Name="STEP1" Datatype="Int" />
+    <Member Name="T_STEP1" Datatype="Int" />
+    <Member Name="Message" Datatype="UDInt" />
+    <Member Name="NumberDI" Datatype="Int" />
+    <Member Name="NumberDO" Datatype="Int" />
+    <Member Name="NumberAI" Datatype="Int" />
+    <Member Name="NumberAO" Datatype="Int" />
+    <Member Name="NOW" Datatype="Array[0..3] of Int" />
+    <Member Name="ShiftParam" Datatype="Array[0..3] of Int" />
+    <Member Name="ShiftActiveNumber" Datatype="Int" />
+    <Member Name="TSK_LTIME" Datatype="LTime" />
+    <Member Name="TSK_MAXTIME" Datatype="LTime" />
+    <Member Name="TSK_MINTIME" Datatype="LTime" />
+    <Member Name="TaskTime" Datatype="&quot;Lib_PLC_TaskTime&quot;" />
+    <Member Name="TIME_TCK" Datatype="Struct">
+      <Member Name="cyclic_sec_R" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+      <Member Name="cyclic_ms" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+      <Member Name="cyclic_sec_LR" Datatype="LReal"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+      <Member Name="FirstScanTime" Datatype="Date_And_Time"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+      <Member Name="PrevScanTime" Datatype="Date_And_Time"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+      <Member Name="NowTime" Datatype="Date_And_Time"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+      <Member Name="Time1cycle_r" Datatype="LReal" />
+      <Member Name="Time1cycle_di" Datatype="UDInt" />
+      <Member Name="Time1cycle_DINT" Datatype="UDInt" />
+      <Member Name="TimeTotalPLC" Datatype="UDInt" />
+    </Member>
+    <Member Name="TaskTime_RUNTIME" Datatype="Struct">
+      <Member Name="Live" Datatype="LReal" />
+      <Member Name="TIME_TCK_s" Datatype="LReal" />
+    </Member>
+    <Member Name="MEM_RUNTIME" Datatype="LReal"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="HMI" Datatype="Struct">
+      <Member Name="State" Datatype="UDInt" />
+      <Member Name="Alarm" Datatype="UDInt" />
+      <Member Name="Counter" Datatype="&quot;Lib_PLC_AlarmCounter&quot;" />
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>D_PLC</Name>
+      <Number>1</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

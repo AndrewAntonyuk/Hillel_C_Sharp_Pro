@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cars>
+  <car name="Ferrari">
+    <maxspeed>350.0</maxspeed>
+    <type>Sportcar</type>
+  </car>
+  <car name="Buggatti GTX 751">
+    <maxspeed>451.25</maxspeed>
+    <type>Sportcar</type>
+  </car>
+  <car name="BMW X7">
+    <maxspeed>180.5</maxspeed>
+    <type>Crossover</type>
+  </car>
+</cars>

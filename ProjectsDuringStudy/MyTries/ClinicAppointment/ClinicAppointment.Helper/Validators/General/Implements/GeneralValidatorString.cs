@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ClinicAppointment.Helper.Validators.General.Implements
+﻿namespace ClinicAppointment.Helper.Validators.General.Implements
 {
     public class GeneralValidatorString : IGeneralValidator<string>
     {

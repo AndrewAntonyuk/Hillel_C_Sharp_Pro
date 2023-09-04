@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:03:17.1027592Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="OFF1" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 0  - 0 = Switch-off  with ramp-down p1121</MultiLanguageText>
+      </Comment>
+      <StartValue>false</StartValue>
+    </Member>
+    <Member Name="OFF2" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 1  - 0 = Switch-off immediately, motor coast to stop</MultiLanguageText>
+      </Comment>
+      <StartValue>true</StartValue>
+    </Member>
+    <Member Name="OFF3" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 2  - 0 = Quick stop with ramp-down p1135</MultiLanguageText>
+      </Comment>
+      <StartValue>true</StartValue>
+    </Member>
+    <Member Name="EnableOperation" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 3  - 1 = Switch-on motor (pulses can be enabled)</MultiLanguageText>
+      </Comment>
+      <StartValue>true</StartValue>
+    </Member>
+    <Member Name="EnableRFG" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 4 - 1 = Enable ramp-function generator</MultiLanguageText>
+      </Comment>
+      <StartValue>true</StartValue>
+    </Member>
+    <Member Name="FrozeRFG" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 5 - 0 = Ramp-function generator output is frozen</MultiLanguageText>
+      </Comment>
+      <StartValue>true</StartValue>
+    </Member>
+    <Member Name="EnableSetpoint" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 6 - 1 = Motor accelerates with ramp p1120; 0 = Motor brakes with ramp p1121</MultiLanguageText>
+      </Comment>
+      <StartValue>true</StartValue>
+    </Member>
+    <Member Name="Acknowlege" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 7 - 1 = Acknowlege faults with positive edge. If the ON command still active, the inverter switches to "closing lockout" state</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Bit8_NotUsed" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 8 - NU</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Bit9_NotUsed" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 9 - NU</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CtrlByPLC" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 10 - 1 = Control via fieldbus, process data valid</MultiLanguageText>
+      </Comment>
+      <StartValue>true</StartValue>
+    </Member>
+    <Member Name="ChangeDir" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 11 - 1 = Change direction. Setpoint is inverted in the drive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Bit12_NotUsed" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 12 - NU</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="MOP_Up" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 13 - 1 = Motorized potentiometer is increased</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="MOP_Dwn" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 14 - 1 = Motorized potentiometer is decreased</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Bit15_NotUsed" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit 15 - NU</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>_Inverter_352Tel_CTW_Bits</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

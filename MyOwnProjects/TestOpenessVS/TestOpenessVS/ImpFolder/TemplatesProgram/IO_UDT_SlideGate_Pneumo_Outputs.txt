@@ -1,0 +1,5 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    
+	"Q_{sTechNumPrg}_VlvCmd" := "D_InOut"."{sTechNumPrg}".Cmd_Open;
+END_REGION

@@ -15,7 +15,7 @@ namespace ClinicAppointment.Helper.FileHandlers
         }
 
         public IEnumerable<T> ReadFromFile(string path)
-        {   
+        {
             string textFromFile = fileValidator.Validate(path);
 
             if (string.IsNullOrWhiteSpace(textFromFile))

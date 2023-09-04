@@ -24,43 +24,22 @@ namespace ClinicAppointment.Menu.Commands.Cnsl
 
             if (_patient != null)
             {
-                IGeneralValidator<string> _stringValidator = new GeneralValidatorString();
-                Console.WriteLine("Please enter new name of patient:");
-                _patient.Name = _stringValidator.Validate(Console.ReadLine());
-
-                Console.WriteLine("Please enter new surname of patient:");
-                _patient.Surname = _stringValidator.Validate(Console.ReadLine());
-
-                _stringValidator = new GeneralValidatorPhone();
-                Console.WriteLine("Please enter new phone of patient:");
-                _patient.Phone = _stringValidator.Validate(Console.ReadLine());
-
-                _stringValidator = new GeneralValidatorEmail();
-                Console.WriteLine("Please enter new email of patient:");
-                _patient.Email = _stringValidator.Validate(Console.ReadLine());
+                ConsWorkWithObjects.UpdateUserById(_patient);
 
                 IGeneralValidator<IllnessTypes> _enumValidator = new GeneralValidatorEnum<IllnessTypes>();
                 Console.WriteLine("Please enter new type of ilness (available types):");
-                EnumExtention.ShowEnumDescription(IllnessTypes.DentalDisease);
+                EnumExtension.ShowEnumDescription(IllnessTypes.DentalDisease);
                 _patient.IllnessType = _enumValidator.Validate(Console.ReadLine());
 
                 Console.WriteLine("Please enter new additional information of patient:");
-                _patient.AddittionalInfo = Console.ReadLine();
+                _patient.AdditionalInfo = Console.ReadLine();
 
                 Console.WriteLine("Please enter new address of patient:");
                 _patient.Address = Console.ReadLine();
 
-                _patient = _patientService.Update(_userId,_patient);
+                _patient = _patientService.Update(_userId, _patient);
 
-                if (_patient != null)
-                {
-                    Console.WriteLine("\nWas updated the next patient:");
-                    _patientService.ShowInfo(_patient);
-                }
-                else
-                {
-                    Console.WriteLine("\nCouldn't update patient");
-                }
+                ConsWorkWithObjects.ResultObjectInform(_patient, _patientService);
             }
             else
             {

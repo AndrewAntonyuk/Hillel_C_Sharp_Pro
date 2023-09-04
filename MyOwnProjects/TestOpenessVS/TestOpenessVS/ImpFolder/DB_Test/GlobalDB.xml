@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document> 
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+	  <HeaderAuthor>AV</HeaderAuthor>
+      <HeaderFamily>TestFamily</HeaderFamily>
+      <HeaderName>Q741P</HeaderName>
+      <HeaderVersion>0.11</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v1">
+  <Section Name="Static">
+    <Member Name="i_VarInt" Datatype="Int" />
+    <Member Name="r_VarReal" Datatype="Real" />
+    <Member Name="VarBool" Datatype="Bool" />
+	<Member Name="VarBoolTest" Datatype="Bool" />
+    <Member Name="VarUDT" Datatype="&quot;Lib_UDT_Motor_DS_RotSens&quot;" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>GlobalDB</Name>
+      <Number>999</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>TetsTitle</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text>TetsTitle</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

@@ -1,9 +1,7 @@
 ﻿using ClinicAppointment.Data.Configuration;
 using ClinicAppointment.Data.Interfaces;
 using ClinicAppointment.Domain.Entities;
-using ClinicAppointment.Helper.FileHandlers;
 using ClinicAppointment.Helper.Utils;
-using Microsoft.VisualBasic.FileIO;
 
 namespace ClinicAppointment.Data.Repositories
 {
@@ -18,15 +16,10 @@ namespace ClinicAppointment.Data.Repositories
             dynamic result = ReadFromAppSettings();
 
             FileType = result.Database.FileType;
-
-            Path = result.Database.Doctors.Path + "." + FileType;            
-
+            Path = result.Database.Doctors.Path + "." + FileType;
             LastId = result.Database.Doctors.LastId;
 
-            if (FileType.ToLower().Equals("xml"))
-                _fileHandler = new FileHandlerXml<Doctor>();
-            else
-                _fileHandler = new FileHandlerJson<Doctor>();
+            _fileHandler = FileUtils.GetFileHandler<Doctor>(result);
         }
 
         public override void ShowInfo(Doctor doctor)
@@ -34,8 +27,8 @@ namespace ClinicAppointment.Data.Repositories
             if (doctor != null)
             {
                 Console.WriteLine("Id: " + doctor.Id + "; name: " + doctor.Name + "; surname: " + doctor.Surname
-                + "; email: " + doctor.Email + "; phone: " + doctor.Phone
-                + "; type: " + doctor.DoctorType + "; experiance: " + doctor.Experiance);
+                 + "; phone: " + doctor.Phone + "; email: " + doctor.Email
+                + "; type: " + doctor.DoctorType + "; experience: " + doctor.Experience);
             }
             else
             {
@@ -43,6 +36,20 @@ namespace ClinicAppointment.Data.Repositories
             }
         }
 
+        protected override void CheckExist(IEnumerable<Doctor> users, Doctor? userNext)
+        {
+            bool condition = userNext != null
+                             && users.Any(user => user.Name.Equals(userNext.Name)
+                                     && user.Surname.Equals(userNext.Surname)
+                                     && (user?.Email?.Equals(userNext?.Email) ?? false)
+                                     && user.DoctorType == userNext.DoctorType
+                                     && (user?.Phone?.Equals(userNext.Phone) ?? false));
+
+            if (condition)
+            {
+                throw new ArgumentException($"Doctor: {userNext?.Name} {userNext?.Surname} {userNext?.DoctorType} already exist!");
+            }
+        }
         protected override void SaveLastId()
         {
             dynamic result = ReadFromAppSettings();

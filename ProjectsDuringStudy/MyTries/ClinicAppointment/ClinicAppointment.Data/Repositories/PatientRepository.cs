@@ -1,8 +1,7 @@
 ﻿using ClinicAppointment.Data.Configuration;
 using ClinicAppointment.Data.Interfaces;
 using ClinicAppointment.Domain.Entities;
-using ClinicAppointment.Helper.FileHandlers;
-using System.Numerics;
+using ClinicAppointment.Helper.Utils;
 
 namespace ClinicAppointment.Data.Repositories
 {
@@ -17,13 +16,10 @@ namespace ClinicAppointment.Data.Repositories
             dynamic result = ReadFromAppSettings();
 
             FileType = result.Database.FileType;
-            Path = result.Database.Patients.Path + "." + FileType; 
+            Path = result.Database.Patients.Path + "." + FileType;
             LastId = result.Database.Patients.LastId;
 
-            if (FileType.ToLower().Equals("xml"))
-                _fileHandler = new FileHandlerXml<Patient>();
-            else
-                _fileHandler = new FileHandlerJson<Patient>();
+            _fileHandler = FileUtils.GetFileHandler<Patient>(result);
         }
 
         public override void ShowInfo(Patient patient)
@@ -31,7 +27,7 @@ namespace ClinicAppointment.Data.Repositories
             if (patient != null)
             {
                 Console.WriteLine("Id: " + patient.Id + "; name: " + patient.Name + "; surname: " + patient.Surname
-                + "; email: " + patient.Email + "; phone: " + patient.Phone);
+                + "; phone: " + patient.Phone + "; email: " + patient.Email + "; illness: " + patient.IllnessType);
             }
             else
             {
@@ -45,6 +41,21 @@ namespace ClinicAppointment.Data.Repositories
             result.Database.Patients.LastId = LastId;
 
             File.WriteAllText(Constants.AppSettingsPath, result.ToString());
+        }
+
+        protected override void CheckExist(IEnumerable<Patient> users, Patient userNext)
+        {
+            bool condition = userNext != null
+                            && users.Any(user => user.Name.Equals(userNext.Name)
+                                    && user.Surname.Equals(userNext.Surname)
+                                    && (user?.Email?.Equals(userNext?.Email) ?? false)
+                                    && (user?.Phone?.Equals(userNext.Phone) ?? false)
+                                    && user?.IllnessType == userNext?.IllnessType);
+
+            if (condition)
+            {
+                throw new ArgumentException($"Patient: {userNext?.Name} {userNext?.Surname} already exist!");
+            }
         }
     }
 }

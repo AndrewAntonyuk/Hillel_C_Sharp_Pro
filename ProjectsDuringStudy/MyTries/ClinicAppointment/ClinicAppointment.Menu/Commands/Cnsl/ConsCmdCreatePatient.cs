@@ -13,46 +13,26 @@ namespace ClinicAppointment.Menu.Commands.Cnsl
     {
         public void Execute()
         {
-            Patient _patient = new Patient();
             IPatientService _patientService = new PatientService();
 
-            IGeneralValidator<string> _stringValidator = new GeneralValidatorString();
-            Console.WriteLine("Please enter name of patient:");
-            _patient.Name = _stringValidator.Validate(Console.ReadLine());
+            Console.WriteLine("Please, enter all essential information for new patient:");
 
-            Console.WriteLine("Please enter surname of patient:");
-            _patient.Surname = _stringValidator.Validate(Console.ReadLine());
-
-            _stringValidator = new GeneralValidatorPhone();
-            Console.WriteLine("Please enter phone of patient:");
-            _patient.Phone = _stringValidator.Validate(Console.ReadLine());
-
-            _stringValidator = new GeneralValidatorEmail();
-            Console.WriteLine("Please enter email of patient:");
-            _patient.Email = _stringValidator.Validate(Console.ReadLine());
+            Patient _patient = ConsWorkWithObjects.CreateUser<Patient>();
 
             IGeneralValidator<IllnessTypes> _enumValidator = new GeneralValidatorEnum<IllnessTypes>();
-            Console.WriteLine("Please enter type of ilness (available types):");
-            EnumExtention.ShowEnumDescription(IllnessTypes.DentalDisease);
+            Console.WriteLine("Please enter type of illness (available types):");
+            EnumExtension.ShowEnumDescription(IllnessTypes.DentalDisease);
             _patient.IllnessType = _enumValidator.Validate(Console.ReadLine());
 
-            Console.WriteLine("Please enter additional information of patient:");
-            _patient.AddittionalInfo = Console.ReadLine();
+            Console.WriteLine("Please enter additional information:");
+            _patient.AdditionalInfo = Console.ReadLine();
 
-            Console.WriteLine("Please enter address of patient:");
+            Console.WriteLine("Please enter address:");
             _patient.Address = Console.ReadLine();
 
             _patient = _patientService.Create(_patient);
 
-            if (_patient != null)
-            {
-                Console.WriteLine("\nWas created the next patient:");
-                _patientService.ShowInfo(_patient);
-            }
-            else
-            {
-                Console.WriteLine("\nCouldn't create patient");
-            }
+            ConsWorkWithObjects.ResultObjectInform(_patient, _patientService);
         }
     }
 }

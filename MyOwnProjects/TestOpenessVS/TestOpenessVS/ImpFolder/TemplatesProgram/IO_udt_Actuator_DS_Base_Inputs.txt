@@ -1,0 +1,5 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    //Параметри котушки: {sDescribe1}
+    	
+END_REGION

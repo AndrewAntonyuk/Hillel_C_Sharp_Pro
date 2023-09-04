@@ -1,0 +1,890 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:02:45.6616783Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>VS</HeaderAuthor>
+      <HeaderFamily>Simulation</HeaderFamily>
+      <HeaderVersion>2.0</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="i_Reset" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = reset all parameters; output = input</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="i_Invert" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = invert logic (cooling)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ir_Input" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Input value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ir_T1_sec" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Time T1, sec</MultiLanguageText>
+      </Comment>
+      <StartValue>2.1</StartValue>
+    </Member>
+    <Member Name="ir_K" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Gain K</MultiLanguageText>
+      </Comment>
+      <StartValue>1.0</StartValue>
+    </Member>
+    <Member Name="ir_T_cycle_sec" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Cyclic time, s (OB time)</MultiLanguageText>
+      </Comment>
+      <StartValue>0.1</StartValue>
+    </Member>
+    <Member Name="ir_OffSet_Out" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Offset for out value</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="ir_Delta" Datatype="Real">
+      <StartValue>0.1</StartValue>
+    </Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="q_DataErr" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = invalid data</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="qr_Output" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Output value</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="s_FirstCall" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">For internal use</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="sr_Output" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Output value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="sr_T1_sec_Old" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Old value of time T1, sec</MultiLanguageText>
+      </Comment>
+      <StartValue>1.0</StartValue>
+    </Member>
+    <Member Name="sr_K_Old" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Old value of  Gain K</MultiLanguageText>
+      </Comment>
+      <StartValue>1.0</StartValue>
+    </Member>
+    <Member Name="sr_T_cycle_sec_Old" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Old value of cyclic time, s (OB time)</MultiLanguageText>
+      </Comment>
+      <StartValue>0.1</StartValue>
+    </Member>
+    <Member Name="sr_InPart" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">For internal use</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="sr_ExpPart" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">For internal use</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="tr_LogKp" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Input value for logic</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>Lib_FB_PT1_Ramp</Name>
+      <Number>3</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Block for simulation systems which can represetation like PT1;
+                  K
+W(p) = ----------------
+              Tp  +  1</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Blank Num="4" UId="21" />
+  <LineComment Inserted="true" UId="22">
+    <Text UId="23">
+    Transfer function:
+              k
+    W(p) = --------
+            Tp + 1
+            
+    Equition after invers Z-transformation:
+    
+    Y[t] = Y[t-1] * e(-Tc/T1) + X[t]*K*(1-e(-Tc/T1))   
+    
+    </Text>
+  </LineComment>
+  <NewLine Num="2" UId="24" />
+  <Blank Num="4" UId="25" />
+  <LineComment UId="26">
+    <Text UId="27">Invert logic checking</Text>
+  </LineComment>
+  <NewLine UId="28" />
+  <Blank Num="4" UId="29" />
+  <Token Text="IF" UId="30" />
+  <Blank UId="31" />
+  <Access Scope="LocalVariable" UId="32">
+    <Symbol UId="33">
+      <Component Name="i_Invert" UId="34" />
+    </Symbol>
+  </Access>
+  <NewLine UId="35" />
+  <Blank Num="4" UId="36" />
+  <Token Text="THEN" UId="37" />
+  <NewLine UId="38" />
+  <Blank Num="8" UId="39" />
+  <Access Scope="LocalVariable" UId="40">
+    <Symbol UId="41">
+      <Component Name="tr_LogKp" UId="42" />
+    </Symbol>
+  </Access>
+  <Blank UId="43" />
+  <Token Text=":=" UId="44" />
+  <Blank UId="45" />
+  <Access Scope="LiteralConstant" UId="46">
+    <Constant UId="47">
+      <ConstantValue UId="49">-1.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank UId="50" />
+  <Token Text="*" UId="51" />
+  <Blank UId="52" />
+  <Access Scope="LocalVariable" UId="53">
+    <Symbol UId="54">
+      <Component Name="ir_K" UId="55" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="56" />
+  <NewLine UId="57" />
+  <Blank Num="4" UId="58" />
+  <Token Text="ELSE" UId="59" />
+  <NewLine UId="60" />
+  <Blank Num="8" UId="61" />
+  <Access Scope="LocalVariable" UId="62">
+    <Symbol UId="63">
+      <Component Name="tr_LogKp" UId="64" />
+    </Symbol>
+  </Access>
+  <Blank UId="65" />
+  <Token Text=":=" UId="66" />
+  <Blank UId="67" />
+  <Access Scope="LocalVariable" UId="68">
+    <Symbol UId="69">
+      <Component Name="ir_K" UId="70" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="71" />
+  <NewLine UId="72" />
+  <Blank Num="4" UId="73" />
+  <Token Text="END_IF" UId="74" />
+  <Token Text=";" UId="75" />
+  <NewLine UId="76" />
+  <Blank Num="4" UId="77" />
+  <NewLine UId="78" />
+  <Blank Num="4" UId="79" />
+  <LineComment UId="80">
+    <Text UId="81">Check parameters</Text>
+  </LineComment>
+  <NewLine UId="82" />
+  <Blank Num="4" UId="83" />
+  <Token Text="IF" UId="84" />
+  <Blank UId="85" />
+  <Access Scope="LocalVariable" UId="86">
+    <Symbol UId="87">
+      <Component Name="ir_T1_sec" UId="88" />
+    </Symbol>
+  </Access>
+  <Blank UId="89" />
+  <Token Text="&lt;=" UId="90" />
+  <Blank UId="91" />
+  <Access Scope="LiteralConstant" UId="92">
+    <Constant UId="93">
+      <ConstantValue UId="95">0.0</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="96" />
+  <Blank Num="8" UId="97" />
+  <Token Text="OR" UId="98" />
+  <Blank UId="99" />
+  <Access Scope="LocalVariable" UId="100">
+    <Symbol UId="101">
+      <Component Name="ir_T_cycle_sec" UId="102" />
+    </Symbol>
+  </Access>
+  <Blank UId="103" />
+  <Token Text="&lt;=" UId="104" />
+  <Blank UId="105" />
+  <Access Scope="LiteralConstant" UId="106">
+    <Constant UId="107">
+      <ConstantValue UId="109">0.0</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="110" />
+  <Blank Num="4" UId="111" />
+  <Token Text="THEN" UId="112" />
+  <NewLine UId="113" />
+  <Blank Num="8" UId="114" />
+  <Access Scope="LocalVariable" UId="115">
+    <Symbol UId="116">
+      <Component Name="q_DataErr" UId="117" />
+    </Symbol>
+  </Access>
+  <Blank UId="118" />
+  <Token Text=":=" UId="119" />
+  <Blank UId="120" />
+  <Access Scope="LiteralConstant" UId="121">
+    <Constant UId="122">
+      <ConstantValue UId="124">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="125" />
+  <NewLine UId="126" />
+  <Blank Num="8" UId="127" />
+  <Access Scope="LocalVariable" UId="128">
+    <Symbol UId="129">
+      <Component Name="sr_Output" UId="130" />
+    </Symbol>
+  </Access>
+  <Blank UId="131" />
+  <Token Text=":=" UId="132" />
+  <Blank UId="133" />
+  <Access Scope="LiteralConstant" UId="134">
+    <Constant UId="135">
+      <ConstantValue UId="137">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="138" />
+  <NewLine UId="139" />
+  <Blank Num="8" UId="140" />
+  <Access Scope="LocalVariable" UId="141">
+    <Symbol UId="142">
+      <Component Name="qr_Output" UId="143" />
+    </Symbol>
+  </Access>
+  <Blank UId="144" />
+  <Token Text=":=" UId="145" />
+  <Blank UId="146" />
+  <Access Scope="LiteralConstant" UId="147">
+    <Constant UId="148">
+      <ConstantValue UId="150">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="151" />
+  <NewLine UId="152" />
+  <Blank Num="8" UId="153" />
+  <Token Text="RETURN" UId="154" />
+  <Token Text=";" UId="155" />
+  <NewLine UId="156" />
+  <Blank Num="4" UId="157" />
+  <Token Text="ELSE" UId="158" />
+  <NewLine UId="159" />
+  <Blank Num="8" UId="160" />
+  <Access Scope="LocalVariable" UId="161">
+    <Symbol UId="162">
+      <Component Name="q_DataErr" UId="163" />
+    </Symbol>
+  </Access>
+  <Blank UId="164" />
+  <Token Text=":=" UId="165" />
+  <Blank UId="166" />
+  <Access Scope="LiteralConstant" UId="167">
+    <Constant UId="168">
+      <ConstantValue UId="170">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="171" />
+  <NewLine UId="172" />
+  <Blank Num="4" UId="173" />
+  <Token Text="END_IF" UId="174" />
+  <Token Text=";" UId="175" />
+  <NewLine UId="176" />
+  <Blank Num="4" UId="177" />
+  <NewLine UId="178" />
+  <Blank Num="4" UId="179" />
+  <LineComment UId="180">
+    <Text UId="181">It is parts of z-equition calculation</Text>
+  </LineComment>
+  <NewLine UId="182" />
+  <Blank Num="4" UId="183" />
+  <LineComment UId="184">
+    <Text UId="185">We calculate only on changes or at begin</Text>
+  </LineComment>
+  <NewLine UId="186" />
+  <Blank Num="4" UId="187" />
+  <Token Text="IF" UId="188" />
+  <Blank UId="189" />
+  <Token Text="NOT" UId="190" />
+  <Blank UId="191" />
+  <Access Scope="LocalVariable" UId="192">
+    <Symbol UId="193">
+      <Component Name="s_FirstCall" UId="194" />
+    </Symbol>
+  </Access>
+  <NewLine UId="195" />
+  <Blank Num="8" UId="196" />
+  <Token Text="OR" UId="197" />
+  <Blank UId="198" />
+  <Token Text="(" UId="199" />
+  <Access Scope="LocalVariable" UId="200">
+    <Symbol UId="201">
+      <Component Name="sr_T1_sec_Old" UId="202" />
+    </Symbol>
+  </Access>
+  <Blank UId="203" />
+  <Token Text="&lt;&gt;" UId="204" />
+  <Blank UId="205" />
+  <Access Scope="LocalVariable" UId="206">
+    <Symbol UId="207">
+      <Component Name="ir_T1_sec" UId="208" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="209" />
+  <NewLine UId="210" />
+  <Blank Num="8" UId="211" />
+  <Token Text="OR" UId="212" />
+  <Blank UId="213" />
+  <Token Text="(" UId="214" />
+  <Access Scope="LocalVariable" UId="215">
+    <Symbol UId="216">
+      <Component Name="sr_K_Old" UId="217" />
+    </Symbol>
+  </Access>
+  <Blank UId="218" />
+  <Token Text="&lt;&gt;" UId="219" />
+  <Blank UId="220" />
+  <Access Scope="LocalVariable" UId="221">
+    <Symbol UId="222">
+      <Component Name="tr_LogKp" UId="223" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="224" />
+  <NewLine UId="225" />
+  <Blank Num="8" UId="226" />
+  <Token Text="OR" UId="227" />
+  <Blank UId="228" />
+  <Token Text="(" UId="229" />
+  <Access Scope="LocalVariable" UId="230">
+    <Symbol UId="231">
+      <Component Name="sr_T_cycle_sec_Old" UId="232" />
+    </Symbol>
+  </Access>
+  <Blank UId="233" />
+  <Token Text="&lt;&gt;" UId="234" />
+  <Blank UId="235" />
+  <Access Scope="LocalVariable" UId="236">
+    <Symbol UId="237">
+      <Component Name="ir_T_cycle_sec" UId="238" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="239" />
+  <NewLine UId="240" />
+  <Blank Num="4" UId="241" />
+  <Token Text="THEN" UId="242" />
+  <NewLine UId="243" />
+  <Blank Num="8" UId="244" />
+  <Access Scope="LocalVariable" UId="245">
+    <Symbol UId="246">
+      <Component Name="s_FirstCall" UId="247" />
+    </Symbol>
+  </Access>
+  <Blank UId="248" />
+  <Token Text=":=" UId="249" />
+  <Blank UId="250" />
+  <Access Scope="LiteralConstant" UId="251">
+    <Constant UId="252">
+      <ConstantValue UId="254">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="255" />
+  <NewLine UId="256" />
+  <Blank Num="8" UId="257" />
+  <NewLine UId="258" />
+  <Blank Num="8" UId="259" />
+  <LineComment UId="260">
+    <Text UId="261">Calculation the parts of invert z-transform equition</Text>
+  </LineComment>
+  <NewLine UId="262" />
+  <Blank Num="8" UId="263" />
+  <Access Scope="LocalVariable" UId="264">
+    <Symbol UId="265">
+      <Component Name="sr_ExpPart" UId="266" />
+    </Symbol>
+  </Access>
+  <Blank UId="267" />
+  <Token Text=":=" UId="268" />
+  <Blank UId="269" />
+  <Token Text="-" UId="270" />
+  <Blank UId="271" />
+  <Access Scope="Call" UId="272">
+    <Instruction Name="EXP" UId="273">
+      <Token Text="(" UId="274" />
+      <NamelessParameter UId="275">
+        <Token Text="-" UId="276" />
+        <Blank UId="277" />
+        <Access Scope="LocalVariable" UId="278">
+          <Symbol UId="279">
+            <Component Name="ir_T_cycle_sec" UId="280" />
+          </Symbol>
+        </Access>
+        <Blank UId="281" />
+        <Token Text="/" UId="282" />
+        <Blank UId="283" />
+        <Access Scope="LocalVariable" UId="284">
+          <Symbol UId="285">
+            <Component Name="ir_T1_sec" UId="286" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="288" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="289" />
+  <NewLine UId="290" />
+  <Blank Num="8" UId="291" />
+  <Access Scope="LocalVariable" UId="292">
+    <Symbol UId="293">
+      <Component Name="sr_InPart" UId="294" />
+    </Symbol>
+  </Access>
+  <Blank UId="295" />
+  <Token Text=":=" UId="296" />
+  <Blank UId="297" />
+  <Access Scope="LocalVariable" UId="298">
+    <Symbol UId="299">
+      <Component Name="tr_LogKp" UId="300" />
+    </Symbol>
+  </Access>
+  <Blank UId="301" />
+  <Token Text="*" UId="302" />
+  <Blank UId="303" />
+  <Token Text="(" UId="304" />
+  <Access Scope="LiteralConstant" UId="305">
+    <Constant UId="306">
+      <ConstantValue UId="308">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank UId="309" />
+  <Token Text="+" UId="310" />
+  <Blank UId="311" />
+  <Access Scope="LocalVariable" UId="312">
+    <Symbol UId="313">
+      <Component Name="sr_ExpPart" UId="314" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="315" />
+  <Token Text=";" UId="316" />
+  <NewLine UId="317" />
+  <Blank Num="8" UId="318" />
+  <NewLine UId="319" />
+  <Blank Num="8" UId="320" />
+  <LineComment UId="321">
+    <Text UId="322">It rewrites old values</Text>
+  </LineComment>
+  <NewLine UId="323" />
+  <Blank Num="8" UId="324" />
+  <Access Scope="LocalVariable" UId="325">
+    <Symbol UId="326">
+      <Component Name="sr_T1_sec_Old" UId="327" />
+    </Symbol>
+  </Access>
+  <Blank UId="328" />
+  <Token Text=":=" UId="329" />
+  <Blank UId="330" />
+  <Access Scope="LocalVariable" UId="331">
+    <Symbol UId="332">
+      <Component Name="ir_T1_sec" UId="333" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="334" />
+  <NewLine UId="335" />
+  <Blank Num="8" UId="336" />
+  <Access Scope="LocalVariable" UId="337">
+    <Symbol UId="338">
+      <Component Name="sr_K_Old" UId="339" />
+    </Symbol>
+  </Access>
+  <Blank UId="340" />
+  <Token Text=":=" UId="341" />
+  <Blank UId="342" />
+  <Access Scope="LocalVariable" UId="343">
+    <Symbol UId="344">
+      <Component Name="tr_LogKp" UId="345" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="346" />
+  <NewLine UId="347" />
+  <Blank Num="8" UId="348" />
+  <Access Scope="LocalVariable" UId="349">
+    <Symbol UId="350">
+      <Component Name="sr_T_cycle_sec_Old" UId="351" />
+    </Symbol>
+  </Access>
+  <Blank UId="352" />
+  <Token Text=":=" UId="353" />
+  <Blank UId="354" />
+  <Access Scope="LocalVariable" UId="355">
+    <Symbol UId="356">
+      <Component Name="ir_T_cycle_sec" UId="357" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="358" />
+  <NewLine UId="359" />
+  <Blank Num="4" UId="360" />
+  <Token Text="END_IF" UId="361" />
+  <Token Text=";" UId="362" />
+  <NewLine UId="363" />
+  <Blank Num="4" UId="364" />
+  <NewLine UId="365" />
+  <Blank Num="4" UId="366" />
+  <LineComment UId="367">
+    <Text UId="368"> Differencial Equation of PT1-System for calculate output value</Text>
+  </LineComment>
+  <NewLine UId="369" />
+  <Blank Num="4" UId="370" />
+  <Access Scope="LocalVariable" UId="371">
+    <Symbol UId="372">
+      <Component Name="sr_Output" UId="373" />
+    </Symbol>
+  </Access>
+  <Blank UId="374" />
+  <Token Text=":=" UId="375" />
+  <Blank UId="376" />
+  <Token Text="(" UId="377" />
+  <Access Scope="LocalVariable" UId="378">
+    <Symbol UId="379">
+      <Component Name="ir_Input" UId="380" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="381" />
+  <Token Text="*" UId="382" />
+  <Blank UId="383" />
+  <Access Scope="LocalVariable" UId="384">
+    <Symbol UId="385">
+      <Component Name="sr_InPart" UId="386" />
+    </Symbol>
+  </Access>
+  <Blank UId="387" />
+  <Token Text="-" UId="388" />
+  <Blank UId="389" />
+  <Access Scope="LocalVariable" UId="390">
+    <Symbol UId="391">
+      <Component Name="sr_Output" UId="392" />
+    </Symbol>
+  </Access>
+  <Blank UId="393" />
+  <Token Text="*" UId="394" />
+  <Blank UId="395" />
+  <Access Scope="LocalVariable" UId="396">
+    <Symbol UId="397">
+      <Component Name="sr_ExpPart" UId="398" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="399" />
+  <NewLine UId="400" />
+  <Blank Num="4" UId="401" />
+  <NewLine UId="402" />
+  <Blank Num="4" UId="403" />
+  <LineComment UId="404">
+    <Text UId="405">if sub In-Out &lt; delta -&gt; Out = In</Text>
+  </LineComment>
+  <NewLine UId="406" />
+  <Blank Num="4" UId="407" />
+  <Token Text="IF" UId="408" />
+  <Blank UId="409" />
+  <Access Scope="Call" UId="410">
+    <Instruction Name="ABS" UId="411">
+      <Token Text="(" UId="412" />
+      <NamelessParameter UId="413">
+        <Access Scope="LocalVariable" UId="414">
+          <Symbol UId="415">
+            <Component Name="ir_Input" UId="416" />
+          </Symbol>
+        </Access>
+        <Blank UId="417" />
+        <Token Text="-" UId="418" />
+        <Blank UId="419" />
+        <Access Scope="LocalVariable" UId="420">
+          <Symbol UId="421">
+            <Component Name="sr_Output" UId="422" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="424" />
+    </Instruction>
+  </Access>
+  <Blank UId="425" />
+  <Token Text="&lt;=" UId="426" />
+  <Blank UId="427" />
+  <Access Scope="LocalVariable" UId="428">
+    <Symbol UId="429">
+      <Component Name="ir_Delta" UId="430" />
+    </Symbol>
+  </Access>
+  <NewLine UId="431" />
+  <Blank Num="4" UId="432" />
+  <Token Text="THEN" UId="433" />
+  <NewLine UId="434" />
+  <Blank Num="8" UId="435" />
+  <Access Scope="LocalVariable" UId="436">
+    <Symbol UId="437">
+      <Component Name="sr_Output" UId="438" />
+    </Symbol>
+  </Access>
+  <Blank UId="439" />
+  <Token Text=":=" UId="440" />
+  <Blank UId="441" />
+  <Access Scope="LocalVariable" UId="442">
+    <Symbol UId="443">
+      <Component Name="ir_Input" UId="444" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="445" />
+  <NewLine UId="446" />
+  <Blank Num="4" UId="447" />
+  <Token Text="END_IF" UId="448" />
+  <Token Text=";" UId="449" />
+  <NewLine UId="450" />
+  <Blank Num="4" UId="451" />
+  <NewLine UId="452" />
+  <Blank Num="4" UId="453" />
+  <LineComment UId="454">
+    <Text UId="455">If reset occured</Text>
+  </LineComment>
+  <NewLine UId="456" />
+  <Blank Num="4" UId="457" />
+  <Token Text="IF" UId="458" />
+  <Blank UId="459" />
+  <Access Scope="LocalVariable" UId="460">
+    <Symbol UId="461">
+      <Component Name="i_Reset" UId="462" />
+    </Symbol>
+  </Access>
+  <NewLine UId="463" />
+  <Blank Num="4" UId="464" />
+  <Token Text="THEN" UId="465" />
+  <NewLine UId="466" />
+  <Blank Num="8" UId="467" />
+  <Access Scope="LocalVariable" UId="468">
+    <Symbol UId="469">
+      <Component Name="sr_Output" UId="470" />
+    </Symbol>
+  </Access>
+  <Blank UId="471" />
+  <Token Text=":=" UId="472" />
+  <Blank UId="473" />
+  <Access Scope="LocalVariable" UId="474">
+    <Symbol UId="475">
+      <Component Name="ir_Input" UId="476" />
+    </Symbol>
+  </Access>
+  <Blank UId="477" />
+  <Token Text="*" UId="478" />
+  <Blank UId="479" />
+  <Access Scope="LocalVariable" UId="480">
+    <Symbol UId="481">
+      <Component Name="tr_LogKp" UId="482" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="483" />
+  <NewLine UId="484" />
+  <Blank Num="4" UId="485" />
+  <Token Text="END_IF" UId="486" />
+  <Token Text=";" UId="487" />
+  <NewLine UId="488" />
+  <Blank Num="4" UId="489" />
+  <NewLine UId="490" />
+  <Blank Num="4" UId="491" />
+  <LineComment UId="492">
+    <Text UId="493">New value writes to output</Text>
+  </LineComment>
+  <NewLine UId="494" />
+  <Blank Num="4" UId="495" />
+  <Access Scope="LocalVariable" UId="496">
+    <Symbol UId="497">
+      <Component Name="qr_Output" UId="498" />
+    </Symbol>
+  </Access>
+  <Blank UId="499" />
+  <Token Text=":=" UId="500" />
+  <Blank UId="501" />
+  <Access Scope="LocalVariable" UId="502">
+    <Symbol UId="503">
+      <Component Name="sr_Output" UId="504" />
+    </Symbol>
+  </Access>
+  <Blank UId="505" />
+  <Token Text="+" UId="506" />
+  <Blank UId="507" />
+  <Access Scope="LocalVariable" UId="508">
+    <Symbol UId="509">
+      <Component Name="ir_OffSet_Out" UId="510" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="511" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Simulation of PT1</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

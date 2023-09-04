@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfEmployee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Employee>
+    <Name>Jack</Name>
+    <Age>41</Age>
+    <Position>C# Developer</Position>
+    <Company>
+      <Name>Microsoft</Name>
+      <Description>Software development</Description>
+    </Company>
+  </Employee>
+  <Employee>
+    <Name>Linda</Name>
+    <Age>18</Age>
+    <Position>Java Developer</Position>
+    <Company>
+      <Name>Microsoft</Name>
+      <Description>Software development</Description>
+    </Company>
+  </Employee>
+  <Employee>
+    <Name>Nicole</Name>
+    <Age>19</Age>
+    <Position>Java Developer</Position>
+    <Company>
+      <Name>Apple</Name>
+      <Description>Software development</Description>
+    </Company>
+  </Employee>
+  <Employee>
+    <Name>Marshal</Name>
+    <Age>25</Age>
+    <Position>C# Developer</Position>
+    <Company>
+      <Name>Microsoft</Name>
+      <Description>Software development</Description>
+    </Company>
+  </Employee>
+  <Employee>
+    <Name>Colonel</Name>
+    <Age>35</Age>
+    <Position>C# Developer</Position>
+    <Company>
+      <Name>Apple</Name>
+      <Description>Software development</Description>
+    </Company>
+  </Employee>
+</ArrayOfEmployee>

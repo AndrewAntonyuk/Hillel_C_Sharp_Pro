@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:02:49.5126461Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut">
+    <Member Name="i_InputArr" Datatype="&quot;_PID_Cascad_AutoCtrlPumpsAll&quot;" />
+  </Section>
+  <Section Name="Temp">
+    <Member Name="t_ExistFree" Datatype="Bool" />
+    <Member Name="ti_Cnt" Datatype="Int" />
+    <Member Name="ti_CurrPID" Datatype="Int" />
+  </Section>
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Int" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>Lib_FC_PID_Cascad_AddNextPID</Name>
+      <Number>26</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment UId="21">
+    <Text UId="22">Set next available element for PID and reset all unavailable</Text>
+  </LineComment>
+  <NewLine UId="23" />
+  <LineComment UId="24">
+    <Text UId="25">Reset flags</Text>
+  </LineComment>
+  <NewLine UId="26" />
+  <Access Scope="LocalVariable" UId="27">
+    <Symbol UId="28">
+      <Component Name="t_ExistFree" UId="29" />
+    </Symbol>
+  </Access>
+  <Blank UId="30" />
+  <Token Text=":=" UId="31" />
+  <Blank UId="32" />
+  <Access Scope="LiteralConstant" UId="33">
+    <Constant UId="34">
+      <ConstantValue UId="36">false</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="37" />
+  <NewLine UId="38" />
+  <Access Scope="LocalVariable" UId="39">
+    <Symbol UId="40">
+      <Component Name="ti_CurrPID" UId="41" />
+    </Symbol>
+  </Access>
+  <Blank UId="42" />
+  <Token Text=":=" UId="43" />
+  <Blank UId="44" />
+  <Access Scope="LiteralConstant" UId="45">
+    <Constant UId="46">
+      <ConstantValue UId="48">-1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="49" />
+  <NewLine UId="50" />
+  <Token Text="FOR" UId="51" />
+  <Blank UId="52" />
+  <Access Scope="LocalVariable" UId="53">
+    <Symbol UId="54">
+      <Component Name="ti_Cnt" UId="55" />
+    </Symbol>
+  </Access>
+  <Blank UId="56" />
+  <Token Text=":=" UId="57" />
+  <Blank UId="58" />
+  <Access Scope="LiteralConstant" UId="59">
+    <Constant UId="60">
+      <ConstantValue UId="62">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank UId="63" />
+  <Token Text="TO" UId="64" />
+  <Blank UId="65" />
+  <Access Scope="LiteralConstant" UId="66">
+    <Constant UId="67">
+      <ConstantValue UId="69">2</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank UId="70" />
+  <Token Text="DO" UId="71" />
+  <NewLine UId="72" />
+  <Blank Num="4" UId="73" />
+  <NewLine UId="74" />
+  <Blank Num="4" UId="75" />
+  <Token Text="IF" UId="76" />
+  <Blank UId="77" />
+  <Token Text="NOT" UId="78" />
+  <Blank UId="79" />
+  <Access Scope="LocalVariable" UId="80">
+    <Symbol UId="81">
+      <Component Name="i_InputArr" UId="82" />
+      <Token Text="." UId="83" />
+      <Component Name="Arr" UId="84">
+        <Token Text="[" UId="85" />
+        <Access Scope="LocalVariable" UId="86">
+          <Symbol UId="87">
+            <Component Name="ti_Cnt" UId="88" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="89" />
+      </Component>
+      <Token Text="." UId="90" />
+      <Component Name="AutoControl_P" UId="91" />
+      <Token Text="." UId="92" />
+      <Component Name="StatusGen" UId="93" />
+      <Token Text="." UId="94" />
+      <Component Name="StartFull" UId="95" />
+    </Symbol>
+  </Access>
+  <NewLine UId="96" />
+  <Blank Num="8" UId="97" />
+  <Token Text="AND" UId="98" />
+  <Blank UId="99" />
+  <Token Text="NOT" UId="100" />
+  <Blank UId="101" />
+  <Access Scope="LocalVariable" UId="102">
+    <Symbol UId="103">
+      <Component Name="i_InputArr" UId="104" />
+      <Token Text="." UId="105" />
+      <Component Name="Arr" UId="106">
+        <Token Text="[" UId="107" />
+        <Access Scope="LocalVariable" UId="108">
+          <Symbol UId="109">
+            <Component Name="ti_Cnt" UId="110" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="111" />
+      </Component>
+      <Token Text="." UId="112" />
+      <Component Name="AutoControl_P" UId="113" />
+      <Token Text="." UId="114" />
+      <Component Name="StatusGen" UId="115" />
+      <Token Text="." UId="116" />
+      <Component Name="StartPID" UId="117" />
+    </Symbol>
+  </Access>
+  <NewLine UId="118" />
+  <Blank Num="8" UId="119" />
+  <Token Text="AND" UId="120" />
+  <Blank UId="121" />
+  <Access Scope="LocalVariable" UId="122">
+    <Symbol UId="123">
+      <Component Name="i_InputArr" UId="124" />
+      <Token Text="." UId="125" />
+      <Component Name="Arr" UId="126">
+        <Token Text="[" UId="127" />
+        <Access Scope="LocalVariable" UId="128">
+          <Symbol UId="129">
+            <Component Name="ti_Cnt" UId="130" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="131" />
+      </Component>
+      <Token Text="." UId="132" />
+      <Component Name="Enabled" UId="133" />
+    </Symbol>
+  </Access>
+  <NewLine UId="134" />
+  <Blank Num="8" UId="135" />
+  <Token Text="AND" UId="136" />
+  <Blank UId="137" />
+  <Access Scope="LocalVariable" UId="138">
+    <Symbol UId="139">
+      <Component Name="i_InputArr" UId="140" />
+      <Token Text="." UId="141" />
+      <Component Name="Arr" UId="142">
+        <Token Text="[" UId="143" />
+        <Access Scope="LocalVariable" UId="144">
+          <Symbol UId="145">
+            <Component Name="ti_Cnt" UId="146" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="147" />
+      </Component>
+      <Token Text="." UId="148" />
+      <Component Name="AutoControl_P" UId="149" />
+      <Token Text="." UId="150" />
+      <Component Name="Mode" UId="151" />
+      <Token Text="." UId="152" />
+      <Component Name="Auto" UId="153" />
+    </Symbol>
+  </Access>
+  <NewLine UId="154" />
+  <Blank Num="8" UId="155" />
+  <Token Text="AND" UId="156" />
+  <Blank UId="157" />
+  <Access Scope="LocalVariable" UId="158">
+    <Symbol UId="159">
+      <Component Name="i_InputArr" UId="160" />
+      <Token Text="." UId="161" />
+      <Component Name="Arr" UId="162">
+        <Token Text="[" UId="163" />
+        <Access Scope="LocalVariable" UId="164">
+          <Symbol UId="165">
+            <Component Name="ti_Cnt" UId="166" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="167" />
+      </Component>
+      <Token Text="." UId="168" />
+      <Component Name="AutoControl_P" UId="169" />
+      <Token Text="." UId="170" />
+      <Component Name="StatusGen" UId="171" />
+      <Token Text="." UId="172" />
+      <Component Name="Ready" UId="173" />
+    </Symbol>
+  </Access>
+  <NewLine UId="174" />
+  <Blank Num="4" UId="175" />
+  <Token Text="THEN" UId="176" />
+  <NewLine UId="177" />
+  <Blank Num="8" UId="178" />
+  <Access Scope="LocalVariable" UId="179">
+    <Symbol UId="180">
+      <Component Name="t_ExistFree" UId="181" />
+    </Symbol>
+  </Access>
+  <Blank UId="182" />
+  <Token Text=":=" UId="183" />
+  <Blank UId="184" />
+  <Access Scope="LiteralConstant" UId="185">
+    <Constant UId="186">
+      <ConstantValue UId="188">true</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="189" />
+  <NewLine UId="190" />
+  <Blank Num="4" UId="191" />
+  <Token Text="END_IF" UId="192" />
+  <Token Text=";" UId="193" />
+  <NewLine UId="194" />
+  <Blank Num="4" UId="195" />
+  <NewLine UId="196" />
+  <Blank Num="4" UId="197" />
+  <Token Text="IF" UId="198" />
+  <Blank UId="199" />
+  <Access Scope="LocalVariable" UId="200">
+    <Symbol UId="201">
+      <Component Name="i_InputArr" UId="202" />
+      <Token Text="." UId="203" />
+      <Component Name="Arr" UId="204">
+        <Token Text="[" UId="205" />
+        <Access Scope="LocalVariable" UId="206">
+          <Symbol UId="207">
+            <Component Name="ti_Cnt" UId="208" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="209" />
+      </Component>
+      <Token Text="." UId="210" />
+      <Component Name="AutoControl_P" UId="211" />
+      <Token Text="." UId="212" />
+      <Component Name="StatusGen" UId="213" />
+      <Token Text="." UId="214" />
+      <Component Name="StartPID" UId="215" />
+    </Symbol>
+  </Access>
+  <NewLine UId="216" />
+  <Blank Num="4" UId="217" />
+  <Token Text="THEN" UId="218" />
+  <NewLine UId="219" />
+  <Blank Num="8" UId="220" />
+  <Access Scope="LocalVariable" UId="221">
+    <Symbol UId="222">
+      <Component Name="ti_CurrPID" UId="223" />
+    </Symbol>
+  </Access>
+  <Blank UId="224" />
+  <Token Text=":=" UId="225" />
+  <Blank UId="226" />
+  <Access Scope="LocalVariable" UId="227">
+    <Symbol UId="228">
+      <Component Name="ti_Cnt" UId="229" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="230" />
+  <NewLine UId="231" />
+  <Blank Num="4" UId="232" />
+  <Token Text="END_IF" UId="233" />
+  <Token Text=";" UId="234" />
+  <NewLine UId="235" />
+  <Token Text="END_FOR" UId="236" />
+  <Token Text=";" UId="237" />
+  <NewLine UId="238" />
+  <Access Scope="LocalVariable" UId="239">
+    <Symbol UId="240">
+      <Component Name="Lib_FC_PID_Cascad_AddNextPID" UId="241" />
+    </Symbol>
+  </Access>
+  <Blank UId="242" />
+  <Token Text=":=" UId="243" />
+  <Blank UId="244" />
+  <Access Scope="LocalVariable" UId="245">
+    <Symbol UId="246">
+      <Component Name="ti_CurrPID" UId="247" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="248" />
+  <NewLine Num="2" UId="249" />
+  <LineComment UId="250">
+    <Text UId="251">Set first free element</Text>
+  </LineComment>
+  <NewLine UId="252" />
+  <Token Text="IF" UId="253" />
+  <Blank UId="254" />
+  <Access Scope="LocalVariable" UId="255">
+    <Symbol UId="256">
+      <Component Name="t_ExistFree" UId="257" />
+    </Symbol>
+  </Access>
+  <NewLine UId="258" />
+  <Token Text="THEN" UId="259" />
+  <NewLine UId="260" />
+  <Blank Num="4" UId="261" />
+  <Token Text="IF" UId="262" />
+  <Blank UId="263" />
+  <Access Scope="LocalVariable" UId="264">
+    <Symbol UId="265">
+      <Component Name="ti_CurrPID" UId="266" />
+    </Symbol>
+  </Access>
+  <Blank UId="267" />
+  <Token Text="&gt;=" UId="268" />
+  <Blank UId="269" />
+  <Access Scope="LiteralConstant" UId="270">
+    <Constant UId="271">
+      <ConstantValue UId="273">0</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="274" />
+  <Blank Num="4" UId="275" />
+  <Token Text="THEN" UId="276" />
+  <NewLine UId="277" />
+  <Blank Num="8" UId="278" />
+  <Access Scope="LocalVariable" UId="279">
+    <Symbol UId="280">
+      <Component Name="i_InputArr" UId="281" />
+      <Token Text="." UId="282" />
+      <Component Name="Arr" UId="283">
+        <Token Text="[" UId="284" />
+        <Access Scope="LocalVariable" UId="285">
+          <Symbol UId="286">
+            <Component Name="ti_CurrPID" UId="287" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="288" />
+      </Component>
+      <Token Text="." UId="289" />
+      <Component Name="AutoControl_P" UId="290" />
+      <Token Text="." UId="291" />
+      <Component Name="StatusGen" UId="292" />
+      <Token Text="." UId="293" />
+      <Component Name="StartPID" UId="294" />
+    </Symbol>
+  </Access>
+  <Blank UId="295" />
+  <Token Text=":=" UId="296" />
+  <Blank UId="297" />
+  <Access Scope="LiteralConstant" UId="298">
+    <Constant UId="299">
+      <ConstantValue UId="301">false</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="302" />
+  <NewLine UId="303" />
+  <Blank Num="8" UId="304" />
+  <Access Scope="LocalVariable" UId="305">
+    <Symbol UId="306">
+      <Component Name="i_InputArr" UId="307" />
+      <Token Text="." UId="308" />
+      <Component Name="Arr" UId="309">
+        <Token Text="[" UId="310" />
+        <Access Scope="LocalVariable" UId="311">
+          <Symbol UId="312">
+            <Component Name="ti_CurrPID" UId="313" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="314" />
+      </Component>
+      <Token Text="." UId="315" />
+      <Component Name="AutoControl_P" UId="316" />
+      <Token Text="." UId="317" />
+      <Component Name="StatusGen" UId="318" />
+      <Token Text="." UId="319" />
+      <Component Name="StartFull" UId="320" />
+    </Symbol>
+  </Access>
+  <Blank UId="321" />
+  <Token Text=":=" UId="322" />
+  <Blank UId="323" />
+  <Access Scope="LiteralConstant" UId="324">
+    <Constant UId="325">
+      <ConstantValue UId="327">true</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="328" />
+  <NewLine UId="329" />
+  <Blank Num="4" UId="330" />
+  <Token Text="END_IF" UId="331" />
+  <Token Text=";" UId="332" />
+  <NewLine UId="333" />
+  <Blank Num="4" UId="334" />
+  <NewLine UId="335" />
+  <Blank Num="4" UId="336" />
+  <Token Text="FOR" UId="337" />
+  <Blank UId="338" />
+  <Access Scope="LocalVariable" UId="339">
+    <Symbol UId="340">
+      <Component Name="ti_Cnt" UId="341" />
+    </Symbol>
+  </Access>
+  <Blank UId="342" />
+  <Token Text=":=" UId="343" />
+  <Blank UId="344" />
+  <Access Scope="LiteralConstant" UId="345">
+    <Constant UId="346">
+      <ConstantValue UId="348">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank UId="349" />
+  <Token Text="TO" UId="350" />
+  <Blank UId="351" />
+  <Access Scope="LiteralConstant" UId="352">
+    <Constant UId="353">
+      <ConstantValue UId="355">2</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank UId="356" />
+  <Token Text="DO" UId="357" />
+  <NewLine UId="358" />
+  <Blank Num="8" UId="359" />
+  <Token Text="IF" UId="360" />
+  <Blank UId="361" />
+  <Token Text="NOT" UId="362" />
+  <Blank UId="363" />
+  <Access Scope="LocalVariable" UId="364">
+    <Symbol UId="365">
+      <Component Name="i_InputArr" UId="366" />
+      <Token Text="." UId="367" />
+      <Component Name="Arr" UId="368">
+        <Token Text="[" UId="369" />
+        <Access Scope="LocalVariable" UId="370">
+          <Symbol UId="371">
+            <Component Name="ti_Cnt" UId="372" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="373" />
+      </Component>
+      <Token Text="." UId="374" />
+      <Component Name="AutoControl_P" UId="375" />
+      <Token Text="." UId="376" />
+      <Component Name="StatusGen" UId="377" />
+      <Token Text="." UId="378" />
+      <Component Name="StartFull" UId="379" />
+    </Symbol>
+  </Access>
+  <NewLine UId="380" />
+  <Blank Num="12" UId="381" />
+  <Token Text="AND" UId="382" />
+  <Blank UId="383" />
+  <Token Text="NOT" UId="384" />
+  <Blank UId="385" />
+  <Access Scope="LocalVariable" UId="386">
+    <Symbol UId="387">
+      <Component Name="i_InputArr" UId="388" />
+      <Token Text="." UId="389" />
+      <Component Name="Arr" UId="390">
+        <Token Text="[" UId="391" />
+        <Access Scope="LocalVariable" UId="392">
+          <Symbol UId="393">
+            <Component Name="ti_Cnt" UId="394" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="395" />
+      </Component>
+      <Token Text="." UId="396" />
+      <Component Name="AutoControl_P" UId="397" />
+      <Token Text="." UId="398" />
+      <Component Name="StatusGen" UId="399" />
+      <Token Text="." UId="400" />
+      <Component Name="StartPID" UId="401" />
+    </Symbol>
+  </Access>
+  <NewLine UId="402" />
+  <Blank Num="12" UId="403" />
+  <Token Text="AND" UId="404" />
+  <Blank UId="405" />
+  <Access Scope="LocalVariable" UId="406">
+    <Symbol UId="407">
+      <Component Name="i_InputArr" UId="408" />
+      <Token Text="." UId="409" />
+      <Component Name="Arr" UId="410">
+        <Token Text="[" UId="411" />
+        <Access Scope="LocalVariable" UId="412">
+          <Symbol UId="413">
+            <Component Name="ti_Cnt" UId="414" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="415" />
+      </Component>
+      <Token Text="." UId="416" />
+      <Component Name="Enabled" UId="417" />
+    </Symbol>
+  </Access>
+  <NewLine UId="418" />
+  <Blank Num="12" UId="419" />
+  <Token Text="AND" UId="420" />
+  <Blank UId="421" />
+  <Access Scope="LocalVariable" UId="422">
+    <Symbol UId="423">
+      <Component Name="i_InputArr" UId="424" />
+      <Token Text="." UId="425" />
+      <Component Name="Arr" UId="426">
+        <Token Text="[" UId="427" />
+        <Access Scope="LocalVariable" UId="428">
+          <Symbol UId="429">
+            <Component Name="ti_Cnt" UId="430" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="431" />
+      </Component>
+      <Token Text="." UId="432" />
+      <Component Name="AutoControl_P" UId="433" />
+      <Token Text="." UId="434" />
+      <Component Name="Mode" UId="435" />
+      <Token Text="." UId="436" />
+      <Component Name="Auto" UId="437" />
+    </Symbol>
+  </Access>
+  <NewLine UId="438" />
+  <Blank Num="12" UId="439" />
+  <Token Text="AND" UId="440" />
+  <Blank UId="441" />
+  <Access Scope="LocalVariable" UId="442">
+    <Symbol UId="443">
+      <Component Name="i_InputArr" UId="444" />
+      <Token Text="." UId="445" />
+      <Component Name="Arr" UId="446">
+        <Token Text="[" UId="447" />
+        <Access Scope="LocalVariable" UId="448">
+          <Symbol UId="449">
+            <Component Name="ti_Cnt" UId="450" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="451" />
+      </Component>
+      <Token Text="." UId="452" />
+      <Component Name="AutoControl_P" UId="453" />
+      <Token Text="." UId="454" />
+      <Component Name="StatusGen" UId="455" />
+      <Token Text="." UId="456" />
+      <Component Name="Ready" UId="457" />
+    </Symbol>
+  </Access>
+  <NewLine UId="458" />
+  <Blank Num="8" UId="459" />
+  <Token Text="THEN" UId="460" />
+  <NewLine UId="461" />
+  <Blank Num="12" UId="462" />
+  <Access Scope="LocalVariable" UId="463">
+    <Symbol UId="464">
+      <Component Name="i_InputArr" UId="465" />
+      <Token Text="." UId="466" />
+      <Component Name="Arr" UId="467">
+        <Token Text="[" UId="468" />
+        <Access Scope="LocalVariable" UId="469">
+          <Symbol UId="470">
+            <Component Name="ti_Cnt" UId="471" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="472" />
+      </Component>
+      <Token Text="." UId="473" />
+      <Component Name="AutoControl_P" UId="474" />
+      <Token Text="." UId="475" />
+      <Component Name="StatusGen" UId="476" />
+      <Token Text="." UId="477" />
+      <Component Name="StartPID" UId="478" />
+    </Symbol>
+  </Access>
+  <Blank UId="479" />
+  <Token Text=":=" UId="480" />
+  <Blank UId="481" />
+  <Access Scope="LiteralConstant" UId="482">
+    <Constant UId="483">
+      <ConstantValue UId="485">true</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="486" />
+  <NewLine UId="487" />
+  <Blank Num="12" UId="488" />
+  <Access Scope="LocalVariable" UId="489">
+    <Symbol UId="490">
+      <Component Name="Lib_FC_PID_Cascad_AddNextPID" UId="491" />
+    </Symbol>
+  </Access>
+  <Blank UId="492" />
+  <Token Text=":=" UId="493" />
+  <Blank UId="494" />
+  <Access Scope="LocalVariable" UId="495">
+    <Symbol UId="496">
+      <Component Name="ti_Cnt" UId="497" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="498" />
+  <NewLine UId="499" />
+  <Blank Num="12" UId="500" />
+  <Token Text="RETURN" UId="501" />
+  <Token Text=";" UId="502" />
+  <NewLine UId="503" />
+  <Blank Num="8" UId="504" />
+  <Token Text="END_IF" UId="505" />
+  <Token Text=";" UId="506" />
+  <NewLine UId="507" />
+  <Blank Num="4" UId="508" />
+  <Token Text="END_FOR" UId="509" />
+  <Token Text=";" UId="510" />
+  <NewLine UId="511" />
+  <Blank Num="4" UId="512" />
+  <NewLine UId="513" />
+  <Token Text="END_IF" UId="514" />
+  <Token Text=";" UId="515" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

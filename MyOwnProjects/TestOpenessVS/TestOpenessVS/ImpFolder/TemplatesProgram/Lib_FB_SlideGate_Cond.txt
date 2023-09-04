@@ -1,0 +1,68 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+	//Опис: {sDescribe1}
+    
+	REGION Блокування та зовнішні аварії
+        REGION Блокування Open
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksOpen_8.%X0 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksOpen_8.%X1 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksOpen_8.%X2 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksOpen_8.%X3 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksOpen_8.%X4 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksOpen_8.%X5 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksOpen_8.%X6 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksOpen_8.%X7 := false;
+        END_REGION
+        
+        REGION Блокування Close
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksClose_8.%X0 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksClose_8.%X1 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksClose_8.%X2 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksClose_8.%X3 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksClose_8.%X4 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksClose_8.%X5 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksClose_8.%X6 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksClose_8.%X7 := false;
+        END_REGION
+        
+        REGION Зовнішні аварії та попередження
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X0 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X1 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X2 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X3 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X4 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X5 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X6 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X7 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X8 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X9 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X10 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X11 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X12 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X13 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X14 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X15 := false;
+            
+            "D_N1Gr_Ctrl".I_ExternalWarning := false;
+        END_REGION
+    END_REGION
+	
+	REGION Блок керування
+	    
+		"D_{sTechNumPrg}_Ctrl"(I_Initialization:="D_General_ProgramDATA".RestartPLC,
+						   IR_CycleTime:="D_PLC".TIME_TCK.cyclic_sec_R,
+						   II_Obj_ID:={sID},
+						   II_Sens_ID:={sDescribe2},
+						   I_CmdGeneralReset:="D_General_ProgramDATA".ResetGlobal,
+						   I_One_1s:="D_PLC".PLS.P1S,
+						   I_EstopHMI:="D_General_ProgramDATA".ES_HMI_Global
+						   AND "D_General_ProgramDATA".ES_Fld_Global,
+						   I_SuppyBox_Ok:=#t_SupplyRelease,
+						   I_IsOpen:="D_{sTechNumPrg}_Ctrl".Q_CmdOpen,
+						   I_IsClose:=NOT "D_{sTechNumPrg}_Ctrl".Q_CmdOpen,
+						   Q_CmdOpen=>"D_InOut"."{sTechNumPrg}".Cmd_Open,
+						   Q_DataErr=>"D_{sTechNumPrg}_Ctrl".Q_DataErr,
+						   IQ_PLC_CycleInfo:="D_PLC_CycleInfo_DATA".Grp_Obj[1, 0]);
+    END_REGION					  
+    
+END_REGION

@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:03:03.4522009Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="Config" Datatype="Struct" Remanence="Retain">
+      <Member Name="Max_Number_Groups" Datatype="Int"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><StartValue>3</StartValue></Member>
+      <Member Name="Max_Number_ButtonInGroup" Datatype="Int">
+        <StartValue>5</StartValue>
+      </Member>
+    </Member>
+    <Member Name="Grp_Obj" Datatype="Array[0..9, 0..15] of &quot;Lib_PLC_CycleInfo&quot;"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="None" /></Sections><Subelement Path="0,0"><Comment><MultiLanguageText Lang="en-US">Система в цілому</MultiLanguageText></Comment></Subelement></Member>
+    <Member Name="Grp_HMI&amp;CNTR" Datatype="Array[0..9, 0..15] of &quot;Lib_PLC_CycleInfo&quot;">
+      <Sections>
+        <Section Name="None" />
+      </Sections>
+      <Subelement Path="0,0">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Система - сумарно</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,1">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,2">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,3">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,4">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,5">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,6">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,7">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,8">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,9">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,10">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,11">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,12">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,13">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,14">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="0,15">
+        <Comment>
+          <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,0">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - сумарно</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,1">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 1</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,2">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 2</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,3">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 3</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,4">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 4</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,5">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 5</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,6">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 6</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,7">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 7</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,8">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 8</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,9">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 9</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,10">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 10</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,11">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 11</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,12">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 12</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,13">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 13</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,14">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 14</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="1,15">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 1 - Підгрупа 15</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,0">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - сумарно</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,1">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 1</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,2">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 2</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,3">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 3</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,4">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 4</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,5">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 5</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,6">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 6</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,7">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 7</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,8">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 8</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,9">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 9</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,10">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 10</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,11">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 11</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,12">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 12</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,13">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 13</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,14">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 14</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2,15">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 2 - Підгрупа 15</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,0">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - сумарно</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,1">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 1</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,2">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 2</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,3">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 3</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,4">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 4</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,5">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 5</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,6">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 6</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,7">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 7</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,8">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 8</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,9">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 9</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,10">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 10</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,11">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 11</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,12">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 12</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,13">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 13</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,14">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 14</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3,15">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 3 - Підгрупа 15</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,0">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - сумарно</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,1">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 1</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,2">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 2</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,3">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 3</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,4">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 4</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,5">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 5</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,6">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 6</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,7">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 7</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,8">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 8</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,9">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 9</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,10">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 10</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,11">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 11</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,12">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 12</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,13">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 13</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,14">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 14</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4,15">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 4 - Підгрупа 15</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,0">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - сумарно</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,1">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 1</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,2">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 2</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,3">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 3</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,4">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 4</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,5">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 5</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,6">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 6</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,7">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 7</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,8">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 8</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,9">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 9</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,10">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 10</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,11">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 11</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,12">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 12</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,13">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 13</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,14">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 14</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5,15">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 5 - Підгрупа 15</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,0">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - сумарно</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,1">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 1</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,2">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 2</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,3">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 3</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,4">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 4</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,5">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 5</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,6">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 6</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,7">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 7</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,8">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 8</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,9">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 9</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,10">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 10</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,11">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 11</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,12">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 12</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,13">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 13</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,14">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 14</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6,15">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 6 - Підгрупа 15</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,0">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - сумарно</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,1">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 1</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,2">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 2</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,3">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 3</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,4">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 4</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,5">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 5</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,6">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 6</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,7">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 7</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,8">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 8</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,9">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 9</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,10">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 10</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,11">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 11</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,12">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 12</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,13">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 13</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,14">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 14</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7,15">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 7 - Підгрупа 15</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,0">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - сумарно</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,1">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 1</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,2">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 2</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,3">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 3</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,4">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 4</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,5">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 5</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,6">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 6</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,7">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 7</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,8">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 8</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,9">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 9</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,10">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 10</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,11">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 11</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,12">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 12</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,13">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 13</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,14">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 14</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8,15">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 8 - Підгрупа 15</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,0">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - сумарно</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,1">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 1</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,2">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 2</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,3">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 3</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,4">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 4</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,5">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 5</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,6">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 6</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,7">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 7</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,8">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 8</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,9">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 9</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,10">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 10</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,11">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 11</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,12">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 12</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,13">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 13</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,14">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 14</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9,15">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Група 9 - Підгрупа 15</MultiLanguageText>
+        </Comment>
+      </Subelement>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>D_PLC_CycleInfo_DATA</Name>
+      <Number>6</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

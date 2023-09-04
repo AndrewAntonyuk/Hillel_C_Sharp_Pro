@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V15.1" />
+  <DocumentInfo>
+    <Created>2023-01-03T10:05:14.5467529Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V15.1 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V15.1 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V15.1 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>G110M, G120, G120C, G120D, G120P</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V15.1 Update 5</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>Soft Starter ES</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Professional</DisplayName>
+        <DisplayVersion>V15.1 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Tags.PlcTagTable ID="0">
+    <AttributeList>
+      <Name>Додатково (PSL_SAF_)__PF_H1</Name>
+    </AttributeList>
+    <ObjectList>
+      <SW.Tags.PlcTag ID="1" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I0.0</LogicalAddress>
+          <Name>I_PF_H1_001KV1_24_PSL400</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#001_KV1--->=PF+H2_A100:1//Ввід силовий: Напруга 400VAC ок</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#001_KV1--->=PF+H2_A100:1//Ввід силовий: Напруга 400VAC ок</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="5" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I0.1</LogicalAddress>
+          <Name>I_PF_H1_001QF1_4_PSL400</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="6" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#001_QF1--->=PF+H2_A100:5//Ввід силовий: Вхідний автомат силового живлення</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#001_QF1--->=PF+H2_A100:5//Ввід силовий: Вхідний автомат силового живлення</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="9" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I0.2</LogicalAddress>
+          <Name>I_PF_H1_003QF1_1_54_PSL230</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#003_QF1--->=PF+H2_A100:2//Оперативні кола 230 VAC: Живлення трансформатору оперативних кіл 230 VAC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#003_QF1--->=PF+H2_A100:2//Оперативні кола 230 VAC: Живлення трансформатору оперативних кіл 230 VAC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="D" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I0.3</LogicalAddress>
+          <Name>I_PF_H1_003QF2_14_PSL230</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#003_QF2--->=PF+H2_A100:6//Оперативні кола 230 VAC: Живлення оперативної напруги 230 VAC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#003_QF2--->=PF+H2_A100:6//Оперативні кола 230 VAC: Живлення оперативної напруги 230 VAC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="11" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I1.0</LogicalAddress>
+          <Name>I_PF_H1_003F1_14_PSL230</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="12" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#003_F1--->=PF+H2_A101:1//Оперативні кола 230 VAC: Живлення оперативної напруги 24VDC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#003_F1--->=PF+H2_A101:1//Оперативні кола 230 VAC: Живлення оперативної напруги 24VDC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="15" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I1.1</LogicalAddress>
+          <Name>I_PF_H1_003F2_14_PSL230</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="16" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="17" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#003_F2--->=PF+H2_A101:5//Оперативні кола 230 VAC: Живлення кіл безпеки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#003_F2--->=PF+H2_A101:5//Оперативні кола 230 VAC: Живлення кіл безпеки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="19" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I1.2</LogicalAddress>
+          <Name>I_PF_H1_003F3_14_PSL230</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#003_F3--->=PF+H2_A101:2//Оперативні кола 230 VAC: Живлення котушок контакторів</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#003_F3--->=PF+H2_A101:2//Оперативні кола 230 VAC: Живлення котушок контакторів</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="1D" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I1.3</LogicalAddress>
+          <Name>I_PF_H1_004T1_14_PSL24</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#004_T1--->=PF+H2_A101:6//Оперативні кола 24 VDC: 24 VDC OK</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#004_T1--->=PF+H2_A101:6//Оперативні кола 24 VDC: 24 VDC OK</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="21" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I2.0</LogicalAddress>
+          <Name>I_PF_H1_004QF1_14_PSL24</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="22" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#004_QF1--->=PF+H2_A102:1//Оперативні кола 24 VDC: Живлення оперативної напруги 24VDC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="24" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#004_QF1--->=PF+H2_A102:1//Оперативні кола 24 VDC: Живлення оперативної напруги 24VDC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="25" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I2.1</LogicalAddress>
+          <Name>I_PF_H1_004F1_14_PSL24</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="26" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="27" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#004_F1--->=PF+H2_A102:5//Оперативні кола 24 VDC: Живлення реле безпеки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#004_F1--->=PF+H2_A102:5//Оперативні кола 24 VDC: Живлення реле безпеки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="29" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I2.2</LogicalAddress>
+          <Name>I_PF_H1_004F2_14_PSL24</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#004_F2--->=PF+H2_A102:2//Оперативні кола 24 VDC: Живлення модулів DO/AO</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#004_F2--->=PF+H2_A102:2//Оперативні кола 24 VDC: Живлення модулів DO/AO</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="2D" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I2.3</LogicalAddress>
+          <Name>I_PF_H1_004F5_14_PSL24</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#004_F5--->=PF+H2_A102:6//Оперативні кола 24 VDC: Живлення котушок клапанів зони загрузки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#004_F5--->=PF+H2_A102:6//Оперативні кола 24 VDC: Живлення котушок клапанів зони загрузки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="31" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I3.0</LogicalAddress>
+          <Name>I_PF_H1_004F6_14_PSL24</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="32" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="33" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#004_F6--->=PF+H2_A103:1//Оперативні кола 24 VDC: Живлення котушок клапанів зони розгрузки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#004_F6--->=PF+H2_A103:1//Оперативні кола 24 VDC: Живлення котушок клапанів зони розгрузки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="35" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I3.1</LogicalAddress>
+          <Name>I_PF_H1_004UPS1_1_PSL24</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="36" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#004_UPS1--->=PF+H2_A103:5//Оперативні кола 24 VDC: БЛОК безперебійного електроживлення BAT.</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="38" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#004_UPS1--->=PF+H2_A103:5//Оперативні кола 24 VDC: БЛОК безперебійного електроживлення BAT.</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="39" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I3.2</LogicalAddress>
+          <Name>I_PF_H1_004UPS1_4_PSL24</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#004_UPS1--->=PF+H2_A103:2//Оперативні кола 24 VDC: БЛОК безперебійного електроживлення ALARM</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#004_UPS1--->=PF+H2_A103:2//Оперативні кола 24 VDC: БЛОК безперебійного електроживлення ALARM</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="3D" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I3.3</LogicalAddress>
+          <Name>I_PF_H1_004F10_14_PSL24</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#004_F10--->=PF+H2_A103:6//Оперативні кола 24 VDC: Живлення шафи Т1 (Станція ET200)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="40" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#004_F10--->=PF+H2_A103:6//Оперативні кола 24 VDC: Живлення шафи Т1 (Станція ET200)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="41" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I4.0</LogicalAddress>
+          <Name>I_PF_H1_004F11_14_PSL24</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="42" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="43" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#004_F11--->=PF+H2_A104:1//Оперативні кола 24 VDC: Живлення шафи Т2 (Панель оператора)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="44" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#004_F11--->=PF+H2_A104:1//Оперативні кола 24 VDC: Живлення шафи Т2 (Панель оператора)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="45" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I4.1</LogicalAddress>
+          <Name>I_PF_H1_004F12_14_PSL24</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="46" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="47" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#004_F12--->=PF+H2_A104:5//Оперативні кола 24 VDC: Живлення шафи Т3 (Станція ET200)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="48" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#004_F12--->=PF+H2_A104:5//Оперативні кола 24 VDC: Живлення шафи Т3 (Станція ET200)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="49" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I4.2</LogicalAddress>
+          <Name>I_PF_H1_005SB1_4_SAF</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#005_SB1--->=PF+H2_A104:2//Кола безпеки: Аварійний стоп</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#005_SB1--->=PF+H2_A104:2//Кола безпеки: Аварійний стоп</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="4D" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I4.3</LogicalAddress>
+          <Name>I_PF_H1_005SB2_4_SAF</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#005_SB2--->=PF+H2_A104:6//Кола безпеки: Квітувати аварію</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="50" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#005_SB2--->=PF+H2_A104:6//Кола безпеки: Квітувати аварію</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="51" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I5.0</LogicalAddress>
+          <Name>I_PF_H1_005KM2_14_SAF</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="52" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="53" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#005_KM2--->=PF+H2_A105:1//Кола безпеки: Контактори кіл безпеки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="54" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#005_KM2--->=PF+H2_A105:1//Кола безпеки: Контактори кіл безпеки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="55" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%I5.1</LogicalAddress>
+          <Name>I_PF_H1_005KM3_34_SAF</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="56" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="57" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#005_KM3--->=PF+H2_A105:5//Кола безпеки: ЗЗ Подати напругу</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="58" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#005_KM3--->=PF+H2_A105:5//Кола безпеки: ЗЗ Подати напругу</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="59" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%Q0.0</LogicalAddress>
+          <Name>Q_PF_H1_005KL1__A1_SAF</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#005_KL1--->=PF+H2_A200:1//Кола безпеки: Квітування реле безпеки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#005_KL1--->=PF+H2_A200:1//Кола безпеки: Квітування реле безпеки</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="5D" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%Q0.1</LogicalAddress>
+          <Name>Q_PF_H1_005SB2_x1_SAF</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#005_SB2--->=PF+H2_A200:5//Кола безпеки: Квітувати аварію</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="60" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#005_SB2--->=PF+H2_A200:5//Кола безпеки: Квітувати аварію</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="61" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Bool</DataTypeName>
+          <LogicalAddress>%Q0.2</LogicalAddress>
+          <Name>Q_PF_H1_005HL1_x1_SAF</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="62" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="63" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Додатково| =PF+H1#005_HL1--->=PF+H2_A200:2//Кола безпеки: Напругу подано</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="64" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>Додатково| =PF+H1#005_HL1--->=PF+H2_A200:2//Кола безпеки: Напругу подано</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+    </ObjectList>
+  </SW.Tags.PlcTagTable>
+</Document>

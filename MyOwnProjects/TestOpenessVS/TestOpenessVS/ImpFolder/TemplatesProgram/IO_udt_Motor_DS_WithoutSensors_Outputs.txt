@@ -1,0 +1,6 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    //Параметри двигуна: {sDescribe1}
+    	
+	"Q_{sTechNumPrg}_KM" := "D_InOut"."{sTechNumPrg}".Q_Cmd_KM1;
+END_REGION

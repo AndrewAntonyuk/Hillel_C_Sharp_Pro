@@ -1,0 +1,1509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:02:47.2254951Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="I_CmdGeneralReset" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">0 ⮥ 1 = Input general reset ERROR/Interlocks</MultiLanguageText></Comment></Member>
+    <Member Name="IR_CycleTime" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Time of  last PLC cycle, sec</MultiLanguageText></Comment><StartValue>0.0</StartValue></Member>
+    <Member Name="I_Initialization" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">1 = Restart PLC is active (First scan)</MultiLanguageText></Comment><StartValue>FALSE</StartValue></Member>
+    <Member Name="I_One_1s" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">1 = One cycle per one seccond pulse</MultiLanguageText></Comment></Member>
+    <Member Name="I_KV_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Напруга 400VAC в нормі -KV1</MultiLanguageText></Comment></Member>
+    <Member Name="I_QF_Trans_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Автомат захисту трансформатора -Q1</MultiLanguageText></Comment></Member>
+    <Member Name="I_QF_Oper230_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Розподільчий автомат оперативної напруги 230 V AC -F1</MultiLanguageText></Comment></Member>
+    <Member Name="I_QF_Oper24_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення оперативної напруги 24 V DC -F2</MultiLanguageText></Comment></Member>
+    <Member Name="I_QF_Saf_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення кіл безпеки -F3</MultiLanguageText></Comment></Member>
+    <Member Name="I_QF_KM_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення котушок контакторів -F4</MultiLanguageText></Comment></Member>
+    <Member Name="I_QF_Gas_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення сигналізатора загазованості -F5</MultiLanguageText></Comment></Member>
+    <Member Name="I_QF_VlvSaf_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення відсічного клапана -F6</MultiLanguageText></Comment></Member>
+    <Member Name="I_QF_Spare_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Резерв -F7</MultiLanguageText></Comment></Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="QW_STW" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Status for HMI</MultiLanguageText></Comment></Member>
+    <Member Name="Q_Reset" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">1 = Reset external err</MultiLanguageText></Comment></Member>
+    <Member Name="Q_SomeErr" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">1 = Some err occured</MultiLanguageText></Comment></Member>
+    <Member Name="Q_KV_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Напруга 400VAC в нормі -KV1</MultiLanguageText></Comment></Member>
+    <Member Name="Q_QF_Trans_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Автомат захисту трансформатора -Q1</MultiLanguageText></Comment></Member>
+    <Member Name="Q_QF_Oper230_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Розподільчий автомат оперативної напруги 230 V AC -F1</MultiLanguageText></Comment></Member>
+    <Member Name="Q_QF_Oper24_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення оперативної напруги 24 V DC -F2</MultiLanguageText></Comment></Member>
+    <Member Name="Q_QF_Saf_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення кіл безпеки -F3</MultiLanguageText></Comment></Member>
+    <Member Name="Q_QF_KM_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення котушок контакторів -F4</MultiLanguageText></Comment></Member>
+    <Member Name="Q_QF_Gas_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення сигналізатора загазованості -F5</MultiLanguageText></Comment></Member>
+    <Member Name="Q_QF_VlvSaf_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення відсічного клапана -F6</MultiLanguageText></Comment></Member>
+    <Member Name="Q_QF_Spare_Ok" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Резерв -F7</MultiLanguageText></Comment></Member>
+  </Section>
+  <Section Name="InOut">
+    <Member Name="II_CMD" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Command from HMI for current box</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Static">
+    <Member Name="s_KV_Err" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Напруга 400VAC в нормі -KV1</MultiLanguageText></Comment></Member>
+    <Member Name="s_QF_Trans_Err" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Автомат захисту трансформатора -Q1</MultiLanguageText></Comment></Member>
+    <Member Name="s_QF_Oper230_Err" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Розподільчий автомат оперативної напруги 230 V AC -F1</MultiLanguageText></Comment></Member>
+    <Member Name="s_QF_Oper24_Err" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення оперативної напруги 24 V DC -F2</MultiLanguageText></Comment></Member>
+    <Member Name="s_QF_Saf_Err" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення кіл безпеки -F3</MultiLanguageText></Comment></Member>
+    <Member Name="s_QF_KM_Err" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення котушок контакторів -F4</MultiLanguageText></Comment></Member>
+    <Member Name="s_QF_Gas_Err" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення сигналізатора загазованості -F5</MultiLanguageText></Comment></Member>
+    <Member Name="s_QF_VlvSaf_Err" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Живлення відсічного клапана -F6</MultiLanguageText></Comment></Member>
+    <Member Name="s_QF_Spare_Err" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Резерв -F7</MultiLanguageText></Comment></Member>
+    <Member Name="s_TP_Reset" Datatype="&quot;Lib_FB_Timer_TP_Simple&quot;"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="t_ResetHMI" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Reset from HMI</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_ResetLogic" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Reset for logic</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_SomeErr" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Some err occured</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ti_LogicCMD" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">CMD for logic</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="tw_STW" Datatype="Word">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Status for HMI</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>Internal_H01_FB</Name>
+      <Number>8</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Proccess signals from fuses, safety and others internal devices</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="REGION" UId="21" />
+  <Blank UId="22" />
+  <Text UId="23">Initialization</Text>
+  <NewLine UId="24" />
+  <Blank Num="4" UId="25" />
+  <Token Text="IF" UId="26" />
+  <Blank UId="27" />
+  <Access Scope="LocalVariable" UId="28">
+    <Symbol UId="29">
+      <Component Name="II_CMD" UId="30" />
+    </Symbol>
+  </Access>
+  <Blank UId="31" />
+  <Token Text="&lt;&gt;" UId="32" />
+  <Blank UId="33" />
+  <Access Scope="LiteralConstant" UId="34">
+    <Constant UId="35">
+      <ConstantValue UId="37">0</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="38" />
+  <Blank Num="4" UId="39" />
+  <Token Text="THEN" UId="40" />
+  <NewLine UId="41" />
+  <Blank Num="8" UId="42" />
+  <Access Scope="LocalVariable" UId="43">
+    <Symbol UId="44">
+      <Component Name="ti_LogicCMD" UId="45" />
+    </Symbol>
+  </Access>
+  <Blank UId="46" />
+  <Token Text=":=" UId="47" />
+  <Blank UId="48" />
+  <Access Scope="LocalVariable" UId="49">
+    <Symbol UId="50">
+      <Component Name="II_CMD" UId="51" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="52" />
+  <NewLine UId="53" />
+  <Blank Num="8" UId="54" />
+  <Access Scope="LocalVariable" UId="55">
+    <Symbol UId="56">
+      <Component Name="II_CMD" UId="57" />
+    </Symbol>
+  </Access>
+  <Blank UId="58" />
+  <Token Text=":=" UId="59" />
+  <Blank UId="60" />
+  <Access Scope="LiteralConstant" UId="61">
+    <Constant UId="62">
+      <ConstantValue UId="64">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="65" />
+  <NewLine UId="66" />
+  <Blank Num="4" UId="67" />
+  <Token Text="ELSE" UId="68" />
+  <NewLine UId="69" />
+  <Blank Num="8" UId="70" />
+  <Access Scope="LocalVariable" UId="71">
+    <Symbol UId="72">
+      <Component Name="ti_LogicCMD" UId="73" />
+    </Symbol>
+  </Access>
+  <Blank UId="74" />
+  <Token Text=":=" UId="75" />
+  <Blank UId="76" />
+  <Access Scope="LiteralConstant" UId="77">
+    <Constant UId="78">
+      <ConstantValue UId="80">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="81" />
+  <NewLine UId="82" />
+  <Blank Num="4" UId="83" />
+  <Token Text="END_IF" UId="84" />
+  <Token Text=";" UId="85" />
+  <NewLine UId="86" />
+  <Blank Num="4" UId="87" />
+  <NewLine UId="88" />
+  <Blank Num="4" UId="89" />
+  <Access Scope="LocalVariable" UId="90">
+    <Symbol UId="91">
+      <Component Name="t_ResetHMI" UId="92" />
+    </Symbol>
+  </Access>
+  <Blank UId="93" />
+  <Token Text=":=" UId="94" />
+  <Blank UId="95" />
+  <Access Scope="LiteralConstant" UId="96">
+    <Constant UId="97">
+      <ConstantValue UId="99">false</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="100" />
+  <NewLine UId="101" />
+  <Blank Num="4" UId="102" />
+  <Access Scope="LocalVariable" UId="103">
+    <Symbol UId="104">
+      <Component Name="tw_STW" UId="105" />
+    </Symbol>
+  </Access>
+  <Blank UId="106" />
+  <Token Text=":=" UId="107" />
+  <Blank UId="108" />
+  <Access Scope="TypedConstant" UId="109">
+    <Constant UId="110">
+      <ConstantValue UId="111">w#16#0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="112" />
+  <NewLine UId="113" />
+  <Token Text="END_REGION" UId="114" />
+  <NewLine Num="2" UId="115" />
+  <Token Text="REGION" UId="116" />
+  <Blank UId="117" />
+  <Text UId="118">Reset for logic</Text>
+  <NewLine UId="119" />
+  <Blank Num="4" UId="120" />
+  <LineComment UId="121">
+    <Text UId="122">Reset from HMI</Text>
+  </LineComment>
+  <NewLine UId="123" />
+  <Blank Num="4" UId="124" />
+  <Token Text="CASE" UId="125" />
+  <Blank UId="126" />
+  <Access Scope="LocalVariable" UId="127">
+    <Symbol UId="128">
+      <Component Name="ti_LogicCMD" UId="129" />
+    </Symbol>
+  </Access>
+  <Blank UId="130" />
+  <Token Text="OF" UId="131" />
+  <NewLine UId="132" />
+  <Blank Num="8" UId="133" />
+  <Access Scope="LiteralConstant" UId="134">
+    <Constant UId="135">
+      <ConstantValue UId="137">31</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=".." UId="138" />
+  <Access Scope="LiteralConstant" UId="139">
+    <Constant UId="140">
+      <ConstantValue UId="142">32</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=":" UId="143" />
+  <Blank Num="2" UId="144" />
+  <LineComment UId="145">
+    <Text UId="146">Reset</Text>
+  </LineComment>
+  <NewLine UId="147" />
+  <Blank Num="12" UId="148" />
+  <Access Scope="LocalVariable" UId="149">
+    <Symbol UId="150">
+      <Component Name="t_ResetHMI" UId="151" />
+    </Symbol>
+  </Access>
+  <Blank UId="152" />
+  <Token Text=":=" UId="153" />
+  <Blank UId="154" />
+  <Access Scope="LiteralConstant" UId="155">
+    <Constant UId="156">
+      <ConstantValue UId="158">true</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="159" />
+  <NewLine UId="160" />
+  <Blank Num="8" UId="161" />
+  <Token Text="ELSE" UId="162" />
+  <Blank Num="2" UId="163" />
+  <LineComment UId="164">
+    <Text UId="165"> Statement section ELSE</Text>
+  </LineComment>
+  <NewLine UId="166" />
+  <Blank Num="12" UId="167" />
+  <Token Text=";" UId="168" />
+  <NewLine UId="169" />
+  <Blank Num="4" UId="170" />
+  <Token Text="END_CASE" UId="171" />
+  <Token Text=";" UId="172" />
+  <NewLine UId="173" />
+  <Blank Num="4" UId="174" />
+  <NewLine UId="175" />
+  <Blank Num="4" UId="176" />
+  <LineComment UId="177">
+    <Text UId="178">Reset for logic</Text>
+  </LineComment>
+  <NewLine UId="179" />
+  <Blank Num="4" UId="180" />
+  <Access Scope="LocalVariable" UId="181">
+    <Symbol UId="182">
+      <Component Name="t_ResetLogic" UId="183" />
+    </Symbol>
+  </Access>
+  <Blank UId="184" />
+  <Token Text=":=" UId="185" />
+  <Blank UId="186" />
+  <Access Scope="LocalVariable" UId="187">
+    <Symbol UId="188">
+      <Component Name="t_ResetHMI" UId="189" />
+    </Symbol>
+  </Access>
+  <NewLine UId="190" />
+  <Blank Num="4" UId="191" />
+  <Token Text="OR" UId="192" />
+  <Blank UId="193" />
+  <Access Scope="LocalVariable" UId="194">
+    <Symbol UId="195">
+      <Component Name="I_CmdGeneralReset" UId="196" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="197" />
+  <NewLine UId="198" />
+  <Blank Num="4" UId="199" />
+  <NewLine UId="200" />
+  <Blank Num="4" UId="201" />
+  <Access Scope="Call" UId="202">
+    <CallInfo UId="203" BlockType="FB" Name="Lib_FB_Timer_TP_Simple">
+      <Instance Scope="LocalVariable" UId="204">
+        <Component Name="s_TP_Reset" UId="205" />
+      </Instance>
+      <Token Text="(" UId="206" />
+      <Parameter Name="IR_CycleTime" UId="207">
+        <Token Text=":=" UId="208" />
+        <Access Scope="LocalVariable" UId="209">
+          <Symbol UId="210">
+            <Component Name="IR_CycleTime" UId="211" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="212" />
+      <NewLine UId="213" />
+      <Blank Num="16" UId="214" />
+      <Parameter Name="IB_StartTimerInput" UId="215">
+        <Token Text=":=" UId="216" />
+        <Access Scope="LocalVariable" UId="217">
+          <Symbol UId="218">
+            <Component Name="t_ResetLogic" UId="219" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="220" />
+      <NewLine UId="221" />
+      <Blank Num="16" UId="222" />
+      <Parameter Name="IR_SpTime" UId="223">
+        <Token Text=":=" UId="224" />
+        <Access Scope="LiteralConstant" UId="225">
+          <Constant UId="226">
+            <ConstantValue UId="228">2.0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="229" />
+      <NewLine UId="230" />
+      <Blank Num="16" UId="231" />
+      <Parameter Name="QB_TimerOut" UId="232">
+        <Token Text="=&gt;" UId="233" />
+        <Access Scope="LocalVariable" UId="234">
+          <Symbol UId="235">
+            <Component Name="t_ResetLogic" UId="236" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="238" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="239" />
+  <NewLine UId="240" />
+  <Blank Num="4" UId="241" />
+  <NewLine UId="242" />
+  <Token Text="END_REGION" UId="243" />
+  <NewLine Num="2" UId="244" />
+  <Token Text="REGION" UId="245" />
+  <Blank UId="246" />
+  <Text UId="247">Catch errors</Text>
+  <NewLine UId="248" />
+  <Blank Num="4" UId="249" />
+  <Access Scope="LocalVariable" UId="250">
+    <Symbol UId="251">
+      <Component Name="s_KV_Err" UId="252" />
+    </Symbol>
+  </Access>
+  <Blank UId="253" />
+  <Token Text=":=" UId="254" />
+  <Blank UId="255" />
+  <Token Text="(" UId="256" />
+  <Token Text="NOT" UId="257" />
+  <Blank UId="258" />
+  <Access Scope="LocalVariable" UId="259">
+    <Symbol UId="260">
+      <Component Name="I_KV_Ok" UId="261" />
+    </Symbol>
+  </Access>
+  <NewLine UId="262" />
+  <Blank Num="4" UId="263" />
+  <Token Text="OR" UId="264" />
+  <Blank UId="265" />
+  <Token Text="(" UId="266" />
+  <Access Scope="LocalVariable" UId="267">
+    <Symbol UId="268">
+      <Component Name="s_KV_Err" UId="269" />
+    </Symbol>
+  </Access>
+  <NewLine UId="270" />
+  <Blank Num="4" UId="271" />
+  <Token Text="AND" UId="272" />
+  <Blank UId="273" />
+  <Token Text="NOT" UId="274" />
+  <Blank UId="275" />
+  <Access Scope="LocalVariable" UId="276">
+    <Symbol UId="277">
+      <Component Name="t_ResetLogic" UId="278" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="279" />
+  <Token Text=")" UId="280" />
+  <Blank UId="281" />
+  <NewLine UId="282" />
+  <Blank Num="4" UId="283" />
+  <Token Text="AND" UId="284" />
+  <Blank UId="285" />
+  <Token Text="NOT" UId="286" />
+  <Blank UId="287" />
+  <Access Scope="LocalVariable" UId="288">
+    <Symbol UId="289">
+      <Component Name="I_Initialization" UId="290" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="291" />
+  <NewLine UId="292" />
+  <Blank Num="4" UId="293" />
+  <NewLine UId="294" />
+  <Blank Num="4" UId="295" />
+  <Access Scope="LocalVariable" UId="296">
+    <Symbol UId="297">
+      <Component Name="s_QF_Trans_Err" UId="298" />
+    </Symbol>
+  </Access>
+  <Blank UId="299" />
+  <Token Text=":=" UId="300" />
+  <Blank UId="301" />
+  <Token Text="(" UId="302" />
+  <Token Text="NOT" UId="303" />
+  <Blank UId="304" />
+  <Access Scope="LocalVariable" UId="305">
+    <Symbol UId="306">
+      <Component Name="I_QF_Trans_Ok" UId="307" />
+    </Symbol>
+  </Access>
+  <NewLine UId="308" />
+  <Blank Num="4" UId="309" />
+  <Token Text="OR" UId="310" />
+  <Blank UId="311" />
+  <Token Text="(" UId="312" />
+  <Access Scope="LocalVariable" UId="313">
+    <Symbol UId="314">
+      <Component Name="s_QF_Trans_Err" UId="315" />
+    </Symbol>
+  </Access>
+  <NewLine UId="316" />
+  <Blank Num="4" UId="317" />
+  <Token Text="AND" UId="318" />
+  <Blank UId="319" />
+  <Token Text="NOT" UId="320" />
+  <Blank UId="321" />
+  <Access Scope="LocalVariable" UId="322">
+    <Symbol UId="323">
+      <Component Name="t_ResetLogic" UId="324" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="325" />
+  <Token Text=")" UId="326" />
+  <NewLine UId="327" />
+  <Blank Num="4" UId="328" />
+  <Token Text="AND" UId="329" />
+  <Blank UId="330" />
+  <Token Text="NOT" UId="331" />
+  <Blank UId="332" />
+  <Access Scope="LocalVariable" UId="333">
+    <Symbol UId="334">
+      <Component Name="I_Initialization" UId="335" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="336" />
+  <NewLine UId="337" />
+  <Blank Num="4" UId="338" />
+  <NewLine UId="339" />
+  <Blank Num="4" UId="340" />
+  <Access Scope="LocalVariable" UId="341">
+    <Symbol UId="342">
+      <Component Name="s_QF_Oper230_Err" UId="343" />
+    </Symbol>
+  </Access>
+  <Blank UId="344" />
+  <Token Text=":=" UId="345" />
+  <Blank UId="346" />
+  <Token Text="(" UId="347" />
+  <Token Text="NOT" UId="348" />
+  <Blank UId="349" />
+  <Access Scope="LocalVariable" UId="350">
+    <Symbol UId="351">
+      <Component Name="I_QF_Oper230_Ok" UId="352" />
+    </Symbol>
+  </Access>
+  <NewLine UId="353" />
+  <Blank Num="4" UId="354" />
+  <Token Text="OR" UId="355" />
+  <Blank UId="356" />
+  <Token Text="(" UId="357" />
+  <Access Scope="LocalVariable" UId="358">
+    <Symbol UId="359">
+      <Component Name="s_QF_Oper230_Err" UId="360" />
+    </Symbol>
+  </Access>
+  <NewLine UId="361" />
+  <Blank Num="4" UId="362" />
+  <Token Text="AND" UId="363" />
+  <Blank UId="364" />
+  <Token Text="NOT" UId="365" />
+  <Blank UId="366" />
+  <Access Scope="LocalVariable" UId="367">
+    <Symbol UId="368">
+      <Component Name="t_ResetLogic" UId="369" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="370" />
+  <Token Text=")" UId="371" />
+  <NewLine UId="372" />
+  <Blank Num="4" UId="373" />
+  <Token Text="AND" UId="374" />
+  <Blank UId="375" />
+  <Token Text="NOT" UId="376" />
+  <Blank UId="377" />
+  <Access Scope="LocalVariable" UId="378">
+    <Symbol UId="379">
+      <Component Name="I_Initialization" UId="380" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="381" />
+  <NewLine UId="382" />
+  <Blank Num="4" UId="383" />
+  <NewLine UId="384" />
+  <Blank Num="4" UId="385" />
+  <Access Scope="LocalVariable" UId="386">
+    <Symbol UId="387">
+      <Component Name="s_QF_Oper24_Err" UId="388" />
+    </Symbol>
+  </Access>
+  <Blank UId="389" />
+  <Token Text=":=" UId="390" />
+  <Blank UId="391" />
+  <Token Text="(" UId="392" />
+  <Token Text="NOT" UId="393" />
+  <Blank UId="394" />
+  <Access Scope="LocalVariable" UId="395">
+    <Symbol UId="396">
+      <Component Name="I_QF_Oper24_Ok" UId="397" />
+    </Symbol>
+  </Access>
+  <NewLine UId="398" />
+  <Blank Num="4" UId="399" />
+  <Token Text="OR" UId="400" />
+  <Blank UId="401" />
+  <Token Text="(" UId="402" />
+  <Access Scope="LocalVariable" UId="403">
+    <Symbol UId="404">
+      <Component Name="s_QF_Oper24_Err" UId="405" />
+    </Symbol>
+  </Access>
+  <NewLine UId="406" />
+  <Blank Num="4" UId="407" />
+  <Token Text="AND" UId="408" />
+  <Blank UId="409" />
+  <Token Text="NOT" UId="410" />
+  <Blank UId="411" />
+  <Access Scope="LocalVariable" UId="412">
+    <Symbol UId="413">
+      <Component Name="t_ResetLogic" UId="414" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="415" />
+  <Token Text=")" UId="416" />
+  <NewLine UId="417" />
+  <Blank Num="4" UId="418" />
+  <Token Text="AND" UId="419" />
+  <Blank UId="420" />
+  <Token Text="NOT" UId="421" />
+  <Blank UId="422" />
+  <Access Scope="LocalVariable" UId="423">
+    <Symbol UId="424">
+      <Component Name="I_Initialization" UId="425" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="426" />
+  <NewLine UId="427" />
+  <Blank Num="4" UId="428" />
+  <NewLine UId="429" />
+  <Blank Num="4" UId="430" />
+  <Access Scope="LocalVariable" UId="431">
+    <Symbol UId="432">
+      <Component Name="s_QF_Saf_Err" UId="433" />
+    </Symbol>
+  </Access>
+  <Blank UId="434" />
+  <Token Text=":=" UId="435" />
+  <Blank UId="436" />
+  <Token Text="(" UId="437" />
+  <Token Text="NOT" UId="438" />
+  <Blank UId="439" />
+  <Access Scope="LocalVariable" UId="440">
+    <Symbol UId="441">
+      <Component Name="I_QF_Saf_Ok" UId="442" />
+    </Symbol>
+  </Access>
+  <NewLine UId="443" />
+  <Blank Num="4" UId="444" />
+  <Token Text="OR" UId="445" />
+  <Blank UId="446" />
+  <Token Text="(" UId="447" />
+  <Access Scope="LocalVariable" UId="448">
+    <Symbol UId="449">
+      <Component Name="s_QF_Saf_Err" UId="450" />
+    </Symbol>
+  </Access>
+  <NewLine UId="451" />
+  <Blank Num="4" UId="452" />
+  <Token Text="AND" UId="453" />
+  <Blank UId="454" />
+  <Token Text="NOT" UId="455" />
+  <Blank UId="456" />
+  <Access Scope="LocalVariable" UId="457">
+    <Symbol UId="458">
+      <Component Name="t_ResetLogic" UId="459" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="460" />
+  <Token Text=")" UId="461" />
+  <NewLine UId="462" />
+  <Blank Num="4" UId="463" />
+  <Token Text="AND" UId="464" />
+  <Blank UId="465" />
+  <Token Text="NOT" UId="466" />
+  <Blank UId="467" />
+  <Access Scope="LocalVariable" UId="468">
+    <Symbol UId="469">
+      <Component Name="I_Initialization" UId="470" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="471" />
+  <NewLine UId="472" />
+  <Blank Num="4" UId="473" />
+  <NewLine UId="474" />
+  <Blank Num="4" UId="475" />
+  <Access Scope="LocalVariable" UId="476">
+    <Symbol UId="477">
+      <Component Name="s_QF_KM_Err" UId="478" />
+    </Symbol>
+  </Access>
+  <Blank UId="479" />
+  <Token Text=":=" UId="480" />
+  <Blank UId="481" />
+  <Token Text="(" UId="482" />
+  <Token Text="NOT" UId="483" />
+  <Blank UId="484" />
+  <Access Scope="LocalVariable" UId="485">
+    <Symbol UId="486">
+      <Component Name="I_QF_KM_Ok" UId="487" />
+    </Symbol>
+  </Access>
+  <NewLine UId="488" />
+  <Blank Num="4" UId="489" />
+  <Token Text="OR" UId="490" />
+  <Blank UId="491" />
+  <Token Text="(" UId="492" />
+  <Access Scope="LocalVariable" UId="493">
+    <Symbol UId="494">
+      <Component Name="s_QF_KM_Err" UId="495" />
+    </Symbol>
+  </Access>
+  <NewLine UId="496" />
+  <Blank Num="4" UId="497" />
+  <Token Text="AND" UId="498" />
+  <Blank UId="499" />
+  <Token Text="NOT" UId="500" />
+  <Blank UId="501" />
+  <Access Scope="LocalVariable" UId="502">
+    <Symbol UId="503">
+      <Component Name="t_ResetLogic" UId="504" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="505" />
+  <Token Text=")" UId="506" />
+  <NewLine UId="507" />
+  <Blank Num="4" UId="508" />
+  <Token Text="AND" UId="509" />
+  <Blank UId="510" />
+  <Token Text="NOT" UId="511" />
+  <Blank UId="512" />
+  <Access Scope="LocalVariable" UId="513">
+    <Symbol UId="514">
+      <Component Name="I_Initialization" UId="515" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="516" />
+  <NewLine UId="517" />
+  <Blank Num="4" UId="518" />
+  <NewLine UId="519" />
+  <Blank Num="4" UId="520" />
+  <Access Scope="LocalVariable" UId="521">
+    <Symbol UId="522">
+      <Component Name="s_QF_Gas_Err" UId="523" />
+    </Symbol>
+  </Access>
+  <Blank UId="524" />
+  <Token Text=":=" UId="525" />
+  <Blank UId="526" />
+  <Token Text="(" UId="527" />
+  <Token Text="NOT" UId="528" />
+  <Blank UId="529" />
+  <Access Scope="LocalVariable" UId="530">
+    <Symbol UId="531">
+      <Component Name="I_QF_Gas_Ok" UId="532" />
+    </Symbol>
+  </Access>
+  <NewLine UId="533" />
+  <Blank Num="4" UId="534" />
+  <Token Text="OR" UId="535" />
+  <Blank UId="536" />
+  <Token Text="(" UId="537" />
+  <Access Scope="LocalVariable" UId="538">
+    <Symbol UId="539">
+      <Component Name="s_QF_Gas_Err" UId="540" />
+    </Symbol>
+  </Access>
+  <NewLine UId="541" />
+  <Blank Num="4" UId="542" />
+  <Token Text="AND" UId="543" />
+  <Blank UId="544" />
+  <Token Text="NOT" UId="545" />
+  <Blank UId="546" />
+  <Access Scope="LocalVariable" UId="547">
+    <Symbol UId="548">
+      <Component Name="t_ResetLogic" UId="549" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="550" />
+  <Token Text=")" UId="551" />
+  <NewLine UId="552" />
+  <Blank Num="4" UId="553" />
+  <Token Text="AND" UId="554" />
+  <Blank UId="555" />
+  <Token Text="NOT" UId="556" />
+  <Blank UId="557" />
+  <Access Scope="LocalVariable" UId="558">
+    <Symbol UId="559">
+      <Component Name="I_Initialization" UId="560" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="561" />
+  <NewLine UId="562" />
+  <Blank Num="4" UId="563" />
+  <NewLine UId="564" />
+  <Blank Num="4" UId="565" />
+  <Access Scope="LocalVariable" UId="566">
+    <Symbol UId="567">
+      <Component Name="s_QF_VlvSaf_Err" UId="568" />
+    </Symbol>
+  </Access>
+  <Blank UId="569" />
+  <Token Text=":=" UId="570" />
+  <Blank UId="571" />
+  <Token Text="(" UId="572" />
+  <Token Text="NOT" UId="573" />
+  <Blank UId="574" />
+  <Access Scope="LocalVariable" UId="575">
+    <Symbol UId="576">
+      <Component Name="I_QF_VlvSaf_Ok" UId="577" />
+    </Symbol>
+  </Access>
+  <NewLine UId="578" />
+  <Blank Num="4" UId="579" />
+  <Token Text="OR" UId="580" />
+  <Blank UId="581" />
+  <Token Text="(" UId="582" />
+  <Access Scope="LocalVariable" UId="583">
+    <Symbol UId="584">
+      <Component Name="s_QF_VlvSaf_Err" UId="585" />
+    </Symbol>
+  </Access>
+  <NewLine UId="586" />
+  <Blank Num="4" UId="587" />
+  <Token Text="AND" UId="588" />
+  <Blank UId="589" />
+  <Token Text="NOT" UId="590" />
+  <Blank UId="591" />
+  <Access Scope="LocalVariable" UId="592">
+    <Symbol UId="593">
+      <Component Name="t_ResetLogic" UId="594" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="595" />
+  <Token Text=")" UId="596" />
+  <NewLine UId="597" />
+  <Blank Num="4" UId="598" />
+  <Token Text="AND" UId="599" />
+  <Blank UId="600" />
+  <Token Text="NOT" UId="601" />
+  <Blank UId="602" />
+  <Access Scope="LocalVariable" UId="603">
+    <Symbol UId="604">
+      <Component Name="I_Initialization" UId="605" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="606" />
+  <NewLine UId="607" />
+  <Blank Num="4" UId="608" />
+  <NewLine UId="609" />
+  <Blank Num="4" UId="610" />
+  <Access Scope="LocalVariable" UId="611">
+    <Symbol UId="612">
+      <Component Name="s_QF_Spare_Err" UId="613" />
+    </Symbol>
+  </Access>
+  <Blank UId="614" />
+  <Token Text=":=" UId="615" />
+  <Blank UId="616" />
+  <Token Text="(" UId="617" />
+  <Token Text="NOT" UId="618" />
+  <Blank UId="619" />
+  <Access Scope="LocalVariable" UId="620">
+    <Symbol UId="621">
+      <Component Name="I_QF_Spare_Ok" UId="622" />
+    </Symbol>
+  </Access>
+  <NewLine UId="623" />
+  <Blank Num="4" UId="624" />
+  <Token Text="OR" UId="625" />
+  <Blank UId="626" />
+  <Token Text="(" UId="627" />
+  <Access Scope="LocalVariable" UId="628">
+    <Symbol UId="629">
+      <Component Name="s_QF_Spare_Err" UId="630" />
+    </Symbol>
+  </Access>
+  <NewLine UId="631" />
+  <Blank Num="4" UId="632" />
+  <Token Text="AND" UId="633" />
+  <Blank UId="634" />
+  <Token Text="NOT" UId="635" />
+  <Blank UId="636" />
+  <Access Scope="LocalVariable" UId="637">
+    <Symbol UId="638">
+      <Component Name="t_ResetLogic" UId="639" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="640" />
+  <Token Text=")" UId="641" />
+  <NewLine UId="642" />
+  <Blank Num="4" UId="643" />
+  <Token Text="AND" UId="644" />
+  <Blank UId="645" />
+  <Token Text="NOT" UId="646" />
+  <Blank UId="647" />
+  <Access Scope="LocalVariable" UId="648">
+    <Symbol UId="649">
+      <Component Name="I_Initialization" UId="650" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="651" />
+  <NewLine UId="652" />
+  <Token Text="END_REGION" UId="653" />
+  <NewLine Num="2" UId="654" />
+  <Token Text="REGION" UId="655" />
+  <Blank UId="656" />
+  <Text UId="657">Write STW</Text>
+  <NewLine UId="658" />
+  <Blank Num="4" UId="659" />
+  <LineComment UId="660">
+    <Text UId="661">Some err occured</Text>
+  </LineComment>
+  <NewLine UId="662" />
+  <Blank Num="4" UId="663" />
+  <Access Scope="LocalVariable" UId="664">
+    <Symbol UId="665">
+      <Component Name="t_SomeErr" UId="666" />
+    </Symbol>
+  </Access>
+  <Blank UId="667" />
+  <Token Text=":=" UId="668" />
+  <Blank UId="669" />
+  <Access Scope="LocalVariable" UId="670">
+    <Symbol UId="671">
+      <Component Name="s_KV_Err" UId="672" />
+    </Symbol>
+  </Access>
+  <NewLine UId="673" />
+  <Blank Num="4" UId="674" />
+  <Token Text="OR" UId="675" />
+  <Blank UId="676" />
+  <Access Scope="LocalVariable" UId="677">
+    <Symbol UId="678">
+      <Component Name="s_QF_Trans_Err" UId="679" />
+    </Symbol>
+  </Access>
+  <NewLine UId="680" />
+  <Blank Num="4" UId="681" />
+  <Token Text="OR" UId="682" />
+  <Blank UId="683" />
+  <Access Scope="LocalVariable" UId="684">
+    <Symbol UId="685">
+      <Component Name="s_QF_Oper230_Err" UId="686" />
+    </Symbol>
+  </Access>
+  <NewLine UId="687" />
+  <Blank Num="4" UId="688" />
+  <Token Text="OR" UId="689" />
+  <Blank UId="690" />
+  <Access Scope="LocalVariable" UId="691">
+    <Symbol UId="692">
+      <Component Name="s_QF_Oper24_Err" UId="693" />
+    </Symbol>
+  </Access>
+  <NewLine UId="694" />
+  <Blank Num="4" UId="695" />
+  <Token Text="OR" UId="696" />
+  <Blank UId="697" />
+  <Access Scope="LocalVariable" UId="698">
+    <Symbol UId="699">
+      <Component Name="s_QF_Saf_Err" UId="700" />
+    </Symbol>
+  </Access>
+  <NewLine UId="701" />
+  <Blank Num="4" UId="702" />
+  <Token Text="OR" UId="703" />
+  <Blank UId="704" />
+  <Access Scope="LocalVariable" UId="705">
+    <Symbol UId="706">
+      <Component Name="s_QF_KM_Err" UId="707" />
+    </Symbol>
+  </Access>
+  <NewLine UId="708" />
+  <Blank Num="4" UId="709" />
+  <Token Text="OR" UId="710" />
+  <Blank UId="711" />
+  <Access Scope="LocalVariable" UId="712">
+    <Symbol UId="713">
+      <Component Name="s_QF_Gas_Err" UId="714" />
+    </Symbol>
+  </Access>
+  <NewLine UId="715" />
+  <Blank Num="4" UId="716" />
+  <Token Text="OR" UId="717" />
+  <Blank UId="718" />
+  <Access Scope="LocalVariable" UId="719">
+    <Symbol UId="720">
+      <Component Name="s_QF_VlvSaf_Err" UId="721" />
+    </Symbol>
+  </Access>
+  <NewLine UId="722" />
+  <Blank Num="4" UId="723" />
+  <Token Text="OR" UId="724" />
+  <Blank UId="725" />
+  <Access Scope="LocalVariable" UId="726">
+    <Symbol UId="727">
+      <Component Name="s_QF_Spare_Err" UId="728" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="729" />
+  <NewLine UId="730" />
+  <Blank Num="4" UId="731" />
+  <NewLine UId="732" />
+  <Blank Num="4" UId="733" />
+  <LineComment UId="734">
+    <Text UId="735">Write err to STW</Text>
+  </LineComment>
+  <NewLine UId="736" />
+  <Blank Num="4" UId="737" />
+  <Access Scope="LocalVariable" UId="738">
+    <Symbol UId="739">
+      <Component Name="tw_STW" UId="740" />
+      <Token Text="." UId="741" />
+      <Token Text="%X0" UId="742" />
+    </Symbol>
+  </Access>
+  <Blank UId="743" />
+  <Token Text=":=" UId="744" />
+  <Blank UId="745" />
+  <Access Scope="LocalVariable" UId="746">
+    <Symbol UId="747">
+      <Component Name="t_SomeErr" UId="748" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="749" />
+  <NewLine UId="750" />
+  <Blank Num="4" UId="751" />
+  <Access Scope="LocalVariable" UId="752">
+    <Symbol UId="753">
+      <Component Name="tw_STW" UId="754" />
+      <Token Text="." UId="755" />
+      <Token Text="%X1" UId="756" />
+    </Symbol>
+  </Access>
+  <Blank UId="757" />
+  <Token Text=":=" UId="758" />
+  <Blank UId="759" />
+  <Access Scope="LocalVariable" UId="760">
+    <Symbol UId="761">
+      <Component Name="s_KV_Err" UId="762" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="763" />
+  <NewLine UId="764" />
+  <Blank Num="4" UId="765" />
+  <Access Scope="LocalVariable" UId="766">
+    <Symbol UId="767">
+      <Component Name="tw_STW" UId="768" />
+      <Token Text="." UId="769" />
+      <Token Text="%X2" UId="770" />
+    </Symbol>
+  </Access>
+  <Blank UId="771" />
+  <Token Text=":=" UId="772" />
+  <Blank UId="773" />
+  <Access Scope="LocalVariable" UId="774">
+    <Symbol UId="775">
+      <Component Name="s_QF_Trans_Err" UId="776" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="777" />
+  <NewLine UId="778" />
+  <Blank Num="4" UId="779" />
+  <Access Scope="LocalVariable" UId="780">
+    <Symbol UId="781">
+      <Component Name="tw_STW" UId="782" />
+      <Token Text="." UId="783" />
+      <Token Text="%X3" UId="784" />
+    </Symbol>
+  </Access>
+  <Blank UId="785" />
+  <Token Text=":=" UId="786" />
+  <Blank UId="787" />
+  <Access Scope="LocalVariable" UId="788">
+    <Symbol UId="789">
+      <Component Name="s_QF_Oper230_Err" UId="790" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="791" />
+  <NewLine UId="792" />
+  <Blank Num="4" UId="793" />
+  <Access Scope="LocalVariable" UId="794">
+    <Symbol UId="795">
+      <Component Name="tw_STW" UId="796" />
+      <Token Text="." UId="797" />
+      <Token Text="%X4" UId="798" />
+    </Symbol>
+  </Access>
+  <Blank UId="799" />
+  <Token Text=":=" UId="800" />
+  <Blank UId="801" />
+  <Access Scope="LocalVariable" UId="802">
+    <Symbol UId="803">
+      <Component Name="s_QF_Oper24_Err" UId="804" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="805" />
+  <NewLine UId="806" />
+  <Blank Num="4" UId="807" />
+  <Access Scope="LocalVariable" UId="808">
+    <Symbol UId="809">
+      <Component Name="tw_STW" UId="810" />
+      <Token Text="." UId="811" />
+      <Token Text="%X5" UId="812" />
+    </Symbol>
+  </Access>
+  <Blank UId="813" />
+  <Token Text=":=" UId="814" />
+  <Blank UId="815" />
+  <Access Scope="LocalVariable" UId="816">
+    <Symbol UId="817">
+      <Component Name="s_QF_Saf_Err" UId="818" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="819" />
+  <NewLine UId="820" />
+  <Blank Num="4" UId="821" />
+  <Access Scope="LocalVariable" UId="822">
+    <Symbol UId="823">
+      <Component Name="tw_STW" UId="824" />
+      <Token Text="." UId="825" />
+      <Token Text="%X6" UId="826" />
+    </Symbol>
+  </Access>
+  <Blank UId="827" />
+  <Token Text=":=" UId="828" />
+  <Blank UId="829" />
+  <Access Scope="LocalVariable" UId="830">
+    <Symbol UId="831">
+      <Component Name="s_QF_KM_Err" UId="832" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="833" />
+  <NewLine UId="834" />
+  <Blank Num="4" UId="835" />
+  <Access Scope="LocalVariable" UId="836">
+    <Symbol UId="837">
+      <Component Name="tw_STW" UId="838" />
+      <Token Text="." UId="839" />
+      <Token Text="%X7" UId="840" />
+    </Symbol>
+  </Access>
+  <Blank UId="841" />
+  <Token Text=":=" UId="842" />
+  <Blank UId="843" />
+  <Access Scope="LocalVariable" UId="844">
+    <Symbol UId="845">
+      <Component Name="s_QF_Gas_Err" UId="846" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="847" />
+  <NewLine UId="848" />
+  <Blank Num="4" UId="849" />
+  <Access Scope="LocalVariable" UId="850">
+    <Symbol UId="851">
+      <Component Name="tw_STW" UId="852" />
+      <Token Text="." UId="853" />
+      <Token Text="%X8" UId="854" />
+    </Symbol>
+  </Access>
+  <Blank UId="855" />
+  <Token Text=":=" UId="856" />
+  <Blank UId="857" />
+  <Access Scope="LocalVariable" UId="858">
+    <Symbol UId="859">
+      <Component Name="s_QF_VlvSaf_Err" UId="860" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="861" />
+  <NewLine UId="862" />
+  <Blank Num="4" UId="863" />
+  <Access Scope="LocalVariable" UId="864">
+    <Symbol UId="865">
+      <Component Name="tw_STW" UId="866" />
+      <Token Text="." UId="867" />
+      <Token Text="%X9" UId="868" />
+    </Symbol>
+  </Access>
+  <Blank UId="869" />
+  <Token Text=":=" UId="870" />
+  <Blank UId="871" />
+  <Access Scope="LocalVariable" UId="872">
+    <Symbol UId="873">
+      <Component Name="s_QF_Spare_Err" UId="874" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="875" />
+  <NewLine UId="876" />
+  <Token Text="END_REGION" UId="877" />
+  <NewLine Num="2" UId="878" />
+  <Token Text="REGION" UId="879" />
+  <Blank UId="880" />
+  <Text UId="881">Write outs</Text>
+  <NewLine UId="882" />
+  <Blank Num="4" UId="883" />
+  <Access Scope="LocalVariable" UId="884">
+    <Symbol UId="885">
+      <Component Name="QW_STW" UId="886" />
+    </Symbol>
+  </Access>
+  <Blank UId="887" />
+  <Token Text=":=" UId="888" />
+  <Blank UId="889" />
+  <Access Scope="LocalVariable" UId="890">
+    <Symbol UId="891">
+      <Component Name="tw_STW" UId="892" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="893" />
+  <NewLine UId="894" />
+  <Blank Num="4" UId="895" />
+  <Access Scope="LocalVariable" UId="896">
+    <Symbol UId="897">
+      <Component Name="Q_Reset" UId="898" />
+    </Symbol>
+  </Access>
+  <Blank UId="899" />
+  <Token Text=":=" UId="900" />
+  <Blank UId="901" />
+  <Access Scope="LocalVariable" UId="902">
+    <Symbol UId="903">
+      <Component Name="t_ResetLogic" UId="904" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="905" />
+  <NewLine UId="906" />
+  <Blank Num="4" UId="907" />
+  <Access Scope="LocalVariable" UId="908">
+    <Symbol UId="909">
+      <Component Name="Q_SomeErr" UId="910" />
+    </Symbol>
+  </Access>
+  <Blank UId="911" />
+  <Token Text=":=" UId="912" />
+  <Blank UId="913" />
+  <Access Scope="LocalVariable" UId="914">
+    <Symbol UId="915">
+      <Component Name="t_SomeErr" UId="916" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="917" />
+  <NewLine UId="918" />
+  <Blank Num="4" UId="919" />
+  <Access Scope="LocalVariable" UId="920">
+    <Symbol UId="921">
+      <Component Name="Q_KV_Ok" UId="922" />
+    </Symbol>
+  </Access>
+  <Blank UId="923" />
+  <Token Text=":=" UId="924" />
+  <Blank UId="925" />
+  <Token Text="NOT" UId="926" />
+  <Blank UId="927" />
+  <Access Scope="LocalVariable" UId="928">
+    <Symbol UId="929">
+      <Component Name="s_KV_Err" UId="930" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="931" />
+  <NewLine UId="932" />
+  <Blank Num="4" UId="933" />
+  <Access Scope="LocalVariable" UId="934">
+    <Symbol UId="935">
+      <Component Name="Q_QF_Trans_Ok" UId="936" />
+    </Symbol>
+  </Access>
+  <Blank UId="937" />
+  <Token Text=":=" UId="938" />
+  <Blank UId="939" />
+  <Token Text="NOT" UId="940" />
+  <Blank UId="941" />
+  <Access Scope="LocalVariable" UId="942">
+    <Symbol UId="943">
+      <Component Name="s_QF_Trans_Err" UId="944" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="945" />
+  <NewLine UId="946" />
+  <Blank Num="4" UId="947" />
+  <Access Scope="LocalVariable" UId="948">
+    <Symbol UId="949">
+      <Component Name="Q_QF_Oper230_Ok" UId="950" />
+    </Symbol>
+  </Access>
+  <Blank UId="951" />
+  <Token Text=":=" UId="952" />
+  <Blank UId="953" />
+  <Token Text="NOT" UId="954" />
+  <Blank UId="955" />
+  <Access Scope="LocalVariable" UId="956">
+    <Symbol UId="957">
+      <Component Name="s_QF_Oper230_Err" UId="958" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="959" />
+  <NewLine UId="960" />
+  <Blank Num="4" UId="961" />
+  <Access Scope="LocalVariable" UId="962">
+    <Symbol UId="963">
+      <Component Name="Q_QF_Oper24_Ok" UId="964" />
+    </Symbol>
+  </Access>
+  <Blank UId="965" />
+  <Token Text=":=" UId="966" />
+  <Blank UId="967" />
+  <Token Text="NOT" UId="968" />
+  <Blank UId="969" />
+  <Access Scope="LocalVariable" UId="970">
+    <Symbol UId="971">
+      <Component Name="s_QF_Oper24_Err" UId="972" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="973" />
+  <NewLine UId="974" />
+  <Blank Num="4" UId="975" />
+  <Access Scope="LocalVariable" UId="976">
+    <Symbol UId="977">
+      <Component Name="Q_QF_Saf_Ok" UId="978" />
+    </Symbol>
+  </Access>
+  <Blank UId="979" />
+  <Token Text=":=" UId="980" />
+  <Blank UId="981" />
+  <Token Text="NOT" UId="982" />
+  <Blank UId="983" />
+  <Access Scope="LocalVariable" UId="984">
+    <Symbol UId="985">
+      <Component Name="s_QF_Saf_Err" UId="986" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="987" />
+  <NewLine UId="988" />
+  <Blank Num="4" UId="989" />
+  <Access Scope="LocalVariable" UId="990">
+    <Symbol UId="991">
+      <Component Name="Q_QF_KM_Ok" UId="992" />
+    </Symbol>
+  </Access>
+  <Blank UId="993" />
+  <Token Text=":=" UId="994" />
+  <Blank UId="995" />
+  <Token Text="NOT" UId="996" />
+  <Blank UId="997" />
+  <Access Scope="LocalVariable" UId="998">
+    <Symbol UId="999">
+      <Component Name="s_QF_KM_Err" UId="1000" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1001" />
+  <NewLine UId="1002" />
+  <Blank Num="4" UId="1003" />
+  <Access Scope="LocalVariable" UId="1004">
+    <Symbol UId="1005">
+      <Component Name="Q_QF_Gas_Ok" UId="1006" />
+    </Symbol>
+  </Access>
+  <Blank UId="1007" />
+  <Token Text=":=" UId="1008" />
+  <Blank UId="1009" />
+  <Token Text="NOT" UId="1010" />
+  <Blank UId="1011" />
+  <Access Scope="LocalVariable" UId="1012">
+    <Symbol UId="1013">
+      <Component Name="s_QF_Gas_Err" UId="1014" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1015" />
+  <NewLine UId="1016" />
+  <Blank Num="4" UId="1017" />
+  <Access Scope="LocalVariable" UId="1018">
+    <Symbol UId="1019">
+      <Component Name="Q_QF_VlvSaf_Ok" UId="1020" />
+    </Symbol>
+  </Access>
+  <Blank UId="1021" />
+  <Token Text=":=" UId="1022" />
+  <Blank UId="1023" />
+  <Token Text="NOT" UId="1024" />
+  <Blank UId="1025" />
+  <Access Scope="LocalVariable" UId="1026">
+    <Symbol UId="1027">
+      <Component Name="s_QF_VlvSaf_Err" UId="1028" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1029" />
+  <NewLine UId="1030" />
+  <Blank Num="4" UId="1031" />
+  <Access Scope="LocalVariable" UId="1032">
+    <Symbol UId="1033">
+      <Component Name="Q_QF_Spare_Ok" UId="1034" />
+    </Symbol>
+  </Access>
+  <Blank UId="1035" />
+  <Token Text=":=" UId="1036" />
+  <Blank UId="1037" />
+  <Token Text="NOT" UId="1038" />
+  <Blank UId="1039" />
+  <Access Scope="LocalVariable" UId="1040">
+    <Symbol UId="1041">
+      <Component Name="s_QF_Spare_Err" UId="1042" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1043" />
+  <NewLine UId="1044" />
+  <Token Text="END_REGION" UId="1045" />
+  <NewLine UId="1046" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>InternalH01</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

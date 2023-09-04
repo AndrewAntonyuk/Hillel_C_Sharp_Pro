@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--../../../TestXml/students.xml-->
+<command>
+  <persone name="Sky">
+    <age>125</age>
+    <position>Green</position>
+    <enemy>Alf</enemy>
+  </persone>
+  <persone name="Walker">
+    <age>5</age>
+    <position>Soft</position>
+    <enemy>Archer</enemy>
+  </persone>
+</command>

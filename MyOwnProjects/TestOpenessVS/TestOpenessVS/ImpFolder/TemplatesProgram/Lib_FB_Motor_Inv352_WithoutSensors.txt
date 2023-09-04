@@ -1,0 +1,93 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    //Параметри двигуна: {sDescribe1}
+    //Параметри ПЧ: {sDescribe2}
+    
+    REGION Блокування та зовнішні аварії
+        REGION Блокування forward
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksForward_8.%X0 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksForward_8.%X1 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksForward_8.%X2 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksForward_8.%X3 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksForward_8.%X4 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksForward_8.%X5 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksForward_8.%X6 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksForward_8.%X7 := false;
+        END_REGION
+        
+        REGION Блокування reverse
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksReverse_8.%X0 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksReverse_8.%X1 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksReverse_8.%X2 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksReverse_8.%X3 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksReverse_8.%X4 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksReverse_8.%X5 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksReverse_8.%X6 := false;
+            "D_{sTechNumPrg}_Ctrl".IB_InterlocksReverse_8.%X7 := false;
+        END_REGION
+        
+        REGION Зовнішні аварії та попередження
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X0 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X1 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X2 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X3 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X4 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X5 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X6 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X7 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X8 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X9 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X10 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X11 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X12 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X13 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X14 := false;
+            "D_{sTechNumPrg}_Ctrl".IW_ExternalError_16.%X15 := false;
+            
+            "D_{sTechNumPrg}_Ctrl".I_ExternalWarning := false;
+        END_REGION
+    END_REGION
+    
+    REGION Блок керування
+		"D_{sTechNumPrg}_Ctrl"(I_Initialization := "D_General_ProgramDATA".RestartPLC,
+							IR_CycleTime := "D_PLC".TIME_TCK.cyclic_sec_R,
+							II_Obj_ID:={sID},
+							I_CmdGeneralReset := "D_General_ProgramDATA".ResetGeneralPLC,
+							I_One_1s := "D_PLC".PLS.P1S,
+							I_EstopLocal := TRUE,
+							I_EstopHMI := "D_General_ProgramDATA".EStopGeneralPLC,
+							I_SuppyBox_Ok := t_SuppBox_Ok,
+							I_MP_Ok := "D_InOut"."{sTechNumPrg}".I_MCP,
+							I_ThermoDefend := "D_InOut"."{sTechNumPrg}".I_Thermo_Ok,
+							I_TripBus := "D_PN_IO_Status".States_Proc[{sDescribe2}],
+							I_EnableForward := TRUE,
+							I_EnableReverse := false,
+							IR_TimeTripInverter := 15.0,
+							Q_CmdForward => "D_{sTechNumPrg}_Ctrl".Q_CmdForward,
+							Q_CmdReverse => "D_{sTechNumPrg}_Ctrl".Q_CmdReverse,
+							Q_Reset => "D_{sTechNumPrg}_Ctrl".Q_Reset,
+							Q_Error => "D_{sTechNumPrg}_Ctrl".Q_Error,
+							Q_Warning => "D_{sTechNumPrg}_Ctrl".Q_Warning,
+							Q_Auto => "D_{sTechNumPrg}_Ctrl".Q_Auto,
+							Q_ManLocal => "D_{sTechNumPrg}_Ctrl".Q_ManLocal,
+							Q_Stoped => "D_{sTechNumPrg}_Ctrl".Q_Stoped,
+							Q_Run => "D_{sTechNumPrg}_Ctrl".Q_Run,
+							Q_RunForward => "D_{sTechNumPrg}_Ctrl".Q_RunForward,
+							Q_RunReverse => "D_{sTechNumPrg}_Ctrl".Q_RunReverse,
+							Q_DataErr => "D_{sTechNumPrg}_Ctrl".Q_DataErr,
+							QR_SpeedSetpoint => "D_{sTechNumPrg}_Ctrl".QR_SpeedSetpoint,
+							QR_SpeedActual => "D_{sTechNumPrg}_Ctrl".QR_SpeedActual,
+							QR_CurrentActual => "D_{sTechNumPrg}_Ctrl".QR_CurrentActual,
+							IQ_PLC_CycleInfo := "PLC_CycleInfo_DATA".Grp_Obj[1, 1]);
+
+    END_REGION
+    
+    REGION Блок частотного перетворювача
+		"D_{sTechNumPrg}_Inv"(II_Obj_ID:={sID},
+							 I_HW_Tel_ID:={sFunc},
+							 Q_DataErr=>"D_{sTechNumPrg}_Inv".Q_DataErr,
+							 Q_Error=>"D_{sTechNumPrg}_Inv".Q_Error,
+							 QW_Status=>"D_{sTechNumPrg}_Inv".QW_Status,
+							 QW_DiagId=>"D_{sTechNumPrg}_Inv".QW_DiagId);
+    END_REGION
+END_REGION

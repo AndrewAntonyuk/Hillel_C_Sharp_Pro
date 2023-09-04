@@ -6,7 +6,7 @@ namespace ClinicAppointment.Domain.Entities
     {
         public DoctorTypes DoctorType { get; set; }
 
-        public byte Experiance { get; set; }
+        public byte Experience { get; set; }
 
         public decimal Salary { get; set; }
     }

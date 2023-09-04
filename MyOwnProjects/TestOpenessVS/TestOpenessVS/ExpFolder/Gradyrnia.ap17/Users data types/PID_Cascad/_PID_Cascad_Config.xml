@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:03:20.3807719Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="b" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">bool parameters</MultiLanguageText></Comment><Member Name="DirectMode" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">1 = Direct mode of PID choiced</MultiLanguageText></Comment><StartValue>true</StartValue></Member><Member Name="Enabled_P1" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">1 = Pump 1 enabled for cascade</MultiLanguageText></Comment><StartValue>true</StartValue></Member><Member Name="Enabled_P2" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">1 = Pump 2 enabled for cascade</MultiLanguageText></Comment><StartValue>true</StartValue></Member><Member Name="Enabled_P3" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">1 = Pump 3 enabled for cascade</MultiLanguageText></Comment><StartValue>true</StartValue></Member><Member Name="bit_4" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member><Member Name="bit_5" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member><Member Name="bit_6" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member><Member Name="bit_7" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member></Member>
+    <Member Name="r_SP_Auto_Value" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">SP value for PID in auto mode, PU</MultiLanguageText></Comment><StartValue>0.0</StartValue></Member>
+    <Member Name="r_SP_Man_Value" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">SP value for PID in auto mode, PU</MultiLanguageText></Comment><StartValue>0.0</StartValue></Member>
+    <Member Name="r_spP_part" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">P part value</MultiLanguageText></Comment><StartValue>1.0</StartValue></Member>
+    <Member Name="r_spI_part" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">I part value</MultiLanguageText></Comment><StartValue>20.0</StartValue></Member>
+    <Member Name="r_spD_part" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">D part value</MultiLanguageText></Comment><StartValue>0.0</StartValue></Member>
+    <Member Name="r_FTC_Value" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Substitude value for forcely closed</MultiLanguageText></Comment><StartValue>0.0</StartValue></Member>
+    <Member Name="r_FTO_Value" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Substitude value for forcely opened</MultiLanguageText></Comment><StartValue>100.0</StartValue></Member>
+    <Member Name="r_Out_MaxValue" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Maximum value of output of PID</MultiLanguageText></Comment></Member>
+    <Member Name="r_Out_MinValue" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Minimum value of output of PID</MultiLanguageText></Comment></Member>
+    <Member Name="r_PV_MaxValue" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Maximum value of input of PID</MultiLanguageText></Comment></Member>
+    <Member Name="r_PV_MinValue" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Minimum value of input of PID</MultiLanguageText></Comment></Member>
+    <Member Name="r_spCascadeTime" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Time for on/off next stage of cascade</MultiLanguageText></Comment><StartValue>20.0</StartValue></Member>
+    <Member Name="r_spStabilizationTime" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Time for stabilization detection, s</MultiLanguageText>
+      </Comment>
+      <StartValue>60.0</StartValue>
+    </Member>
+    <Member Name="r_ActSpeedSP_P1" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Actual SP of speed, % of pump 1</MultiLanguageText></Comment></Member>
+    <Member Name="r_ActSpeedSP_P2" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Actual SP of  speed, % of pump 2</MultiLanguageText></Comment><StartValue>0.0</StartValue></Member>
+    <Member Name="r_ActSpeedSP_P3" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Actual SP of  speed, % of pump 3</MultiLanguageText></Comment><StartValue>0.0</StartValue></Member>
+    <Member Name="r_ActSpeedPV_P1" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Actual PV of speed, % of pump 1</MultiLanguageText></Comment></Member>
+    <Member Name="r_ActSpeedPV_P2" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Actual PV of speed, % of pump 2</MultiLanguageText></Comment><StartValue>0.0</StartValue></Member>
+    <Member Name="r_ActSpeedPV_P3" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Actual PV of speed, % of pump 3</MultiLanguageText></Comment><StartValue>0.0</StartValue></Member>
+    <Member Name="r_Motohours_P1" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Motohours of pump 1</MultiLanguageText></Comment></Member>
+    <Member Name="r_Motohours_P2" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Motohours of pump 2</MultiLanguageText></Comment><StartValue>0.0</StartValue></Member>
+    <Member Name="r_Motohours_P3" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Motohours of pump 3</MultiLanguageText></Comment><StartValue>0.0</StartValue></Member>
+    <Member Name="r_PV_ActValue" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Actual value of PV, PU</MultiLanguageText></Comment></Member>
+    <Member Name="r_Out_ActValue" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Actual value of output of PID, %</MultiLanguageText></Comment></Member>
+    <Member Name="r_QuanEnabled" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Quantity of enabled pumps</MultiLanguageText></Comment></Member>
+    <Member Name="i_Priority_P1" Datatype="Int"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Priority of pump 1</MultiLanguageText></Comment><StartValue>1</StartValue></Member>
+    <Member Name="i_Priority_P2" Datatype="Int"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Priority of pump 2</MultiLanguageText></Comment><StartValue>2</StartValue></Member>
+    <Member Name="i_Priority_P3" Datatype="Int"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Priority of pump 3</MultiLanguageText></Comment><StartValue>3</StartValue></Member>
+    <Member Name="w_enableExternalErrors_16" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">bit  - 1 = enable</MultiLanguageText></Comment><StartValue>16#FFFF</StartValue></Member>
+    <Member Name="b_bypassInterlocksForward_8" Datatype="Byte"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">bit  - 0 = Interlock Bypassed forward direction</MultiLanguageText></Comment><StartValue>16#FF</StartValue></Member>
+    <Member Name="b_bypassInterlocksReverse_8" Datatype="Byte"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">bit  - 0 = Interlock Bypassed reverse direction</MultiLanguageText></Comment><StartValue>16#FF</StartValue></Member>
+  </Section>
+</Sections></Interface>
+      <Name>_PID_Cascad_Config</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

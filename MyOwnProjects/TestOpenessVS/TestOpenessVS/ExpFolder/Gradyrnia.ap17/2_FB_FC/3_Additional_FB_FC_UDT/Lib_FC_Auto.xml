@@ -1,0 +1,1119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:02:45.0837111Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="IB_Initialisation" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = "FirstScan" / Стартова ініціалізація/Restart PLC is active</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Output" />
+  <Section Name="InOut">
+    <Member Name="IOs_AutoControl" Datatype="&quot;Lib_UDT_AutoControl&quot;" />
+  </Section>
+  <Section Name="Temp">
+    <Member Name="ts_AutoControl" Datatype="&quot;Lib_UDT_AutoControl&quot;" />
+  </Section>
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>Lib_FC_Auto</Name>
+      <Number>8</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment UId="21">
+    <Text UId="22"> REGION Стартова Ініціалізація AutoControl</Text>
+  </LineComment>
+  <NewLine UId="23" />
+  <LineComment UId="24">
+    <Text UId="25">--------------------------------------</Text>
+  </LineComment>
+  <NewLine UId="26" />
+  <LineComment UId="27">
+    <Text UId="28">Reset #ts_AutoControl &lt;- "DB_AutoControl_arr".AutoControl_arr[999];</Text>
+  </LineComment>
+  <NewLine UId="29" />
+  <Access Scope="LocalVariable" UId="30">
+    <Symbol UId="31">
+      <Component Name="ts_AutoControl" UId="32" />
+    </Symbol>
+  </Access>
+  <Blank UId="33" />
+  <Token Text=":=" UId="34" />
+  <Blank UId="35" />
+  <Access Scope="LocalVariable" UId="36">
+    <Symbol UId="37">
+      <Component Name="IOs_AutoControl" UId="38" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="39" />
+  <NewLine UId="40" />
+  <LineComment UId="41">
+    <Text UId="42">--------------------------------------</Text>
+  </LineComment>
+  <NewLine UId="43" />
+  <LineComment UId="44">
+    <Text UId="45">-------------------------------------</Text>
+  </LineComment>
+  <NewLine UId="46" />
+  <Token Text="IF" UId="47" />
+  <Blank UId="48" />
+  <Access Scope="LocalVariable" UId="49">
+    <Symbol UId="50">
+      <Component Name="IB_Initialisation" UId="51" />
+    </Symbol>
+  </Access>
+  <Blank UId="52" />
+  <Token Text="THEN" UId="53" />
+  <NewLine UId="54" />
+  <Blank Num="4" UId="55" />
+  <Access Scope="LocalVariable" UId="56">
+    <Symbol UId="57">
+      <Component Name="ts_AutoControl" UId="58" />
+      <Token Text="." UId="59" />
+      <Component Name="CTW" UId="60" />
+      <Token Text="." UId="61" />
+      <Token Text="%B0" UId="62" />
+    </Symbol>
+  </Access>
+  <Blank UId="63" />
+  <Token Text=":=" UId="64" />
+  <Blank UId="65" />
+  <Access Scope="LiteralConstant" UId="66">
+    <Constant UId="67">
+      <ConstantValue UId="69">2#00000000</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="70" />
+  <NewLine UId="71" />
+  <Blank Num="4" UId="72" />
+  <Access Scope="LocalVariable" UId="73">
+    <Symbol UId="74">
+      <Component Name="ts_AutoControl" UId="75" />
+      <Token Text="." UId="76" />
+      <Component Name="CTW" UId="77" />
+      <Token Text="." UId="78" />
+      <Token Text="%B1" UId="79" />
+    </Symbol>
+  </Access>
+  <Blank UId="80" />
+  <Token Text=":=" UId="81" />
+  <Blank UId="82" />
+  <Access Scope="LiteralConstant" UId="83">
+    <Constant UId="84">
+      <ConstantValue UId="86">2#00000000</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="87" />
+  <NewLine UId="88" />
+  <Blank Num="4" UId="89" />
+  <Access Scope="LocalVariable" UId="90">
+    <Symbol UId="91">
+      <Component Name="ts_AutoControl" UId="92" />
+      <Token Text="." UId="93" />
+      <Component Name="CTW" UId="94" />
+      <Token Text="." UId="95" />
+      <Token Text="%B2" UId="96" />
+    </Symbol>
+  </Access>
+  <Blank UId="97" />
+  <Token Text=":=" UId="98" />
+  <Blank UId="99" />
+  <Access Scope="LocalVariable" UId="100">
+    <Symbol UId="101">
+      <Component Name="ts_AutoControl" UId="102" />
+      <Token Text="." UId="103" />
+      <Component Name="CTW" UId="104" />
+      <Token Text="." UId="105" />
+      <Token Text="%B2" UId="106" />
+    </Symbol>
+  </Access>
+  <Blank UId="107" />
+  <Token Text="AND" UId="108" />
+  <Blank UId="109" />
+  <Access Scope="LiteralConstant" UId="110">
+    <Constant UId="111">
+      <ConstantValue UId="113">2#10000000</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="114" />
+  <NewLine UId="115" />
+  <Blank Num="4" UId="116" />
+  <Access Scope="LocalVariable" UId="117">
+    <Symbol UId="118">
+      <Component Name="ts_AutoControl" UId="119" />
+      <Token Text="." UId="120" />
+      <Component Name="CTW" UId="121" />
+      <Token Text="." UId="122" />
+      <Token Text="%B3" UId="123" />
+    </Symbol>
+  </Access>
+  <Blank UId="124" />
+  <Token Text=":=" UId="125" />
+  <Blank UId="126" />
+  <Access Scope="LiteralConstant" UId="127">
+    <Constant UId="128">
+      <ConstantValue UId="130">2#00000000</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="131" />
+  <NewLine UId="132" />
+  <Blank Num="4" UId="133" />
+  <Access Scope="LocalVariable" UId="134">
+    <Symbol UId="135">
+      <Component Name="ts_AutoControl" UId="136" />
+      <Token Text="." UId="137" />
+      <Component Name="Global_CMD" UId="138" />
+    </Symbol>
+  </Access>
+  <Blank UId="139" />
+  <Token Text=":=" UId="140" />
+  <Blank UId="141" />
+  <Access Scope="LiteralConstant" UId="142">
+    <Constant UId="143">
+      <ConstantValue UId="145">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="146" />
+  <LineComment UId="147">
+    <Text UId="148">MANREM - Перевести в ManualRemote -ручний HMI</Text>
+  </LineComment>
+  <NewLine UId="149" />
+  <Token Text="END_IF" UId="150" />
+  <Token Text=";" UId="151" />
+  <NewLine UId="152" />
+  <LineComment UId="153">
+    <Text UId="154">-------------------------------------</Text>
+  </LineComment>
+  <NewLine UId="155" />
+  <LineComment UId="156">
+    <Text UId="157">AutoControl</Text>
+  </LineComment>
+  <NewLine UId="158" />
+  <LineComment UId="159">
+    <Text UId="160">CTW.%X0:= CmdAutoOpen - (Static bit)</Text>
+  </LineComment>
+  <NewLine UId="161" />
+  <LineComment UId="162">
+    <Text UId="163">CTW.%X1:= CmdAutoClose - (Static bit)</Text>
+  </LineComment>
+  <NewLine UId="164" />
+  <LineComment UId="165">
+    <Text UId="166">////CTW.%X2:=</Text>
+  </LineComment>
+  <NewLine UId="167" />
+  <LineComment UId="168">
+    <Text UId="169">////CTW.%X3:=</Text>
+  </LineComment>
+  <NewLine UId="170" />
+  <LineComment UId="171">
+    <Text UId="172">////CTW.%X4:=</Text>
+  </LineComment>
+  <NewLine UId="173" />
+  <LineComment UId="174">
+    <Text UId="175">////CTW.%X6:=</Text>
+  </LineComment>
+  <NewLine UId="176" />
+  <LineComment UId="177">
+    <Text UId="178">////CTW.%X7:=</Text>
+  </LineComment>
+  <NewLine UId="179" />
+  <LineComment UId="180">
+    <Text UId="181">////CTW.%X8:=</Text>
+  </LineComment>
+  <NewLine UId="182" />
+  <LineComment UId="183">
+    <Text UId="184">////CTW.%X9:=</Text>
+  </LineComment>
+  <NewLine UId="185" />
+  <LineComment UId="186">
+    <Text UId="187">////CTW.%X10:=</Text>
+  </LineComment>
+  <NewLine UId="188" />
+  <LineComment UId="189">
+    <Text UId="190">////CTW.%X11:=</Text>
+  </LineComment>
+  <NewLine UId="191" />
+  <LineComment UId="192">
+    <Text UId="193">////CTW.%X12:=</Text>
+  </LineComment>
+  <NewLine UId="194" />
+  <LineComment UId="195">
+    <Text UId="196">////CTW.%X13:=</Text>
+  </LineComment>
+  <NewLine UId="197" />
+  <LineComment UId="198">
+    <Text UId="199">////CTW.%X14:=</Text>
+  </LineComment>
+  <NewLine UId="200" />
+  <LineComment UId="201">
+    <Text UId="202">////CTW.%X15:=</Text>
+  </LineComment>
+  <NewLine UId="203" />
+  <LineComment UId="204">
+    <Text UId="205">////CTW.%X16:= go to ManualRemote - (resetable bit)</Text>
+  </LineComment>
+  <NewLine UId="206" />
+  <LineComment UId="207">
+    <Text UId="208">////CTW.%X17:= go to Auto - (resetable bit)</Text>
+  </LineComment>
+  <NewLine UId="209" />
+  <LineComment UId="210">
+    <Text UId="211">////CTW.%X18:= go to ManualLocal - (resetable bit)</Text>
+  </LineComment>
+  <NewLine UId="212" />
+  <LineComment UId="213">
+    <Text UId="214">////CTW.%X19:= ON Simulation - (resetable bit)</Text>
+  </LineComment>
+  <NewLine UId="215" />
+  <LineComment UId="216">
+    <Text UId="217">////CTW.%X20:= OFF Simulation - (resetable bit)</Text>
+  </LineComment>
+  <NewLine UId="218" />
+  <LineComment UId="219">
+    <Text UId="220">////CTW.%X21:= </Text>
+  </LineComment>
+  <NewLine UId="221" />
+  <LineComment UId="222">
+    <Text UId="223">////CTW.%X22:= go to Disable - (resetable bit)</Text>
+  </LineComment>
+  <NewLine UId="224" />
+  <LineComment UId="225">
+    <Text UId="226">////CTW.%X23:= Independent - (Static bit)</Text>
+  </LineComment>
+  <NewLine UId="227" />
+  <LineComment UId="228">
+    <Text UId="229">////CTW.%X24:=</Text>
+  </LineComment>
+  <NewLine UId="230" />
+  <LineComment UId="231">
+    <Text UId="232">////CTW.%X25:=</Text>
+  </LineComment>
+  <NewLine UId="233" />
+  <LineComment UId="234">
+    <Text UId="235">////CTW.%X26:=</Text>
+  </LineComment>
+  <NewLine UId="236" />
+  <LineComment UId="237">
+    <Text UId="238">////CTW.%X27:=</Text>
+  </LineComment>
+  <NewLine UId="239" />
+  <LineComment UId="240">
+    <Text UId="241">////CTW.%X28:=</Text>
+  </LineComment>
+  <NewLine UId="242" />
+  <LineComment UId="243">
+    <Text UId="244">////CTW.%X29:=</Text>
+  </LineComment>
+  <NewLine UId="245" />
+  <LineComment UId="246">
+    <Text UId="247">////CTW.%X30:=</Text>
+  </LineComment>
+  <NewLine UId="248" />
+  <LineComment UId="249">
+    <Text UId="250">////CTW.%X31:=</Text>
+  </LineComment>
+  <NewLine UId="251" />
+  <LineComment UId="252">
+    <Text UId="253">-------------------------------------</Text>
+  </LineComment>
+  <NewLine UId="254" />
+  <LineComment UId="255">
+    <Text UId="256">Get data from general DB of Auto, Inverter for exchange data between diff modules one object</Text>
+  </LineComment>
+  <NewLine Num="2" UId="257" />
+  <Token Text="REGION" UId="258" />
+  <Blank UId="259" />
+  <Text UId="260">CMD </Text>
+  <NewLine UId="261" />
+  <Blank Num="4" UId="262" />
+  <Token Text="IF" UId="263" />
+  <Blank UId="264" />
+  <Access Scope="LocalVariable" UId="265">
+    <Symbol UId="266">
+      <Component Name="ts_AutoControl" UId="267" />
+      <Token Text="." UId="268" />
+      <Component Name="Global_CMD" UId="269" />
+    </Symbol>
+  </Access>
+  <Blank UId="270" />
+  <Token Text="&gt;" UId="271" />
+  <Blank UId="272" />
+  <Access Scope="LiteralConstant" UId="273">
+    <Constant UId="274">
+      <ConstantValue UId="276">0</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="277" />
+  <Blank Num="8" UId="278" />
+  <Token Text="AND" UId="279" />
+  <Blank UId="280" />
+  <Access Scope="LocalVariable" UId="281">
+    <Symbol UId="282">
+      <Component Name="ts_AutoControl" UId="283" />
+      <Token Text="." UId="284" />
+      <Component Name="Global_CMD" UId="285" />
+    </Symbol>
+  </Access>
+  <Blank UId="286" />
+  <Token Text="&lt;" UId="287" />
+  <Blank UId="288" />
+  <Access Scope="LiteralConstant" UId="289">
+    <Constant UId="290">
+      <ConstantValue UId="292">200</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank UId="293" />
+  <Token Text="THEN" UId="294" />
+  <NewLine UId="295" />
+  <Blank Num="8" UId="296" />
+  <Token Text="CASE" UId="297" />
+  <Blank UId="298" />
+  <Access Scope="LocalVariable" UId="299">
+    <Symbol UId="300">
+      <Component Name="ts_AutoControl" UId="301" />
+      <Token Text="." UId="302" />
+      <Component Name="Global_CMD" UId="303" />
+    </Symbol>
+  </Access>
+  <Blank UId="304" />
+  <Token Text="OF" UId="305" />
+  <NewLine UId="306" />
+  <Blank Num="12" UId="307" />
+  <Access Scope="LiteralConstant" UId="308">
+    <Constant UId="309">
+      <ConstantValue UId="311">3</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text="," UId="312" />
+  <Blank UId="313" />
+  <Access Scope="LiteralConstant" UId="314">
+    <Constant UId="315">
+      <ConstantValue UId="317">4</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text="," UId="318" />
+  <Blank UId="319" />
+  <Access Scope="LiteralConstant" UId="320">
+    <Constant UId="321">
+      <ConstantValue UId="323">5</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text="," UId="324" />
+  <Blank UId="325" />
+  <Access Scope="LiteralConstant" UId="326">
+    <Constant UId="327">
+      <ConstantValue UId="329">6</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=":" UId="330" />
+  <LineComment UId="331">
+    <Text UId="332"> заблоковані командт</Text>
+  </LineComment>
+  <NewLine UId="333" />
+  <Blank Num="16" UId="334" />
+  <Access Scope="LocalVariable" UId="335">
+    <Symbol UId="336">
+      <Component Name="ts_AutoControl" UId="337" />
+      <Token Text="." UId="338" />
+      <Component Name="Global_CMD" UId="339" />
+    </Symbol>
+  </Access>
+  <Blank UId="340" />
+  <Token Text=":=" UId="341" />
+  <Blank UId="342" />
+  <Access Scope="LiteralConstant" UId="343">
+    <Constant UId="344">
+      <ConstantValue UId="346">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="347" />
+  <NewLine UId="348" />
+  <Blank Num="12" UId="349" />
+  <Access Scope="LiteralConstant" UId="350">
+    <Constant UId="351">
+      <ConstantValue UId="353">100</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=".." UId="354" />
+  <Access Scope="LiteralConstant" UId="355">
+    <Constant UId="356">
+      <ConstantValue UId="358">131</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=":" UId="359" />
+  <Blank UId="360" />
+  <LineComment UId="361">
+    <Text UId="362"> Reset bit CTW</Text>
+  </LineComment>
+  <NewLine UId="363" />
+  <Blank Num="16" UId="364" />
+  <Access Scope="LocalVariable" UId="365">
+    <Symbol UId="366">
+      <Component Name="ts_AutoControl" UId="367" />
+      <Token Text="." UId="368" />
+      <Component Name="CTW" UId="369" />
+    </Symbol>
+  </Access>
+  <Blank UId="370" />
+  <Token Text=":=" UId="371" />
+  <Blank UId="372" />
+  <Access Scope="Call" UId="373">
+    <Instruction Name="ROR" UId="374">
+      <Token Text="(" UId="375" />
+      <Parameter Name="IN" UId="376">
+        <Blank UId="377" />
+        <Token Text=":=" UId="378" />
+        <Blank UId="379" />
+        <Access Scope="LocalVariable" UId="380">
+          <Symbol UId="381">
+            <Component Name="ts_AutoControl" UId="382" />
+            <Token Text="." UId="383" />
+            <Component Name="CTW" UId="384" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="385" />
+      <Blank UId="386" />
+      <Parameter Name="N" UId="387">
+        <Blank UId="388" />
+        <Token Text=":=" UId="389" />
+        <Blank UId="390" />
+        <Access Scope="LocalVariable" UId="391">
+          <Symbol UId="392">
+            <Component Name="ts_AutoControl" UId="393" />
+            <Token Text="." UId="394" />
+            <Component Name="Global_CMD" UId="395" />
+          </Symbol>
+        </Access>
+        <Blank UId="396" />
+        <Token Text="-" UId="397" />
+        <Blank UId="398" />
+        <Access Scope="LiteralConstant" UId="399">
+          <Constant UId="400">
+            <ConstantValue UId="402">100</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="404" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="405" />
+  <NewLine UId="406" />
+  <Blank Num="16" UId="407" />
+  <Access Scope="LocalVariable" UId="408">
+    <Symbol UId="409">
+      <Component Name="ts_AutoControl" UId="410" />
+      <Token Text="." UId="411" />
+      <Component Name="CTW" UId="412" />
+      <Token Text="." UId="413" />
+      <Token Text="%X0" UId="414" />
+    </Symbol>
+  </Access>
+  <Blank UId="415" />
+  <Token Text=":=" UId="416" />
+  <Blank UId="417" />
+  <Access Scope="LiteralConstant" UId="418">
+    <Constant UId="419">
+      <ConstantValue UId="421">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="422" />
+  <NewLine UId="423" />
+  <Blank Num="16" UId="424" />
+  <Access Scope="LocalVariable" UId="425">
+    <Symbol UId="426">
+      <Component Name="ts_AutoControl" UId="427" />
+      <Token Text="." UId="428" />
+      <Component Name="CTW" UId="429" />
+    </Symbol>
+  </Access>
+  <Blank UId="430" />
+  <Token Text=":=" UId="431" />
+  <Blank UId="432" />
+  <Access Scope="Call" UId="433">
+    <Instruction Name="ROL" UId="434">
+      <Token Text="(" UId="435" />
+      <Parameter Name="IN" UId="436">
+        <Blank UId="437" />
+        <Token Text=":=" UId="438" />
+        <Blank UId="439" />
+        <Access Scope="LocalVariable" UId="440">
+          <Symbol UId="441">
+            <Component Name="ts_AutoControl" UId="442" />
+            <Token Text="." UId="443" />
+            <Component Name="CTW" UId="444" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="445" />
+      <Blank UId="446" />
+      <Parameter Name="N" UId="447">
+        <Blank UId="448" />
+        <Token Text=":=" UId="449" />
+        <Blank UId="450" />
+        <Access Scope="LocalVariable" UId="451">
+          <Symbol UId="452">
+            <Component Name="ts_AutoControl" UId="453" />
+            <Token Text="." UId="454" />
+            <Component Name="Global_CMD" UId="455" />
+          </Symbol>
+        </Access>
+        <Blank UId="456" />
+        <Token Text="-" UId="457" />
+        <Blank UId="458" />
+        <Access Scope="LiteralConstant" UId="459">
+          <Constant UId="460">
+            <ConstantValue UId="462">100</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="464" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="465" />
+  <NewLine UId="466" />
+  <Blank Num="16" UId="467" />
+  <Access Scope="LocalVariable" UId="468">
+    <Symbol UId="469">
+      <Component Name="ts_AutoControl" UId="470" />
+      <Token Text="." UId="471" />
+      <Component Name="Global_CMD" UId="472" />
+    </Symbol>
+  </Access>
+  <Blank UId="473" />
+  <Token Text=":=" UId="474" />
+  <Blank UId="475" />
+  <Access Scope="LiteralConstant" UId="476">
+    <Constant UId="477">
+      <ConstantValue UId="479">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="480" />
+  <NewLine UId="481" />
+  <Blank Num="16" UId="482" />
+  <NewLine UId="483" />
+  <Blank Num="12" UId="484" />
+  <Access Scope="LiteralConstant" UId="485">
+    <Constant UId="486">
+      <ConstantValue UId="488">150</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=".." UId="489" />
+  <Access Scope="LiteralConstant" UId="490">
+    <Constant UId="491">
+      <ConstantValue UId="493">181</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=":" UId="494" />
+  <Blank UId="495" />
+  <LineComment UId="496">
+    <Text UId="497"> Set bit CTW</Text>
+  </LineComment>
+  <NewLine UId="498" />
+  <Blank Num="16" UId="499" />
+  <Access Scope="LocalVariable" UId="500">
+    <Symbol UId="501">
+      <Component Name="ts_AutoControl" UId="502" />
+      <Token Text="." UId="503" />
+      <Component Name="CTW" UId="504" />
+    </Symbol>
+  </Access>
+  <Blank UId="505" />
+  <Token Text=":=" UId="506" />
+  <Blank UId="507" />
+  <Access Scope="Call" UId="508">
+    <Instruction Name="ROR" UId="509">
+      <Token Text="(" UId="510" />
+      <Parameter Name="IN" UId="511">
+        <Blank UId="512" />
+        <Token Text=":=" UId="513" />
+        <Blank UId="514" />
+        <Access Scope="LocalVariable" UId="515">
+          <Symbol UId="516">
+            <Component Name="ts_AutoControl" UId="517" />
+            <Token Text="." UId="518" />
+            <Component Name="CTW" UId="519" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="520" />
+      <Blank UId="521" />
+      <Parameter Name="N" UId="522">
+        <Blank UId="523" />
+        <Token Text=":=" UId="524" />
+        <Blank UId="525" />
+        <Access Scope="LocalVariable" UId="526">
+          <Symbol UId="527">
+            <Component Name="ts_AutoControl" UId="528" />
+            <Token Text="." UId="529" />
+            <Component Name="Global_CMD" UId="530" />
+          </Symbol>
+        </Access>
+        <Blank UId="531" />
+        <Token Text="-" UId="532" />
+        <Blank UId="533" />
+        <Access Scope="LiteralConstant" UId="534">
+          <Constant UId="535">
+            <ConstantValue UId="537">150</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="539" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="540" />
+  <NewLine UId="541" />
+  <Blank Num="16" UId="542" />
+  <Access Scope="LocalVariable" UId="543">
+    <Symbol UId="544">
+      <Component Name="ts_AutoControl" UId="545" />
+      <Token Text="." UId="546" />
+      <Component Name="CTW" UId="547" />
+      <Token Text="." UId="548" />
+      <Token Text="%X0" UId="549" />
+    </Symbol>
+  </Access>
+  <Blank UId="550" />
+  <Token Text=":=" UId="551" />
+  <Blank UId="552" />
+  <Access Scope="LiteralConstant" UId="553">
+    <Constant UId="554">
+      <ConstantValue UId="556">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="557" />
+  <NewLine UId="558" />
+  <Blank Num="16" UId="559" />
+  <Access Scope="LocalVariable" UId="560">
+    <Symbol UId="561">
+      <Component Name="ts_AutoControl" UId="562" />
+      <Token Text="." UId="563" />
+      <Component Name="CTW" UId="564" />
+    </Symbol>
+  </Access>
+  <Blank UId="565" />
+  <Token Text=":=" UId="566" />
+  <Blank UId="567" />
+  <Access Scope="Call" UId="568">
+    <Instruction Name="ROL" UId="569">
+      <Token Text="(" UId="570" />
+      <Parameter Name="IN" UId="571">
+        <Blank UId="572" />
+        <Token Text=":=" UId="573" />
+        <Blank UId="574" />
+        <Access Scope="LocalVariable" UId="575">
+          <Symbol UId="576">
+            <Component Name="ts_AutoControl" UId="577" />
+            <Token Text="." UId="578" />
+            <Component Name="CTW" UId="579" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="580" />
+      <Blank UId="581" />
+      <Parameter Name="N" UId="582">
+        <Blank UId="583" />
+        <Token Text=":=" UId="584" />
+        <Blank UId="585" />
+        <Access Scope="LocalVariable" UId="586">
+          <Symbol UId="587">
+            <Component Name="ts_AutoControl" UId="588" />
+            <Token Text="." UId="589" />
+            <Component Name="Global_CMD" UId="590" />
+          </Symbol>
+        </Access>
+        <Blank UId="591" />
+        <Token Text="-" UId="592" />
+        <Blank UId="593" />
+        <Access Scope="LiteralConstant" UId="594">
+          <Constant UId="595">
+            <ConstantValue UId="597">150</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="599" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="600" />
+  <NewLine UId="601" />
+  <Blank Num="16" UId="602" />
+  <Access Scope="LocalVariable" UId="603">
+    <Symbol UId="604">
+      <Component Name="ts_AutoControl" UId="605" />
+      <Token Text="." UId="606" />
+      <Component Name="Global_CMD" UId="607" />
+    </Symbol>
+  </Access>
+  <Blank UId="608" />
+  <Token Text=":=" UId="609" />
+  <Blank UId="610" />
+  <Access Scope="LiteralConstant" UId="611">
+    <Constant UId="612">
+      <ConstantValue UId="614">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="615" />
+  <NewLine UId="616" />
+  <Blank Num="16" UId="617" />
+  <LineComment UId="618">
+    <Text UId="619"> 164..195: // invert bit CTW</Text>
+  </LineComment>
+  <NewLine UId="620" />
+  <Blank Num="16" UId="621" />
+  <LineComment UId="622">
+    <Text UId="623">     #ts_AutoControl.CTW := ROR(IN := #ts_AutoControl.CTW, N := #ts_AutoControl.Global_CMD - 164);</Text>
+  </LineComment>
+  <NewLine UId="624" />
+  <Blank Num="16" UId="625" />
+  <LineComment UId="626">
+    <Text UId="627">     #ts_AutoControl.CTW.%X0 := NOT #ts_AutoControl.CTW.%X0;</Text>
+  </LineComment>
+  <NewLine UId="628" />
+  <Blank Num="16" UId="629" />
+  <LineComment UId="630">
+    <Text UId="631">     #ts_AutoControl.CTW := ROL(IN := #ts_AutoControl.CTW, N := #ts_AutoControl.Global_CMD - 164);</Text>
+  </LineComment>
+  <NewLine UId="632" />
+  <Blank Num="16" UId="633" />
+  <LineComment UId="634">
+    <Text UId="635">     #ts_AutoControl.Global_CMD := 0;</Text>
+  </LineComment>
+  <NewLine UId="636" />
+  <Blank Num="12" UId="637" />
+  <Token Text="ELSE" UId="638" />
+  <NewLine UId="639" />
+  <Blank Num="16" UId="640" />
+  <Token Text=";" UId="641" />
+  <NewLine UId="642" />
+  <Blank Num="8" UId="643" />
+  <Token Text="END_CASE" UId="644" />
+  <Token Text=";" UId="645" />
+  <NewLine UId="646" />
+  <Blank Num="8" UId="647" />
+  <NewLine UId="648" />
+  <Blank Num="8" UId="649" />
+  <NewLine UId="650" />
+  <Blank Num="4" UId="651" />
+  <Token Text="END_IF" UId="652" />
+  <Token Text=";" UId="653" />
+  <NewLine UId="654" />
+  <Blank Num="4" UId="655" />
+  <NewLine UId="656" />
+  <Blank Num="4" UId="657" />
+  <NewLine UId="658" />
+  <Token Text="END_REGION" UId="659" />
+  <NewLine UId="660" />
+  <LineComment UId="661">
+    <Text UId="662"> ---------------------------------------------------------------</Text>
+  </LineComment>
+  <NewLine Num="2" UId="663" />
+  <Token Text="REGION" UId="664" />
+  <Blank UId="665" />
+  <Text UId="666">- CTW - &gt;  to -&gt; Global CMD ///////From auto array CTW_BIT</Text>
+  <NewLine UId="667" />
+  <Blank Num="4" UId="668" />
+  <LineComment Inserted="true" UId="669">
+    <Text UId="670">Motor MODE - CMD From auto array db</Text>
+  </LineComment>
+  <NewLine UId="671" />
+  <Blank Num="4" UId="672" />
+  <LineComment UId="673">
+    <Text UId="674"> IF #ts_AutoControl.Global_CMD = 0 AND</Text>
+  </LineComment>
+  <NewLine UId="675" />
+  <Blank Num="4" UId="676" />
+  <LineComment UId="677">
+    <Text UId="678">     BYTE_TO_INT(#ts_AutoControl.CTW.%B2 AND 2#01111111) &lt;&gt; 0 THEN</Text>
+  </LineComment>
+  <NewLine UId="679" />
+  <Blank Num="4" UId="680" />
+  <LineComment UId="681">
+    <Text UId="682">     CASE BYTE_TO_INT(#ts_AutoControl.CTW.%B2 AND 2#01111111) OF</Text>
+  </LineComment>
+  <NewLine UId="683" />
+  <Blank Num="4" UId="684" />
+  <LineComment UId="685">
+    <Text UId="686">         1:  (*bit 0 Manual =  Function change to Manual mode - активує ManualRemote*)</Text>
+  </LineComment>
+  <NewLine UId="687" />
+  <Blank Num="4" UId="688" />
+  <LineComment UId="689">
+    <Text UId="690">             #ts_AutoControl.Global_CMD := 1;</Text>
+  </LineComment>
+  <NewLine UId="691" />
+  <Blank Num="4" UId="692" />
+  <LineComment UId="693">
+    <Text UId="694">         2:  (*bit 1 AUTO = Auto Function change to Auto mode*)</Text>
+  </LineComment>
+  <NewLine UId="695" />
+  <Blank Num="4" UId="696" />
+  <LineComment UId="697">
+    <Text UId="698">             #ts_AutoControl.Global_CMD := 2;</Text>
+  </LineComment>
+  <NewLine UId="699" />
+  <Blank Num="4" UId="700" />
+  <LineComment UId="701">
+    <Text UId="702">             //4:  (*bit 2 Перевести в ManualLocal - ручний зі щита кнопками*)</Text>
+  </LineComment>
+  <NewLine UId="703" />
+  <Blank Num="4" UId="704" />
+  <LineComment UId="705">
+    <Text UId="706">             //    #ts_AutoControl.Global_CMD := 3;</Text>
+  </LineComment>
+  <NewLine UId="707" />
+  <Blank Num="4" UId="708" />
+  <LineComment UId="709">
+    <Text UId="710">         8:  (*bit 3 Simulation - ON Симуляція*)</Text>
+  </LineComment>
+  <NewLine UId="711" />
+  <Blank Num="4" UId="712" />
+  <LineComment UId="713">
+    <Text UId="714">             #ts_AutoControl.Global_CMD := 7;</Text>
+  </LineComment>
+  <NewLine UId="715" />
+  <Blank Num="4" UId="716" />
+  <LineComment UId="717">
+    <Text UId="718">         16:  (*bit 4 Simulation - OFF Симуляція*)</Text>
+  </LineComment>
+  <NewLine UId="719" />
+  <Blank Num="4" UId="720" />
+  <LineComment UId="721">
+    <Text UId="722">             #ts_AutoControl.Global_CMD := 8;</Text>
+  </LineComment>
+  <NewLine UId="723" />
+  <Blank Num="4" UId="724" />
+  <LineComment UId="725">
+    <Text UId="726">             //32: (*bit 5 DSABLE/OFF/STOP*)</Text>
+  </LineComment>
+  <NewLine UId="727" />
+  <Blank Num="4" UId="728" />
+  <LineComment UId="729">
+    <Text UId="730">             //    ;</Text>
+  </LineComment>
+  <NewLine UId="731" />
+  <Blank Num="4" UId="732" />
+  <LineComment UId="733">
+    <Text UId="734">         64:  (*bit 6 DSABLE/OFF/STOP*)</Text>
+  </LineComment>
+  <NewLine UId="735" />
+  <Blank Num="4" UId="736" />
+  <LineComment UId="737">
+    <Text UId="738">             #ts_AutoControl.Global_CMD := 10;</Text>
+  </LineComment>
+  <NewLine UId="739" />
+  <Blank Num="4" UId="740" />
+  <LineComment UId="741">
+    <Text UId="742">         ELSE  // Statement section ELSE</Text>
+  </LineComment>
+  <NewLine UId="743" />
+  <Blank Num="4" UId="744" />
+  <LineComment UId="745">
+    <Text UId="746">             #ts_AutoControl.Global_CMD := 0;</Text>
+  </LineComment>
+  <NewLine UId="747" />
+  <Blank Num="4" UId="748" />
+  <LineComment UId="749">
+    <Text UId="750">     END_CASE;</Text>
+  </LineComment>
+  <NewLine UId="751" />
+  <Blank Num="4" UId="752" />
+  <LineComment UId="753">
+    <Text UId="754">     #ts_AutoControl.CTW.%B2 :=#ts_AutoControl.CTW.%B2 AND 2#10000000;</Text>
+  </LineComment>
+  <NewLine UId="755" />
+  <Blank Num="4" UId="756" />
+  <LineComment UId="757">
+    <Text UId="758"> END_IF;</Text>
+  </LineComment>
+  <NewLine UId="759" />
+  <Token Text="END_REGION" UId="760" />
+  <NewLine Num="5" UId="761" />
+  <Access Scope="LocalVariable" UId="762">
+    <Symbol UId="763">
+      <Component Name="ts_AutoControl" UId="764" />
+      <Token Text="." UId="765" />
+      <Component Name="CTW" UId="766" />
+      <Token Text="." UId="767" />
+      <Token Text="%X23" UId="768" />
+    </Symbol>
+  </Access>
+  <Blank UId="769" />
+  <Token Text=":=" UId="770" />
+  <Blank UId="771" />
+  <Access Scope="LiteralConstant" UId="772">
+    <Constant UId="773">
+      <ConstantValue UId="775">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="776" />
+  <NewLine Num="2" UId="777" />
+  <LineComment UId="778">
+    <Text UId="779">---------------------------------------------------------------</Text>
+  </LineComment>
+  <NewLine UId="780" />
+  <Access Scope="LocalVariable" UId="781">
+    <Symbol UId="782">
+      <Component Name="IOs_AutoControl" UId="783" />
+    </Symbol>
+  </Access>
+  <Blank UId="784" />
+  <Token Text=":=" UId="785" />
+  <Blank UId="786" />
+  <Access Scope="LocalVariable" UId="787">
+    <Symbol UId="788">
+      <Component Name="ts_AutoControl" UId="789" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="790" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

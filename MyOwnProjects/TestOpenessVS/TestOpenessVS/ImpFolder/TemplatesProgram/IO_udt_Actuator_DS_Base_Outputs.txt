@@ -1,0 +1,6 @@
+REGION (ID = {sID}) {sTechName} {sTechNumCustomer}
+    //Тип елемента: {sElementType}
+    //Параметри котушки: {sDescribe1}
+    	
+	"Q_{sTechNumPrg}_Y" := "D_InOut"."{sTechNumPrg}".Q_Out;
+END_REGION

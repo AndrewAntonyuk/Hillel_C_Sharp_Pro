@@ -22,8 +22,10 @@ namespace ClinicAppointment.Data.Repositories
             source.CreatedAt = DateTime.Now;
             source.UpdatedAt = DateTime.Now;
 
-            _fileHandler.WriteToFile(Path, GetAll().Append(source));
+            List<TSource> users = GetAll() as List<TSource> ?? new List<TSource>();
 
+            CheckExist(users, source);
+            _fileHandler.WriteToFile(Path, users.Append(source));
             SaveLastId();
 
             return source;
@@ -34,7 +36,9 @@ namespace ClinicAppointment.Data.Repositories
             if (GetById(id) is null)
                 return false;
 
-            _fileHandler.WriteToFile(Path, GetAll().Where(x => x.Id != id));
+            var newList = GetAll().Where(x => x.Id != id);
+
+            _fileHandler.WriteToFile(Path, newList);
 
             return true;
         }
@@ -46,7 +50,9 @@ namespace ClinicAppointment.Data.Repositories
 
         public TSource? GetById(int id)
         {
-            return GetAll().FirstOrDefault(x => x.Id == id);
+            return (from u in GetAll()
+                    where u.Id == id
+                    select u).FirstOrDefault();
         }
 
         public TSource Update(int id, TSource source)
@@ -62,6 +68,8 @@ namespace ClinicAppointment.Data.Repositories
         public abstract void ShowInfo(TSource user);
 
         protected abstract void SaveLastId();
+
+        protected abstract void CheckExist(IEnumerable<TSource> arr, TSource obj);
 
         protected dynamic ReadFromAppSettings() => JsonConvert.DeserializeObject<dynamic>(File.ReadAllText(Constants.AppSettingsPath));
     }

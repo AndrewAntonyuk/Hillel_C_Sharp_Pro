@@ -1,0 +1,4054 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-07-28T18:02:44.7250723Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS DCC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Energy Suite</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 CFC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SIMATIC Visualization Architect</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="i_StartFwd" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Start motor forward command</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="i_StartRev" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Start motor backward command</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="i_FdbckFwd" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Feedback forward</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="i_FdbckRev" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Feedback backward</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="i_RestartingPLC" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PLC restart is active</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="i_SimMode" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Simulation mode is active</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ir_TimeCycle" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PLC one cycle time, sec</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ir_SPTimeFdbck" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Setpoint for feedback fault detection, sec</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ir_SPTimeRev" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Delay before changing the direction of rotation, sec.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ir_SPTimeNxtStrt" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Delay before next start, sec</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="q_CmdRunFwd" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Start motor forward command</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="q_CmdRunRev" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Start motor backward command</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="q_Fault" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Some fault is ative</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="qs_Statuses" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Motor statuses</MultiLanguageText>
+      </Comment>
+      <Member Name="Run" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Motor is running (any direction)</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="RunFwd" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Motor is running forward</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="RunRev" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Motor is running backward</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SimMode" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Simulation mode is active</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="AfterStpBlck" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Delay (block) after motor stop</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="CngDirBlck" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Delay before direction changing</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ST_7" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Status #7</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ST_8" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Status #8</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="FltStartFwdBwdActive" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Start commands forward and backward are active</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="FltFwdContOn" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Fault of forward contactor start</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="FltFwdContOff" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Fault of forward contactor stop</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="FltRevContOn" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Fault of backward contactor start</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="FltRevContOff" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Fault of backward contactor stop</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="FLT_6" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Fault #6</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="FLT_7" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Fault #7</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="FLT_8" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Fault #8</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="s_CmdRunFwd" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Start motor forward command</MultiLanguageText></Comment></Member>
+    <Member Name="s_CmdRunBwd" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Start motor backward command</MultiLanguageText></Comment></Member>
+    <Member Name="s_OldDirFwd" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Last direction (true = forward)</MultiLanguageText></Comment><StartValue>true</StartValue></Member>
+    <Member Name="sfb_TOF_ChngDir" Datatype="&quot;Lib_FB_Timer_OFF_Simple&quot;"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Changing the direction of rotation timer</MultiLanguageText></Comment></Member>
+    <Member Name="sfb_TOF_NxtStrt" Datatype="&quot;Lib_FB_Timer_OFF_Simple&quot;"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Deley beetween motor starts</MultiLanguageText></Comment></Member>
+    <Member Name="sfb_TON_FwdFdbck" Datatype="&quot;Lib_FB_Timer_ON_Simple&quot;"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Feedback from contactor on (forward)</MultiLanguageText></Comment></Member>
+    <Member Name="sfb_TON_BwdFdbck" Datatype="&quot;Lib_FB_Timer_ON_Simple&quot;"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Feedback from contactor on (backward)</MultiLanguageText></Comment></Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="t_StrtFwdPermtd" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Start forward is permited</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_StrtBwdPermtd" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Start backward is permited</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_FwdContFdbck" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Forward contactor feedback (standard and sim mode)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_BwdContFdbck" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Backward contactor feedback (standard and sim mode)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_SomeFault" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Some fault is active</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_FwdContOnFlt" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Fault of forward contactor start</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_FwdContOffFlt" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Fault of forward contactor stop</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_BwdContOnFlt" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Fault of backward contactor start</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_BwdContOffFlt" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Fault of backward contactor stop</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_CngDirFwdBlck" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Delay before direction changing</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_CngDirBwdBlck" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Delay before direction changing</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="t_NxtStrtBlck" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Next start block</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>Lib_FB_MotSimp</Name>
+      <Number>10</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="REGION" UId="21" />
+  <Blank UId="22" />
+  <Text UId="23">Description</Text>
+  <NewLine UId="24" />
+  <Blank Num="4" UId="25" />
+  <LineComment UId="26">
+    <Text UId="27">   Блок керування контактором мотора</Text>
+  </LineComment>
+  <NewLine UId="28" />
+  <Blank Num="4" UId="29" />
+  <LineComment UId="30">
+    <Text UId="31">   Входи iStartFwd та iStartRev ініціалізує запуск контактора руху мотора вперед і назад відповідно.</Text>
+  </LineComment>
+  <NewLine UId="32" />
+  <Blank Num="4" UId="33" />
+  <LineComment UId="34">
+    <Text UId="35">   Якщо після подачі команди iStartFwd на входах блоку не з'являється сигнал зворотнього зв'язку iFdbckFwd впродорвж часу irSPTimeFdbck (сек), то помилка запуску контактора osStatuses.FltFwdContOn стає активною. Вона буде активною, поки команда iStartFwd не стане рівною 0.</Text>
+  </LineComment>
+  <NewLine UId="36" />
+  <Blank Num="4" UId="37" />
+  <LineComment UId="38">
+    <Text UId="39">   Після того, як сигнал про запуск iStartFwd зникає, а сигнал зворотнього зв'язку iFdbckFwd впродорвж часу irSPTimeFdbck не зникає, то помилка зупинки контактора osStatuses.FltFwdContOff стає активною.</Text>
+  </LineComment>
+  <NewLine UId="40" />
+  <Blank Num="4" UId="41" />
+  <LineComment UId="42">
+    <Text UId="43">   Блок керування контактором мотора</Text>
+  </LineComment>
+  <NewLine UId="44" />
+  <Blank Num="4" UId="45" />
+  <LineComment UId="46">
+    <Text UId="47">   Аналогічна логіка і для контактора руху мотора назад.</Text>
+  </LineComment>
+  <NewLine UId="48" />
+  <Blank Num="4" UId="49" />
+  <LineComment UId="50">
+    <Text UId="51">   При появі одночасно сигналів iStartFwd та iStartRev, активується аварія osStatuses.FltStartFwdBwdActive.</Text>
+  </LineComment>
+  <NewLine UId="52" />
+  <Blank Num="4" UId="53" />
+  <LineComment UId="54">
+    <Text UId="55">   При появі будь-якої з перелічених помилок, подача сигналу 'Пуск' на контактори припиняється.</Text>
+  </LineComment>
+  <NewLine UId="56" />
+  <Blank Num="4" UId="57" />
+  <LineComment UId="58">
+    <Text UId="59">   Крім того існують блокування, які захищають пускачі від частих стартів і від ввімкнення двигуна у протифазі. Інтервали часу, впродовж яких ці блокування активні, задаються на входах irSPTimeNxtStrt та irSPTimeRev відповідно. Відлік часу починається з моменту припинення подачі команди 'Пуск' на пускач.</Text>
+  </LineComment>
+  <NewLine UId="60" />
+  <Blank Num="4" UId="61" />
+  <LineComment UId="62">
+    <Text UId="63">   Симулювати роботу блоку можна, якщо подати на вхід iSimMode сигнал true. В такому режимі, при подачі сигналу запуску, симулюється відповідний зворотній зв'язок контактора, але команди запуску не подаються на виходи oCmdRunFwd та oCmdRunRev, а лише відображаються в структурі osStatuses.   </Text>
+  </LineComment>
+  <NewLine UId="64" />
+  <Blank Num="4" UId="65" />
+  <NewLine UId="66" />
+  <Blank Num="4" UId="67" />
+  <LineComment UId="68">
+    <Text UId="69">   Motor contactor control unit</Text>
+  </LineComment>
+  <NewLine UId="70" />
+  <Blank Num="4" UId="71" />
+  <LineComment UId="72">
+    <Text UId="73">   The iStartFwd and iStartRev inputs initiate the start of the forward and reverse motor contactor, respectively.</Text>
+  </LineComment>
+  <NewLine UId="74" />
+  <Blank Num="4" UId="75" />
+  <LineComment UId="76">
+    <Text UId="77">   If the iFtbckFwd feedback signal does not appear on the inputs of the block after the iStartFwd command is issued during the irSPTimeFdbck time (sec), the error of starting the contactor osStatuses.FltFwdContOn becomes active. It will remain active until the iStartFwd command becomes 0.</Text>
+  </LineComment>
+  <NewLine UId="78" />
+  <Blank Num="4" UId="79" />
+  <LineComment UId="80">
+    <Text UId="81">   After the iStartFwd start signal disappears and the iFdbckFwd feedback signal does not disappear during the irSPTimeFdbck time, the stop error of the osStatuses.FltFwdContOff contactor becomes active.</Text>
+  </LineComment>
+  <NewLine UId="82" />
+  <Blank Num="4" UId="83" />
+  <LineComment UId="84">
+    <Text UId="85">   The logic is similar for the contactor of the motor movement back.</Text>
+  </LineComment>
+  <NewLine UId="86" />
+  <Blank Num="4" UId="87" />
+  <LineComment UId="88">
+    <Text UId="89">   If the iStartFwd and iStartRev signals appear at the same time, the osStatuses.FltStartFwdBwdActive alarm is activated.</Text>
+  </LineComment>
+  <NewLine UId="90" />
+  <Blank Num="4" UId="91" />
+  <LineComment UId="92">
+    <Text UId="93">   If any of these errors occur, the 'Start' signal to the contactors is stopped.</Text>
+  </LineComment>
+  <NewLine UId="94" />
+  <Blank Num="4" UId="95" />
+  <LineComment UId="96">
+    <Text UId="97">   In addition, there are locks that protect the contactors from frequent starts and from starting the motor in antiphase. The time intervals during which these locks are active are set on the irSPTimeNxtStrt and irSPTimeRev inputs, respectively. The countdown starts from the moment the command "Start" on the contactor is stopped.</Text>
+  </LineComment>
+  <NewLine UId="98" />
+  <Blank Num="4" UId="99" />
+  <LineComment UId="100">
+    <Text UId="101">   You can simulate the operation of the unit if you send a true signal to the iSimMode input. In this mode, when the start signal is applied, the corresponding feedback of the contactor is simulated, but the start commands are not given to the outputs oCmdRunFwd and oCmdRunRev, but are only displayed in the osStatuses structure.    </Text>
+  </LineComment>
+  <NewLine UId="102" />
+  <Token Text="END_REGION" UId="103" />
+  <NewLine Num="2" UId="104" />
+  <Token Text="REGION" UId="105" />
+  <Blank UId="106" />
+  <Text UId="107">Feedback signal (standard and sim mode)</Text>
+  <NewLine UId="108" />
+  <Blank Num="4" UId="109" />
+  <Access Scope="LocalVariable" UId="110">
+    <Symbol UId="111">
+      <Component Name="t_FwdContFdbck" UId="112" />
+    </Symbol>
+  </Access>
+  <Blank UId="113" />
+  <Token Text=":=" UId="114" />
+  <Blank UId="115" />
+  <Access Scope="LocalVariable" UId="116">
+    <Symbol UId="117">
+      <Component Name="i_FdbckFwd" UId="118" />
+    </Symbol>
+  </Access>
+  <Blank UId="119" />
+  <Token Text="OR" UId="120" />
+  <Blank UId="121" />
+  <Token Text="(" UId="122" />
+  <Access Scope="LocalVariable" UId="123">
+    <Symbol UId="124">
+      <Component Name="s_CmdRunFwd" UId="125" />
+    </Symbol>
+  </Access>
+  <Blank UId="126" />
+  <Token Text="AND" UId="127" />
+  <Blank UId="128" />
+  <Access Scope="LocalVariable" UId="129">
+    <Symbol UId="130">
+      <Component Name="i_SimMode" UId="131" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="132" />
+  <Token Text=";" UId="133" />
+  <Blank Num="4" UId="134" />
+  <LineComment UId="135">
+    <Text UId="136">Forward contactor feedback (standard and sim mode)</Text>
+  </LineComment>
+  <NewLine UId="137" />
+  <Blank Num="4" UId="138" />
+  <Access Scope="LocalVariable" UId="139">
+    <Symbol UId="140">
+      <Component Name="t_BwdContFdbck" UId="141" />
+    </Symbol>
+  </Access>
+  <Blank UId="142" />
+  <Token Text=":=" UId="143" />
+  <Blank UId="144" />
+  <Access Scope="LocalVariable" UId="145">
+    <Symbol UId="146">
+      <Component Name="i_FdbckRev" UId="147" />
+    </Symbol>
+  </Access>
+  <Blank UId="148" />
+  <Token Text="OR" UId="149" />
+  <Blank UId="150" />
+  <Token Text="(" UId="151" />
+  <Access Scope="LocalVariable" UId="152">
+    <Symbol UId="153">
+      <Component Name="s_CmdRunBwd" UId="154" />
+    </Symbol>
+  </Access>
+  <Blank UId="155" />
+  <Token Text="AND" UId="156" />
+  <Blank UId="157" />
+  <Access Scope="LocalVariable" UId="158">
+    <Symbol UId="159">
+      <Component Name="i_SimMode" UId="160" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="161" />
+  <Token Text=";" UId="162" />
+  <Blank Num="4" UId="163" />
+  <LineComment UId="164">
+    <Text UId="165">Backward contactor feedback (standard and sim mode)</Text>
+  </LineComment>
+  <NewLine UId="166" />
+  <Token Text="END_REGION" UId="167" />
+  <NewLine Num="2" UId="168" />
+  <Token Text="REGION" UId="169" />
+  <Blank UId="170" />
+  <Text UId="171">Timers</Text>
+  <NewLine UId="172" />
+  <Blank Num="4" UId="173" />
+  <Token Text="REGION" UId="174" />
+  <Blank UId="175" />
+  <Text UId="176">Timers setpoints</Text>
+  <NewLine UId="177" />
+  <Blank Num="8" UId="178" />
+  <Access Scope="LocalVariable" UId="179">
+    <Symbol UId="180">
+      <Component Name="sfb_TOF_ChngDir" UId="181" />
+      <Token Text="." UId="182" />
+      <Component Name="IR_SpTime" UId="183" />
+    </Symbol>
+  </Access>
+  <Blank UId="184" />
+  <Token Text=":=" UId="185" />
+  <Blank UId="186" />
+  <Access Scope="LocalVariable" UId="187">
+    <Symbol UId="188">
+      <Component Name="ir_SPTimeRev" UId="189" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="190" />
+  <Blank UId="191" />
+  <LineComment UId="192">
+    <Text UId="193">Changing the direction of rotation timer</Text>
+  </LineComment>
+  <NewLine UId="194" />
+  <Blank Num="8" UId="195" />
+  <NewLine UId="196" />
+  <Blank Num="8" UId="197" />
+  <Access Scope="LocalVariable" UId="198">
+    <Symbol UId="199">
+      <Component Name="sfb_TOF_NxtStrt" UId="200" />
+      <Token Text="." UId="201" />
+      <Component Name="IR_SpTime" UId="202" />
+    </Symbol>
+  </Access>
+  <Blank UId="203" />
+  <Token Text=":=" UId="204" />
+  <Blank UId="205" />
+  <Access Scope="LocalVariable" UId="206">
+    <Symbol UId="207">
+      <Component Name="ir_SPTimeNxtStrt" UId="208" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="209" />
+  <Blank UId="210" />
+  <LineComment UId="211">
+    <Text UId="212">Deley beetween motor starts</Text>
+  </LineComment>
+  <NewLine UId="213" />
+  <Blank Num="8" UId="214" />
+  <NewLine UId="215" />
+  <Blank Num="8" UId="216" />
+  <Access Scope="LocalVariable" UId="217">
+    <Symbol UId="218">
+      <Component Name="sfb_TON_FwdFdbck" UId="219" />
+      <Token Text="." UId="220" />
+      <Component Name="IR_SpTime" UId="221" />
+    </Symbol>
+  </Access>
+  <Blank UId="222" />
+  <Token Text=":=" UId="223" />
+  <Blank UId="224" />
+  <Access Scope="LocalVariable" UId="225">
+    <Symbol UId="226">
+      <Component Name="ir_SPTimeFdbck" UId="227" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="228" />
+  <Blank Num="2" UId="229" />
+  <LineComment UId="230">
+    <Text UId="231">Feedback from contactor on (forward)</Text>
+  </LineComment>
+  <NewLine UId="232" />
+  <Blank Num="8" UId="233" />
+  <Access Scope="LocalVariable" UId="234">
+    <Symbol UId="235">
+      <Component Name="sfb_TON_BwdFdbck" UId="236" />
+      <Token Text="." UId="237" />
+      <Component Name="IR_SpTime" UId="238" />
+    </Symbol>
+  </Access>
+  <Blank UId="239" />
+  <Token Text=":=" UId="240" />
+  <Blank UId="241" />
+  <Access Scope="LocalVariable" UId="242">
+    <Symbol UId="243">
+      <Component Name="ir_SPTimeFdbck" UId="244" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="245" />
+  <Blank Num="2" UId="246" />
+  <LineComment UId="247">
+    <Text UId="248">Feedback from contactor on (backward)</Text>
+  </LineComment>
+  <NewLine UId="249" />
+  <Blank Num="4" UId="250" />
+  <Token Text="END_REGION" UId="251" />
+  <NewLine UId="252" />
+  <Blank Num="4" UId="253" />
+  <NewLine UId="254" />
+  <Blank Num="4" UId="255" />
+  <Token Text="REGION" UId="256" />
+  <Blank UId="257" />
+  <Text UId="258">Timers inputsts</Text>
+  <NewLine UId="259" />
+  <Blank Num="8" UId="260" />
+  <Access Scope="LocalVariable" UId="261">
+    <Symbol UId="262">
+      <Component Name="sfb_TOF_ChngDir" UId="263" />
+      <Token Text="." UId="264" />
+      <Component Name="IB_StartTimerInput" UId="265" />
+    </Symbol>
+  </Access>
+  <Blank UId="266" />
+  <Token Text=":=" UId="267" />
+  <Blank UId="268" />
+  <Access Scope="LocalVariable" UId="269">
+    <Symbol UId="270">
+      <Component Name="s_CmdRunFwd" UId="271" />
+    </Symbol>
+  </Access>
+  <Blank Num="2" UId="272" />
+  <LineComment UId="273">
+    <Text UId="274">Changing the direction of rotation timer</Text>
+  </LineComment>
+  <NewLine UId="275" />
+  <Blank Num="8" UId="276" />
+  <Token Text="OR" UId="277" />
+  <Blank UId="278" />
+  <Access Scope="LocalVariable" UId="279">
+    <Symbol UId="280">
+      <Component Name="s_CmdRunBwd" UId="281" />
+    </Symbol>
+  </Access>
+  <NewLine UId="282" />
+  <Blank Num="8" UId="283" />
+  <Token Text=";" UId="284" />
+  <NewLine UId="285" />
+  <Blank Num="8" UId="286" />
+  <NewLine UId="287" />
+  <Blank Num="8" UId="288" />
+  <Access Scope="LocalVariable" UId="289">
+    <Symbol UId="290">
+      <Component Name="sfb_TOF_NxtStrt" UId="291" />
+      <Token Text="." UId="292" />
+      <Component Name="IB_StartTimerInput" UId="293" />
+    </Symbol>
+  </Access>
+  <Blank UId="294" />
+  <Token Text=":=" UId="295" />
+  <Blank UId="296" />
+  <Access Scope="LocalVariable" UId="297">
+    <Symbol UId="298">
+      <Component Name="s_CmdRunFwd" UId="299" />
+    </Symbol>
+  </Access>
+  <Blank Num="2" UId="300" />
+  <LineComment UId="301">
+    <Text UId="302">Deley beetween motor starts</Text>
+  </LineComment>
+  <NewLine UId="303" />
+  <Blank Num="8" UId="304" />
+  <Token Text="OR" UId="305" />
+  <Blank UId="306" />
+  <Access Scope="LocalVariable" UId="307">
+    <Symbol UId="308">
+      <Component Name="s_CmdRunBwd" UId="309" />
+    </Symbol>
+  </Access>
+  <NewLine UId="310" />
+  <Blank Num="8" UId="311" />
+  <Token Text="OR" UId="312" />
+  <Blank UId="313" />
+  <Access Scope="LocalVariable" UId="314">
+    <Symbol UId="315">
+      <Component Name="i_FdbckFwd" UId="316" />
+    </Symbol>
+  </Access>
+  <NewLine UId="317" />
+  <Blank Num="8" UId="318" />
+  <Token Text="OR" UId="319" />
+  <Blank UId="320" />
+  <Access Scope="LocalVariable" UId="321">
+    <Symbol UId="322">
+      <Component Name="i_FdbckRev" UId="323" />
+    </Symbol>
+  </Access>
+  <NewLine UId="324" />
+  <Blank Num="8" UId="325" />
+  <Token Text=";" UId="326" />
+  <NewLine UId="327" />
+  <Blank Num="8" UId="328" />
+  <NewLine UId="329" />
+  <Blank Num="8" UId="330" />
+  <Access Scope="LocalVariable" UId="331">
+    <Symbol UId="332">
+      <Component Name="sfb_TON_FwdFdbck" UId="333" />
+      <Token Text="." UId="334" />
+      <Component Name="IB_StartTimerInput" UId="335" />
+    </Symbol>
+  </Access>
+  <Blank UId="336" />
+  <Token Text=":=" UId="337" />
+  <Blank UId="338" />
+  <Token Text="(" UId="339" />
+  <Access Scope="LocalVariable" UId="340">
+    <Symbol UId="341">
+      <Component Name="s_CmdRunFwd" UId="342" />
+    </Symbol>
+  </Access>
+  <Blank Num="4" UId="343" />
+  <LineComment UId="344">
+    <Text UId="345">Feedback from contactor on (forward)</Text>
+  </LineComment>
+  <NewLine UId="346" />
+  <Blank Num="8" UId="347" />
+  <Token Text="AND" UId="348" />
+  <Blank UId="349" />
+  <Token Text="NOT" UId="350" />
+  <Blank UId="351" />
+  <Access Scope="LocalVariable" UId="352">
+    <Symbol UId="353">
+      <Component Name="t_FwdContFdbck" UId="354" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="355" />
+  <NewLine UId="356" />
+  <Blank Num="8" UId="357" />
+  <NewLine UId="358" />
+  <Blank Num="8" UId="359" />
+  <Token Text="OR" UId="360" />
+  <Blank UId="361" />
+  <Token Text="(" UId="362" />
+  <Access Scope="LocalVariable" UId="363">
+    <Symbol UId="364">
+      <Component Name="sfb_TON_FwdFdbck" UId="365" />
+      <Token Text="." UId="366" />
+      <Component Name="QB_TimerOut" UId="367" />
+    </Symbol>
+  </Access>
+  <NewLine UId="368" />
+  <Blank Num="8" UId="369" />
+  <Token Text="AND" UId="370" />
+  <Blank UId="371" />
+  <Token Text="NOT" UId="372" />
+  <Blank UId="373" />
+  <Access Scope="LocalVariable" UId="374">
+    <Symbol UId="375">
+      <Component Name="t_FwdContFdbck" UId="376" />
+    </Symbol>
+  </Access>
+  <NewLine UId="377" />
+  <Blank Num="8" UId="378" />
+  <Token Text="AND" UId="379" />
+  <Blank UId="380" />
+  <Access Scope="LocalVariable" UId="381">
+    <Symbol UId="382">
+      <Component Name="i_StartFwd" UId="383" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="384" />
+  <NewLine UId="385" />
+  <Blank Num="8" UId="386" />
+  <NewLine UId="387" />
+  <Blank Num="8" UId="388" />
+  <Token Text="OR" UId="389" />
+  <Blank UId="390" />
+  <Token Text="(" UId="391" />
+  <Token Text="NOT" UId="392" />
+  <Blank UId="393" />
+  <Access Scope="LocalVariable" UId="394">
+    <Symbol UId="395">
+      <Component Name="s_CmdRunFwd" UId="396" />
+    </Symbol>
+  </Access>
+  <NewLine UId="397" />
+  <Blank Num="8" UId="398" />
+  <Token Text="AND" UId="399" />
+  <Blank UId="400" />
+  <Access Scope="LocalVariable" UId="401">
+    <Symbol UId="402">
+      <Component Name="t_FwdContFdbck" UId="403" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="404" />
+  <NewLine UId="405" />
+  <Blank Num="8" UId="406" />
+  <NewLine UId="407" />
+  <Blank Num="8" UId="408" />
+  <Token Text="OR" UId="409" />
+  <Blank UId="410" />
+  <Token Text="(" UId="411" />
+  <Access Scope="LocalVariable" UId="412">
+    <Symbol UId="413">
+      <Component Name="sfb_TON_FwdFdbck" UId="414" />
+      <Token Text="." UId="415" />
+      <Component Name="QB_TimerOut" UId="416" />
+    </Symbol>
+  </Access>
+  <NewLine UId="417" />
+  <Blank Num="8" UId="418" />
+  <Token Text="AND" UId="419" />
+  <Blank UId="420" />
+  <Access Scope="LocalVariable" UId="421">
+    <Symbol UId="422">
+      <Component Name="t_FwdContFdbck" UId="423" />
+    </Symbol>
+  </Access>
+  <NewLine UId="424" />
+  <Blank Num="8" UId="425" />
+  <Token Text="AND" UId="426" />
+  <Blank UId="427" />
+  <Token Text="NOT" UId="428" />
+  <Blank UId="429" />
+  <Access Scope="LocalVariable" UId="430">
+    <Symbol UId="431">
+      <Component Name="i_StartFwd" UId="432" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="433" />
+  <NewLine UId="434" />
+  <Blank Num="8" UId="435" />
+  <Token Text=";" UId="436" />
+  <NewLine UId="437" />
+  <Blank Num="8" UId="438" />
+  <NewLine UId="439" />
+  <Blank Num="8" UId="440" />
+  <Access Scope="LocalVariable" UId="441">
+    <Symbol UId="442">
+      <Component Name="sfb_TON_BwdFdbck" UId="443" />
+      <Token Text="." UId="444" />
+      <Component Name="IB_StartTimerInput" UId="445" />
+    </Symbol>
+  </Access>
+  <Blank UId="446" />
+  <Token Text=":=" UId="447" />
+  <Blank UId="448" />
+  <Token Text="(" UId="449" />
+  <Access Scope="LocalVariable" UId="450">
+    <Symbol UId="451">
+      <Component Name="s_CmdRunBwd" UId="452" />
+    </Symbol>
+  </Access>
+  <Blank Num="4" UId="453" />
+  <LineComment UId="454">
+    <Text UId="455">Feedback from contactor on (backward)</Text>
+  </LineComment>
+  <NewLine UId="456" />
+  <Blank Num="8" UId="457" />
+  <Token Text="AND" UId="458" />
+  <Blank UId="459" />
+  <Token Text="NOT" UId="460" />
+  <Blank UId="461" />
+  <Access Scope="LocalVariable" UId="462">
+    <Symbol UId="463">
+      <Component Name="t_BwdContFdbck" UId="464" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="465" />
+  <NewLine UId="466" />
+  <Blank Num="8" UId="467" />
+  <NewLine UId="468" />
+  <Blank Num="8" UId="469" />
+  <Token Text="OR" UId="470" />
+  <Blank UId="471" />
+  <Token Text="(" UId="472" />
+  <Access Scope="LocalVariable" UId="473">
+    <Symbol UId="474">
+      <Component Name="sfb_TON_BwdFdbck" UId="475" />
+      <Token Text="." UId="476" />
+      <Component Name="QB_TimerOut" UId="477" />
+    </Symbol>
+  </Access>
+  <NewLine UId="478" />
+  <Blank Num="8" UId="479" />
+  <Token Text="AND" UId="480" />
+  <Blank UId="481" />
+  <Token Text="NOT" UId="482" />
+  <Blank UId="483" />
+  <Access Scope="LocalVariable" UId="484">
+    <Symbol UId="485">
+      <Component Name="t_BwdContFdbck" UId="486" />
+    </Symbol>
+  </Access>
+  <NewLine UId="487" />
+  <Blank Num="8" UId="488" />
+  <Token Text="AND" UId="489" />
+  <Blank UId="490" />
+  <Access Scope="LocalVariable" UId="491">
+    <Symbol UId="492">
+      <Component Name="i_StartRev" UId="493" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="494" />
+  <NewLine UId="495" />
+  <Blank Num="8" UId="496" />
+  <NewLine UId="497" />
+  <Blank Num="8" UId="498" />
+  <Token Text="OR" UId="499" />
+  <Blank UId="500" />
+  <Token Text="(" UId="501" />
+  <Token Text="NOT" UId="502" />
+  <Blank UId="503" />
+  <Access Scope="LocalVariable" UId="504">
+    <Symbol UId="505">
+      <Component Name="s_CmdRunBwd" UId="506" />
+    </Symbol>
+  </Access>
+  <NewLine UId="507" />
+  <Blank Num="8" UId="508" />
+  <Token Text="AND" UId="509" />
+  <Blank UId="510" />
+  <Access Scope="LocalVariable" UId="511">
+    <Symbol UId="512">
+      <Component Name="t_BwdContFdbck" UId="513" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="514" />
+  <NewLine UId="515" />
+  <Blank Num="8" UId="516" />
+  <NewLine UId="517" />
+  <Blank Num="8" UId="518" />
+  <Token Text="OR" UId="519" />
+  <Blank UId="520" />
+  <Token Text="(" UId="521" />
+  <Access Scope="LocalVariable" UId="522">
+    <Symbol UId="523">
+      <Component Name="sfb_TON_BwdFdbck" UId="524" />
+      <Token Text="." UId="525" />
+      <Component Name="QB_TimerOut" UId="526" />
+    </Symbol>
+  </Access>
+  <NewLine UId="527" />
+  <Blank Num="8" UId="528" />
+  <Token Text="AND" UId="529" />
+  <Blank UId="530" />
+  <Access Scope="LocalVariable" UId="531">
+    <Symbol UId="532">
+      <Component Name="t_BwdContFdbck" UId="533" />
+    </Symbol>
+  </Access>
+  <NewLine UId="534" />
+  <Blank Num="8" UId="535" />
+  <Token Text="AND" UId="536" />
+  <Blank UId="537" />
+  <Token Text="NOT" UId="538" />
+  <Blank UId="539" />
+  <Access Scope="LocalVariable" UId="540">
+    <Symbol UId="541">
+      <Component Name="i_StartRev" UId="542" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="543" />
+  <NewLine UId="544" />
+  <Blank Num="8" UId="545" />
+  <Token Text=";" UId="546" />
+  <NewLine UId="547" />
+  <Blank Num="4" UId="548" />
+  <Token Text="END_REGION" UId="549" />
+  <NewLine UId="550" />
+  <Blank Num="4" UId="551" />
+  <NewLine UId="552" />
+  <Blank Num="4" UId="553" />
+  <Token Text="REGION" UId="554" />
+  <Blank UId="555" />
+  <Text UId="556">Timers calling </Text>
+  <NewLine UId="557" />
+  <Blank Num="8" UId="558" />
+  <LineComment UId="559">
+    <Text UId="560">PLC cycle time</Text>
+  </LineComment>
+  <NewLine UId="561" />
+  <Blank Num="8" UId="562" />
+  <Access Scope="LocalVariable" UId="563">
+    <Symbol UId="564">
+      <Component Name="sfb_TOF_ChngDir" UId="565" />
+      <Token Text="." UId="566" />
+      <Component Name="IR_CycleTime" UId="567" />
+    </Symbol>
+  </Access>
+  <Blank UId="568" />
+  <Token Text=":=" UId="569" />
+  <Blank Num="8" UId="570" />
+  <LineComment UId="571">
+    <Text UId="572">Changing the direction of rotation timer</Text>
+  </LineComment>
+  <NewLine UId="573" />
+  <Blank Num="8" UId="574" />
+  <Access Scope="LocalVariable" UId="575">
+    <Symbol UId="576">
+      <Component Name="sfb_TOF_NxtStrt" UId="577" />
+      <Token Text="." UId="578" />
+      <Component Name="IR_CycleTime" UId="579" />
+    </Symbol>
+  </Access>
+  <Blank UId="580" />
+  <Token Text=":=" UId="581" />
+  <Blank Num="8" UId="582" />
+  <LineComment UId="583">
+    <Text UId="584">Deley beetween motor starts</Text>
+  </LineComment>
+  <NewLine UId="585" />
+  <Blank Num="8" UId="586" />
+  <Access Scope="LocalVariable" UId="587">
+    <Symbol UId="588">
+      <Component Name="sfb_TON_FwdFdbck" UId="589" />
+      <Token Text="." UId="590" />
+      <Component Name="IR_CycleTime" UId="591" />
+    </Symbol>
+  </Access>
+  <Blank UId="592" />
+  <Token Text=":=" UId="593" />
+  <Blank Num="7" UId="594" />
+  <LineComment UId="595">
+    <Text UId="596">Feedback from contactor on (forward)</Text>
+  </LineComment>
+  <NewLine UId="597" />
+  <Blank Num="8" UId="598" />
+  <Access Scope="LocalVariable" UId="599">
+    <Symbol UId="600">
+      <Component Name="sfb_TON_BwdFdbck" UId="601" />
+      <Token Text="." UId="602" />
+      <Component Name="IR_CycleTime" UId="603" />
+    </Symbol>
+  </Access>
+  <Blank UId="604" />
+  <Token Text=":=" UId="605" />
+  <Blank Num="7" UId="606" />
+  <LineComment UId="607">
+    <Text UId="608">Feedback from contactor on (backward)</Text>
+  </LineComment>
+  <NewLine UId="609" />
+  <Blank Num="8" UId="610" />
+  <Access Scope="LocalVariable" UId="611">
+    <Symbol UId="612">
+      <Component Name="ir_TimeCycle" UId="613" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="614" />
+  <NewLine UId="615" />
+  <Blank Num="8" UId="616" />
+  <LineComment UId="617">
+    <Text UId="618">Timers functions</Text>
+  </LineComment>
+  <NewLine UId="619" />
+  <Blank Num="8" UId="620" />
+  <Access Scope="Call" UId="621">
+    <CallInfo UId="622" BlockType="FB" Name="Lib_FB_Timer_OFF_Simple">
+      <Instance Scope="LocalVariable" UId="623">
+        <Component Name="sfb_TOF_ChngDir" UId="624" />
+      </Instance>
+      <Token Text="(" UId="625" />
+      <Token Text=")" UId="631" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="632" />
+  <Blank Num="5" UId="633" />
+  <LineComment UId="634">
+    <Text UId="635">Changing the direction of rotation timer</Text>
+  </LineComment>
+  <NewLine UId="636" />
+  <Blank Num="8" UId="637" />
+  <Access Scope="Call" UId="638">
+    <CallInfo UId="639" BlockType="FB" Name="Lib_FB_Timer_OFF_Simple">
+      <Instance Scope="LocalVariable" UId="640">
+        <Component Name="sfb_TOF_NxtStrt" UId="641" />
+      </Instance>
+      <Token Text="(" UId="642" />
+      <Token Text=")" UId="648" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="649" />
+  <Blank Num="5" UId="650" />
+  <LineComment UId="651">
+    <Text UId="652">Deley beetween motor starts</Text>
+  </LineComment>
+  <NewLine UId="653" />
+  <Blank Num="8" UId="654" />
+  <Access Scope="Call" UId="655">
+    <CallInfo UId="656" BlockType="FB" Name="Lib_FB_Timer_ON_Simple">
+      <Instance Scope="LocalVariable" UId="657">
+        <Component Name="sfb_TON_FwdFdbck" UId="658" />
+      </Instance>
+      <Token Text="(" UId="659" />
+      <Token Text=")" UId="665" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="666" />
+  <Blank Num="4" UId="667" />
+  <LineComment UId="668">
+    <Text UId="669">Feedback from contactor on (forward)</Text>
+  </LineComment>
+  <NewLine UId="670" />
+  <Blank Num="8" UId="671" />
+  <Access Scope="Call" UId="672">
+    <CallInfo UId="673" BlockType="FB" Name="Lib_FB_Timer_ON_Simple">
+      <Instance Scope="LocalVariable" UId="674">
+        <Component Name="sfb_TON_BwdFdbck" UId="675" />
+      </Instance>
+      <Token Text="(" UId="676" />
+      <Token Text=")" UId="682" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="683" />
+  <Blank Num="4" UId="684" />
+  <LineComment UId="685">
+    <Text UId="686">Feedback from contactor on (backward)</Text>
+  </LineComment>
+  <NewLine UId="687" />
+  <Blank Num="4" UId="688" />
+  <Token Text="END_REGION" UId="689" />
+  <NewLine UId="690" />
+  <Token Text="END_REGION" UId="691" />
+  <NewLine Num="2" UId="692" />
+  <Token Text="REGION" UId="693" />
+  <Blank UId="694" />
+  <Text UId="695">Old direction</Text>
+  <NewLine UId="696" />
+  <Blank Num="4" UId="697" />
+  <LineComment UId="698">
+    <Text UId="699">Last direction (true = forward)</Text>
+  </LineComment>
+  <NewLine UId="700" />
+  <Blank Num="4" UId="701" />
+  <Token Text="IF" UId="702" />
+  <Blank UId="703" />
+  <Access Scope="LocalVariable" UId="704">
+    <Symbol UId="705">
+      <Component Name="s_CmdRunFwd" UId="706" />
+    </Symbol>
+  </Access>
+  <Blank UId="707" />
+  <Token Text="THEN" UId="708" />
+  <NewLine UId="709" />
+  <Blank Num="8" UId="710" />
+  <Access Scope="LocalVariable" UId="711">
+    <Symbol UId="712">
+      <Component Name="s_OldDirFwd" UId="713" />
+    </Symbol>
+  </Access>
+  <Blank UId="714" />
+  <Token Text=":=" UId="715" />
+  <Blank UId="716" />
+  <Access Scope="LiteralConstant" UId="717">
+    <Constant UId="718">
+      <ConstantValue UId="720">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="721" />
+  <NewLine UId="722" />
+  <Blank Num="4" UId="723" />
+  <Token Text="ELSIF" UId="724" />
+  <Blank UId="725" />
+  <Access Scope="LocalVariable" UId="726">
+    <Symbol UId="727">
+      <Component Name="s_CmdRunBwd" UId="728" />
+    </Symbol>
+  </Access>
+  <Blank UId="729" />
+  <Token Text="THEN" UId="730" />
+  <NewLine UId="731" />
+  <Blank Num="8" UId="732" />
+  <Access Scope="LocalVariable" UId="733">
+    <Symbol UId="734">
+      <Component Name="s_OldDirFwd" UId="735" />
+    </Symbol>
+  </Access>
+  <Blank UId="736" />
+  <Token Text=":=" UId="737" />
+  <Blank UId="738" />
+  <Access Scope="LiteralConstant" UId="739">
+    <Constant UId="740">
+      <ConstantValue UId="742">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="743" />
+  <NewLine UId="744" />
+  <Blank Num="4" UId="745" />
+  <Token Text="END_IF" UId="746" />
+  <Token Text=";" UId="747" />
+  <NewLine UId="748" />
+  <Token Text="END_REGION" UId="749" />
+  <NewLine Num="2" UId="750" />
+  <Token Text="REGION" UId="751" />
+  <Blank UId="752" />
+  <Text UId="753">Block start/stop</Text>
+  <NewLine UId="754" />
+  <Blank Num="4" UId="755" />
+  <LineComment UId="756">
+    <Text UId="757">Delay before direction changing</Text>
+  </LineComment>
+  <NewLine UId="758" />
+  <Blank Num="4" UId="759" />
+  <Access Scope="LocalVariable" UId="760">
+    <Symbol UId="761">
+      <Component Name="t_CngDirFwdBlck" UId="762" />
+    </Symbol>
+  </Access>
+  <Blank UId="763" />
+  <Token Text=":=" UId="764" />
+  <Blank UId="765" />
+  <Token Text="(" UId="766" />
+  <Access Scope="LocalVariable" UId="767">
+    <Symbol UId="768">
+      <Component Name="sfb_TOF_ChngDir" UId="769" />
+      <Token Text="." UId="770" />
+      <Component Name="QB_TimerOut" UId="771" />
+    </Symbol>
+  </Access>
+  <Blank UId="772" />
+  <Token Text="AND" UId="773" />
+  <Blank UId="774" />
+  <Token Text="NOT" UId="775" />
+  <Blank UId="776" />
+  <Access Scope="LocalVariable" UId="777">
+    <Symbol UId="778">
+      <Component Name="s_CmdRunFwd" UId="779" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="780" />
+  <NewLine UId="781" />
+  <Blank Num="4" UId="782" />
+  <Token Text="AND" UId="783" />
+  <Blank UId="784" />
+  <Token Text="NOT" UId="785" />
+  <Blank UId="786" />
+  <Access Scope="LocalVariable" UId="787">
+    <Symbol UId="788">
+      <Component Name="s_OldDirFwd" UId="789" />
+    </Symbol>
+  </Access>
+  <NewLine UId="790" />
+  <Blank Num="4" UId="791" />
+  <Token Text=";" UId="792" />
+  <NewLine UId="793" />
+  <Blank Num="4" UId="794" />
+  <LineComment UId="795">
+    <Text UId="796">Delay before direction changing</Text>
+  </LineComment>
+  <NewLine UId="797" />
+  <Blank Num="4" UId="798" />
+  <Access Scope="LocalVariable" UId="799">
+    <Symbol UId="800">
+      <Component Name="t_CngDirBwdBlck" UId="801" />
+    </Symbol>
+  </Access>
+  <Blank UId="802" />
+  <Token Text=":=" UId="803" />
+  <Blank UId="804" />
+  <Token Text="(" UId="805" />
+  <Access Scope="LocalVariable" UId="806">
+    <Symbol UId="807">
+      <Component Name="sfb_TOF_ChngDir" UId="808" />
+      <Token Text="." UId="809" />
+      <Component Name="QB_TimerOut" UId="810" />
+    </Symbol>
+  </Access>
+  <Blank UId="811" />
+  <Token Text="AND" UId="812" />
+  <Blank UId="813" />
+  <Token Text="NOT" UId="814" />
+  <Blank UId="815" />
+  <Access Scope="LocalVariable" UId="816">
+    <Symbol UId="817">
+      <Component Name="s_CmdRunBwd" UId="818" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="819" />
+  <NewLine UId="820" />
+  <Blank Num="4" UId="821" />
+  <Token Text="AND" UId="822" />
+  <Blank UId="823" />
+  <Access Scope="LocalVariable" UId="824">
+    <Symbol UId="825">
+      <Component Name="s_OldDirFwd" UId="826" />
+    </Symbol>
+  </Access>
+  <NewLine UId="827" />
+  <Blank Num="4" UId="828" />
+  <Token Text=";" UId="829" />
+  <NewLine UId="830" />
+  <Blank Num="4" UId="831" />
+  <LineComment UId="832">
+    <Text UId="833">Next start block</Text>
+  </LineComment>
+  <NewLine UId="834" />
+  <Blank Num="4" UId="835" />
+  <Access Scope="LocalVariable" UId="836">
+    <Symbol UId="837">
+      <Component Name="t_NxtStrtBlck" UId="838" />
+    </Symbol>
+  </Access>
+  <Blank UId="839" />
+  <Token Text=":=" UId="840" />
+  <Blank UId="841" />
+  <Access Scope="LocalVariable" UId="842">
+    <Symbol UId="843">
+      <Component Name="sfb_TOF_NxtStrt" UId="844" />
+      <Token Text="." UId="845" />
+      <Component Name="QB_TimerOut" UId="846" />
+    </Symbol>
+  </Access>
+  <NewLine UId="847" />
+  <Blank Num="4" UId="848" />
+  <Token Text="AND" UId="849" />
+  <Blank UId="850" />
+  <Token Text="NOT" UId="851" />
+  <Blank UId="852" />
+  <Token Text="(" UId="853" />
+  <Access Scope="LocalVariable" UId="854">
+    <Symbol UId="855">
+      <Component Name="s_CmdRunFwd" UId="856" />
+    </Symbol>
+  </Access>
+  <NewLine UId="857" />
+  <Blank Num="4" UId="858" />
+  <Token Text="OR" UId="859" />
+  <Blank UId="860" />
+  <Access Scope="LocalVariable" UId="861">
+    <Symbol UId="862">
+      <Component Name="s_CmdRunBwd" UId="863" />
+    </Symbol>
+  </Access>
+  <NewLine UId="864" />
+  <Blank Num="4" UId="865" />
+  <Token Text="OR" UId="866" />
+  <Blank UId="867" />
+  <Access Scope="LocalVariable" UId="868">
+    <Symbol UId="869">
+      <Component Name="i_FdbckFwd" UId="870" />
+    </Symbol>
+  </Access>
+  <NewLine UId="871" />
+  <Blank Num="4" UId="872" />
+  <Token Text="OR" UId="873" />
+  <Blank UId="874" />
+  <Access Scope="LocalVariable" UId="875">
+    <Symbol UId="876">
+      <Component Name="i_FdbckRev" UId="877" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="878" />
+  <NewLine UId="879" />
+  <Blank Num="4" UId="880" />
+  <Token Text=";" UId="881" />
+  <NewLine UId="882" />
+  <Token Text="END_REGION" UId="883" />
+  <NewLine Num="2" UId="884" />
+  <Token Text="REGION" UId="885" />
+  <Blank UId="886" />
+  <Text UId="887">Faults</Text>
+  <NewLine UId="888" />
+  <Blank Num="4" UId="889" />
+  <Access Scope="LocalVariable" UId="890">
+    <Symbol UId="891">
+      <Component Name="t_FwdContOnFlt" UId="892" />
+    </Symbol>
+  </Access>
+  <Blank UId="893" />
+  <Token Text=":=" UId="894" />
+  <Blank UId="895" />
+  <Access Scope="LocalVariable" UId="896">
+    <Symbol UId="897">
+      <Component Name="sfb_TON_FwdFdbck" UId="898" />
+      <Token Text="." UId="899" />
+      <Component Name="QB_TimerOut" UId="900" />
+    </Symbol>
+  </Access>
+  <Blank UId="901" />
+  <Token Text="AND" UId="902" />
+  <Blank UId="903" />
+  <Token Text="NOT" UId="904" />
+  <Blank UId="905" />
+  <Access Scope="LocalVariable" UId="906">
+    <Symbol UId="907">
+      <Component Name="t_FwdContFdbck" UId="908" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="909" />
+  <Blank UId="910" />
+  <LineComment UId="911">
+    <Text UId="912">Fault of forward contactor start</Text>
+  </LineComment>
+  <NewLine UId="913" />
+  <Blank Num="4" UId="914" />
+  <Access Scope="LocalVariable" UId="915">
+    <Symbol UId="916">
+      <Component Name="t_BwdContOnFlt" UId="917" />
+    </Symbol>
+  </Access>
+  <Blank UId="918" />
+  <Token Text=":=" UId="919" />
+  <Blank UId="920" />
+  <Access Scope="LocalVariable" UId="921">
+    <Symbol UId="922">
+      <Component Name="sfb_TON_BwdFdbck" UId="923" />
+      <Token Text="." UId="924" />
+      <Component Name="QB_TimerOut" UId="925" />
+    </Symbol>
+  </Access>
+  <Blank UId="926" />
+  <Token Text="AND" UId="927" />
+  <Blank UId="928" />
+  <Token Text="NOT" UId="929" />
+  <Blank UId="930" />
+  <Access Scope="LocalVariable" UId="931">
+    <Symbol UId="932">
+      <Component Name="t_BwdContFdbck" UId="933" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="934" />
+  <Blank UId="935" />
+  <LineComment UId="936">
+    <Text UId="937">Fault of backward contactor start</Text>
+  </LineComment>
+  <NewLine UId="938" />
+  <Blank Num="4" UId="939" />
+  <NewLine UId="940" />
+  <Blank Num="4" UId="941" />
+  <Access Scope="LocalVariable" UId="942">
+    <Symbol UId="943">
+      <Component Name="t_FwdContOffFlt" UId="944" />
+    </Symbol>
+  </Access>
+  <Blank UId="945" />
+  <Token Text=":=" UId="946" />
+  <Blank UId="947" />
+  <Access Scope="LocalVariable" UId="948">
+    <Symbol UId="949">
+      <Component Name="sfb_TON_FwdFdbck" UId="950" />
+      <Token Text="." UId="951" />
+      <Component Name="QB_TimerOut" UId="952" />
+    </Symbol>
+  </Access>
+  <Blank UId="953" />
+  <Token Text="AND" UId="954" />
+  <Blank UId="955" />
+  <Access Scope="LocalVariable" UId="956">
+    <Symbol UId="957">
+      <Component Name="t_FwdContFdbck" UId="958" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="959" />
+  <Blank Num="4" UId="960" />
+  <LineComment UId="961">
+    <Text UId="962">Fault of forward contactor stop</Text>
+  </LineComment>
+  <NewLine UId="963" />
+  <Blank Num="4" UId="964" />
+  <Access Scope="LocalVariable" UId="965">
+    <Symbol UId="966">
+      <Component Name="t_BwdContOffFlt" UId="967" />
+    </Symbol>
+  </Access>
+  <Blank UId="968" />
+  <Token Text=":=" UId="969" />
+  <Blank UId="970" />
+  <Access Scope="LocalVariable" UId="971">
+    <Symbol UId="972">
+      <Component Name="sfb_TON_BwdFdbck" UId="973" />
+      <Token Text="." UId="974" />
+      <Component Name="QB_TimerOut" UId="975" />
+    </Symbol>
+  </Access>
+  <Blank UId="976" />
+  <Token Text="AND" UId="977" />
+  <Blank UId="978" />
+  <Access Scope="LocalVariable" UId="979">
+    <Symbol UId="980">
+      <Component Name="t_BwdContFdbck" UId="981" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="982" />
+  <Blank Num="4" UId="983" />
+  <LineComment UId="984">
+    <Text UId="985">Fault of backward contactor stop</Text>
+  </LineComment>
+  <NewLine UId="986" />
+  <Blank Num="4" UId="987" />
+  <NewLine UId="988" />
+  <Blank Num="4" UId="989" />
+  <LineComment UId="990">
+    <Text UId="991">Some fault is active</Text>
+  </LineComment>
+  <NewLine UId="992" />
+  <Blank Num="4" UId="993" />
+  <Access Scope="LocalVariable" UId="994">
+    <Symbol UId="995">
+      <Component Name="t_SomeFault" UId="996" />
+    </Symbol>
+  </Access>
+  <Blank UId="997" />
+  <Token Text=":=" UId="998" />
+  <Blank UId="999" />
+  <Access Scope="LocalVariable" UId="1000">
+    <Symbol UId="1001">
+      <Component Name="t_FwdContOnFlt" UId="1002" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1003" />
+  <Blank Num="4" UId="1004" />
+  <Token Text="OR" UId="1005" />
+  <Blank UId="1006" />
+  <Access Scope="LocalVariable" UId="1007">
+    <Symbol UId="1008">
+      <Component Name="t_BwdContOnFlt" UId="1009" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1010" />
+  <Blank Num="4" UId="1011" />
+  <Token Text="OR" UId="1012" />
+  <Blank UId="1013" />
+  <Access Scope="LocalVariable" UId="1014">
+    <Symbol UId="1015">
+      <Component Name="t_FwdContOffFlt" UId="1016" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1017" />
+  <Blank Num="4" UId="1018" />
+  <Token Text="OR" UId="1019" />
+  <Blank UId="1020" />
+  <Access Scope="LocalVariable" UId="1021">
+    <Symbol UId="1022">
+      <Component Name="t_BwdContOffFlt" UId="1023" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1024" />
+  <Blank Num="4" UId="1025" />
+  <Token Text="OR" UId="1026" />
+  <Blank UId="1027" />
+  <Token Text="(" UId="1028" />
+  <Access Scope="LocalVariable" UId="1029">
+    <Symbol UId="1030">
+      <Component Name="i_StartFwd" UId="1031" />
+    </Symbol>
+  </Access>
+  <Blank UId="1032" />
+  <Token Text="AND" UId="1033" />
+  <Blank UId="1034" />
+  <Access Scope="LocalVariable" UId="1035">
+    <Symbol UId="1036">
+      <Component Name="i_StartRev" UId="1037" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1038" />
+  <NewLine UId="1039" />
+  <Blank Num="4" UId="1040" />
+  <Token Text=";" UId="1041" />
+  <NewLine UId="1042" />
+  <Token Text="END_REGION" UId="1043" />
+  <NewLine Num="2" UId="1044" />
+  <Token Text="REGION" UId="1045" />
+  <Blank UId="1046" />
+  <Text UId="1047">Start permitions</Text>
+  <NewLine UId="1048" />
+  <Blank Num="4" UId="1049" />
+  <LineComment UId="1050">
+    <Text UId="1051">Start forward is permited</Text>
+  </LineComment>
+  <NewLine UId="1052" />
+  <Blank Num="4" UId="1053" />
+  <Access Scope="LocalVariable" UId="1054">
+    <Symbol UId="1055">
+      <Component Name="t_StrtFwdPermtd" UId="1056" />
+    </Symbol>
+  </Access>
+  <Blank UId="1057" />
+  <Token Text=":=" UId="1058" />
+  <Blank UId="1059" />
+  <Token Text="NOT" UId="1060" />
+  <Blank UId="1061" />
+  <Access Scope="LocalVariable" UId="1062">
+    <Symbol UId="1063">
+      <Component Name="t_CngDirFwdBlck" UId="1064" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1065" />
+  <Blank Num="4" UId="1066" />
+  <Token Text="AND" UId="1067" />
+  <Blank UId="1068" />
+  <Token Text="NOT" UId="1069" />
+  <Blank UId="1070" />
+  <Access Scope="LocalVariable" UId="1071">
+    <Symbol UId="1072">
+      <Component Name="t_NxtStrtBlck" UId="1073" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1074" />
+  <Blank Num="4" UId="1075" />
+  <Token Text="AND" UId="1076" />
+  <Blank UId="1077" />
+  <Token Text="NOT" UId="1078" />
+  <Blank UId="1079" />
+  <Access Scope="LocalVariable" UId="1080">
+    <Symbol UId="1081">
+      <Component Name="t_SomeFault" UId="1082" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1083" />
+  <Blank Num="4" UId="1084" />
+  <Token Text=";" UId="1085" />
+  <NewLine UId="1086" />
+  <Blank Num="4" UId="1087" />
+  <LineComment UId="1088">
+    <Text UId="1089">Start backward is permited</Text>
+  </LineComment>
+  <NewLine UId="1090" />
+  <Blank Num="4" UId="1091" />
+  <Access Scope="LocalVariable" UId="1092">
+    <Symbol UId="1093">
+      <Component Name="t_StrtBwdPermtd" UId="1094" />
+    </Symbol>
+  </Access>
+  <Blank UId="1095" />
+  <Token Text=":=" UId="1096" />
+  <Blank UId="1097" />
+  <Token Text="NOT" UId="1098" />
+  <Blank UId="1099" />
+  <Access Scope="LocalVariable" UId="1100">
+    <Symbol UId="1101">
+      <Component Name="t_CngDirBwdBlck" UId="1102" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1103" />
+  <Blank Num="4" UId="1104" />
+  <Token Text="AND" UId="1105" />
+  <Blank UId="1106" />
+  <Token Text="NOT" UId="1107" />
+  <Blank UId="1108" />
+  <Access Scope="LocalVariable" UId="1109">
+    <Symbol UId="1110">
+      <Component Name="t_NxtStrtBlck" UId="1111" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1112" />
+  <Blank Num="4" UId="1113" />
+  <Token Text="AND" UId="1114" />
+  <Blank UId="1115" />
+  <Token Text="NOT" UId="1116" />
+  <Blank UId="1117" />
+  <Access Scope="LocalVariable" UId="1118">
+    <Symbol UId="1119">
+      <Component Name="t_SomeFault" UId="1120" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1121" />
+  <Blank Num="4" UId="1122" />
+  <Token Text=";" UId="1123" />
+  <NewLine UId="1124" />
+  <Blank Num="4" UId="1125" />
+  <Token Text="REGION" UId="1126" />
+  <Blank UId="1127" />
+  <Text UId="1128">Description</Text>
+  <NewLine UId="1129" />
+  <Blank Num="8" UId="1130" />
+  <LineComment UId="1131">
+    <Text UId="1132">   Блок керування контактором мотора</Text>
+  </LineComment>
+  <NewLine UId="1133" />
+  <Blank Num="8" UId="1134" />
+  <LineComment UId="1135">
+    <Text UId="1136">   Входи iStartFwd та iStartRev ініціалізує запуск контактора руху мотора вперед і назад відповідно.</Text>
+  </LineComment>
+  <NewLine UId="1137" />
+  <Blank Num="8" UId="1138" />
+  <LineComment UId="1139">
+    <Text UId="1140">   Якщо після подачі команди iStartFwd на входах блоку не з'являється сигнал зворотнього зв'язку iFdbckFwd впродорвж часу irSPTimeFdbck (сек), то помилка запуску контактора osStatuses.FltFwdContOn стає активною. Вона буде активною, поки команда iStartFwd не стане рівною 0.</Text>
+  </LineComment>
+  <NewLine UId="1141" />
+  <Blank Num="8" UId="1142" />
+  <LineComment UId="1143">
+    <Text UId="1144">   Після того, як сигнал про запуск iStartFwd зникає, а сигнал зворотнього зв'язку iFdbckFwd впродорвж часу irSPTimeFdbck не зникає, то помилка зупинки контактора osStatuses.FltFwdContOff стає активною.</Text>
+  </LineComment>
+  <NewLine UId="1145" />
+  <Blank Num="8" UId="1146" />
+  <LineComment UId="1147">
+    <Text UId="1148">   Блок керування контактором мотора</Text>
+  </LineComment>
+  <NewLine UId="1149" />
+  <Blank Num="8" UId="1150" />
+  <LineComment UId="1151">
+    <Text UId="1152">   Аналогічна логіка і для контактора руху мотора назад.</Text>
+  </LineComment>
+  <NewLine UId="1153" />
+  <Blank Num="8" UId="1154" />
+  <LineComment UId="1155">
+    <Text UId="1156">   При появі одночасно сигналів iStartFwd та iStartRev, активується аварія osStatuses.FltStartFwdBwdActive.</Text>
+  </LineComment>
+  <NewLine UId="1157" />
+  <Blank Num="8" UId="1158" />
+  <LineComment UId="1159">
+    <Text UId="1160">   При появі будь-якої з перелічених помилок, подача сигналу 'Пуск' на контактори припиняється.</Text>
+  </LineComment>
+  <NewLine UId="1161" />
+  <Blank Num="8" UId="1162" />
+  <LineComment UId="1163">
+    <Text UId="1164">   Крім того існують блокування, які захищають пускачі від частих стартів і від ввімкнення двигуна у протифазі. Інтервали часу, впродовж яких ці блокування активні, задаються на входах irSPTimeNxtStrt та irSPTimeRev відповідно. Відлік часу починається з моменту припинення подачі команди 'Пуск' на пускач.</Text>
+  </LineComment>
+  <NewLine UId="1165" />
+  <Blank Num="8" UId="1166" />
+  <LineComment UId="1167">
+    <Text UId="1168">   Симулювати роботу блоку можна, якщо подати на вхід iSimMode сигнал true. В такому режимі, при подачі сигналу запуску, симулюється відповідний зворотній зв'язок контактора, але команди запуску не подаються на виходи oCmdRunFwd та oCmdRunRev, а лише відображаються в структурі osStatuses.   </Text>
+  </LineComment>
+  <NewLine UId="1169" />
+  <Blank Num="8" UId="1170" />
+  <NewLine UId="1171" />
+  <Blank Num="8" UId="1172" />
+  <LineComment UId="1173">
+    <Text UId="1174">   Motor contactor control unit</Text>
+  </LineComment>
+  <NewLine UId="1175" />
+  <Blank Num="8" UId="1176" />
+  <LineComment UId="1177">
+    <Text UId="1178">   The iStartFwd and iStartRev inputs initiate the start of the forward and reverse motor contactor, respectively.</Text>
+  </LineComment>
+  <NewLine UId="1179" />
+  <Blank Num="8" UId="1180" />
+  <LineComment UId="1181">
+    <Text UId="1182">   If the iFtbckFwd feedback signal does not appear on the inputs of the block after the iStartFwd command is issued during the irSPTimeFdbck time (sec), the error of starting the contactor osStatuses.FltFwdContOn becomes active. It will remain active until the iStartFwd command becomes 0.</Text>
+  </LineComment>
+  <NewLine UId="1183" />
+  <Blank Num="8" UId="1184" />
+  <LineComment UId="1185">
+    <Text UId="1186">   After the iStartFwd start signal disappears and the iFdbckFwd feedback signal does not disappear during the irSPTimeFdbck time, the stop error of the osStatuses.FltFwdContOff contactor becomes active.</Text>
+  </LineComment>
+  <NewLine UId="1187" />
+  <Blank Num="8" UId="1188" />
+  <LineComment UId="1189">
+    <Text UId="1190">   The logic is similar for the contactor of the motor movement back.</Text>
+  </LineComment>
+  <NewLine UId="1191" />
+  <Blank Num="8" UId="1192" />
+  <LineComment UId="1193">
+    <Text UId="1194">   If the iStartFwd and iStartRev signals appear at the same time, the osStatuses.FltStartFwdBwdActive alarm is activated.</Text>
+  </LineComment>
+  <NewLine UId="1195" />
+  <Blank Num="8" UId="1196" />
+  <LineComment UId="1197">
+    <Text UId="1198">   If any of these errors occur, the 'Start' signal to the contactors is stopped.</Text>
+  </LineComment>
+  <NewLine UId="1199" />
+  <Blank Num="8" UId="1200" />
+  <LineComment UId="1201">
+    <Text UId="1202">   In addition, there are locks that protect the contactors from frequent starts and from starting the motor in antiphase. The time intervals during which these locks are active are set on the irSPTimeNxtStrt and irSPTimeRev inputs, respectively. The countdown starts from the moment the command "Start" on the contactor is stopped.</Text>
+  </LineComment>
+  <NewLine UId="1203" />
+  <Blank Num="8" UId="1204" />
+  <LineComment UId="1205">
+    <Text UId="1206">   You can simulate the operation of the unit if you send a true signal to the iSimMode input. In this mode, when the start signal is applied, the corresponding feedback of the contactor is simulated, but the start commands are not given to the outputs oCmdRunFwd and oCmdRunRev, but are only displayed in the osStatuses structure.    </Text>
+  </LineComment>
+  <NewLine UId="1207" />
+  <Blank Num="4" UId="1208" />
+  <Token Text="END_REGION" UId="1209" />
+  <NewLine UId="1210" />
+  <Blank Num="4" UId="1211" />
+  <NewLine UId="1212" />
+  <Blank Num="4" UId="1213" />
+  <Token Text="REGION" UId="1214" />
+  <Blank UId="1215" />
+  <Text UId="1216">Feedback signal (standard and sim mode)</Text>
+  <NewLine UId="1217" />
+  <Blank Num="8" UId="1218" />
+  <Access Scope="LocalVariable" UId="1219">
+    <Symbol UId="1220">
+      <Component Name="t_FwdContFdbck" UId="1221" />
+    </Symbol>
+  </Access>
+  <Blank UId="1222" />
+  <Token Text=":=" UId="1223" />
+  <Blank UId="1224" />
+  <Access Scope="LocalVariable" UId="1225">
+    <Symbol UId="1226">
+      <Component Name="i_FdbckFwd" UId="1227" />
+    </Symbol>
+  </Access>
+  <Blank UId="1228" />
+  <Token Text="OR" UId="1229" />
+  <Blank UId="1230" />
+  <Token Text="(" UId="1231" />
+  <Access Scope="LocalVariable" UId="1232">
+    <Symbol UId="1233">
+      <Component Name="s_CmdRunFwd" UId="1234" />
+    </Symbol>
+  </Access>
+  <Blank UId="1235" />
+  <Token Text="AND" UId="1236" />
+  <Blank UId="1237" />
+  <Access Scope="LocalVariable" UId="1238">
+    <Symbol UId="1239">
+      <Component Name="i_SimMode" UId="1240" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1241" />
+  <Token Text=";" UId="1242" />
+  <Blank Num="4" UId="1243" />
+  <LineComment UId="1244">
+    <Text UId="1245">Forward contactor feedback (standard and sim mode)</Text>
+  </LineComment>
+  <NewLine UId="1246" />
+  <Blank Num="8" UId="1247" />
+  <Access Scope="LocalVariable" UId="1248">
+    <Symbol UId="1249">
+      <Component Name="t_BwdContFdbck" UId="1250" />
+    </Symbol>
+  </Access>
+  <Blank UId="1251" />
+  <Token Text=":=" UId="1252" />
+  <Blank UId="1253" />
+  <Access Scope="LocalVariable" UId="1254">
+    <Symbol UId="1255">
+      <Component Name="i_FdbckRev" UId="1256" />
+    </Symbol>
+  </Access>
+  <Blank UId="1257" />
+  <Token Text="OR" UId="1258" />
+  <Blank UId="1259" />
+  <Token Text="(" UId="1260" />
+  <Access Scope="LocalVariable" UId="1261">
+    <Symbol UId="1262">
+      <Component Name="s_CmdRunBwd" UId="1263" />
+    </Symbol>
+  </Access>
+  <Blank UId="1264" />
+  <Token Text="AND" UId="1265" />
+  <Blank UId="1266" />
+  <Access Scope="LocalVariable" UId="1267">
+    <Symbol UId="1268">
+      <Component Name="i_SimMode" UId="1269" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1270" />
+  <Token Text=";" UId="1271" />
+  <Blank Num="4" UId="1272" />
+  <LineComment UId="1273">
+    <Text UId="1274">Backward contactor feedback (standard and sim mode)</Text>
+  </LineComment>
+  <NewLine UId="1275" />
+  <Blank Num="4" UId="1276" />
+  <Token Text="END_REGION" UId="1277" />
+  <NewLine UId="1278" />
+  <Blank Num="4" UId="1279" />
+  <NewLine UId="1280" />
+  <Blank Num="4" UId="1281" />
+  <Token Text="REGION" UId="1282" />
+  <Blank UId="1283" />
+  <Text UId="1284">Timers</Text>
+  <NewLine UId="1285" />
+  <Blank Num="8" UId="1286" />
+  <Token Text="REGION" UId="1287" />
+  <Blank UId="1288" />
+  <Text UId="1289">Timers setpoints</Text>
+  <NewLine UId="1290" />
+  <Blank Num="12" UId="1291" />
+  <Access Scope="LocalVariable" UId="1292">
+    <Symbol UId="1293">
+      <Component Name="sfb_TOF_ChngDir" UId="1294" />
+      <Token Text="." UId="1295" />
+      <Component Name="IR_SpTime" UId="1296" />
+    </Symbol>
+  </Access>
+  <Blank UId="1297" />
+  <Token Text=":=" UId="1298" />
+  <Blank UId="1299" />
+  <Access Scope="LocalVariable" UId="1300">
+    <Symbol UId="1301">
+      <Component Name="ir_SPTimeRev" UId="1302" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1303" />
+  <Blank UId="1304" />
+  <LineComment UId="1305">
+    <Text UId="1306">Changing the direction of rotation timer</Text>
+  </LineComment>
+  <NewLine UId="1307" />
+  <Blank Num="12" UId="1308" />
+  <NewLine UId="1309" />
+  <Blank Num="12" UId="1310" />
+  <Access Scope="LocalVariable" UId="1311">
+    <Symbol UId="1312">
+      <Component Name="sfb_TOF_NxtStrt" UId="1313" />
+      <Token Text="." UId="1314" />
+      <Component Name="IR_SpTime" UId="1315" />
+    </Symbol>
+  </Access>
+  <Blank UId="1316" />
+  <Token Text=":=" UId="1317" />
+  <Blank UId="1318" />
+  <Access Scope="LocalVariable" UId="1319">
+    <Symbol UId="1320">
+      <Component Name="ir_SPTimeNxtStrt" UId="1321" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1322" />
+  <Blank UId="1323" />
+  <LineComment UId="1324">
+    <Text UId="1325">Deley beetween motor starts</Text>
+  </LineComment>
+  <NewLine UId="1326" />
+  <Blank Num="12" UId="1327" />
+  <NewLine UId="1328" />
+  <Blank Num="12" UId="1329" />
+  <Access Scope="LocalVariable" UId="1330">
+    <Symbol UId="1331">
+      <Component Name="sfb_TON_FwdFdbck" UId="1332" />
+      <Token Text="." UId="1333" />
+      <Component Name="IR_SpTime" UId="1334" />
+    </Symbol>
+  </Access>
+  <Blank UId="1335" />
+  <Token Text=":=" UId="1336" />
+  <Blank UId="1337" />
+  <Access Scope="LocalVariable" UId="1338">
+    <Symbol UId="1339">
+      <Component Name="ir_SPTimeFdbck" UId="1340" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1341" />
+  <Blank Num="2" UId="1342" />
+  <LineComment UId="1343">
+    <Text UId="1344">Feedback from contactor on (forward)</Text>
+  </LineComment>
+  <NewLine UId="1345" />
+  <Blank Num="12" UId="1346" />
+  <Access Scope="LocalVariable" UId="1347">
+    <Symbol UId="1348">
+      <Component Name="sfb_TON_BwdFdbck" UId="1349" />
+      <Token Text="." UId="1350" />
+      <Component Name="IR_SpTime" UId="1351" />
+    </Symbol>
+  </Access>
+  <Blank UId="1352" />
+  <Token Text=":=" UId="1353" />
+  <Blank UId="1354" />
+  <Access Scope="LocalVariable" UId="1355">
+    <Symbol UId="1356">
+      <Component Name="ir_SPTimeFdbck" UId="1357" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1358" />
+  <Blank Num="2" UId="1359" />
+  <LineComment UId="1360">
+    <Text UId="1361">Feedback from contactor on (backward)</Text>
+  </LineComment>
+  <NewLine UId="1362" />
+  <Blank Num="8" UId="1363" />
+  <Token Text="END_REGION" UId="1364" />
+  <NewLine UId="1365" />
+  <Blank Num="8" UId="1366" />
+  <NewLine UId="1367" />
+  <Blank Num="8" UId="1368" />
+  <Token Text="REGION" UId="1369" />
+  <Blank UId="1370" />
+  <Text UId="1371">Timers inputsts</Text>
+  <NewLine UId="1372" />
+  <Blank Num="12" UId="1373" />
+  <Access Scope="LocalVariable" UId="1374">
+    <Symbol UId="1375">
+      <Component Name="sfb_TOF_ChngDir" UId="1376" />
+      <Token Text="." UId="1377" />
+      <Component Name="IB_StartTimerInput" UId="1378" />
+    </Symbol>
+  </Access>
+  <Blank UId="1379" />
+  <Token Text=":=" UId="1380" />
+  <Blank UId="1381" />
+  <Access Scope="LocalVariable" UId="1382">
+    <Symbol UId="1383">
+      <Component Name="s_CmdRunFwd" UId="1384" />
+    </Symbol>
+  </Access>
+  <Blank Num="2" UId="1385" />
+  <LineComment UId="1386">
+    <Text UId="1387">Changing the direction of rotation timer</Text>
+  </LineComment>
+  <NewLine UId="1388" />
+  <Blank Num="12" UId="1389" />
+  <Token Text="OR" UId="1390" />
+  <Blank UId="1391" />
+  <Access Scope="LocalVariable" UId="1392">
+    <Symbol UId="1393">
+      <Component Name="s_CmdRunBwd" UId="1394" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1395" />
+  <Blank Num="12" UId="1396" />
+  <Token Text=";" UId="1397" />
+  <NewLine UId="1398" />
+  <Blank Num="12" UId="1399" />
+  <NewLine UId="1400" />
+  <Blank Num="12" UId="1401" />
+  <Access Scope="LocalVariable" UId="1402">
+    <Symbol UId="1403">
+      <Component Name="sfb_TOF_NxtStrt" UId="1404" />
+      <Token Text="." UId="1405" />
+      <Component Name="IB_StartTimerInput" UId="1406" />
+    </Symbol>
+  </Access>
+  <Blank UId="1407" />
+  <Token Text=":=" UId="1408" />
+  <Blank UId="1409" />
+  <Access Scope="LocalVariable" UId="1410">
+    <Symbol UId="1411">
+      <Component Name="s_CmdRunFwd" UId="1412" />
+    </Symbol>
+  </Access>
+  <Blank Num="2" UId="1413" />
+  <LineComment UId="1414">
+    <Text UId="1415">Deley beetween motor starts</Text>
+  </LineComment>
+  <NewLine UId="1416" />
+  <Blank Num="12" UId="1417" />
+  <Token Text="OR" UId="1418" />
+  <Blank UId="1419" />
+  <Access Scope="LocalVariable" UId="1420">
+    <Symbol UId="1421">
+      <Component Name="s_CmdRunBwd" UId="1422" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1423" />
+  <Blank Num="12" UId="1424" />
+  <Token Text="OR" UId="1425" />
+  <Blank UId="1426" />
+  <Access Scope="LocalVariable" UId="1427">
+    <Symbol UId="1428">
+      <Component Name="i_FdbckFwd" UId="1429" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1430" />
+  <Blank Num="12" UId="1431" />
+  <Token Text="OR" UId="1432" />
+  <Blank UId="1433" />
+  <Access Scope="LocalVariable" UId="1434">
+    <Symbol UId="1435">
+      <Component Name="i_FdbckRev" UId="1436" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1437" />
+  <Blank Num="12" UId="1438" />
+  <Token Text=";" UId="1439" />
+  <NewLine UId="1440" />
+  <Blank Num="12" UId="1441" />
+  <NewLine UId="1442" />
+  <Blank Num="12" UId="1443" />
+  <Access Scope="LocalVariable" UId="1444">
+    <Symbol UId="1445">
+      <Component Name="sfb_TON_FwdFdbck" UId="1446" />
+      <Token Text="." UId="1447" />
+      <Component Name="IB_StartTimerInput" UId="1448" />
+    </Symbol>
+  </Access>
+  <Blank UId="1449" />
+  <Token Text=":=" UId="1450" />
+  <Blank UId="1451" />
+  <Token Text="(" UId="1452" />
+  <Access Scope="LocalVariable" UId="1453">
+    <Symbol UId="1454">
+      <Component Name="s_CmdRunFwd" UId="1455" />
+    </Symbol>
+  </Access>
+  <Blank Num="4" UId="1456" />
+  <LineComment UId="1457">
+    <Text UId="1458">Feedback from contactor on (forward)</Text>
+  </LineComment>
+  <NewLine UId="1459" />
+  <Blank Num="12" UId="1460" />
+  <Token Text="AND" UId="1461" />
+  <Blank UId="1462" />
+  <Token Text="NOT" UId="1463" />
+  <Blank UId="1464" />
+  <Access Scope="LocalVariable" UId="1465">
+    <Symbol UId="1466">
+      <Component Name="t_FwdContFdbck" UId="1467" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1468" />
+  <NewLine UId="1469" />
+  <Blank Num="12" UId="1470" />
+  <NewLine UId="1471" />
+  <Blank Num="12" UId="1472" />
+  <Token Text="OR" UId="1473" />
+  <Blank UId="1474" />
+  <Token Text="(" UId="1475" />
+  <Access Scope="LocalVariable" UId="1476">
+    <Symbol UId="1477">
+      <Component Name="sfb_TON_FwdFdbck" UId="1478" />
+      <Token Text="." UId="1479" />
+      <Component Name="QB_TimerOut" UId="1480" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1481" />
+  <Blank Num="12" UId="1482" />
+  <Token Text="AND" UId="1483" />
+  <Blank UId="1484" />
+  <Token Text="NOT" UId="1485" />
+  <Blank UId="1486" />
+  <Access Scope="LocalVariable" UId="1487">
+    <Symbol UId="1488">
+      <Component Name="t_FwdContFdbck" UId="1489" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1490" />
+  <Blank Num="12" UId="1491" />
+  <Token Text="AND" UId="1492" />
+  <Blank UId="1493" />
+  <Access Scope="LocalVariable" UId="1494">
+    <Symbol UId="1495">
+      <Component Name="i_StartFwd" UId="1496" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1497" />
+  <NewLine UId="1498" />
+  <Blank Num="12" UId="1499" />
+  <NewLine UId="1500" />
+  <Blank Num="12" UId="1501" />
+  <Token Text="OR" UId="1502" />
+  <Blank UId="1503" />
+  <Token Text="(" UId="1504" />
+  <Token Text="NOT" UId="1505" />
+  <Blank UId="1506" />
+  <Access Scope="LocalVariable" UId="1507">
+    <Symbol UId="1508">
+      <Component Name="s_CmdRunFwd" UId="1509" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1510" />
+  <Blank Num="12" UId="1511" />
+  <Token Text="AND" UId="1512" />
+  <Blank UId="1513" />
+  <Access Scope="LocalVariable" UId="1514">
+    <Symbol UId="1515">
+      <Component Name="t_FwdContFdbck" UId="1516" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1517" />
+  <NewLine UId="1518" />
+  <Blank Num="12" UId="1519" />
+  <NewLine UId="1520" />
+  <Blank Num="12" UId="1521" />
+  <Token Text="OR" UId="1522" />
+  <Blank UId="1523" />
+  <Token Text="(" UId="1524" />
+  <Access Scope="LocalVariable" UId="1525">
+    <Symbol UId="1526">
+      <Component Name="sfb_TON_FwdFdbck" UId="1527" />
+      <Token Text="." UId="1528" />
+      <Component Name="QB_TimerOut" UId="1529" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1530" />
+  <Blank Num="12" UId="1531" />
+  <Token Text="AND" UId="1532" />
+  <Blank UId="1533" />
+  <Access Scope="LocalVariable" UId="1534">
+    <Symbol UId="1535">
+      <Component Name="t_FwdContFdbck" UId="1536" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1537" />
+  <Blank Num="12" UId="1538" />
+  <Token Text="AND" UId="1539" />
+  <Blank UId="1540" />
+  <Token Text="NOT" UId="1541" />
+  <Blank UId="1542" />
+  <Access Scope="LocalVariable" UId="1543">
+    <Symbol UId="1544">
+      <Component Name="i_StartFwd" UId="1545" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1546" />
+  <NewLine UId="1547" />
+  <Blank Num="12" UId="1548" />
+  <Token Text=";" UId="1549" />
+  <NewLine UId="1550" />
+  <Blank Num="12" UId="1551" />
+  <NewLine UId="1552" />
+  <Blank Num="12" UId="1553" />
+  <Access Scope="LocalVariable" UId="1554">
+    <Symbol UId="1555">
+      <Component Name="sfb_TON_BwdFdbck" UId="1556" />
+      <Token Text="." UId="1557" />
+      <Component Name="IB_StartTimerInput" UId="1558" />
+    </Symbol>
+  </Access>
+  <Blank UId="1559" />
+  <Token Text=":=" UId="1560" />
+  <Blank UId="1561" />
+  <Token Text="(" UId="1562" />
+  <Access Scope="LocalVariable" UId="1563">
+    <Symbol UId="1564">
+      <Component Name="s_CmdRunBwd" UId="1565" />
+    </Symbol>
+  </Access>
+  <Blank Num="4" UId="1566" />
+  <LineComment UId="1567">
+    <Text UId="1568">Feedback from contactor on (backward)</Text>
+  </LineComment>
+  <NewLine UId="1569" />
+  <Blank Num="12" UId="1570" />
+  <Token Text="AND" UId="1571" />
+  <Blank UId="1572" />
+  <Token Text="NOT" UId="1573" />
+  <Blank UId="1574" />
+  <Access Scope="LocalVariable" UId="1575">
+    <Symbol UId="1576">
+      <Component Name="t_BwdContFdbck" UId="1577" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1578" />
+  <NewLine UId="1579" />
+  <Blank Num="12" UId="1580" />
+  <NewLine UId="1581" />
+  <Blank Num="12" UId="1582" />
+  <Token Text="OR" UId="1583" />
+  <Blank UId="1584" />
+  <Token Text="(" UId="1585" />
+  <Access Scope="LocalVariable" UId="1586">
+    <Symbol UId="1587">
+      <Component Name="sfb_TON_BwdFdbck" UId="1588" />
+      <Token Text="." UId="1589" />
+      <Component Name="QB_TimerOut" UId="1590" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1591" />
+  <Blank Num="12" UId="1592" />
+  <Token Text="AND" UId="1593" />
+  <Blank UId="1594" />
+  <Token Text="NOT" UId="1595" />
+  <Blank UId="1596" />
+  <Access Scope="LocalVariable" UId="1597">
+    <Symbol UId="1598">
+      <Component Name="t_BwdContFdbck" UId="1599" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1600" />
+  <Blank Num="12" UId="1601" />
+  <Token Text="AND" UId="1602" />
+  <Blank UId="1603" />
+  <Access Scope="LocalVariable" UId="1604">
+    <Symbol UId="1605">
+      <Component Name="i_StartRev" UId="1606" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1607" />
+  <NewLine UId="1608" />
+  <Blank Num="12" UId="1609" />
+  <NewLine UId="1610" />
+  <Blank Num="12" UId="1611" />
+  <Token Text="OR" UId="1612" />
+  <Blank UId="1613" />
+  <Token Text="(" UId="1614" />
+  <Token Text="NOT" UId="1615" />
+  <Blank UId="1616" />
+  <Access Scope="LocalVariable" UId="1617">
+    <Symbol UId="1618">
+      <Component Name="s_CmdRunBwd" UId="1619" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1620" />
+  <Blank Num="12" UId="1621" />
+  <Token Text="AND" UId="1622" />
+  <Blank UId="1623" />
+  <Access Scope="LocalVariable" UId="1624">
+    <Symbol UId="1625">
+      <Component Name="t_BwdContFdbck" UId="1626" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1627" />
+  <NewLine UId="1628" />
+  <Blank Num="12" UId="1629" />
+  <NewLine UId="1630" />
+  <Blank Num="12" UId="1631" />
+  <Token Text="OR" UId="1632" />
+  <Blank UId="1633" />
+  <Token Text="(" UId="1634" />
+  <Access Scope="LocalVariable" UId="1635">
+    <Symbol UId="1636">
+      <Component Name="sfb_TON_BwdFdbck" UId="1637" />
+      <Token Text="." UId="1638" />
+      <Component Name="QB_TimerOut" UId="1639" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1640" />
+  <Blank Num="12" UId="1641" />
+  <Token Text="AND" UId="1642" />
+  <Blank UId="1643" />
+  <Access Scope="LocalVariable" UId="1644">
+    <Symbol UId="1645">
+      <Component Name="t_BwdContFdbck" UId="1646" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1647" />
+  <Blank Num="12" UId="1648" />
+  <Token Text="AND" UId="1649" />
+  <Blank UId="1650" />
+  <Token Text="NOT" UId="1651" />
+  <Blank UId="1652" />
+  <Access Scope="LocalVariable" UId="1653">
+    <Symbol UId="1654">
+      <Component Name="i_StartRev" UId="1655" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1656" />
+  <NewLine UId="1657" />
+  <Blank Num="12" UId="1658" />
+  <Token Text=";" UId="1659" />
+  <NewLine UId="1660" />
+  <Blank Num="8" UId="1661" />
+  <Token Text="END_REGION" UId="1662" />
+  <NewLine UId="1663" />
+  <Blank Num="8" UId="1664" />
+  <NewLine UId="1665" />
+  <Blank Num="8" UId="1666" />
+  <Token Text="REGION" UId="1667" />
+  <Blank UId="1668" />
+  <Text UId="1669">Timers calling </Text>
+  <NewLine UId="1670" />
+  <Blank Num="12" UId="1671" />
+  <LineComment UId="1672">
+    <Text UId="1673">PLC cycle time</Text>
+  </LineComment>
+  <NewLine UId="1674" />
+  <Blank Num="12" UId="1675" />
+  <Access Scope="LocalVariable" UId="1676">
+    <Symbol UId="1677">
+      <Component Name="sfb_TOF_ChngDir" UId="1678" />
+      <Token Text="." UId="1679" />
+      <Component Name="IR_CycleTime" UId="1680" />
+    </Symbol>
+  </Access>
+  <Blank UId="1681" />
+  <Token Text=":=" UId="1682" />
+  <Blank Num="8" UId="1683" />
+  <LineComment UId="1684">
+    <Text UId="1685">Changing the direction of rotation timer</Text>
+  </LineComment>
+  <NewLine UId="1686" />
+  <Blank Num="12" UId="1687" />
+  <Access Scope="LocalVariable" UId="1688">
+    <Symbol UId="1689">
+      <Component Name="sfb_TOF_NxtStrt" UId="1690" />
+      <Token Text="." UId="1691" />
+      <Component Name="IR_CycleTime" UId="1692" />
+    </Symbol>
+  </Access>
+  <Blank UId="1693" />
+  <Token Text=":=" UId="1694" />
+  <Blank Num="8" UId="1695" />
+  <LineComment UId="1696">
+    <Text UId="1697">Deley beetween motor starts</Text>
+  </LineComment>
+  <NewLine UId="1698" />
+  <Blank Num="12" UId="1699" />
+  <Access Scope="LocalVariable" UId="1700">
+    <Symbol UId="1701">
+      <Component Name="sfb_TON_FwdFdbck" UId="1702" />
+      <Token Text="." UId="1703" />
+      <Component Name="IR_CycleTime" UId="1704" />
+    </Symbol>
+  </Access>
+  <Blank UId="1705" />
+  <Token Text=":=" UId="1706" />
+  <Blank Num="7" UId="1707" />
+  <LineComment UId="1708">
+    <Text UId="1709">Feedback from contactor on (forward)</Text>
+  </LineComment>
+  <NewLine UId="1710" />
+  <Blank Num="12" UId="1711" />
+  <Access Scope="LocalVariable" UId="1712">
+    <Symbol UId="1713">
+      <Component Name="sfb_TON_BwdFdbck" UId="1714" />
+      <Token Text="." UId="1715" />
+      <Component Name="IR_CycleTime" UId="1716" />
+    </Symbol>
+  </Access>
+  <Blank UId="1717" />
+  <Token Text=":=" UId="1718" />
+  <Blank Num="7" UId="1719" />
+  <LineComment UId="1720">
+    <Text UId="1721">Feedback from contactor on (backward)</Text>
+  </LineComment>
+  <NewLine UId="1722" />
+  <Blank Num="12" UId="1723" />
+  <Access Scope="LocalVariable" UId="1724">
+    <Symbol UId="1725">
+      <Component Name="ir_TimeCycle" UId="1726" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1727" />
+  <NewLine UId="1728" />
+  <Blank Num="12" UId="1729" />
+  <LineComment UId="1730">
+    <Text UId="1731">Timers functions</Text>
+  </LineComment>
+  <NewLine UId="1732" />
+  <Blank Num="12" UId="1733" />
+  <Access Scope="Call" UId="1734">
+    <CallInfo UId="1735" BlockType="FB" Name="Lib_FB_Timer_OFF_Simple">
+      <Instance Scope="LocalVariable" UId="1736">
+        <Component Name="sfb_TOF_ChngDir" UId="1737" />
+      </Instance>
+      <Token Text="(" UId="1738" />
+      <Token Text=")" UId="1744" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="1745" />
+  <Blank Num="5" UId="1746" />
+  <LineComment UId="1747">
+    <Text UId="1748">Changing the direction of rotation timer</Text>
+  </LineComment>
+  <NewLine UId="1749" />
+  <Blank Num="12" UId="1750" />
+  <Access Scope="Call" UId="1751">
+    <CallInfo UId="1752" BlockType="FB" Name="Lib_FB_Timer_OFF_Simple">
+      <Instance Scope="LocalVariable" UId="1753">
+        <Component Name="sfb_TOF_NxtStrt" UId="1754" />
+      </Instance>
+      <Token Text="(" UId="1755" />
+      <Token Text=")" UId="1761" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="1762" />
+  <Blank Num="5" UId="1763" />
+  <LineComment UId="1764">
+    <Text UId="1765">Deley beetween motor starts</Text>
+  </LineComment>
+  <NewLine UId="1766" />
+  <Blank Num="12" UId="1767" />
+  <Access Scope="Call" UId="1768">
+    <CallInfo UId="1769" BlockType="FB" Name="Lib_FB_Timer_ON_Simple">
+      <Instance Scope="LocalVariable" UId="1770">
+        <Component Name="sfb_TON_FwdFdbck" UId="1771" />
+      </Instance>
+      <Token Text="(" UId="1772" />
+      <Token Text=")" UId="1778" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="1779" />
+  <Blank Num="4" UId="1780" />
+  <LineComment UId="1781">
+    <Text UId="1782">Feedback from contactor on (forward)</Text>
+  </LineComment>
+  <NewLine UId="1783" />
+  <Blank Num="12" UId="1784" />
+  <Access Scope="Call" UId="1785">
+    <CallInfo UId="1786" BlockType="FB" Name="Lib_FB_Timer_ON_Simple">
+      <Instance Scope="LocalVariable" UId="1787">
+        <Component Name="sfb_TON_BwdFdbck" UId="1788" />
+      </Instance>
+      <Token Text="(" UId="1789" />
+      <Token Text=")" UId="1795" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="1796" />
+  <Blank Num="4" UId="1797" />
+  <LineComment UId="1798">
+    <Text UId="1799">Feedback from contactor on (backward)</Text>
+  </LineComment>
+  <NewLine UId="1800" />
+  <Blank Num="8" UId="1801" />
+  <Token Text="END_REGION" UId="1802" />
+  <NewLine UId="1803" />
+  <Blank Num="4" UId="1804" />
+  <Token Text="END_REGION" UId="1805" />
+  <NewLine UId="1806" />
+  <Blank Num="4" UId="1807" />
+  <NewLine UId="1808" />
+  <Blank Num="4" UId="1809" />
+  <Token Text="REGION" UId="1810" />
+  <Blank UId="1811" />
+  <Text UId="1812">Old direction</Text>
+  <NewLine UId="1813" />
+  <Blank Num="8" UId="1814" />
+  <LineComment UId="1815">
+    <Text UId="1816">Last direction (true = forward)</Text>
+  </LineComment>
+  <NewLine UId="1817" />
+  <Blank Num="8" UId="1818" />
+  <Token Text="IF" UId="1819" />
+  <Blank UId="1820" />
+  <Access Scope="LocalVariable" UId="1821">
+    <Symbol UId="1822">
+      <Component Name="s_CmdRunFwd" UId="1823" />
+    </Symbol>
+  </Access>
+  <Blank UId="1824" />
+  <Token Text="THEN" UId="1825" />
+  <NewLine UId="1826" />
+  <Blank Num="12" UId="1827" />
+  <Access Scope="LocalVariable" UId="1828">
+    <Symbol UId="1829">
+      <Component Name="s_OldDirFwd" UId="1830" />
+    </Symbol>
+  </Access>
+  <Blank UId="1831" />
+  <Token Text=":=" UId="1832" />
+  <Blank UId="1833" />
+  <Access Scope="LiteralConstant" UId="1834">
+    <Constant UId="1835">
+      <ConstantValue UId="1837">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1838" />
+  <NewLine UId="1839" />
+  <Blank Num="8" UId="1840" />
+  <Token Text="ELSIF" UId="1841" />
+  <Blank UId="1842" />
+  <Access Scope="LocalVariable" UId="1843">
+    <Symbol UId="1844">
+      <Component Name="s_CmdRunBwd" UId="1845" />
+    </Symbol>
+  </Access>
+  <Blank UId="1846" />
+  <Token Text="THEN" UId="1847" />
+  <NewLine UId="1848" />
+  <Blank Num="12" UId="1849" />
+  <Access Scope="LocalVariable" UId="1850">
+    <Symbol UId="1851">
+      <Component Name="s_OldDirFwd" UId="1852" />
+    </Symbol>
+  </Access>
+  <Blank UId="1853" />
+  <Token Text=":=" UId="1854" />
+  <Blank UId="1855" />
+  <Access Scope="LiteralConstant" UId="1856">
+    <Constant UId="1857">
+      <ConstantValue UId="1859">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1860" />
+  <NewLine UId="1861" />
+  <Blank Num="8" UId="1862" />
+  <Token Text="END_IF" UId="1863" />
+  <Token Text=";" UId="1864" />
+  <NewLine UId="1865" />
+  <Blank Num="4" UId="1866" />
+  <Token Text="END_REGION" UId="1867" />
+  <NewLine UId="1868" />
+  <Blank Num="4" UId="1869" />
+  <NewLine UId="1870" />
+  <Blank Num="4" UId="1871" />
+  <Token Text="REGION" UId="1872" />
+  <Blank UId="1873" />
+  <Text UId="1874">Block start/stop</Text>
+  <NewLine UId="1875" />
+  <Blank Num="8" UId="1876" />
+  <LineComment UId="1877">
+    <Text UId="1878">Delay before direction changing</Text>
+  </LineComment>
+  <NewLine UId="1879" />
+  <Blank Num="8" UId="1880" />
+  <Access Scope="LocalVariable" UId="1881">
+    <Symbol UId="1882">
+      <Component Name="t_CngDirFwdBlck" UId="1883" />
+    </Symbol>
+  </Access>
+  <Blank UId="1884" />
+  <Token Text=":=" UId="1885" />
+  <Blank UId="1886" />
+  <Token Text="(" UId="1887" />
+  <Access Scope="LocalVariable" UId="1888">
+    <Symbol UId="1889">
+      <Component Name="sfb_TOF_ChngDir" UId="1890" />
+      <Token Text="." UId="1891" />
+      <Component Name="QB_TimerOut" UId="1892" />
+    </Symbol>
+  </Access>
+  <Blank UId="1893" />
+  <Token Text="AND" UId="1894" />
+  <Blank UId="1895" />
+  <Token Text="NOT" UId="1896" />
+  <Blank UId="1897" />
+  <Access Scope="LocalVariable" UId="1898">
+    <Symbol UId="1899">
+      <Component Name="s_CmdRunFwd" UId="1900" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1901" />
+  <NewLine UId="1902" />
+  <Blank Num="8" UId="1903" />
+  <Token Text="AND" UId="1904" />
+  <Blank UId="1905" />
+  <Token Text="NOT" UId="1906" />
+  <Blank UId="1907" />
+  <Access Scope="LocalVariable" UId="1908">
+    <Symbol UId="1909">
+      <Component Name="s_OldDirFwd" UId="1910" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1911" />
+  <Blank Num="8" UId="1912" />
+  <Token Text=";" UId="1913" />
+  <NewLine UId="1914" />
+  <Blank Num="8" UId="1915" />
+  <LineComment UId="1916">
+    <Text UId="1917">Delay before direction changing</Text>
+  </LineComment>
+  <NewLine UId="1918" />
+  <Blank Num="8" UId="1919" />
+  <Access Scope="LocalVariable" UId="1920">
+    <Symbol UId="1921">
+      <Component Name="t_CngDirBwdBlck" UId="1922" />
+    </Symbol>
+  </Access>
+  <Blank UId="1923" />
+  <Token Text=":=" UId="1924" />
+  <Blank UId="1925" />
+  <Token Text="(" UId="1926" />
+  <Access Scope="LocalVariable" UId="1927">
+    <Symbol UId="1928">
+      <Component Name="sfb_TOF_ChngDir" UId="1929" />
+      <Token Text="." UId="1930" />
+      <Component Name="QB_TimerOut" UId="1931" />
+    </Symbol>
+  </Access>
+  <Blank UId="1932" />
+  <Token Text="AND" UId="1933" />
+  <Blank UId="1934" />
+  <Token Text="NOT" UId="1935" />
+  <Blank UId="1936" />
+  <Access Scope="LocalVariable" UId="1937">
+    <Symbol UId="1938">
+      <Component Name="s_CmdRunBwd" UId="1939" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1940" />
+  <NewLine UId="1941" />
+  <Blank Num="8" UId="1942" />
+  <Token Text="AND" UId="1943" />
+  <Blank UId="1944" />
+  <Access Scope="LocalVariable" UId="1945">
+    <Symbol UId="1946">
+      <Component Name="s_OldDirFwd" UId="1947" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1948" />
+  <Blank Num="8" UId="1949" />
+  <Token Text=";" UId="1950" />
+  <NewLine UId="1951" />
+  <Blank Num="8" UId="1952" />
+  <LineComment UId="1953">
+    <Text UId="1954">Next start block</Text>
+  </LineComment>
+  <NewLine UId="1955" />
+  <Blank Num="8" UId="1956" />
+  <Access Scope="LocalVariable" UId="1957">
+    <Symbol UId="1958">
+      <Component Name="t_NxtStrtBlck" UId="1959" />
+    </Symbol>
+  </Access>
+  <Blank UId="1960" />
+  <Token Text=":=" UId="1961" />
+  <Blank UId="1962" />
+  <Access Scope="LocalVariable" UId="1963">
+    <Symbol UId="1964">
+      <Component Name="sfb_TOF_NxtStrt" UId="1965" />
+      <Token Text="." UId="1966" />
+      <Component Name="QB_TimerOut" UId="1967" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1968" />
+  <Blank Num="8" UId="1969" />
+  <Token Text="AND" UId="1970" />
+  <Blank UId="1971" />
+  <Token Text="NOT" UId="1972" />
+  <Blank UId="1973" />
+  <Token Text="(" UId="1974" />
+  <Access Scope="LocalVariable" UId="1975">
+    <Symbol UId="1976">
+      <Component Name="s_CmdRunFwd" UId="1977" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1978" />
+  <Blank Num="8" UId="1979" />
+  <Token Text="OR" UId="1980" />
+  <Blank UId="1981" />
+  <Access Scope="LocalVariable" UId="1982">
+    <Symbol UId="1983">
+      <Component Name="s_CmdRunBwd" UId="1984" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1985" />
+  <Blank Num="8" UId="1986" />
+  <Token Text="OR" UId="1987" />
+  <Blank UId="1988" />
+  <Access Scope="LocalVariable" UId="1989">
+    <Symbol UId="1990">
+      <Component Name="i_FdbckFwd" UId="1991" />
+    </Symbol>
+  </Access>
+  <NewLine UId="1992" />
+  <Blank Num="8" UId="1993" />
+  <Token Text="OR" UId="1994" />
+  <Blank UId="1995" />
+  <Access Scope="LocalVariable" UId="1996">
+    <Symbol UId="1997">
+      <Component Name="i_FdbckRev" UId="1998" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="1999" />
+  <NewLine UId="2000" />
+  <Blank Num="8" UId="2001" />
+  <Token Text=";" UId="2002" />
+  <NewLine UId="2003" />
+  <Blank Num="4" UId="2004" />
+  <Token Text="END_REGION" UId="2005" />
+  <NewLine UId="2006" />
+  <Blank Num="4" UId="2007" />
+  <NewLine UId="2008" />
+  <Blank Num="4" UId="2009" />
+  <Token Text="REGION" UId="2010" />
+  <Blank UId="2011" />
+  <Text UId="2012">Faults</Text>
+  <NewLine UId="2013" />
+  <Blank Num="8" UId="2014" />
+  <Access Scope="LocalVariable" UId="2015">
+    <Symbol UId="2016">
+      <Component Name="t_FwdContOnFlt" UId="2017" />
+    </Symbol>
+  </Access>
+  <Blank UId="2018" />
+  <Token Text=":=" UId="2019" />
+  <Blank UId="2020" />
+  <Access Scope="LocalVariable" UId="2021">
+    <Symbol UId="2022">
+      <Component Name="sfb_TON_FwdFdbck" UId="2023" />
+      <Token Text="." UId="2024" />
+      <Component Name="QB_TimerOut" UId="2025" />
+    </Symbol>
+  </Access>
+  <Blank UId="2026" />
+  <Token Text="AND" UId="2027" />
+  <Blank UId="2028" />
+  <Token Text="NOT" UId="2029" />
+  <Blank UId="2030" />
+  <Access Scope="LocalVariable" UId="2031">
+    <Symbol UId="2032">
+      <Component Name="t_FwdContFdbck" UId="2033" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2034" />
+  <Blank UId="2035" />
+  <LineComment UId="2036">
+    <Text UId="2037">Fault of forward contactor start</Text>
+  </LineComment>
+  <NewLine UId="2038" />
+  <Blank Num="8" UId="2039" />
+  <Access Scope="LocalVariable" UId="2040">
+    <Symbol UId="2041">
+      <Component Name="t_BwdContOnFlt" UId="2042" />
+    </Symbol>
+  </Access>
+  <Blank UId="2043" />
+  <Token Text=":=" UId="2044" />
+  <Blank UId="2045" />
+  <Access Scope="LocalVariable" UId="2046">
+    <Symbol UId="2047">
+      <Component Name="sfb_TON_BwdFdbck" UId="2048" />
+      <Token Text="." UId="2049" />
+      <Component Name="QB_TimerOut" UId="2050" />
+    </Symbol>
+  </Access>
+  <Blank UId="2051" />
+  <Token Text="AND" UId="2052" />
+  <Blank UId="2053" />
+  <Token Text="NOT" UId="2054" />
+  <Blank UId="2055" />
+  <Access Scope="LocalVariable" UId="2056">
+    <Symbol UId="2057">
+      <Component Name="t_BwdContFdbck" UId="2058" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2059" />
+  <Blank UId="2060" />
+  <LineComment UId="2061">
+    <Text UId="2062">Fault of backward contactor start</Text>
+  </LineComment>
+  <NewLine UId="2063" />
+  <Blank Num="8" UId="2064" />
+  <NewLine UId="2065" />
+  <Blank Num="8" UId="2066" />
+  <Access Scope="LocalVariable" UId="2067">
+    <Symbol UId="2068">
+      <Component Name="t_FwdContOffFlt" UId="2069" />
+    </Symbol>
+  </Access>
+  <Blank UId="2070" />
+  <Token Text=":=" UId="2071" />
+  <Blank UId="2072" />
+  <Access Scope="LocalVariable" UId="2073">
+    <Symbol UId="2074">
+      <Component Name="sfb_TON_FwdFdbck" UId="2075" />
+      <Token Text="." UId="2076" />
+      <Component Name="QB_TimerOut" UId="2077" />
+    </Symbol>
+  </Access>
+  <Blank UId="2078" />
+  <Token Text="AND" UId="2079" />
+  <Blank UId="2080" />
+  <Access Scope="LocalVariable" UId="2081">
+    <Symbol UId="2082">
+      <Component Name="t_FwdContFdbck" UId="2083" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2084" />
+  <Blank Num="4" UId="2085" />
+  <LineComment UId="2086">
+    <Text UId="2087">Fault of forward contactor stop</Text>
+  </LineComment>
+  <NewLine UId="2088" />
+  <Blank Num="8" UId="2089" />
+  <Access Scope="LocalVariable" UId="2090">
+    <Symbol UId="2091">
+      <Component Name="t_BwdContOffFlt" UId="2092" />
+    </Symbol>
+  </Access>
+  <Blank UId="2093" />
+  <Token Text=":=" UId="2094" />
+  <Blank UId="2095" />
+  <Access Scope="LocalVariable" UId="2096">
+    <Symbol UId="2097">
+      <Component Name="sfb_TON_BwdFdbck" UId="2098" />
+      <Token Text="." UId="2099" />
+      <Component Name="QB_TimerOut" UId="2100" />
+    </Symbol>
+  </Access>
+  <Blank UId="2101" />
+  <Token Text="AND" UId="2102" />
+  <Blank UId="2103" />
+  <Access Scope="LocalVariable" UId="2104">
+    <Symbol UId="2105">
+      <Component Name="t_BwdContFdbck" UId="2106" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2107" />
+  <Blank Num="4" UId="2108" />
+  <LineComment UId="2109">
+    <Text UId="2110">Fault of backward contactor stop</Text>
+  </LineComment>
+  <NewLine UId="2111" />
+  <Blank Num="8" UId="2112" />
+  <NewLine UId="2113" />
+  <Blank Num="8" UId="2114" />
+  <LineComment UId="2115">
+    <Text UId="2116">Some fault is active</Text>
+  </LineComment>
+  <NewLine UId="2117" />
+  <Blank Num="8" UId="2118" />
+  <Access Scope="LocalVariable" UId="2119">
+    <Symbol UId="2120">
+      <Component Name="t_SomeFault" UId="2121" />
+    </Symbol>
+  </Access>
+  <Blank UId="2122" />
+  <Token Text=":=" UId="2123" />
+  <Blank UId="2124" />
+  <Access Scope="LocalVariable" UId="2125">
+    <Symbol UId="2126">
+      <Component Name="t_FwdContOnFlt" UId="2127" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2128" />
+  <Blank Num="8" UId="2129" />
+  <Token Text="OR" UId="2130" />
+  <Blank UId="2131" />
+  <Access Scope="LocalVariable" UId="2132">
+    <Symbol UId="2133">
+      <Component Name="t_BwdContOnFlt" UId="2134" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2135" />
+  <Blank Num="8" UId="2136" />
+  <Token Text="OR" UId="2137" />
+  <Blank UId="2138" />
+  <Access Scope="LocalVariable" UId="2139">
+    <Symbol UId="2140">
+      <Component Name="t_FwdContOffFlt" UId="2141" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2142" />
+  <Blank Num="8" UId="2143" />
+  <Token Text="OR" UId="2144" />
+  <Blank UId="2145" />
+  <Access Scope="LocalVariable" UId="2146">
+    <Symbol UId="2147">
+      <Component Name="t_BwdContOffFlt" UId="2148" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2149" />
+  <Blank Num="8" UId="2150" />
+  <Token Text="OR" UId="2151" />
+  <Blank UId="2152" />
+  <Token Text="(" UId="2153" />
+  <Access Scope="LocalVariable" UId="2154">
+    <Symbol UId="2155">
+      <Component Name="i_StartFwd" UId="2156" />
+    </Symbol>
+  </Access>
+  <Blank UId="2157" />
+  <Token Text="AND" UId="2158" />
+  <Blank UId="2159" />
+  <Access Scope="LocalVariable" UId="2160">
+    <Symbol UId="2161">
+      <Component Name="i_StartRev" UId="2162" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="2163" />
+  <NewLine UId="2164" />
+  <Blank Num="8" UId="2165" />
+  <Token Text=";" UId="2166" />
+  <NewLine UId="2167" />
+  <Blank Num="4" UId="2168" />
+  <Token Text="END_REGION" UId="2169" />
+  <NewLine UId="2170" />
+  <Blank Num="4" UId="2171" />
+  <NewLine UId="2172" />
+  <Blank Num="4" UId="2173" />
+  <Token Text="REGION" UId="2174" />
+  <Blank UId="2175" />
+  <Text UId="2176">Start permitions</Text>
+  <NewLine UId="2177" />
+  <Blank Num="8" UId="2178" />
+  <LineComment UId="2179">
+    <Text UId="2180">Start forward is permited</Text>
+  </LineComment>
+  <NewLine UId="2181" />
+  <Blank Num="8" UId="2182" />
+  <Access Scope="LocalVariable" UId="2183">
+    <Symbol UId="2184">
+      <Component Name="t_StrtFwdPermtd" UId="2185" />
+    </Symbol>
+  </Access>
+  <Blank UId="2186" />
+  <Token Text=":=" UId="2187" />
+  <Blank UId="2188" />
+  <Token Text="NOT" UId="2189" />
+  <Blank UId="2190" />
+  <Access Scope="LocalVariable" UId="2191">
+    <Symbol UId="2192">
+      <Component Name="t_CngDirFwdBlck" UId="2193" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2194" />
+  <Blank Num="8" UId="2195" />
+  <Token Text="AND" UId="2196" />
+  <Blank UId="2197" />
+  <Token Text="NOT" UId="2198" />
+  <Blank UId="2199" />
+  <Access Scope="LocalVariable" UId="2200">
+    <Symbol UId="2201">
+      <Component Name="t_NxtStrtBlck" UId="2202" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2203" />
+  <Blank Num="8" UId="2204" />
+  <Token Text="AND" UId="2205" />
+  <Blank UId="2206" />
+  <Token Text="NOT" UId="2207" />
+  <Blank UId="2208" />
+  <Access Scope="LocalVariable" UId="2209">
+    <Symbol UId="2210">
+      <Component Name="t_SomeFault" UId="2211" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2212" />
+  <Blank Num="8" UId="2213" />
+  <Token Text=";" UId="2214" />
+  <NewLine UId="2215" />
+  <Blank Num="8" UId="2216" />
+  <LineComment UId="2217">
+    <Text UId="2218">Start backward is permited</Text>
+  </LineComment>
+  <NewLine UId="2219" />
+  <Blank Num="8" UId="2220" />
+  <Access Scope="LocalVariable" UId="2221">
+    <Symbol UId="2222">
+      <Component Name="t_StrtBwdPermtd" UId="2223" />
+    </Symbol>
+  </Access>
+  <Blank UId="2224" />
+  <Token Text=":=" UId="2225" />
+  <Blank UId="2226" />
+  <Token Text="NOT" UId="2227" />
+  <Blank UId="2228" />
+  <Access Scope="LocalVariable" UId="2229">
+    <Symbol UId="2230">
+      <Component Name="t_CngDirBwdBlck" UId="2231" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2232" />
+  <Blank Num="8" UId="2233" />
+  <Token Text="AND" UId="2234" />
+  <Blank UId="2235" />
+  <Token Text="NOT" UId="2236" />
+  <Blank UId="2237" />
+  <Access Scope="LocalVariable" UId="2238">
+    <Symbol UId="2239">
+      <Component Name="t_NxtStrtBlck" UId="2240" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2241" />
+  <Blank Num="8" UId="2242" />
+  <Token Text="AND" UId="2243" />
+  <Blank UId="2244" />
+  <Token Text="NOT" UId="2245" />
+  <Blank UId="2246" />
+  <Access Scope="LocalVariable" UId="2247">
+    <Symbol UId="2248">
+      <Component Name="t_SomeFault" UId="2249" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2250" />
+  <Blank Num="8" UId="2251" />
+  <Token Text=";" UId="2252" />
+  <NewLine UId="2253" />
+  <Blank Num="4" UId="2254" />
+  <Token Text="END_REGION" UId="2255" />
+  <NewLine UId="2256" />
+  <Blank Num="4" UId="2257" />
+  <NewLine UId="2258" />
+  <Blank Num="4" UId="2259" />
+  <Token Text="REGION" UId="2260" />
+  <Blank UId="2261" />
+  <Text UId="2262">Start commands</Text>
+  <NewLine UId="2263" />
+  <Blank Num="8" UId="2264" />
+  <LineComment UId="2265">
+    <Text UId="2266">Start motor forward command</Text>
+  </LineComment>
+  <NewLine UId="2267" />
+  <Blank Num="8" UId="2268" />
+  <Access Scope="LocalVariable" UId="2269">
+    <Symbol UId="2270">
+      <Component Name="s_CmdRunFwd" UId="2271" />
+    </Symbol>
+  </Access>
+  <Blank UId="2272" />
+  <Token Text=":=" UId="2273" />
+  <Blank UId="2274" />
+  <Access Scope="LocalVariable" UId="2275">
+    <Symbol UId="2276">
+      <Component Name="i_StartFwd" UId="2277" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2278" />
+  <Blank Num="8" UId="2279" />
+  <Token Text="AND" UId="2280" />
+  <Blank UId="2281" />
+  <Token Text="NOT" UId="2282" />
+  <Blank UId="2283" />
+  <Access Scope="LocalVariable" UId="2284">
+    <Symbol UId="2285">
+      <Component Name="i_StartRev" UId="2286" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2287" />
+  <Blank Num="8" UId="2288" />
+  <Token Text="AND" UId="2289" />
+  <Blank UId="2290" />
+  <Access Scope="LocalVariable" UId="2291">
+    <Symbol UId="2292">
+      <Component Name="t_StrtFwdPermtd" UId="2293" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2294" />
+  <Blank Num="8" UId="2295" />
+  <Token Text=";" UId="2296" />
+  <NewLine UId="2297" />
+  <Blank Num="8" UId="2298" />
+  <LineComment UId="2299">
+    <Text UId="2300">Start motor backward command</Text>
+  </LineComment>
+  <NewLine UId="2301" />
+  <Blank Num="8" UId="2302" />
+  <Access Scope="LocalVariable" UId="2303">
+    <Symbol UId="2304">
+      <Component Name="s_CmdRunBwd" UId="2305" />
+    </Symbol>
+  </Access>
+  <Blank UId="2306" />
+  <Token Text=":=" UId="2307" />
+  <Blank UId="2308" />
+  <Token Text="NOT" UId="2309" />
+  <Blank UId="2310" />
+  <Access Scope="LocalVariable" UId="2311">
+    <Symbol UId="2312">
+      <Component Name="i_StartFwd" UId="2313" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2314" />
+  <Blank Num="8" UId="2315" />
+  <Token Text="AND" UId="2316" />
+  <Blank UId="2317" />
+  <Access Scope="LocalVariable" UId="2318">
+    <Symbol UId="2319">
+      <Component Name="i_StartRev" UId="2320" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2321" />
+  <Blank Num="8" UId="2322" />
+  <Token Text="AND" UId="2323" />
+  <Blank UId="2324" />
+  <Access Scope="LocalVariable" UId="2325">
+    <Symbol UId="2326">
+      <Component Name="t_StrtBwdPermtd" UId="2327" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2328" />
+  <Blank Num="8" UId="2329" />
+  <Token Text=";" UId="2330" />
+  <NewLine UId="2331" />
+  <Blank Num="4" UId="2332" />
+  <Token Text="END_REGION" UId="2333" />
+  <NewLine UId="2334" />
+  <Blank Num="4" UId="2335" />
+  <NewLine UId="2336" />
+  <Blank Num="4" UId="2337" />
+  <Token Text="REGION" UId="2338" />
+  <Blank UId="2339" />
+  <Text UId="2340">Outputs</Text>
+  <NewLine UId="2341" />
+  <Blank Num="8" UId="2342" />
+  <Access Scope="LocalVariable" UId="2343">
+    <Symbol UId="2344">
+      <Component Name="q_CmdRunFwd" UId="2345" />
+    </Symbol>
+  </Access>
+  <Blank UId="2346" />
+  <Token Text=":=" UId="2347" />
+  <Blank UId="2348" />
+  <Access Scope="LocalVariable" UId="2349">
+    <Symbol UId="2350">
+      <Component Name="s_CmdRunFwd" UId="2351" />
+    </Symbol>
+  </Access>
+  <Blank UId="2352" />
+  <Token Text="AND" UId="2353" />
+  <Blank UId="2354" />
+  <Token Text="NOT" UId="2355" />
+  <Blank UId="2356" />
+  <Access Scope="LocalVariable" UId="2357">
+    <Symbol UId="2358">
+      <Component Name="i_SimMode" UId="2359" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2360" />
+  <Blank Num="3" UId="2361" />
+  <LineComment UId="2362">
+    <Text UId="2363">Start motor forward command</Text>
+  </LineComment>
+  <NewLine UId="2364" />
+  <Blank Num="8" UId="2365" />
+  <Access Scope="LocalVariable" UId="2366">
+    <Symbol UId="2367">
+      <Component Name="q_CmdRunRev" UId="2368" />
+    </Symbol>
+  </Access>
+  <Blank UId="2369" />
+  <Token Text=":=" UId="2370" />
+  <Blank UId="2371" />
+  <Access Scope="LocalVariable" UId="2372">
+    <Symbol UId="2373">
+      <Component Name="s_CmdRunBwd" UId="2374" />
+    </Symbol>
+  </Access>
+  <Blank UId="2375" />
+  <Token Text="AND" UId="2376" />
+  <Blank UId="2377" />
+  <Token Text="NOT" UId="2378" />
+  <Blank UId="2379" />
+  <Access Scope="LocalVariable" UId="2380">
+    <Symbol UId="2381">
+      <Component Name="i_SimMode" UId="2382" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2383" />
+  <Blank Num="3" UId="2384" />
+  <LineComment UId="2385">
+    <Text UId="2386">Start motor backward command</Text>
+  </LineComment>
+  <NewLine UId="2387" />
+  <Blank Num="8" UId="2388" />
+  <Access Scope="LocalVariable" UId="2389">
+    <Symbol UId="2390">
+      <Component Name="q_Fault" UId="2391" />
+    </Symbol>
+  </Access>
+  <Blank UId="2392" />
+  <Token Text=":=" UId="2393" />
+  <Blank UId="2394" />
+  <Access Scope="LocalVariable" UId="2395">
+    <Symbol UId="2396">
+      <Component Name="t_SomeFault" UId="2397" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2398" />
+  <Blank Num="25" UId="2399" />
+  <LineComment UId="2400">
+    <Text UId="2401">Some fault is ative</Text>
+  </LineComment>
+  <NewLine UId="2402" />
+  <Blank Num="8" UId="2403" />
+  <NewLine UId="2404" />
+  <Blank Num="8" UId="2405" />
+  <Access Scope="LocalVariable" UId="2406">
+    <Symbol UId="2407">
+      <Component Name="qs_Statuses" UId="2408" />
+      <Token Text="." UId="2409" />
+      <Component Name="Run" UId="2410" />
+    </Symbol>
+  </Access>
+  <Blank UId="2411" />
+  <Token Text=":=" UId="2412" />
+  <Blank UId="2413" />
+  <Access Scope="LocalVariable" UId="2414">
+    <Symbol UId="2415">
+      <Component Name="t_FwdContFdbck" UId="2416" />
+    </Symbol>
+  </Access>
+  <Blank UId="2417" />
+  <Token Text="OR" UId="2418" />
+  <Blank UId="2419" />
+  <Access Scope="LocalVariable" UId="2420">
+    <Symbol UId="2421">
+      <Component Name="t_BwdContFdbck" UId="2422" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2423" />
+  <Blank Num="4" UId="2424" />
+  <LineComment UId="2425">
+    <Text UId="2426">Status Motor is running (any direction)</Text>
+  </LineComment>
+  <NewLine UId="2427" />
+  <Blank Num="8" UId="2428" />
+  <Access Scope="LocalVariable" UId="2429">
+    <Symbol UId="2430">
+      <Component Name="qs_Statuses" UId="2431" />
+      <Token Text="." UId="2432" />
+      <Component Name="RunFwd" UId="2433" />
+    </Symbol>
+  </Access>
+  <Blank UId="2434" />
+  <Token Text=":=" UId="2435" />
+  <Blank UId="2436" />
+  <Access Scope="LocalVariable" UId="2437">
+    <Symbol UId="2438">
+      <Component Name="t_FwdContFdbck" UId="2439" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2440" />
+  <Blank Num="20" UId="2441" />
+  <LineComment UId="2442">
+    <Text UId="2443">Status Motor is running forward #s_CmdRunFwd AND </Text>
+  </LineComment>
+  <NewLine UId="2444" />
+  <Blank Num="8" UId="2445" />
+  <Access Scope="LocalVariable" UId="2446">
+    <Symbol UId="2447">
+      <Component Name="qs_Statuses" UId="2448" />
+      <Token Text="." UId="2449" />
+      <Component Name="RunRev" UId="2450" />
+    </Symbol>
+  </Access>
+  <Blank UId="2451" />
+  <Token Text=":=" UId="2452" />
+  <Blank UId="2453" />
+  <Access Scope="LocalVariable" UId="2454">
+    <Symbol UId="2455">
+      <Component Name="t_BwdContFdbck" UId="2456" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2457" />
+  <Blank Num="20" UId="2458" />
+  <LineComment UId="2459">
+    <Text UId="2460">Status Motor is running backward #s_CmdRunBwd AND </Text>
+  </LineComment>
+  <NewLine UId="2461" />
+  <Blank Num="8" UId="2462" />
+  <Access Scope="LocalVariable" UId="2463">
+    <Symbol UId="2464">
+      <Component Name="qs_Statuses" UId="2465" />
+      <Token Text="." UId="2466" />
+      <Component Name="SimMode" UId="2467" />
+    </Symbol>
+  </Access>
+  <Blank UId="2468" />
+  <Token Text=":=" UId="2469" />
+  <Blank UId="2470" />
+  <Access Scope="LocalVariable" UId="2471">
+    <Symbol UId="2472">
+      <Component Name="i_SimMode" UId="2473" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2474" />
+  <Blank Num="23" UId="2475" />
+  <LineComment UId="2476">
+    <Text UId="2477">Status Simulation mode is active</Text>
+  </LineComment>
+  <NewLine UId="2478" />
+  <Blank Num="8" UId="2479" />
+  <Access Scope="LocalVariable" UId="2480">
+    <Symbol UId="2481">
+      <Component Name="qs_Statuses" UId="2482" />
+      <Token Text="." UId="2483" />
+      <Component Name="AfterStpBlck" UId="2484" />
+    </Symbol>
+  </Access>
+  <Blank UId="2485" />
+  <Token Text=":=" UId="2486" />
+  <Blank UId="2487" />
+  <Access Scope="LocalVariable" UId="2488">
+    <Symbol UId="2489">
+      <Component Name="t_NxtStrtBlck" UId="2490" />
+    </Symbol>
+  </Access>
+  <Blank Num="15" UId="2491" />
+  <LineComment UId="2492">
+    <Text UId="2493">Status Delay (block) after motor stop</Text>
+  </LineComment>
+  <NewLine UId="2494" />
+  <Blank Num="8" UId="2495" />
+  <Token Text=";" UId="2496" />
+  <NewLine UId="2497" />
+  <Blank Num="8" UId="2498" />
+  <Access Scope="LocalVariable" UId="2499">
+    <Symbol UId="2500">
+      <Component Name="qs_Statuses" UId="2501" />
+      <Token Text="." UId="2502" />
+      <Component Name="CngDirBlck" UId="2503" />
+    </Symbol>
+  </Access>
+  <Blank UId="2504" />
+  <Token Text=":=" UId="2505" />
+  <Blank UId="2506" />
+  <Token Text="(" UId="2507" />
+  <Access Scope="LocalVariable" UId="2508">
+    <Symbol UId="2509">
+      <Component Name="t_CngDirFwdBlck" UId="2510" />
+    </Symbol>
+  </Access>
+  <Blank Num="14" UId="2511" />
+  <LineComment UId="2512">
+    <Text UId="2513">Status Delay before direction changing</Text>
+  </LineComment>
+  <NewLine UId="2514" />
+  <Blank Num="8" UId="2515" />
+  <Token Text="AND" UId="2516" />
+  <Blank UId="2517" />
+  <Access Scope="LocalVariable" UId="2518">
+    <Symbol UId="2519">
+      <Component Name="i_StartFwd" UId="2520" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="2521" />
+  <NewLine UId="2522" />
+  <Blank Num="8" UId="2523" />
+  <Token Text="OR" UId="2524" />
+  <Blank UId="2525" />
+  <Token Text="(" UId="2526" />
+  <Access Scope="LocalVariable" UId="2527">
+    <Symbol UId="2528">
+      <Component Name="t_CngDirBwdBlck" UId="2529" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2530" />
+  <Blank Num="8" UId="2531" />
+  <Token Text="AND" UId="2532" />
+  <Blank UId="2533" />
+  <Access Scope="LocalVariable" UId="2534">
+    <Symbol UId="2535">
+      <Component Name="i_StartRev" UId="2536" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="2537" />
+  <NewLine UId="2538" />
+  <Blank Num="8" UId="2539" />
+  <Token Text=";" UId="2540" />
+  <NewLine UId="2541" />
+  <Blank Num="8" UId="2542" />
+  <Access Scope="LocalVariable" UId="2543">
+    <Symbol UId="2544">
+      <Component Name="qs_Statuses" UId="2545" />
+      <Token Text="." UId="2546" />
+      <Component Name="FltStartFwdBwdActive" UId="2547" />
+    </Symbol>
+  </Access>
+  <Blank UId="2548" />
+  <Token Text=":=" UId="2549" />
+  <Blank UId="2550" />
+  <Access Scope="LocalVariable" UId="2551">
+    <Symbol UId="2552">
+      <Component Name="i_StartFwd" UId="2553" />
+    </Symbol>
+  </Access>
+  <Blank UId="2554" />
+  <Token Text="AND" UId="2555" />
+  <Blank UId="2556" />
+  <Access Scope="LocalVariable" UId="2557">
+    <Symbol UId="2558">
+      <Component Name="i_StartRev" UId="2559" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2560" />
+  <Blank Num="2" UId="2561" />
+  <LineComment UId="2562">
+    <Text UId="2563">Fault Start forward and backward are active</Text>
+  </LineComment>
+  <NewLine UId="2564" />
+  <Blank Num="8" UId="2565" />
+  <NewLine UId="2566" />
+  <Blank Num="8" UId="2567" />
+  <Access Scope="LocalVariable" UId="2568">
+    <Symbol UId="2569">
+      <Component Name="qs_Statuses" UId="2570" />
+      <Token Text="." UId="2571" />
+      <Component Name="FltFwdContOn" UId="2572" />
+    </Symbol>
+  </Access>
+  <Blank UId="2573" />
+  <Token Text=":=" UId="2574" />
+  <Blank UId="2575" />
+  <Access Scope="LocalVariable" UId="2576">
+    <Symbol UId="2577">
+      <Component Name="t_FwdContOnFlt" UId="2578" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2579" />
+  <Blank Num="13" UId="2580" />
+  <LineComment UId="2581">
+    <Text UId="2582">Fault of forward contactor start </Text>
+  </LineComment>
+  <NewLine UId="2583" />
+  <Blank Num="8" UId="2584" />
+  <Access Scope="LocalVariable" UId="2585">
+    <Symbol UId="2586">
+      <Component Name="qs_Statuses" UId="2587" />
+      <Token Text="." UId="2588" />
+      <Component Name="FltFwdContOff" UId="2589" />
+    </Symbol>
+  </Access>
+  <Blank UId="2590" />
+  <Token Text=":=" UId="2591" />
+  <Blank UId="2592" />
+  <Access Scope="LocalVariable" UId="2593">
+    <Symbol UId="2594">
+      <Component Name="t_FwdContOffFlt" UId="2595" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2596" />
+  <Blank Num="11" UId="2597" />
+  <LineComment UId="2598">
+    <Text UId="2599">Fault of forward contactor stop </Text>
+  </LineComment>
+  <NewLine UId="2600" />
+  <Blank Num="8" UId="2601" />
+  <Access Scope="LocalVariable" UId="2602">
+    <Symbol UId="2603">
+      <Component Name="qs_Statuses" UId="2604" />
+      <Token Text="." UId="2605" />
+      <Component Name="FltRevContOn" UId="2606" />
+    </Symbol>
+  </Access>
+  <Blank UId="2607" />
+  <Token Text=":=" UId="2608" />
+  <Blank UId="2609" />
+  <Access Scope="LocalVariable" UId="2610">
+    <Symbol UId="2611">
+      <Component Name="t_BwdContOnFlt" UId="2612" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2613" />
+  <Blank Num="13" UId="2614" />
+  <LineComment UId="2615">
+    <Text UId="2616">Fault of backward contactor start </Text>
+  </LineComment>
+  <NewLine UId="2617" />
+  <Blank Num="8" UId="2618" />
+  <Access Scope="LocalVariable" UId="2619">
+    <Symbol UId="2620">
+      <Component Name="qs_Statuses" UId="2621" />
+      <Token Text="." UId="2622" />
+      <Component Name="FltRevContOff" UId="2623" />
+    </Symbol>
+  </Access>
+  <Blank UId="2624" />
+  <Token Text=":=" UId="2625" />
+  <Blank UId="2626" />
+  <Access Scope="LocalVariable" UId="2627">
+    <Symbol UId="2628">
+      <Component Name="t_BwdContOffFlt" UId="2629" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2630" />
+  <Blank Num="11" UId="2631" />
+  <LineComment UId="2632">
+    <Text UId="2633">Fault of backward contactor stop </Text>
+  </LineComment>
+  <NewLine UId="2634" />
+  <Blank Num="4" UId="2635" />
+  <Token Text="END_REGION" UId="2636" />
+  <NewLine UId="2637" />
+  <Blank Num="4" UId="2638" />
+  <NewLine UId="2639" />
+  <Token Text="END_REGION" UId="2640" />
+  <NewLine Num="2" UId="2641" />
+  <Token Text="REGION" UId="2642" />
+  <Blank UId="2643" />
+  <Text UId="2644">Start commands</Text>
+  <NewLine UId="2645" />
+  <Blank Num="4" UId="2646" />
+  <LineComment UId="2647">
+    <Text UId="2648">Start motor forward command</Text>
+  </LineComment>
+  <NewLine UId="2649" />
+  <Blank Num="4" UId="2650" />
+  <Access Scope="LocalVariable" UId="2651">
+    <Symbol UId="2652">
+      <Component Name="s_CmdRunFwd" UId="2653" />
+    </Symbol>
+  </Access>
+  <Blank UId="2654" />
+  <Token Text=":=" UId="2655" />
+  <Blank UId="2656" />
+  <Access Scope="LocalVariable" UId="2657">
+    <Symbol UId="2658">
+      <Component Name="i_StartFwd" UId="2659" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2660" />
+  <Blank Num="4" UId="2661" />
+  <Token Text="AND" UId="2662" />
+  <Blank UId="2663" />
+  <Token Text="NOT" UId="2664" />
+  <Blank UId="2665" />
+  <Access Scope="LocalVariable" UId="2666">
+    <Symbol UId="2667">
+      <Component Name="i_StartRev" UId="2668" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2669" />
+  <Blank Num="4" UId="2670" />
+  <Token Text="AND" UId="2671" />
+  <Blank UId="2672" />
+  <Access Scope="LocalVariable" UId="2673">
+    <Symbol UId="2674">
+      <Component Name="t_StrtFwdPermtd" UId="2675" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2676" />
+  <Blank Num="4" UId="2677" />
+  <Token Text=";" UId="2678" />
+  <NewLine UId="2679" />
+  <Blank Num="4" UId="2680" />
+  <LineComment UId="2681">
+    <Text UId="2682">Start motor backward command</Text>
+  </LineComment>
+  <NewLine UId="2683" />
+  <Blank Num="4" UId="2684" />
+  <Access Scope="LocalVariable" UId="2685">
+    <Symbol UId="2686">
+      <Component Name="s_CmdRunBwd" UId="2687" />
+    </Symbol>
+  </Access>
+  <Blank UId="2688" />
+  <Token Text=":=" UId="2689" />
+  <Blank UId="2690" />
+  <Token Text="NOT" UId="2691" />
+  <Blank UId="2692" />
+  <Access Scope="LocalVariable" UId="2693">
+    <Symbol UId="2694">
+      <Component Name="i_StartFwd" UId="2695" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2696" />
+  <Blank Num="4" UId="2697" />
+  <Token Text="AND" UId="2698" />
+  <Blank UId="2699" />
+  <Access Scope="LocalVariable" UId="2700">
+    <Symbol UId="2701">
+      <Component Name="i_StartRev" UId="2702" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2703" />
+  <Blank Num="4" UId="2704" />
+  <Token Text="AND" UId="2705" />
+  <Blank UId="2706" />
+  <Access Scope="LocalVariable" UId="2707">
+    <Symbol UId="2708">
+      <Component Name="t_StrtBwdPermtd" UId="2709" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2710" />
+  <Blank Num="4" UId="2711" />
+  <Token Text=";" UId="2712" />
+  <NewLine UId="2713" />
+  <Token Text="END_REGION" UId="2714" />
+  <NewLine Num="2" UId="2715" />
+  <Token Text="REGION" UId="2716" />
+  <Blank UId="2717" />
+  <Text UId="2718">Outputs</Text>
+  <NewLine UId="2719" />
+  <Blank Num="4" UId="2720" />
+  <Access Scope="LocalVariable" UId="2721">
+    <Symbol UId="2722">
+      <Component Name="q_CmdRunFwd" UId="2723" />
+    </Symbol>
+  </Access>
+  <Blank UId="2724" />
+  <Token Text=":=" UId="2725" />
+  <Blank UId="2726" />
+  <Access Scope="LocalVariable" UId="2727">
+    <Symbol UId="2728">
+      <Component Name="s_CmdRunFwd" UId="2729" />
+    </Symbol>
+  </Access>
+  <Blank UId="2730" />
+  <Token Text="AND" UId="2731" />
+  <Blank UId="2732" />
+  <Token Text="NOT" UId="2733" />
+  <Blank UId="2734" />
+  <Access Scope="LocalVariable" UId="2735">
+    <Symbol UId="2736">
+      <Component Name="i_SimMode" UId="2737" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2738" />
+  <Blank Num="3" UId="2739" />
+  <LineComment UId="2740">
+    <Text UId="2741">Start motor forward command</Text>
+  </LineComment>
+  <NewLine UId="2742" />
+  <Blank Num="4" UId="2743" />
+  <Access Scope="LocalVariable" UId="2744">
+    <Symbol UId="2745">
+      <Component Name="q_CmdRunRev" UId="2746" />
+    </Symbol>
+  </Access>
+  <Blank UId="2747" />
+  <Token Text=":=" UId="2748" />
+  <Blank UId="2749" />
+  <Access Scope="LocalVariable" UId="2750">
+    <Symbol UId="2751">
+      <Component Name="s_CmdRunBwd" UId="2752" />
+    </Symbol>
+  </Access>
+  <Blank UId="2753" />
+  <Token Text="AND" UId="2754" />
+  <Blank UId="2755" />
+  <Token Text="NOT" UId="2756" />
+  <Blank UId="2757" />
+  <Access Scope="LocalVariable" UId="2758">
+    <Symbol UId="2759">
+      <Component Name="i_SimMode" UId="2760" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2761" />
+  <Blank Num="3" UId="2762" />
+  <LineComment UId="2763">
+    <Text UId="2764">Start motor backward command</Text>
+  </LineComment>
+  <NewLine UId="2765" />
+  <Blank Num="4" UId="2766" />
+  <Access Scope="LocalVariable" UId="2767">
+    <Symbol UId="2768">
+      <Component Name="q_Fault" UId="2769" />
+    </Symbol>
+  </Access>
+  <Blank UId="2770" />
+  <Token Text=":=" UId="2771" />
+  <Blank UId="2772" />
+  <Access Scope="LocalVariable" UId="2773">
+    <Symbol UId="2774">
+      <Component Name="t_SomeFault" UId="2775" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2776" />
+  <Blank Num="25" UId="2777" />
+  <LineComment UId="2778">
+    <Text UId="2779">Some fault is ative</Text>
+  </LineComment>
+  <NewLine UId="2780" />
+  <Blank Num="4" UId="2781" />
+  <NewLine UId="2782" />
+  <Blank Num="4" UId="2783" />
+  <Access Scope="LocalVariable" UId="2784">
+    <Symbol UId="2785">
+      <Component Name="qs_Statuses" UId="2786" />
+      <Token Text="." UId="2787" />
+      <Component Name="Run" UId="2788" />
+    </Symbol>
+  </Access>
+  <Blank UId="2789" />
+  <Token Text=":=" UId="2790" />
+  <Blank UId="2791" />
+  <Access Scope="LocalVariable" UId="2792">
+    <Symbol UId="2793">
+      <Component Name="t_FwdContFdbck" UId="2794" />
+    </Symbol>
+  </Access>
+  <Blank UId="2795" />
+  <Token Text="OR" UId="2796" />
+  <Blank UId="2797" />
+  <Access Scope="LocalVariable" UId="2798">
+    <Symbol UId="2799">
+      <Component Name="t_BwdContFdbck" UId="2800" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2801" />
+  <Blank Num="4" UId="2802" />
+  <LineComment UId="2803">
+    <Text UId="2804">Status Motor is running (any direction)</Text>
+  </LineComment>
+  <NewLine UId="2805" />
+  <Blank Num="4" UId="2806" />
+  <Access Scope="LocalVariable" UId="2807">
+    <Symbol UId="2808">
+      <Component Name="qs_Statuses" UId="2809" />
+      <Token Text="." UId="2810" />
+      <Component Name="RunFwd" UId="2811" />
+    </Symbol>
+  </Access>
+  <Blank UId="2812" />
+  <Token Text=":=" UId="2813" />
+  <Blank UId="2814" />
+  <Access Scope="LocalVariable" UId="2815">
+    <Symbol UId="2816">
+      <Component Name="t_FwdContFdbck" UId="2817" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2818" />
+  <Blank Num="20" UId="2819" />
+  <LineComment UId="2820">
+    <Text UId="2821">Status Motor is running forward #s_CmdRunFwd AND </Text>
+  </LineComment>
+  <NewLine UId="2822" />
+  <Blank Num="4" UId="2823" />
+  <Access Scope="LocalVariable" UId="2824">
+    <Symbol UId="2825">
+      <Component Name="qs_Statuses" UId="2826" />
+      <Token Text="." UId="2827" />
+      <Component Name="RunRev" UId="2828" />
+    </Symbol>
+  </Access>
+  <Blank UId="2829" />
+  <Token Text=":=" UId="2830" />
+  <Blank UId="2831" />
+  <Access Scope="LocalVariable" UId="2832">
+    <Symbol UId="2833">
+      <Component Name="t_BwdContFdbck" UId="2834" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2835" />
+  <Blank Num="20" UId="2836" />
+  <LineComment UId="2837">
+    <Text UId="2838">Status Motor is running backward #s_CmdRunBwd AND </Text>
+  </LineComment>
+  <NewLine UId="2839" />
+  <Blank Num="4" UId="2840" />
+  <Access Scope="LocalVariable" UId="2841">
+    <Symbol UId="2842">
+      <Component Name="qs_Statuses" UId="2843" />
+      <Token Text="." UId="2844" />
+      <Component Name="SimMode" UId="2845" />
+    </Symbol>
+  </Access>
+  <Blank UId="2846" />
+  <Token Text=":=" UId="2847" />
+  <Blank UId="2848" />
+  <Access Scope="LocalVariable" UId="2849">
+    <Symbol UId="2850">
+      <Component Name="i_SimMode" UId="2851" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2852" />
+  <Blank Num="23" UId="2853" />
+  <LineComment UId="2854">
+    <Text UId="2855">Status Simulation mode is active</Text>
+  </LineComment>
+  <NewLine UId="2856" />
+  <Blank Num="4" UId="2857" />
+  <Access Scope="LocalVariable" UId="2858">
+    <Symbol UId="2859">
+      <Component Name="qs_Statuses" UId="2860" />
+      <Token Text="." UId="2861" />
+      <Component Name="AfterStpBlck" UId="2862" />
+    </Symbol>
+  </Access>
+  <Blank UId="2863" />
+  <Token Text=":=" UId="2864" />
+  <Blank UId="2865" />
+  <Access Scope="LocalVariable" UId="2866">
+    <Symbol UId="2867">
+      <Component Name="t_NxtStrtBlck" UId="2868" />
+    </Symbol>
+  </Access>
+  <Blank Num="15" UId="2869" />
+  <LineComment UId="2870">
+    <Text UId="2871">Status Delay (block) after motor stop</Text>
+  </LineComment>
+  <NewLine UId="2872" />
+  <Blank Num="4" UId="2873" />
+  <Token Text=";" UId="2874" />
+  <NewLine UId="2875" />
+  <Blank Num="4" UId="2876" />
+  <Access Scope="LocalVariable" UId="2877">
+    <Symbol UId="2878">
+      <Component Name="qs_Statuses" UId="2879" />
+      <Token Text="." UId="2880" />
+      <Component Name="CngDirBlck" UId="2881" />
+    </Symbol>
+  </Access>
+  <Blank UId="2882" />
+  <Token Text=":=" UId="2883" />
+  <Blank UId="2884" />
+  <Token Text="(" UId="2885" />
+  <Access Scope="LocalVariable" UId="2886">
+    <Symbol UId="2887">
+      <Component Name="t_CngDirFwdBlck" UId="2888" />
+    </Symbol>
+  </Access>
+  <Blank Num="14" UId="2889" />
+  <LineComment UId="2890">
+    <Text UId="2891">Status Delay before direction changing</Text>
+  </LineComment>
+  <NewLine UId="2892" />
+  <Blank Num="4" UId="2893" />
+  <Token Text="AND" UId="2894" />
+  <Blank UId="2895" />
+  <Access Scope="LocalVariable" UId="2896">
+    <Symbol UId="2897">
+      <Component Name="i_StartFwd" UId="2898" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="2899" />
+  <NewLine UId="2900" />
+  <Blank Num="4" UId="2901" />
+  <Token Text="OR" UId="2902" />
+  <Blank UId="2903" />
+  <Token Text="(" UId="2904" />
+  <Access Scope="LocalVariable" UId="2905">
+    <Symbol UId="2906">
+      <Component Name="t_CngDirBwdBlck" UId="2907" />
+    </Symbol>
+  </Access>
+  <NewLine UId="2908" />
+  <Blank Num="4" UId="2909" />
+  <Token Text="AND" UId="2910" />
+  <Blank UId="2911" />
+  <Access Scope="LocalVariable" UId="2912">
+    <Symbol UId="2913">
+      <Component Name="i_StartRev" UId="2914" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="2915" />
+  <NewLine UId="2916" />
+  <Blank Num="4" UId="2917" />
+  <Token Text=";" UId="2918" />
+  <NewLine UId="2919" />
+  <Blank Num="4" UId="2920" />
+  <Access Scope="LocalVariable" UId="2921">
+    <Symbol UId="2922">
+      <Component Name="qs_Statuses" UId="2923" />
+      <Token Text="." UId="2924" />
+      <Component Name="FltStartFwdBwdActive" UId="2925" />
+    </Symbol>
+  </Access>
+  <Blank UId="2926" />
+  <Token Text=":=" UId="2927" />
+  <Blank UId="2928" />
+  <Access Scope="LocalVariable" UId="2929">
+    <Symbol UId="2930">
+      <Component Name="i_StartFwd" UId="2931" />
+    </Symbol>
+  </Access>
+  <Blank UId="2932" />
+  <Token Text="AND" UId="2933" />
+  <Blank UId="2934" />
+  <Access Scope="LocalVariable" UId="2935">
+    <Symbol UId="2936">
+      <Component Name="i_StartRev" UId="2937" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2938" />
+  <Blank Num="2" UId="2939" />
+  <LineComment UId="2940">
+    <Text UId="2941">Fault Start forward and backward are active</Text>
+  </LineComment>
+  <NewLine UId="2942" />
+  <Blank Num="4" UId="2943" />
+  <NewLine UId="2944" />
+  <Blank Num="4" UId="2945" />
+  <Access Scope="LocalVariable" UId="2946">
+    <Symbol UId="2947">
+      <Component Name="qs_Statuses" UId="2948" />
+      <Token Text="." UId="2949" />
+      <Component Name="FltFwdContOn" UId="2950" />
+    </Symbol>
+  </Access>
+  <Blank UId="2951" />
+  <Token Text=":=" UId="2952" />
+  <Blank UId="2953" />
+  <Access Scope="LocalVariable" UId="2954">
+    <Symbol UId="2955">
+      <Component Name="t_FwdContOnFlt" UId="2956" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2957" />
+  <Blank Num="13" UId="2958" />
+  <LineComment UId="2959">
+    <Text UId="2960">Fault of forward contactor start </Text>
+  </LineComment>
+  <NewLine UId="2961" />
+  <Blank Num="4" UId="2962" />
+  <Access Scope="LocalVariable" UId="2963">
+    <Symbol UId="2964">
+      <Component Name="qs_Statuses" UId="2965" />
+      <Token Text="." UId="2966" />
+      <Component Name="FltFwdContOff" UId="2967" />
+    </Symbol>
+  </Access>
+  <Blank UId="2968" />
+  <Token Text=":=" UId="2969" />
+  <Blank UId="2970" />
+  <Access Scope="LocalVariable" UId="2971">
+    <Symbol UId="2972">
+      <Component Name="t_FwdContOffFlt" UId="2973" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2974" />
+  <Blank Num="11" UId="2975" />
+  <LineComment UId="2976">
+    <Text UId="2977">Fault of forward contactor stop </Text>
+  </LineComment>
+  <NewLine UId="2978" />
+  <Blank Num="4" UId="2979" />
+  <Access Scope="LocalVariable" UId="2980">
+    <Symbol UId="2981">
+      <Component Name="qs_Statuses" UId="2982" />
+      <Token Text="." UId="2983" />
+      <Component Name="FltRevContOn" UId="2984" />
+    </Symbol>
+  </Access>
+  <Blank UId="2985" />
+  <Token Text=":=" UId="2986" />
+  <Blank UId="2987" />
+  <Access Scope="LocalVariable" UId="2988">
+    <Symbol UId="2989">
+      <Component Name="t_BwdContOnFlt" UId="2990" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2991" />
+  <Blank Num="13" UId="2992" />
+  <LineComment UId="2993">
+    <Text UId="2994">Fault of backward contactor start </Text>
+  </LineComment>
+  <NewLine UId="2995" />
+  <Blank Num="4" UId="2996" />
+  <Access Scope="LocalVariable" UId="2997">
+    <Symbol UId="2998">
+      <Component Name="qs_Statuses" UId="2999" />
+      <Token Text="." UId="3000" />
+      <Component Name="FltRevContOff" UId="3001" />
+    </Symbol>
+  </Access>
+  <Blank UId="3002" />
+  <Token Text=":=" UId="3003" />
+  <Blank UId="3004" />
+  <Access Scope="LocalVariable" UId="3005">
+    <Symbol UId="3006">
+      <Component Name="t_BwdContOffFlt" UId="3007" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="3008" />
+  <Blank Num="11" UId="3009" />
+  <LineComment UId="3010">
+    <Text UId="3011">Fault of backward contactor stop </Text>
+  </LineComment>
+  <NewLine UId="3012" />
+  <Token Text="END_REGION" UId="3013" />
+  <NewLine UId="3014" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

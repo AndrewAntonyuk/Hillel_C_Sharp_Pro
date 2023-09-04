@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <HeaderAuthor>AV</HeaderAuthor>
+      <HeaderFamily>ENC</HeaderFamily>
+      <HeaderName>_Ctrl</HeaderName>
+      <HeaderVersion>0.1</HeaderVersion>
+      <InstanceOfName>Lib_FB_Encoder_ENC</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v1">
+          <Section Name="Static" />
+          <Section Name="Input" />
+          <Section Name="Output" />
+          <Section Name="InOut" />
+        </Sections>
+      </Interface>
+      <Name>D_004_ENC_1_Ctrl</Name>
+      <Number>35001</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>==E=HR+H07::Енкодер лівої сторони 004_ENC_1. Керування</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text>==E=HR+H07::Енкодер лівої сторони 004_ENC_1. Керування</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>004_ENC_1</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text>004_ENC_1</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

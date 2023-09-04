@@ -1,0 +1,18 @@
+{
+  "company": "Apple",
+  "Type": "Electronic development",
+  "employees": [
+    {
+      "TestName": "Stewe",
+      "Age": 32
+    },
+    {
+      "TestName": "Jhon",
+      "Age": 25
+    },
+    {
+      "TestName": "Rodger",
+      "Age": 30
+    }
+  ]
+}

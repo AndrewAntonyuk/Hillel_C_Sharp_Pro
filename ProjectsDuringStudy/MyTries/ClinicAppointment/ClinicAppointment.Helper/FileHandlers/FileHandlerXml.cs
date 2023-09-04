@@ -1,10 +1,6 @@
 ﻿using ClinicAppointment.Domain.Entities;
 using ClinicAppointment.Helper.Validators.General;
 using ClinicAppointment.Helper.Validators.General.Implements;
-using System.IO;
-using System.Text;
-using System.Xml;
-using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace ClinicAppointment.Helper.FileHandlers
@@ -20,55 +16,39 @@ namespace ClinicAppointment.Helper.FileHandlers
 
         public IEnumerable<T> ReadFromFile(string path)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
+            XmlSerializer serializer = new XmlSerializer(typeof(List<T>));
             List<T>? result;
 
-            //using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate))
-            //{
-            //    result = (List<T>)serializer.Deserialize(fileStream);
-
-            //    return result == null ? new List<T>() : result;
-            //}
+            fileValidator.Validate(path);
 
             using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate))
             {
                 try
                 {
-                    result = (List<T>)serializer.Deserialize(fileStream);
+                    result = serializer.Deserialize(fileStream) as List<T>;
                 }
-                catch (Exception)
+                catch (InvalidOperationException ex)
                 {
+                    serializer.Serialize(fileStream, new List<T>());
                     result = new List<T>();
-                }
-                finally
-                {
-                    fileStream.Close();
                 }
             }
 
-            return result;
+            return result ?? new List<T>();
         }
 
         public bool WriteToFile(string path, IEnumerable<T> objects)
         {
             if (objects != null)
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(Doctor));
+                XmlSerializer serializer = new XmlSerializer(typeof(List<T>));
 
-                using (var stringWriter = new StringWriter())
+                fileValidator.Validate(path);
+
+                using (FileStream fileStream = new FileStream(path, FileMode.Create))
                 {
-                    using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate))
-                    {
-                        serializer.Serialize(fileStream, objects);
-                    }
+                    serializer.Serialize(fileStream, objects.ToList());
                 }
-
-                //serializer.Serialize( Console.Out, objects );
-                //FileInfo file = new FileInfo(path);
-                //StreamWriter sw = file.AppendText();
-                //XmlSerializer writer = new XmlSerializer(typeof(T));
-                //writer.Serialize(sw, objects);
-                //sw.Close();
             }
             else
             {

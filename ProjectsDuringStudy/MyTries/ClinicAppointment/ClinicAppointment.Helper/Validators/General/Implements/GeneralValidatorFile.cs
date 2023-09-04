@@ -8,9 +8,11 @@
 
             if (!string.IsNullOrWhiteSpace(_path))
             {
+                Directory.CreateDirectory(Path.GetDirectoryName(_path) ?? "");
+
                 if (!File.Exists(_path))
                 {
-                    File.Create(_path);
+                    File.Create(_path).Dispose();
                     return string.Empty;
                 }
 
@@ -19,7 +21,7 @@
             else
             {
                 throw new ArgumentNullException("Target path can't be empty");
-            }            
+            }
         }
     }
 }

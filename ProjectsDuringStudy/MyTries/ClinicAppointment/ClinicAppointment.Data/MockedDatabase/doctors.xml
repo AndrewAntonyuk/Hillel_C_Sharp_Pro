@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDoctor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Doctor>
+    <Id>5</Id>
+    <CreatedAt>2023-09-04T13:57:09.2220686+03:00</CreatedAt>
+    <UpdatedAt>2023-09-04T13:57:09.2250301+03:00</UpdatedAt>
+    <Name>Lionel</Name>
+    <Surname>Messi</Surname>
+    <Phone>0215487963</Phone>
+    <Email>leo@ms.ii</Email>
+    <DoctorType>FamilyDoctor</DoctorType>
+    <Experience>12</Experience>
+    <Salary>12000</Salary>
+  </Doctor>
+  <Doctor>
+    <Id>6</Id>
+    <CreatedAt>2023-09-04T13:58:10.2433673+03:00</CreatedAt>
+    <UpdatedAt>2023-09-04T13:58:10.2433746+03:00</UpdatedAt>
+    <Name>Anta</Name>
+    <Surname>Lulu</Surname>
+    <Phone>0235689471</Phone>
+    <Email>anta@lu.lu</Email>
+    <DoctorType>EyeDoctor</DoctorType>
+    <Experience>5</Experience>
+    <Salary>11000</Salary>
+  </Doctor>
+</ArrayOfDoctor>

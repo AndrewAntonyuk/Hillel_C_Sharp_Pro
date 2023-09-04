@@ -2,18 +2,7 @@
 
 namespace ClinicAppointment.Service.Interfaces
 {
-    public interface IDoctorService
+    public interface IDoctorService : IService<Doctor>
     {
-        Doctor Create(Doctor doctor);
-
-        IEnumerable<Doctor> GetAll();
-
-        Doctor? Get(int id);
-
-        bool Delete(int id);
-
-        Doctor Update(int id, Doctor doctor);
-
-        void ShowInfo(Doctor doctor);
     }
 }
