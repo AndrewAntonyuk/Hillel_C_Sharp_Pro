@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Welcome Page";
+}
+
+<body class= "bg-opacity-50 bg-light bg-gradient">
+    <div class="text-center">
+        <h1 class="display-10">Welcome to our app!</h1>
+
+        <div class="form-group">
+            <span style="margin-right: 10px;">
+                <a asp-controller="Note" asp-action="Index" class="btn btn-lg btn-info p-3" style="font-size:x-large">
+                    <i class="bi bi-file-plus-fill"></i>Notes
+                </a>                
+            </span>
+            <span style="margin-right: 10px;">
+                <a asp-controller="Contact" asp-action="Index" class="btn btn-lg btn-info p-3" style="font-size:x-large">
+                    <i class="bi bi-file-plus-fill"></i>Contacts
+                </a>
+            </span>               
+        </div>
+    </div>    
+</body>
+
+

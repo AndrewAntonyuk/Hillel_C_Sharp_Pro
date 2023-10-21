@@ -1,4 +1,5 @@
-﻿using ClinicAppointment.Domain.Enums;
+﻿using ClinicAppointment.Domain.Entities;
+using ClinicAppointment.Domain.Enums;
 using ClinicAppointment.Helper.Validators.General;
 using ClinicAppointment.Helper.Validators.General.Implements;
 using ClinicAppointment.Menu.Commands.Cnsl;
@@ -74,9 +75,17 @@ namespace ClinicAppointment
     {
         public static void Main()
         {
-            var clinicAppointment = new ClinicAppointment();
+            //var clinicAppointment = new ClinicAppointment();
 
-            clinicAppointment.Menu();
+            //clinicAppointment.Menu();
+
+            Doctor doctor = new Doctor()
+            {
+                Name = "Gggggg",
+                Surname = "Sssssss"
+            };
+
+            Console.WriteLine(doctor);
         }
     }
 }

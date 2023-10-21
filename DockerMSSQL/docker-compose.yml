@@ -1,0 +1,19 @@
+version: '3.9'
+
+volumes:
+  sqlserver_data:
+  
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 1433:1433
+    volumes:
+      - sqlserver_data:/var/lib/mssqlql/data
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=pass123456789
+      - MSSQL_PID=Developer
+

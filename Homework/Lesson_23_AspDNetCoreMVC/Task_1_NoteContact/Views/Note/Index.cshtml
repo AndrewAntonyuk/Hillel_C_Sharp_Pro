@@ -1,0 +1,48 @@
+﻿@model ICollection<Note>
+
+@{
+    ViewData["Title"] = "List of notes";
+}
+
+<body class="bg-opacity-50 bg-light bg-gradient text-center">
+
+    <div class="container shadow p-10">
+        <h1>List of notes for you!</h1>
+
+        <div class="col mb-lg-3">
+            <a asp-controller="Note" asp-action="Create" class="btn btn-lg btn-primary"><i class="bi bi-file-plus-fill"></i>Add new Note</a>
+        </div>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Text of note</th>
+                    <th scope="col">Created at</th>
+                    <th scope="col">Tags</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var note in Model)
+                {
+                    <tr>
+                        <td width="20%">@note.Name</td>
+                        <td width="40%" style="white-space:pre-wrap; word-wrap:break-word"> @note.NoteText </td>
+                        <td width="20%">@note.CreateStamp</td>
+                        <td width="20%">@note.Tags</td>
+                        <td>
+                            <div role="group" class="w-60 btn-group">
+                                <span style="margin-right: 5px">
+                                    <a asp-controller="Note" asp-action="Edit" asp-route-id="@note.Id" class="btn btn-sm btn-info"><i class="bi bi-pencil-square"></i>Edit</a>
+                                </span>
+                                <span style="margin-right: 5px">
+                                    <a asp-controller="Note" asp-action="Delete" asp-route-id="@note.Id" class="btn btn-sm btn-danger"><i class="bi bi-trash-fill"></i>Delete</a>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

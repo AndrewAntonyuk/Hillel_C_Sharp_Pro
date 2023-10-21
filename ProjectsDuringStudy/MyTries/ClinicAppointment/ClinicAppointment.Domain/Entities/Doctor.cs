@@ -9,5 +9,6 @@ namespace ClinicAppointment.Domain.Entities
         public byte Experience { get; set; }
 
         public decimal Salary { get; set; }
+
     }
 }

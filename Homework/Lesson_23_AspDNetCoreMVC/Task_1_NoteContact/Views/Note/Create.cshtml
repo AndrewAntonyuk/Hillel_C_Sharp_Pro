@@ -1,0 +1,42 @@
+﻿@model Note
+
+<body class="bg-opacity-50 bg-light bg-gradient text-center">
+
+    <div class="container shadow p-3">
+        <div class="row pb-2">
+            <h2>Add new Note</h2>
+        </div>
+
+        <form method="post">
+            
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Name">Name of Note</label>
+                    <input type="text" class="form-control mb-3" asp-for="Name" placeholder="Enter name of new Note" required />
+                    <span asp-validation-for="Name" class="alert-danger"></span>
+                </div>
+
+                <div class="multiline col-md-6">
+                    <label asp-for="NoteText">Text of Note</label>
+                    <textarea asp-for ="NoteText" class="form-control mb-5" cols="50" rows="3" placeholder="Enter text for Note"></textarea>
+                    <span asp-validation-for="NoteText" class="alert-warning"></span>                   
+                </div>
+
+                <div class="form-group col-md-6 mb-3">
+                    <label asp-for="CreateStamp">DateTime of Created</label>
+                    <input type="datetime-local" class="form-control mb-3" asp-for="CreateStamp" placeholder="Choice date and time for Note" required />
+                    <span asp-validation-for="CreateStamp" class="alert-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label asp-for="Tags">Tags of Note</label>
+                    <input type="text" class="form-control mb-5" asp-for="Tags" placeholder="Enter tags of new Note" />
+                    <span asp-validation-for="Tags" class="alert-info"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-lg btn-primary p-2"><i class="bi bi-file-plus-fill"></i>Save</button>
+            <a asp-controller="Note" asp-action="Index" class="btn btn-lg btn-warning p-2">Back To List</a>
+        </form>
+    </div>
+</body>

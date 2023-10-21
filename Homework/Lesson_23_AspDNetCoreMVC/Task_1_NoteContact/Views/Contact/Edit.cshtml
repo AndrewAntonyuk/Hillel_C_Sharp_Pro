@@ -1,0 +1,57 @@
+﻿@model Contact
+
+<body class="bg-opacity-50 bg-light bg-gradient text-center">
+
+    <div class="container shadow p-5">
+        <div class="row pb-2">
+            <h2>Edit exist Contact</h2>
+        </div>
+
+        <form method="post" asp-action="Edit">
+            <div asp-validation-summary="All"></div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Name">Name of Contact</label>
+                    <input type="text" class="form-control mb-3" asp-for="Name" placeholder="Name of Contact" />
+                    <span asp-validation-for="Name" class="alert-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label asp-for="PhoneMain">Main phone of Contact</label>
+                    <input type="tel" class="form-control mb-3" asp-for="PhoneMain" placeholder="Main phone of Contact" />
+                    <span asp-validation-for="PhoneMain" class="alert-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label asp-for="PhoneSeccond">Seccond phone of Contact</label>
+                    <input type="tel" class="form-control mb-3" asp-for="PhoneSeccond" placeholder="Seccond phone of Contact" />
+                    <span asp-validation-for="PhoneSeccond" class="alert-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label asp-for="EmailAddress">Email of Contact</label>
+                    <input type="email" class="form-control mb-5" asp-for="EmailAddress" placeholder="Email of Contact" />
+                    <span asp-validation-for="EmailAddress" class="alert-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label asp-for="Description">Description of Contact</label>
+                    <input type="text" class="form-control mb-5" asp-for="Description" placeholder="Description of Contact" />
+                    <span asp-validation-for="Description" class="alert-info"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-lg btn-primary p-2"><i class="bi bi-file-plus-fill"></i>Update</button>
+            <a asp-controller="Contact" asp-action="Index" class="btn btn-lg btn-warning p-2">Back To List</a>
+        </form>
+    </div>
+</body>
+
+@*//for front end validations*@
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

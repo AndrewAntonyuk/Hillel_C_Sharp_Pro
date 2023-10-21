@@ -1,0 +1,50 @@
+﻿@model ICollection<Contact>
+
+@{
+    ViewData["Title"] = "List of contacts";
+}
+
+<body class="bg-opacity-50 bg-light bg-gradient text-center">
+
+    <div class="container shadow p-10">
+        <h1>List of contacts for you!</h1>
+
+        <div class="col mb-lg-3">
+            <a asp-controller="Contact" asp-action="Create" class="btn btn-lg btn-primary"><i class="bi bi-file-plus-fill"></i>Add new Contact</a>
+        </div>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone main</th>
+                    <th scope="col">Phone seccond</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var contact in Model)
+                {
+                    <tr>
+                        <td width="15%">@contact.Name</td>
+                        <td width="15%">@contact.PhoneMain</td>
+                        <td width="15%">@contact.PhoneSeccond</td>
+                        <td width="15%">@contact.EmailAddress</td>
+                        <td width="40%" style="white-space:pre-wrap; word-wrap:break-word">@contact.Description</td>                        
+                        <td>
+                            <div role="group" class="w-60 btn-group">
+                                <span style="margin-right: 5px">
+                                    <a asp-controller="Contact" asp-action="Edit" asp-route-id="@contact.Id" class="btn btn-sm btn-info"><i class="bi bi-pencil-square"></i>Edit</a>
+                                </span>
+                                <span style="margin-right: 5px">
+                                    <a asp-controller="Contact" asp-action="Delete" asp-route-id="@contact.Id" class="btn btn-sm btn-danger"><i class="bi bi-trash-fill"></i>Delete</a>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

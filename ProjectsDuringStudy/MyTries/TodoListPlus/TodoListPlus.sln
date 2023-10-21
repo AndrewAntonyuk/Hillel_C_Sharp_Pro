@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListPlus", "TodoListPlus\TodoListPlus.csproj", "{A79F96E4-9306-4AFC-B0ED-CEA2B4C8469C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListPlus", "TodoListPlus\TodoListPlus.csproj", "{59E27012-2BA8-41D8-99F1-CF3C16BF9C01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A79F96E4-9306-4AFC-B0ED-CEA2B4C8469C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A79F96E4-9306-4AFC-B0ED-CEA2B4C8469C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A79F96E4-9306-4AFC-B0ED-CEA2B4C8469C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A79F96E4-9306-4AFC-B0ED-CEA2B4C8469C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59E27012-2BA8-41D8-99F1-CF3C16BF9C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E27012-2BA8-41D8-99F1-CF3C16BF9C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E27012-2BA8-41D8-99F1-CF3C16BF9C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E27012-2BA8-41D8-99F1-CF3C16BF9C01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DAE288B2-0419-4935-BA08-16B3A42DE8B5}
+		SolutionGuid = {D7BB5DF7-82B9-4BDB-A213-3E60891D5512}
 	EndGlobalSection
 EndGlobal
