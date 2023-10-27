@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Session>
+
+@{
+    ViewData["Title"] = "Sessions";
+}
+
+<h1 class="text-center">Sessions</h1>
+
+<div class="container container-lg shadow p-3 mb-5 bg-white rounded">
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Date of session</th>
+                    <th>Name of film</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var session in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(model => session.EventDateTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => session.Film.Name)
+                        </td>
+                        <td>
+                            <a class="btn btn-info text-light" asp-action="Detail" asp-route-id="@session.Id">Details</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h1>Ther aren't any sessions'</h1>
+    }
+</div>
