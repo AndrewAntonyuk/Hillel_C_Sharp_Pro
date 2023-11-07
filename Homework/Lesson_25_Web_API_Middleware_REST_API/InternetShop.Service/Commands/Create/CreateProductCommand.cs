@@ -54,8 +54,8 @@ namespace InternetShop.Service.Commands.Create
                     CategoryId = createdProduct.Entity.CategoryId,
                     Category = await _context.Categories.Select(x => new CategoryResponse
                     {
-                        Id = x.Id, 
-                        Name = x.Name, 
+                        Id = x.Id,
+                        Name = x.Name,
                         Description = x.Description
                     }).SingleOrDefaultAsync(x => x.Id == request.CategoryId, token) ?? null
                 };
