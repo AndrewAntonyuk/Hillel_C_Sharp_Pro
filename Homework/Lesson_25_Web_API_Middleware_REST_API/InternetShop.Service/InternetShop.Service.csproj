@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\Delete\" />
+    <Folder Include="Commands\UpdatePartial\" />
+    <Folder Include="Commands\Update\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InternetShop.Contract\InternetShop.Contract.csproj" />
+    <ProjectReference Include="..\InternetShop.Data\InternetShop.Data.csproj" />
+  </ItemGroup>
+
+</Project>
