@@ -1,0 +1,92 @@
+.Net / C#
+https://itvdn.com/ru/blog/article/150-questions-net-developer
+https://bool.dev/blog/detail/voprosy-na-sobesedovanii-po-c
+https://bool.dev/blog/detail/voprosy-na-sobesedovanii-dlya-senior-net-developer
+https://dou.ua/lenta/articles/interview-questions-net-developer/
+https://hurma.work/ru/blog/kak-nanyat-back-end-developer/
+
+SQL
+https://senior.ua/articles/50-populyarnyh-voprosov-i-otvetov-na-sobesedovanii-po-sql-server
+https://dou.ua/lenta/articles/sql-questions/
+
+NOSQL (Mongo)
+https://coderlessons.com/tutorials/bazy-dannykh/uchebnik-mongodb/23-voprosy-interviu-mongodb
+https://jsehelper.blogspot.com/2016/05/mongodb.html
+
+WEB
+https://jsehelper.blogspot.com/2016/01/web.html
+https://appmaster.io/blog/top-rest-api-interview-questions
+https://senior.ua/articles/eti-pyat-voprosov-pomogut-nayti-idealnogo-vebrazrabotchika-chto-nuzhno-sprashivat-na-sobesedovanii
+
+Frontend
+https://hurma.work/ru/blog/kak-nanyat-front-end-developer/
+https://h5bp.org/Front-end-Developer-Interview-Questions/translations/ukrainian/
+https://dev.ua/ru/news/frontend
+https://itvdn.com/ru/blog/article/300-js
+
+Алгоритмы
+https://dimlix.com/interview-algorithm/
+https://dev.ua/ru/news/valid-article-1662018511-1662018511
+
+Общие темы для изучения:
+- Patterns & Practices
+- Data Persistance / ORM
+- Computer Science / Data Structures / Algorithms
+- Architecture
+- Security
+- Network
+
+======Записи з лекції==============
+
+https://www.digitalocean.com/community/tutorials/gangs-of-four-gof-design-patterns
+https://itvdn.com/ru/blog/article/150-questions-net-developer
+https://dou.ua/lenta/articles/interview-questions-net-developer/
+
+Таск факторі
+Асинк авайт
+Таск.Резалт вс Авайт
+Мультитретінг
+Таск комплішн соурс
+Стріми
+Гарбадж колектор
+Хттп стрім
+кешування
+Передача цсв в базу даних або в апі
+Реєстрація АПІ () траншієнт, скопед, сінглтон
+Хостед сервісес
+Делонг раннінг таскс
+По структурах про дерева, ліст, аррей, всі решта колекцій
+Ліст вс лінкедліст
+Стандартні інтерфейси (ІЄнумерабл, ІКолекшин і т.д.)
+Нью овверрайд різниця
+Йілд ретурн фсинк єнумерабл (коли використовувати - при считуванні по частинах з файлу)
+Стек, кю, енумерабл кю
+СОЛІД
+Dependency Injection vs Dependency Inversion vs IoC
+КІС ДРАЙ ЯГНІ
+Між юніт тестінг та інтегрейшн тестінг
+Моки
+Мок стап фейк
+Моноліт, мікросервіси
+СІКЮРС, СІКЮС, МЕДІАТОР
+Ентайр архітектура
+Оніон архітектура
+СКЮЛ НОСКЮЛ
+Ейжур(СА ПАС ІАС СЕРВІСБАС КІОЛТИ РЕЄСТРАЦІЯСЕРВСІВ), АВС
+ЕФ ігерлоадінг лейзілоадінг n+1проблем
+Сплітквері міграції фірстпідхід датабасекодподход дапер
+Транзакшини
+Вюхи процедури функції
+Веріабли тимчасові таблиці джоіни
+Кап теорема
+Індекси кластеризовані і не кластеризовані(копія сортованих посилань) 
+Індекс сік, індекс скан і т.д.
+Асід
+РЕСТ, скільки контротролерів на 10 запитів (10)
+Хешинг джвт
+Автентифікація вс авторизація
+Аксес токен вс рефреш токен
+Нттп методи
+Хттп коди
+
+
